@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'YOUR MAPBOX ACCESS TOKEN';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+</head>
+
+<body><!-- Timetable generated on 2024-07-26T20:04:09.914Z using GTFS-to-HTML version 2.6.11 -->
+  <div class="timetable-page menu-type-jump">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center gap-2">
+        <div class="route-color-swatch-large flex-none" style="background-color: #000000; color: #FFFFFF;">D3-SNBS</div>
+        <div>Route D3-SNBS</div>
+      </h1>
+      <div class="effective-date text-gray-600 mt-2">Effective July 24, 2024</div>
+      <div class="timetable mb-10" id="timetable_id_kw11111110" data-day-list="Mon-Sun" data-direction-name="Shanthinagara Bus Station" data-timetable-id="kw|1111111|0" data-direction-id="0" data-route-id="kw">
+        <div class="mb-2">
+          <h2 class="text-xl">Route D3-SNBS - Depot-03 Shanthinagara to Shanthinagara Bus Station | Monday-Sunday</h2>
+        </div>
+        <div class="map" id="map_timetable_id_kw11111110"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_kw11111110",
+              "routes": {
+                "24": {
+                  "route_id": "24",
+                  "agency_id": "1",
+                  "route_short_name": "22-A",
+                  "route_long_name": "Shivajinagara Bus Station ⇔ Byrasandra New Bus Stand",
+                  "route_type": 3
+                },
+                "32": {
+                  "route_id": "32",
+                  "agency_id": "1",
+                  "route_short_name": "353-C",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Jigani Bus Stand",
+                  "route_type": 3
+                },
+                "41": {
+                  "route_id": "41",
+                  "agency_id": "1",
+                  "route_short_name": "365-J",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Jigani APC Circle",
+                  "route_type": 3
+                },
+                "52": {
+                  "route_id": "52",
+                  "agency_id": "1",
+                  "route_short_name": "182",
+                  "route_long_name": "Shivajinagara Bus Station ⇔ Padmanabha Nagara",
+                  "route_type": 3
+                },
+                "99": {
+                  "route_id": "99",
+                  "agency_id": "1",
+                  "route_short_name": "342-F",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Sarjapura",
+                  "route_type": 3
+                },
+                "kw": {
+                  "route_id": "kw",
+                  "agency_id": "1",
+                  "route_short_name": "D3-SNBS",
+                  "route_long_name": "Shanthinagara Bus Station ⇔ Depot-03 Shanthinagara",
+                  "route_type": 3
+                },
+                "gd": {
+                  "route_id": "gd",
+                  "agency_id": "1",
+                  "route_short_name": "13",
+                  "route_long_name": "Shivajinagara Bus Station ⇔ Banashankari Bus Station",
+                  "route_type": 3
+                },
+                "tg": {
+                  "route_id": "tg",
+                  "agency_id": "1",
+                  "route_short_name": "13-A",
+                  "route_long_name": "Shivajinagara Bus Station ⇔ Kumaraswamy Layout 2nd Stage",
+                  "route_type": 3
+                },
+                "8s": {
+                  "route_id": "8s",
+                  "agency_id": "1",
+                  "route_short_name": "168-D VSD",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Tavarekere Aladamara",
+                  "route_type": 3
+                },
+                "iy": {
+                  "route_id": "iy",
+                  "agency_id": "1",
+                  "route_short_name": "168-D",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Tavarekere Aladamara",
+                  "route_type": 3
+                },
+                "dy": {
+                  "route_id": "dy",
+                  "agency_id": "1",
+                  "route_short_name": "171-G",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Koramangala 1st Block",
+                  "route_type": 3
+                },
+                "q2": {
+                  "route_id": "q2",
+                  "agency_id": "1",
+                  "route_short_name": "215-U",
+                  "route_long_name": "Shivajinagara Bus Station ⇔ Kothanuru Hari Nagara",
+                  "route_type": 3
+                },
+                "5k": {
+                  "route_id": "5k",
+                  "agency_id": "1",
+                  "route_short_name": "343-A",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Hullahalli Village",
+                  "route_type": 3
+                },
+                "gi": {
+                  "route_id": "gi",
+                  "agency_id": "1",
+                  "route_short_name": "343-E",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Beguru",
+                  "route_type": 3
+                },
+                "vp": {
+                  "route_id": "vp",
+                  "agency_id": "1",
+                  "route_short_name": "346-C",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Rayasandra Circle",
+                  "route_type": 3
+                },
+                "2r": {
+                  "route_id": "2r",
+                  "agency_id": "1",
+                  "route_short_name": "348",
+                  "route_long_name": "Hosapalya Kudlu Gate ⇔ Kempegowda Bus Station",
+                  "route_type": 3
+                },
+                "2u": {
+                  "route_id": "2u",
+                  "agency_id": "1",
+                  "route_short_name": "348-G",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Hosapalya Kudlu Gate",
+                  "route_type": 3
+                },
+                "em": {
+                  "route_id": "em",
+                  "agency_id": "1",
+                  "route_short_name": "348-E KBS-MGP",
+                  "route_long_name": "Mangammanapalya ⇔ Kempegowda Bus Station",
+                  "route_type": 3
+                },
+                "z9": {
+                  "route_id": "z9",
+                  "agency_id": "1",
+                  "route_short_name": "360-J",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Handenahalli Attibele",
+                  "route_type": 3
+                },
+                "5l": {
+                  "route_id": "5l",
+                  "agency_id": "1",
+                  "route_short_name": "365-E KBS-BTRD",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Byatarayana Doddy",
+                  "route_type": 3
+                },
+                "d": {
+                  "route_id": "d",
+                  "agency_id": "1",
+                  "route_short_name": "365-D",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Bilavaradahalli",
+                  "route_type": 3
+                },
+                "wr": {
+                  "route_id": "wr",
+                  "agency_id": "1",
+                  "route_short_name": "365-K",
+                  "route_long_name": "Kempegowda Bus Station ⇔ CK Palya",
+                  "route_type": 3
+                },
+                "y3": {
+                  "route_id": "y3",
+                  "agency_id": "1",
+                  "route_short_name": "365 KBS-D34G",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Depot-34 Gate",
+                  "route_type": 3
+                },
+                "2s": {
+                  "route_id": "2s",
+                  "agency_id": "1",
+                  "route_short_name": "369-C",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Hulimavu",
+                  "route_type": 3
+                },
+                "or": {
+                  "route_id": "or",
+                  "agency_id": "1",
+                  "route_short_name": "370-A KBS-UJPD",
+                  "route_long_name": "Kempegowda Bus Station ⇔ UjinappanaDoddy",
+                  "route_type": 3
+                },
+                "iu": {
+                  "route_id": "iu",
+                  "agency_id": "1",
+                  "route_short_name": "371-D",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Kaggalipura",
+                  "route_type": 3
+                },
+                "4f": {
+                  "route_id": "4f",
+                  "agency_id": "1",
+                  "route_short_name": "372-F",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Nisarga Badavane",
+                  "route_type": 3
+                },
+                "2a": {
+                  "route_id": "2a",
+                  "agency_id": "1",
+                  "route_short_name": "KIA-14",
+                  "route_long_name": "Kempegowda International Airport ⇔ Royal Meenakshi Mall BG Road",
+                  "route_type": 3
+                },
+                "3v": {
+                  "route_id": "3v",
+                  "agency_id": "1",
+                  "route_short_name": "KBS-3A",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Attibele Bus Stand",
+                  "route_type": 3
+                },
+                "7w": {
+                  "route_id": "7w",
+                  "agency_id": "1",
+                  "route_short_name": "KMT-SNBS",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Shanthinagara Bus Station",
+                  "route_type": 3
+                },
+                "bn": {
+                  "route_id": "bn",
+                  "agency_id": "1",
+                  "route_short_name": "V-342F",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Sarjapura",
+                  "route_type": 3
+                },
+                "f2": {
+                  "route_id": "f2",
+                  "agency_id": "1",
+                  "route_short_name": "KBS-3A ALH-ATB",
+                  "route_long_name": "Avalahalli BDA Park Girinagara ⇔ Attibele Bus Stand",
+                  "route_type": 3
+                },
+                "k1": {
+                  "route_id": "k1",
+                  "agency_id": "1",
+                  "route_short_name": "V-360B",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Attibele Bus Stand",
+                  "route_type": 3
+                },
+                "lq": {
+                  "route_id": "lq",
+                  "agency_id": "1",
+                  "route_short_name": "V-171",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Koramangala 1st Block",
+                  "route_type": 3
+                },
+                "n6": {
+                  "route_id": "n6",
+                  "agency_id": "1",
+                  "route_short_name": "KBS-3C",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Chandapura",
+                  "route_type": 3
+                },
+                "ok": {
+                  "route_id": "ok",
+                  "agency_id": "1",
+                  "route_short_name": "KIA-5",
+                  "route_long_name": "Banashankari Bus Station ⇔ Kempegowda International Airport",
+                  "route_type": 3
+                },
+                "qj": {
+                  "route_id": "qj",
+                  "agency_id": "1",
+                  "route_short_name": "SNBS-CORP-KMT",
+                  "route_long_name": "Shanthinagara Bus Station ⇔ KR Market",
+                  "route_type": 3
+                },
+                "rv": {
+                  "route_id": "rv",
+                  "agency_id": "1",
+                  "route_short_name": "V-360B Flyover",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Attibele Bus Stand",
+                  "route_type": 3
+                },
+                "xd": {
+                  "route_id": "xd",
+                  "agency_id": "1",
+                  "route_short_name": "SNBS-BMETAG",
+                  "route_long_name": "Shanthinagara Bus Station ⇔ Binny Mill ETA Garden",
+                  "route_type": 3
+                },
+                "yn": {
+                  "route_id": "yn",
+                  "agency_id": "1",
+                  "route_short_name": "KBS-3F",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Attibele Bus Stand",
+                  "route_type": 3
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [77.596, 12.95531],
+                      [77.59624, 12.95519],
+                      [77.59549, 12.95372],
+                      [77.59466, 12.95434],
+                      [77.59423, 12.95382],
+                      [77.59349, 12.95446],
+                      [77.59342, 12.95454],
+                      [77.59294, 12.95491],
+                      [77.59285, 12.95495],
+                      [77.59276, 12.95505]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "2nt",
+                    "stop_name": "Depot-03 Shanthinagara",
+                    "routes": ["kw"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.596, 12.95532]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "38h",
+                    "stop_name": "Shanthinagara Bus Station",
+                    "routes": ["gd", "tg", "24", "8s", "iy", "dy", "52", "q2", "99", "5k", "gi", "vp", "2r", "2u", "em", "32", "z9", "41", "5l", "d", "wr", "y3", "2s", "or", "iu", "4f", "2a", "3v", "7w", "bn", "f2", "k1", "kw", "lq", "n6", "ok", "qj", "rv", "xd", "yn"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.59258, 12.95449]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table class="table-vertical" summary="This table shows schedules for a selection of key stops on the route for Route D3-SNBS - Depot-03 Shanthinagara to Shanthinagara Bus Station Mon-Sun. Stops and their schedule times are listed in the columns." data-orientation="vertical">
+            <caption class="sr-only">Route D3-SNBS - Depot-03 Shanthinagara to Shanthinagara Bus Station | Mon-Sun</caption>
+            <colgroup>
+              <col class="stop-0" id="stop_id_2nt" data-stop-id="2nt" data-is-timepoint="true">
+              <col class="stop-1" id="stop_id_38h" data-stop-id="38h" data-is-timepoint="true">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col" width="50.00%">
+                  <div class="stop-name">Depot-03 Shanthinagara</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="50.00%">
+                  <div class="stop-name">Shanthinagara Bus Station</div>
+                  <div class="stop-code"></div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="trip-row" id="trip_id_1f3">
+                <td class="stop-time am"><span class="stop-time-text">7:30am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:32am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_3dj">
+                <td class="stop-time am"><span class="stop-time-text">7:50am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:52am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_46h">
+                <td class="stop-time am"><span class="stop-time-text">8:00am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:02am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_3c9">
+                <td class="stop-time am"><span class="stop-time-text">9:20am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:22am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_1rg">
+                <td class="stop-time am"><span class="stop-time-text">9:40am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:42am</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

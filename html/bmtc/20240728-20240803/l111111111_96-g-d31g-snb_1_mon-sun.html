@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'YOUR MAPBOX ACCESS TOKEN';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+</head>
+
+<body><!-- Timetable generated on 2024-07-26T20:07:03.910Z using GTFS-to-HTML version 2.6.11 -->
+  <div class="timetable-page menu-type-jump">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center gap-2">
+        <div class="route-color-swatch-large flex-none" style="background-color: #000000; color: #FFFFFF;">96-G D31G-SNB</div>
+        <div>Route 96-G D31G-SNB</div>
+      </h1>
+      <div class="effective-date text-gray-600 mt-2">Effective July 24, 2024</div>
+      <div class="timetable mb-10" id="timetable_id_l111111111" data-day-list="Mon-Sun" data-direction-name="Depot-31 Gate" data-timetable-id="l1|1111111|1" data-direction-id="1" data-route-id="l1">
+        <div class="mb-2">
+          <h2 class="text-xl">Route 96-G D31G-SNB - Summanahalli to Depot-31 Gate | Monday-Sunday</h2>
+        </div>
+        <div class="map" id="map_timetable_id_l111111111"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_l111111111",
+              "routes": {
+                "l1": {
+                  "route_id": "l1",
+                  "agency_id": "1",
+                  "route_short_name": "96-G D31G-SNB",
+                  "route_long_name": "Depot-31 Gate ⇔ Shankarnagh Bus Stand",
+                  "route_type": 3
+                },
+                "9k": {
+                  "route_id": "9k",
+                  "agency_id": "1",
+                  "route_short_name": "410-F",
+                  "route_long_name": "Jayanagara Bus Station ⇔ Yeshawanthapura Bus Station",
+                  "route_type": 3
+                },
+                "cj": {
+                  "route_id": "cj",
+                  "agency_id": "1",
+                  "route_short_name": "410-FB",
+                  "route_long_name": "Marenahalli (Marenahalli Metro Station) ⇔ Yeshawanthapura Bus Station",
+                  "route_type": 3
+                },
+                "1o": {
+                  "route_id": "1o",
+                  "agency_id": "1",
+                  "route_short_name": "501-A",
+                  "route_long_name": "Banashankari Bus Station ⇔ Hebbala Bridge",
+                  "route_type": 3
+                },
+                "3w": {
+                  "route_id": "3w",
+                  "agency_id": "1",
+                  "route_short_name": "501-BH",
+                  "route_long_name": "Banashankari Bus Station ⇔ Hebbala Bridge",
+                  "route_type": 3
+                },
+                "ko": {
+                  "route_id": "ko",
+                  "agency_id": "1",
+                  "route_short_name": "502-L",
+                  "route_long_name": "Kottigepalya ⇔ Krishnaraja Pura Govt Hospital",
+                  "route_type": 3
+                },
+                "8h": {
+                  "route_id": "8h",
+                  "agency_id": "1",
+                  "route_short_name": "D31G-KML",
+                  "route_long_name": "Depot-31 Gate ⇔ Kamalanagara BEML Layout",
+                  "route_type": 3
+                },
+                "9w": {
+                  "route_id": "9w",
+                  "agency_id": "1",
+                  "route_short_name": "SMH-D31",
+                  "route_long_name": "Summanahalli ⇔ Depot-31 Summanahalli",
+                  "route_type": 3
+                },
+                "ak": {
+                  "route_id": "ak",
+                  "agency_id": "1",
+                  "route_short_name": "MF-410FC",
+                  "route_long_name": "Jalahalli Cross ⇔ Banashankari Bus Station",
+                  "route_type": 3
+                },
+                "ee": {
+                  "route_id": "ee",
+                  "agency_id": "1",
+                  "route_short_name": "MF-401M PSS-D31G",
+                  "route_long_name": "Peenya 2nd Stage ⇔ Depot-31 Gate",
+                  "route_type": 3
+                },
+                "hn": {
+                  "route_id": "hn",
+                  "agency_id": "1",
+                  "route_short_name": "BC-7H D31G-8MYL",
+                  "route_long_name": "Depot-31 Gate ⇔ 8th Mile Dasarahalli",
+                  "route_type": 3
+                },
+                "kp": {
+                  "route_id": "kp",
+                  "agency_id": "1",
+                  "route_short_name": "MF-401M",
+                  "route_long_name": "Kengeri Bus Station ⇔ Yeshawanthapura Bus Station",
+                  "route_type": 3
+                },
+                "p6": {
+                  "route_id": "p6",
+                  "agency_id": "1",
+                  "route_short_name": "D31G-MGH",
+                  "route_long_name": "Depot-31 Gate ⇔ Manganahalli",
+                  "route_type": 3
+                },
+                "r": {
+                  "route_id": "r",
+                  "agency_id": "1",
+                  "route_short_name": "MF-410FA",
+                  "route_long_name": "Banashankari Bus Station ⇔ Yeshawanthapura Bus Station",
+                  "route_type": 3
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [77.52687, 12.99469],
+                      [77.52701, 12.99525],
+                      [77.52725, 12.99637],
+                      [77.52734, 12.99694],
+                      [77.52821, 12.99671],
+                      [77.52849, 12.99666],
+                      [77.5295, 12.99639],
+                      [77.53105, 12.99593],
+                      [77.53217, 12.99563],
+                      [77.53349, 12.99525],
+                      [77.53435, 12.99503],
+                      [77.53544, 12.99485],
+                      [77.5355, 12.99522],
+                      [77.5373, 12.995],
+                      [77.53728, 12.99477],
+                      [77.53745, 12.99473],
+                      [77.53732, 12.99394],
+                      [77.53732, 12.99378],
+                      [77.53743, 12.99306],
+                      [77.53708, 12.99226],
+                      [77.53803, 12.99208],
+                      [77.53784, 12.99168],
+                      [77.53848, 12.99162],
+                      [77.5382, 12.99073],
+                      [77.53786, 12.98925],
+                      [77.53763, 12.98839],
+                      [77.53752, 12.9879],
+                      [77.53727, 12.98545],
+                      [77.5371, 12.98361],
+                      [77.5371, 12.98346],
+                      [77.53713, 12.98332],
+                      [77.53731, 12.98278],
+                      [77.53734, 12.98262],
+                      [77.5373, 12.98217],
+                      [77.53721, 12.98167],
+                      [77.53687, 12.98086],
+                      [77.53679, 12.98077],
+                      [77.53668, 12.98057],
+                      [77.53513, 12.9812],
+                      [77.53506, 12.98124],
+                      [77.53499, 12.98133],
+                      [77.53435, 12.98156],
+                      [77.53304, 12.9819],
+                      [77.53271, 12.98195],
+                      [77.53237, 12.98197],
+                      [77.53162, 12.98205],
+                      [77.53142, 12.9821],
+                      [77.53126, 12.98216],
+                      [77.53105, 12.98229],
+                      [77.53091, 12.98241],
+                      [77.53066, 12.98299],
+                      [77.5305, 12.9832],
+                      [77.53034, 12.98333],
+                      [77.52989, 12.98357],
+                      [77.52966, 12.98366],
+                      [77.5294, 12.98373],
+                      [77.52873, 12.98382],
+                      [77.52852, 12.98392],
+                      [77.5283, 12.98411],
+                      [77.52784, 12.98465],
+                      [77.5275, 12.98497],
+                      [77.52661, 12.9857],
+                      [77.52648, 12.9858],
+                      [77.5264, 12.98584],
+                      [77.52617, 12.9859],
+                      [77.52601, 12.98589],
+                      [77.52588, 12.98582],
+                      [77.52578, 12.98571],
+                      [77.52557, 12.98553],
+                      [77.52544, 12.98545],
+                      [77.52435, 12.98515],
+                      [77.52409, 12.98504],
+                      [77.52392, 12.98499],
+                      [77.5237, 12.98497],
+                      [77.52357, 12.98502],
+                      [77.52291, 12.98562],
+                      [77.52251, 12.98589],
+                      [77.52191, 12.98613],
+                      [77.52081, 12.98668],
+                      [77.51926, 12.98735],
+                      [77.51942, 12.98799],
+                      [77.51967, 12.98865],
+                      [77.52044, 12.99094],
+                      [77.52061, 12.99118],
+                      [77.52107, 12.99254],
+                      [77.5213, 12.9931]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "2hv",
+                    "stop_name": "Summanahalli",
+                    "routes": ["l1", "9k", "cj", "1o", "3w", "ko", "8h", "9w", "ak", "ee", "hn", "kp", "p6", "r"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.5195, 12.98824]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "301",
+                    "stop_name": "Depot-31 Gate",
+                    "routes": ["l1", "9k", "1o", "3w", "ak", "kp", "r"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.5213, 12.99311]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table class="table-vertical" summary="This table shows schedules for a selection of key stops on the route for Route 96-G D31G-SNB - Summanahalli to Depot-31 Gate Mon-Sun. Stops and their schedule times are listed in the columns." data-orientation="vertical">
+            <caption class="sr-only">Route 96-G D31G-SNB - Summanahalli to Depot-31 Gate | Mon-Sun</caption>
+            <colgroup>
+              <col class="stop-0" id="stop_id_2hv" data-stop-id="2hv" data-is-timepoint="true">
+              <col class="stop-1" id="stop_id_301" data-stop-id="301" data-is-timepoint="true">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col" width="50.00%">
+                  <div class="stop-name">Summanahalli</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="50.00%">
+                  <div class="stop-name">Depot-31 Gate</div>
+                  <div class="stop-code"></div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="trip-row" id="trip_id_390">
+                <td class="stop-time pm"><span class="stop-time-text">12:25pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:36pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_40x">
+                <td class="stop-time pm"><span class="stop-time-text">9:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:10pm</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

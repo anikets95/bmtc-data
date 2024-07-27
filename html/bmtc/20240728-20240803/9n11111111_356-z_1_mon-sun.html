@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'YOUR MAPBOX ACCESS TOKEN';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+</head>
+
+<body><!-- Timetable generated on 2024-07-26T20:07:17.102Z using GTFS-to-HTML version 2.6.11 -->
+  <div class="timetable-page menu-type-jump">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center gap-2">
+        <div class="route-color-swatch-large flex-none" style="background-color: #000000; color: #FFFFFF;">356-Z</div>
+        <div>Route 356-Z</div>
+      </h1>
+      <div class="effective-date text-gray-600 mt-2">Effective July 24, 2024</div>
+      <div class="timetable mb-10" id="timetable_id_9n11111111" data-day-list="Mon-Sun" data-direction-name="Chandapura" data-timetable-id="9n|1111111|1" data-direction-id="1" data-route-id="9n">
+        <div class="mb-2">
+          <h2 class="text-xl">Route 356-Z - Anekal to Chandapura | Monday-Sunday</h2>
+        </div>
+        <div class="map" id="map_timetable_id_9n11111111"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_9n11111111",
+              "routes": {
+                "df": {
+                  "route_id": "df",
+                  "agency_id": "1",
+                  "route_short_name": "353-B JGNAPC-CPR-HKR",
+                  "route_long_name": "Jigani APC Circle ⇔ Huskur",
+                  "route_type": 3
+                },
+                "e6": {
+                  "route_id": "e6",
+                  "agency_id": "1",
+                  "route_short_name": "353-A",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Rajapura",
+                  "route_type": 3
+                },
+                "3q": {
+                  "route_id": "3q",
+                  "agency_id": "1",
+                  "route_short_name": "356 ANK-D38G",
+                  "route_long_name": "Anekal ⇔ Depot-38 Gate",
+                  "route_type": 3
+                },
+                "9n": {
+                  "route_id": "9n",
+                  "agency_id": "1",
+                  "route_short_name": "356-Z",
+                  "route_long_name": "Chandapura ⇔ Anekal",
+                  "route_type": 3
+                },
+                "a": {
+                  "route_id": "a",
+                  "agency_id": "1",
+                  "route_short_name": "356-A",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Thattanahalli",
+                  "route_type": 3
+                },
+                "vl": {
+                  "route_id": "vl",
+                  "agency_id": "1",
+                  "route_short_name": "356-Z D38-ANK",
+                  "route_long_name": "Depot-38 Gate ⇔ Anekal",
+                  "route_type": 3
+                },
+                "wp": {
+                  "route_id": "wp",
+                  "agency_id": "1",
+                  "route_short_name": "356-M",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Anekal",
+                  "route_type": 3
+                },
+                "fj": {
+                  "route_id": "fj",
+                  "agency_id": "1",
+                  "route_short_name": "361-C",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Anekal",
+                  "route_type": 3
+                },
+                "ik": {
+                  "route_id": "ik",
+                  "agency_id": "1",
+                  "route_short_name": "V-356M FLY",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Anekal",
+                  "route_type": 3
+                },
+                "j7": {
+                  "route_id": "j7",
+                  "agency_id": "1",
+                  "route_short_name": "365-P D27-ANK",
+                  "route_long_name": "Depot-27 Gate ⇔ Anekal",
+                  "route_type": 3
+                },
+                "pt": {
+                  "route_id": "pt",
+                  "agency_id": "1",
+                  "route_short_name": "365-Z BGT-MMDH",
+                  "route_long_name": "Bannerughatta Circle ⇔ M Medahalli",
+                  "route_type": 3
+                },
+                "qc": {
+                  "route_id": "qc",
+                  "agency_id": "1",
+                  "route_short_name": "365-Z",
+                  "route_long_name": "Anekal ⇔ Bannerughatta Circle",
+                  "route_type": 3
+                },
+                "r6": {
+                  "route_id": "r6",
+                  "agency_id": "1",
+                  "route_short_name": "365-P",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Anekal",
+                  "route_type": 3
+                },
+                "y5": {
+                  "route_id": "y5",
+                  "agency_id": "1",
+                  "route_short_name": "365-P D34-ANK",
+                  "route_long_name": "Depot-34 Gate ⇔ Anekal",
+                  "route_type": 3
+                },
+                "t1": {
+                  "route_id": "t1",
+                  "agency_id": "1",
+                  "route_short_name": "366-Z",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Anekal",
+                  "route_type": 3
+                },
+                "et": {
+                  "route_id": "et",
+                  "agency_id": "1",
+                  "route_short_name": "399-F",
+                  "route_long_name": "Hosakote Bus Stand (Old) ⇔ Anekal",
+                  "route_type": 3
+                },
+                "q5": {
+                  "route_id": "q5",
+                  "agency_id": "1",
+                  "route_short_name": "399-F ANK-ATB",
+                  "route_long_name": "Anekal ⇔ Attibele Bus Stand",
+                  "route_type": 3
+                },
+                "8b": {
+                  "route_id": "8b",
+                  "agency_id": "1",
+                  "route_short_name": "V-356M",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Anekal",
+                  "route_type": 3
+                },
+                "dw": {
+                  "route_id": "dw",
+                  "agency_id": "1",
+                  "route_short_name": "351-M",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Muttanalluru",
+                  "route_type": 3
+                },
+                "io": {
+                  "route_id": "io",
+                  "agency_id": "1",
+                  "route_short_name": "352",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Hennagara",
+                  "route_type": 3
+                },
+                "r2": {
+                  "route_id": "r2",
+                  "agency_id": "1",
+                  "route_short_name": "357 KBS-BNP",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Bandapura",
+                  "route_type": 3
+                },
+                "3s": {
+                  "route_id": "3s",
+                  "agency_id": "1",
+                  "route_short_name": "360-D",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Manchanahalli",
+                  "route_type": 3
+                },
+                "qo": {
+                  "route_id": "qo",
+                  "agency_id": "1",
+                  "route_short_name": "360-K",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Attibele Bus Stand",
+                  "route_type": 3
+                },
+                "d7": {
+                  "route_id": "d7",
+                  "agency_id": "1",
+                  "route_short_name": "398-B",
+                  "route_long_name": "Chandapura ⇔ Kaggalipura",
+                  "route_type": 3
+                },
+                "ua": {
+                  "route_id": "ua",
+                  "agency_id": "1",
+                  "route_short_name": "398-B ATB-KGP",
+                  "route_long_name": "Attibele Bus Stand ⇔ Kaggalipura",
+                  "route_type": 3
+                },
+                "nu": {
+                  "route_id": "nu",
+                  "agency_id": "1",
+                  "route_short_name": "399-E",
+                  "route_long_name": "Jigani APC Circle ⇔ Chikka Thirupathi",
+                  "route_type": 3
+                },
+                "dd": {
+                  "route_id": "dd",
+                  "agency_id": "1",
+                  "route_short_name": "600-G ATB-ISRLO",
+                  "route_long_name": "Attibele Bus Stand ⇔ ISRO Layout",
+                  "route_type": 3
+                },
+                "fk": {
+                  "route_id": "fk",
+                  "agency_id": "1",
+                  "route_short_name": "600-F",
+                  "route_long_name": "Banashankari Bus Station ⇔ Attibele Bus Stand",
+                  "route_type": 3
+                },
+                "3v": {
+                  "route_id": "3v",
+                  "agency_id": "1",
+                  "route_short_name": "KBS-3A",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Attibele Bus Stand",
+                  "route_type": 3
+                },
+                "k1": {
+                  "route_id": "k1",
+                  "agency_id": "1",
+                  "route_short_name": "V-360B",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Attibele Bus Stand",
+                  "route_type": 3
+                },
+                "kd": {
+                  "route_id": "kd",
+                  "agency_id": "1",
+                  "route_short_name": "V-356",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Chandapura",
+                  "route_type": 3
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [77.69641, 12.7094],
+                      [77.69669, 12.70935],
+                      [77.69703, 12.70932],
+                      [77.69744, 12.70926],
+                      [77.6976, 12.71004],
+                      [77.69764, 12.71015],
+                      [77.6978, 12.7103],
+                      [77.69847, 12.71082],
+                      [77.69887, 12.71104],
+                      [77.69927, 12.71119],
+                      [77.69947, 12.71129],
+                      [77.6994, 12.71138],
+                      [77.69942, 12.71172],
+                      [77.69941, 12.71297],
+                      [77.69943, 12.7137],
+                      [77.69943, 12.71449],
+                      [77.69948, 12.71477],
+                      [77.69959, 12.71515],
+                      [77.7001, 12.71674],
+                      [77.70014, 12.71683],
+                      [77.70012, 12.71689],
+                      [77.70008, 12.71694],
+                      [77.70002, 12.71697],
+                      [77.69994, 12.71697],
+                      [77.70024, 12.71725],
+                      [77.701, 12.71806],
+                      [77.7023, 12.71974],
+                      [77.70243, 12.71998],
+                      [77.70258, 12.72038],
+                      [77.70418, 12.72542],
+                      [77.70467, 12.72685],
+                      [77.70627, 12.73121],
+                      [77.70637, 12.73132],
+                      [77.70695, 12.73293],
+                      [77.70799, 12.73568],
+                      [77.7082, 12.73633],
+                      [77.70846, 12.73725],
+                      [77.70873, 12.7381],
+                      [77.70878, 12.73834],
+                      [77.70898, 12.73902],
+                      [77.70916, 12.7399],
+                      [77.70917, 12.74027],
+                      [77.70914, 12.74065],
+                      [77.70905, 12.74111],
+                      [77.70884, 12.74205],
+                      [77.70871, 12.74253],
+                      [77.70862, 12.74299],
+                      [77.70829, 12.74433],
+                      [77.70813, 12.74481],
+                      [77.70801, 12.74561],
+                      [77.70768, 12.74712],
+                      [77.70674, 12.75197],
+                      [77.7064, 12.75358],
+                      [77.70629, 12.75403],
+                      [77.70619, 12.75436],
+                      [77.70596, 12.75475],
+                      [77.70547, 12.7559],
+                      [77.70514, 12.75651],
+                      [77.70479, 12.75721],
+                      [77.70408, 12.75851],
+                      [77.70081, 12.76464],
+                      [77.70075, 12.76488],
+                      [77.70072, 12.76511],
+                      [77.70103, 12.76662],
+                      [77.70114, 12.76699],
+                      [77.70125, 12.76744],
+                      [77.70137, 12.76826],
+                      [77.70167, 12.77481],
+                      [77.70215, 12.77915],
+                      [77.70228, 12.77958],
+                      [77.70249, 12.78],
+                      [77.70266, 12.78024],
+                      [77.70325, 12.78097],
+                      [77.70361, 12.78147],
+                      [77.70385, 12.78188],
+                      [77.70392, 12.78215],
+                      [77.70392, 12.78244],
+                      [77.70386, 12.78279],
+                      [77.70376, 12.78307],
+                      [77.7035, 12.78366],
+                      [77.70331, 12.78415],
+                      [77.70317, 12.78466],
+                      [77.70313, 12.78506],
+                      [77.70314, 12.78522],
+                      [77.70329, 12.7865],
+                      [77.70321, 12.78646]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [77.70329, 12.7865],
+                      [77.70336, 12.78714],
+                      [77.7034, 12.78729],
+                      [77.70353, 12.78756],
+                      [77.70369, 12.78779],
+                      [77.7049, 12.78911],
+                      [77.70494, 12.78921],
+                      [77.70526, 12.78957],
+                      [77.70534, 12.78969],
+                      [77.70545, 12.78991],
+                      [77.70567, 12.7908],
+                      [77.70602, 12.79259],
+                      [77.70645, 12.7945],
+                      [77.70655, 12.79511],
+                      [77.70657, 12.79532],
+                      [77.70657, 12.79571],
+                      [77.70655, 12.79605],
+                      [77.70644, 12.79699],
+                      [77.70638, 12.79727],
+                      [77.70581, 12.79916],
+                      [77.70541, 12.80035],
+                      [77.70512, 12.80135],
+                      [77.70505, 12.80157],
+                      [77.70493, 12.80185],
+                      [77.7049, 12.80211],
+                      [77.70486, 12.80218],
+                      [77.7045, 12.80227]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "10f",
+                    "stop_name": "Chandapura KEB",
+                    "routes": ["df", "e6", "3q", "9n", "a", "vl", "wp", "fj", "ik"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.70598, 12.79852]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "15w",
+                    "stop_name": "Ramakrishnapura Gate",
+                    "routes": ["3q", "9n", "a", "vl", "wp", "fj", "ik"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.70211, 12.77889]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "17a",
+                    "stop_name": "Karpura Gate",
+                    "routes": ["3q", "9n", "vl", "wp", "fj", "ik"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.70798, 12.73568]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "1t3",
+                    "stop_name": "Anekal",
+                    "routes": ["3q", "9n", "vl", "wp", "fj", "j7", "pt", "qc", "r6", "y5", "t1", "et", "q5", "8b", "ik"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.69641, 12.70939]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "1xn",
+                    "stop_name": "Iggluru",
+                    "routes": ["df", "e6", "3q", "9n", "a", "vl", "wp", "fj", "ik"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.70328, 12.7865]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "294",
+                    "stop_name": "RK Farm",
+                    "routes": ["3q", "9n", "a", "vl", "wp", "fj", "ik"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.70379, 12.75903]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "2ab",
+                    "stop_name": "Chikka Hagade Gate",
+                    "routes": ["3q", "9n", "vl", "wp", "fj", "ik"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.70639, 12.73141]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "2nb",
+                    "stop_name": "Chowdareddy Circle",
+                    "routes": ["3q", "9n", "vl", "wp", "fj", "pt", "qc", "r6", "et", "ik"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.69931, 12.71125]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "2sj",
+                    "stop_name": "Suryacity Gate",
+                    "routes": ["df", "e6", "3q", "9n", "a", "vl", "wp", "fj", "ik"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.70601, 12.79258]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "317",
+                    "stop_name": "Anekal Circle",
+                    "routes": ["3q", "9n", "vl", "wp", "fj", "qc", "r6", "ik"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.70009, 12.71674]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "3en",
+                    "stop_name": "Byagadadenahalli Gate",
+                    "routes": ["3q", "9n", "a", "vl", "wp", "fj", "ik"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.70668, 12.75211]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "41g",
+                    "stop_name": "Avadadenahalli Gate",
+                    "routes": ["3q", "9n", "a", "vl", "wp", "fj", "ik"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.7078, 12.74649]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "428",
+                    "stop_name": "VBHC Apartment Gate",
+                    "routes": ["3q", "9n", "a", "vl", "wp", "fj", "ik"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.70466, 12.7574]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "48y",
+                    "stop_name": "Janatha Colony",
+                    "routes": ["3q", "9n", "vl", "wp", "fj", "ik"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.70376, 12.72419]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "o1",
+                    "stop_name": "Marsuru Gate",
+                    "routes": ["3q", "9n", "a", "vl", "wp", "fj", "ik"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.70141, 12.76964]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "s0",
+                    "stop_name": "Surya Nagara",
+                    "routes": ["df", "e6", "3q", "9n", "a", "vl", "wp", "fj", "ik"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.70562, 12.79071]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "v9",
+                    "stop_name": "Chandapura",
+                    "routes": ["dw", "io", "df", "e6", "3q", "9n", "a", "vl", "wp", "r2", "3s", "qo", "fj", "d7", "ua", "nu", "dd", "fk", "3v", "ik", "k1", "kd"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.7045, 12.80227]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "vs",
+                    "stop_name": "Kavala Hosahalli",
+                    "routes": ["3q", "9n", "vl", "wp", "fj", "ik"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.70433, 12.72591]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table class="table-vertical" summary="This table shows schedules for a selection of key stops on the route for Route 356-Z - Anekal to Chandapura Mon-Sun. Stops and their schedule times are listed in the columns." data-orientation="vertical">
+            <caption class="sr-only">Route 356-Z - Anekal to Chandapura | Mon-Sun</caption>
+            <colgroup>
+              <col class="stop-0" id="stop_id_1t3" data-stop-id="1t3" data-is-timepoint="true">
+              <col class="stop-1" id="stop_id_2nb" data-stop-id="2nb" data-is-timepoint="true">
+              <col class="stop-2" id="stop_id_317" data-stop-id="317" data-is-timepoint="true">
+              <col class="stop-3" id="stop_id_48y" data-stop-id="48y" data-is-timepoint="true">
+              <col class="stop-4" id="stop_id_vs" data-stop-id="vs" data-is-timepoint="true">
+              <col class="stop-5" id="stop_id_2ab" data-stop-id="2ab" data-is-timepoint="true">
+              <col class="stop-6" id="stop_id_17a" data-stop-id="17a" data-is-timepoint="true">
+              <col class="stop-7" id="stop_id_41g" data-stop-id="41g" data-is-timepoint="true">
+              <col class="stop-8" id="stop_id_3en" data-stop-id="3en" data-is-timepoint="true">
+              <col class="stop-9" id="stop_id_428" data-stop-id="428" data-is-timepoint="true">
+              <col class="stop-10" id="stop_id_294" data-stop-id="294" data-is-timepoint="true">
+              <col class="stop-11" id="stop_id_o1" data-stop-id="o1" data-is-timepoint="true">
+              <col class="stop-12" id="stop_id_15w" data-stop-id="15w" data-is-timepoint="true">
+              <col class="stop-13" id="stop_id_1xn" data-stop-id="1xn" data-is-timepoint="true">
+              <col class="stop-14" id="stop_id_s0" data-stop-id="s0" data-is-timepoint="true">
+              <col class="stop-15" id="stop_id_2sj" data-stop-id="2sj" data-is-timepoint="true">
+              <col class="stop-16" id="stop_id_10f" data-stop-id="10f" data-is-timepoint="true">
+              <col class="stop-17" id="stop_id_v9" data-stop-id="v9" data-is-timepoint="true">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col" width="5.56%">
+                  <div class="stop-name">Anekal</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="5.56%">
+                  <div class="stop-name">Chowdareddy Circle</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="5.56%">
+                  <div class="stop-name">Anekal Circle</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="5.56%">
+                  <div class="stop-name">Janatha Colony</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="5.56%">
+                  <div class="stop-name">Kavala Hosahalli</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="5.56%">
+                  <div class="stop-name">Chikka Hagade Gate</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="5.56%">
+                  <div class="stop-name">Karpura Gate</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="5.56%">
+                  <div class="stop-name">Avadadenahalli Gate</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="5.56%">
+                  <div class="stop-name">Byagadadenahalli Gate</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="5.56%">
+                  <div class="stop-name">VBHC Apartment Gate</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="5.56%">
+                  <div class="stop-name">RK Farm</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="5.56%">
+                  <div class="stop-name">Marsuru Gate</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="5.56%">
+                  <div class="stop-name">Ramakrishnapura Gate</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="5.56%">
+                  <div class="stop-name">Iggluru</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="5.56%">
+                  <div class="stop-name">Surya Nagara</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="5.56%">
+                  <div class="stop-name">Suryacity Gate</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="5.56%">
+                  <div class="stop-name">Chandapura KEB</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="5.56%">
+                  <div class="stop-name">Chandapura</div>
+                  <div class="stop-code"></div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="trip-row" id="trip_id_4ic">
+                <td class="stop-time am"><span class="stop-time-text">9:15am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:16am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:18am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:20am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:21am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:23am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:25am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:26am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:28am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:30am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:31am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:33am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:35am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:36am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:38am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:40am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:41am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:43am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_1by">
+                <td class="stop-time am"><span class="stop-time-text">10:30am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:31am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:33am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:35am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:36am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:38am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:40am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:41am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:43am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:45am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:46am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:48am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:50am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:51am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:53am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:55am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:56am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:58am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_42w">
+                <td class="stop-time am"><span class="stop-time-text">10:50am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:51am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:53am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:55am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:56am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:58am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:00am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:01am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:03am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:05am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:06am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:08am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:10am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:11am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:13am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:15am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:16am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:18am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_4cb">
+                <td class="stop-time am"><span class="stop-time-text">11:40am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:41am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:43am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:45am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:46am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:48am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:50am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:51am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:53am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:55am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:56am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:58am</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:01pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:03pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:05pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:06pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:08pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_d8">
+                <td class="stop-time pm"><span class="stop-time-text">12:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:01pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:03pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:05pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:06pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:08pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:10pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:11pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:13pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:15pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:16pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:18pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:20pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:21pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:23pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:25pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:26pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:28pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_4ys">
+                <td class="stop-time pm"><span class="stop-time-text">12:50pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:51pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:53pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:55pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:56pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:58pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:01pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:03pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:05pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:06pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:08pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:10pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:11pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:13pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:15pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:16pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:18pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_4ps">
+                <td class="stop-time pm"><span class="stop-time-text">1:10pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:11pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:13pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:15pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:16pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:18pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:20pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:21pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:23pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:25pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:26pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:28pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:30pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:31pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:33pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:35pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:36pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:38pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_505">
+                <td class="stop-time pm"><span class="stop-time-text">2:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:01pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:03pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:05pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:06pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:08pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:10pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:11pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:13pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:15pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:16pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:18pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:20pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:21pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:23pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:25pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:26pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:28pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_2yz">
+                <td class="stop-time pm"><span class="stop-time-text">2:20pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:21pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:23pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:25pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:26pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:28pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:30pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:31pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:33pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:35pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:36pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:38pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:40pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:41pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:43pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:45pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:46pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:48pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_18w">
+                <td class="stop-time pm"><span class="stop-time-text">3:35pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:36pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:38pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:40pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:41pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:43pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:45pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:46pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:48pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:50pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:51pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:53pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:55pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:56pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">3:58pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:01pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:03pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_jp">
+                <td class="stop-time pm"><span class="stop-time-text">4:10pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:11pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:13pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:15pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:16pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:18pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:20pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:21pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:23pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:25pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:26pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:28pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:30pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:31pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:33pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:35pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:36pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:38pm</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

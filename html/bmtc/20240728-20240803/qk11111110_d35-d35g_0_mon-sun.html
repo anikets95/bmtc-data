@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'YOUR MAPBOX ACCESS TOKEN';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+</head>
+
+<body><!-- Timetable generated on 2024-07-26T20:07:00.223Z using GTFS-to-HTML version 2.6.11 -->
+  <div class="timetable-page menu-type-jump">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center gap-2">
+        <div class="route-color-swatch-large flex-none" style="background-color: #000000; color: #FFFFFF;">D35-D35G</div>
+        <div>Route D35-D35G</div>
+      </h1>
+      <div class="effective-date text-gray-600 mt-2">Effective July 24, 2024</div>
+      <div class="timetable mb-10" id="timetable_id_qk11111110" data-day-list="Mon-Sun" data-direction-name="Depot-35 Gate" data-timetable-id="qk|1111111|0" data-direction-id="0" data-route-id="qk">
+        <div class="mb-2">
+          <h2 class="text-xl">Route D35-D35G - Depot-35 Kannalli to Depot-35 Gate | Monday-Sunday</h2>
+        </div>
+        <div class="map" id="map_timetable_id_qk11111110"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_qk11111110",
+              "routes": {
+                "19": {
+                  "route_id": "19",
+                  "agency_id": "1",
+                  "route_short_name": "242-U LXMP-D35G",
+                  "route_long_name": "Lakshmipura ⇔ Depot-35 Gate",
+                  "route_type": 3
+                },
+                "br": {
+                  "route_id": "br",
+                  "agency_id": "1",
+                  "route_short_name": "240-C D35G-KCH",
+                  "route_long_name": "Depot-35 Gate ⇔ Kachohalli",
+                  "route_type": 3
+                },
+                "rc": {
+                  "route_id": "rc",
+                  "agency_id": "1",
+                  "route_short_name": "241-B D35G-KCP",
+                  "route_long_name": "Depot-35 Gate ⇔ Kenchanapura",
+                  "route_type": 3
+                },
+                "5h": {
+                  "route_id": "5h",
+                  "agency_id": "1",
+                  "route_short_name": "242-Q D35G-GGH",
+                  "route_long_name": "Depot-35 Gate ⇔ Gangenahalli",
+                  "route_type": 3
+                },
+                "5n": {
+                  "route_id": "5n",
+                  "agency_id": "1",
+                  "route_short_name": "242-R D35G-JGH",
+                  "route_long_name": "Depot-35 Gate ⇔ Jogerahalli",
+                  "route_type": 3
+                },
+                "op": {
+                  "route_id": "op",
+                  "agency_id": "1",
+                  "route_short_name": "242 D35G-KMT",
+                  "route_long_name": "Depot-35 Gate ⇔ KR Market (Kalasipalya)",
+                  "route_type": 3
+                },
+                "qg": {
+                  "route_id": "qg",
+                  "agency_id": "1",
+                  "route_short_name": "242-B KBS-D35G",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Depot-35 Gate",
+                  "route_type": 3
+                },
+                "sc": {
+                  "route_id": "sc",
+                  "agency_id": "1",
+                  "route_short_name": "242 D35G-TVK",
+                  "route_long_name": "Depot-35 Gate ⇔ Tavarekere",
+                  "route_type": 3
+                },
+                "jo": {
+                  "route_id": "jo",
+                  "agency_id": "1",
+                  "route_short_name": "245-C D35G-KDBG",
+                  "route_long_name": "Depot-35 Gate ⇔ Kadabagere",
+                  "route_type": 3
+                },
+                "z0": {
+                  "route_id": "z0",
+                  "agency_id": "1",
+                  "route_short_name": "245-D D35G-BTH",
+                  "route_long_name": "Bettahalli ⇔ Depot-35 Gate",
+                  "route_type": 3
+                },
+                "qk": {
+                  "route_id": "qk",
+                  "agency_id": "1",
+                  "route_short_name": "D35-D35G",
+                  "route_long_name": "Depot-35 Kannalli ⇔ Depot-35 Gate",
+                  "route_type": 3
+                },
+                "ri": {
+                  "route_id": "ri",
+                  "agency_id": "1",
+                  "route_short_name": "D35G-JPT",
+                  "route_long_name": "Depot-35 Gate ⇔ Janapriya Township",
+                  "route_type": 3
+                },
+                "v0": {
+                  "route_id": "v0",
+                  "agency_id": "1",
+                  "route_short_name": "G-7 D35G-KBS-SBS",
+                  "route_long_name": "Depot-35 Gate ⇔ Shivajinagara Bus Station",
+                  "route_type": 3
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [77.44273, 12.97255],
+                      [77.44266, 12.97267]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "2fv",
+                    "stop_name": "Depot-35 Gate",
+                    "routes": ["br", "rc", "19", "5h", "5n", "op", "qg", "sc", "jo", "z0", "qk", "ri", "v0"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.44268, 12.9726]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "40i",
+                    "stop_name": "Depot-35 Kannalli",
+                    "routes": ["qk"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.44263, 12.97253]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table class="table-vertical" summary="This table shows schedules for a selection of key stops on the route for Route D35-D35G - Depot-35 Kannalli to Depot-35 Gate Mon-Sun. Stops and their schedule times are listed in the columns." data-orientation="vertical">
+            <caption class="sr-only">Route D35-D35G - Depot-35 Kannalli to Depot-35 Gate | Mon-Sun</caption>
+            <colgroup>
+              <col class="stop-0" id="stop_id_40i" data-stop-id="40i" data-is-timepoint="true">
+              <col class="stop-1" id="stop_id_2fv" data-stop-id="2fv" data-is-timepoint="true">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col" width="50.00%">
+                  <div class="stop-name">Depot-35 Kannalli</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="50.00%">
+                  <div class="stop-name">Depot-35 Gate</div>
+                  <div class="stop-code"></div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="trip-row" id="trip_id_3yv">
+                <td class="stop-time am"><span class="stop-time-text">6:15am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:15am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_jh">
+                <td class="stop-time am"><span class="stop-time-text">6:30am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:30am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_2cr">
+                <td class="stop-time am"><span class="stop-time-text">6:40am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:40am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_4fw">
+                <td class="stop-time am"><span class="stop-time-text">6:45am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:45am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_1lc">
+                <td class="stop-time am"><span class="stop-time-text">6:55am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:55am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_1k3">
+                <td class="stop-time am"><span class="stop-time-text">7:10am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:10am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_40w">
+                <td class="stop-time am"><span class="stop-time-text">7:30am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:30am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_37j">
+                <td class="stop-time am"><span class="stop-time-text">7:40am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:40am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_2s0">
+                <td class="stop-time am"><span class="stop-time-text">7:45am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:45am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_1fy">
+                <td class="stop-time am"><span class="stop-time-text">7:50am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:50am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_4q">
+                <td class="stop-time am"><span class="stop-time-text">8:00am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:00am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_jy">
+                <td class="stop-time am"><span class="stop-time-text">8:05am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:05am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_2a7">
+                <td class="stop-time am"><span class="stop-time-text">8:40am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:40am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_2b2">
+                <td class="stop-time am"><span class="stop-time-text">9:00am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:00am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_7q">
+                <td class="stop-time am"><span class="stop-time-text">11:39am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:39am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_4sp">
+                <td class="stop-time pm"><span class="stop-time-text">12:30pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:30pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_4r">
+                <td class="stop-time pm"><span class="stop-time-text">12:45pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:45pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_29o">
+                <td class="stop-time pm"><span class="stop-time-text">12:55pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:55pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_2lf">
+                <td class="stop-time pm"><span class="stop-time-text">1:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:00pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_2zt">
+                <td class="stop-time pm"><span class="stop-time-text">1:15pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:15pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_2fv">
+                <td class="stop-time pm"><span class="stop-time-text">1:30pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:30pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_nu">
+                <td class="stop-time pm"><span class="stop-time-text">1:35pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:35pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_273">
+                <td class="stop-time pm"><span class="stop-time-text">1:40pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:40pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_2hh">
+                <td class="stop-time pm"><span class="stop-time-text">1:45pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:45pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_49c">
+                <td class="stop-time pm"><span class="stop-time-text">1:55pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:55pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_10s">
+                <td class="stop-time pm"><span class="stop-time-text">2:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:00pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_mh">
+                <td class="stop-time pm"><span class="stop-time-text">2:10pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:10pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_8h">
+                <td class="stop-time pm"><span class="stop-time-text">2:15pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:15pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_4mo">
+                <td class="stop-time pm"><span class="stop-time-text">2:25pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:25pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_4xa">
+                <td class="stop-time pm"><span class="stop-time-text">2:30pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:30pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_32i">
+                <td class="stop-time pm"><span class="stop-time-text">2:45pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:45pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_4xt">
+                <td class="stop-time pm"><span class="stop-time-text">6:49pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:49pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_24k">
+                <td class="stop-time pm"><span class="stop-time-text">7:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:00pm</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

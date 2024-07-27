@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'YOUR MAPBOX ACCESS TOKEN';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+</head>
+
+<body><!-- Timetable generated on 2024-07-26T20:07:05.102Z using GTFS-to-HTML version 2.6.11 -->
+  <div class="timetable-page menu-type-jump">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center gap-2">
+        <div class="route-color-swatch-large flex-none" style="background-color: #000000; color: #FFFFFF;">D30-PTN</div>
+        <div>Route D30-PTN</div>
+      </h1>
+      <div class="effective-date text-gray-600 mt-2">Effective July 24, 2024</div>
+      <div class="timetable mb-10" id="timetable_id_ho11111110" data-day-list="Mon-Sun" data-direction-name="Puttenahalli" data-timetable-id="ho|1111111|0" data-direction-id="0" data-route-id="ho">
+        <div class="mb-2">
+          <h2 class="text-xl">Route D30-PTN - Depot-30 Puttenahalli to Puttenahalli | Monday-Sunday</h2>
+        </div>
+        <div class="map" id="map_timetable_id_ho11111110"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_ho11111110",
+              "routes": {
+                "ho": {
+                  "route_id": "ho",
+                  "agency_id": "1",
+                  "route_short_name": "D30-PTN",
+                  "route_long_name": "Depot-30 Puttenahalli ⇔ Puttenahalli",
+                  "route_type": 3
+                },
+                "1t": {
+                  "route_id": "1t",
+                  "agency_id": "1",
+                  "route_short_name": "285-MJ HBLB-GST",
+                  "route_long_name": "Hebbala Bridge ⇔ Ghati Subramanya",
+                  "route_type": 3
+                },
+                "cf": {
+                  "route_id": "cf",
+                  "agency_id": "1",
+                  "route_short_name": "285-W",
+                  "route_long_name": "KR Market ⇔ Dibbur",
+                  "route_type": 3
+                },
+                "hb": {
+                  "route_id": "hb",
+                  "agency_id": "1",
+                  "route_short_name": "285-X",
+                  "route_long_name": "KR Market ⇔ Dibbur",
+                  "route_type": 3
+                },
+                "n7": {
+                  "route_id": "n7",
+                  "agency_id": "1",
+                  "route_short_name": "285-M",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Doddaballapura Bus Stand",
+                  "route_type": 3
+                },
+                "r8": {
+                  "route_id": "r8",
+                  "agency_id": "1",
+                  "route_short_name": "285-M KBS-BMSIT",
+                  "route_long_name": "Kempegowda Bus Station ⇔ BMSIT College Campous Yelahanka",
+                  "route_type": 3
+                },
+                "vh": {
+                  "route_id": "vh",
+                  "agency_id": "1",
+                  "route_short_name": "285RC",
+                  "route_long_name": "Hesaraghatta ⇔ Kempegowda Bus Station",
+                  "route_type": 3
+                },
+                "w": {
+                  "route_id": "w",
+                  "agency_id": "1",
+                  "route_short_name": "285-N",
+                  "route_long_name": "KR Market ⇔ Tharahunase",
+                  "route_type": 3
+                },
+                "w9": {
+                  "route_id": "w9",
+                  "agency_id": "1",
+                  "route_short_name": "285-CA",
+                  "route_long_name": "KR Market ⇔ Jinke Bachahalli",
+                  "route_type": 3
+                },
+                "y9": {
+                  "route_id": "y9",
+                  "agency_id": "1",
+                  "route_short_name": "285-C KBS-DTMR",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Dodda Tumkur",
+                  "route_type": 3
+                },
+                "gc": {
+                  "route_id": "gc",
+                  "agency_id": "1",
+                  "route_short_name": "289-AB PTH-BYH",
+                  "route_long_name": "Puttenahalli ⇔ Byalahalli",
+                  "route_type": 3
+                },
+                "1e": {
+                  "route_id": "1e",
+                  "agency_id": "1",
+                  "route_short_name": "297-G PTH-DCH",
+                  "route_long_name": "Puttenahalli ⇔ Dodda Cheemanahalli",
+                  "route_type": 3
+                },
+                "6x": {
+                  "route_id": "6x",
+                  "agency_id": "1",
+                  "route_short_name": "PTH-YSTF",
+                  "route_long_name": "Puttenahalli ⇔ 5th Phase Yelahanka New Town",
+                  "route_type": 3
+                },
+                "b7": {
+                  "route_id": "b7",
+                  "agency_id": "1",
+                  "route_short_name": "PTH-MADT",
+                  "route_long_name": "Puttenahalli ⇔ Malya Adhithi School",
+                  "route_type": 3
+                },
+                "f0": {
+                  "route_id": "f0",
+                  "agency_id": "1",
+                  "route_short_name": "PTH-JLOW",
+                  "route_long_name": "Puttenahalli ⇔ Judicial Layout Water Tank",
+                  "route_type": 3
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [77.57771, 13.11003],
+                      [77.57799, 13.11044],
+                      [77.57831, 13.11067],
+                      [77.5799, 13.11122],
+                      [77.58024, 13.11016]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "38f",
+                    "stop_name": "Depot-30 Puttenahalli",
+                    "routes": ["ho"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.57762, 13.11009]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "og",
+                    "stop_name": "Puttenahalli",
+                    "routes": ["1t", "cf", "hb", "n7", "r8", "vh", "w", "w9", "y9", "gc", "1e", "6x", "b7", "f0", "ho"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.58024, 13.11016]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table class="table-vertical" summary="This table shows schedules for a selection of key stops on the route for Route D30-PTN - Depot-30 Puttenahalli to Puttenahalli Mon-Sun. Stops and their schedule times are listed in the columns." data-orientation="vertical">
+            <caption class="sr-only">Route D30-PTN - Depot-30 Puttenahalli to Puttenahalli | Mon-Sun</caption>
+            <colgroup>
+              <col class="stop-0" id="stop_id_38f" data-stop-id="38f" data-is-timepoint="true">
+              <col class="stop-1" id="stop_id_og" data-stop-id="og" data-is-timepoint="true">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col" width="50.00%">
+                  <div class="stop-name">Depot-30 Puttenahalli</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="50.00%">
+                  <div class="stop-name">Puttenahalli</div>
+                  <div class="stop-code"></div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="trip-row" id="trip_id_5v">
+                <td class="stop-time pm"><span class="stop-time-text">2:25pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:25pm</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

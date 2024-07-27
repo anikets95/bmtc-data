@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'YOUR MAPBOX ACCESS TOKEN';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+</head>
+
+<body><!-- Timetable generated on 2024-07-26T20:07:31.754Z using GTFS-to-HTML version 2.6.11 -->
+  <div class="timetable-page menu-type-jump">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center gap-2">
+        <div class="route-color-swatch-large flex-none" style="background-color: #000000; color: #FFFFFF;">365-Z BGT-MMDH</div>
+        <div>Route 365-Z BGT-MMDH</div>
+      </h1>
+      <div class="effective-date text-gray-600 mt-2">Effective July 24, 2024</div>
+      <div class="timetable mb-10" id="timetable_id_pt11111110" data-day-list="Mon-Sun" data-direction-name="M Medahalli" data-timetable-id="pt|1111111|0" data-direction-id="0" data-route-id="pt">
+        <div class="mb-2">
+          <h2 class="text-xl">Route 365-Z BGT-MMDH - Anekal to M Medahalli | Monday-Sunday</h2>
+        </div>
+        <div class="map" id="map_timetable_id_pt11111110"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_pt11111110",
+              "routes": {
+                "3q": {
+                  "route_id": "3q",
+                  "agency_id": "1",
+                  "route_short_name": "356 ANK-D38G",
+                  "route_long_name": "Anekal ⇔ Depot-38 Gate",
+                  "route_type": 3
+                },
+                "9n": {
+                  "route_id": "9n",
+                  "agency_id": "1",
+                  "route_short_name": "356-Z",
+                  "route_long_name": "Chandapura ⇔ Anekal",
+                  "route_type": 3
+                },
+                "vl": {
+                  "route_id": "vl",
+                  "agency_id": "1",
+                  "route_short_name": "356-Z D38-ANK",
+                  "route_long_name": "Depot-38 Gate ⇔ Anekal",
+                  "route_type": 3
+                },
+                "wp": {
+                  "route_id": "wp",
+                  "agency_id": "1",
+                  "route_short_name": "356-M",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Anekal",
+                  "route_type": 3
+                },
+                "fj": {
+                  "route_id": "fj",
+                  "agency_id": "1",
+                  "route_short_name": "361-C",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Anekal",
+                  "route_type": 3
+                },
+                "j7": {
+                  "route_id": "j7",
+                  "agency_id": "1",
+                  "route_short_name": "365-P D27-ANK",
+                  "route_long_name": "Depot-27 Gate ⇔ Anekal",
+                  "route_type": 3
+                },
+                "pt": {
+                  "route_id": "pt",
+                  "agency_id": "1",
+                  "route_short_name": "365-Z BGT-MMDH",
+                  "route_long_name": "Bannerughatta Circle ⇔ M Medahalli",
+                  "route_type": 3
+                },
+                "qc": {
+                  "route_id": "qc",
+                  "agency_id": "1",
+                  "route_short_name": "365-Z",
+                  "route_long_name": "Anekal ⇔ Bannerughatta Circle",
+                  "route_type": 3
+                },
+                "r6": {
+                  "route_id": "r6",
+                  "agency_id": "1",
+                  "route_short_name": "365-P",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Anekal",
+                  "route_type": 3
+                },
+                "y5": {
+                  "route_id": "y5",
+                  "agency_id": "1",
+                  "route_short_name": "365-P D34-ANK",
+                  "route_long_name": "Depot-34 Gate ⇔ Anekal",
+                  "route_type": 3
+                },
+                "t1": {
+                  "route_id": "t1",
+                  "agency_id": "1",
+                  "route_short_name": "366-Z",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Anekal",
+                  "route_type": 3
+                },
+                "et": {
+                  "route_id": "et",
+                  "agency_id": "1",
+                  "route_short_name": "399-F",
+                  "route_long_name": "Hosakote Bus Stand (Old) ⇔ Anekal",
+                  "route_type": 3
+                },
+                "q5": {
+                  "route_id": "q5",
+                  "agency_id": "1",
+                  "route_short_name": "399-F ANK-ATB",
+                  "route_long_name": "Anekal ⇔ Attibele Bus Stand",
+                  "route_type": 3
+                },
+                "8b": {
+                  "route_id": "8b",
+                  "agency_id": "1",
+                  "route_short_name": "V-356M",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Anekal",
+                  "route_type": 3
+                },
+                "ik": {
+                  "route_id": "ik",
+                  "agency_id": "1",
+                  "route_short_name": "V-356M FLY",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Anekal",
+                  "route_type": 3
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [77.58123, 12.81369],
+                      [77.58119, 12.8136],
+                      [77.58118, 12.81347],
+                      [77.58121, 12.81336],
+                      [77.58135, 12.8132],
+                      [77.58152, 12.81308],
+                      [77.58176, 12.81294],
+                      [77.58221, 12.81271],
+                      [77.58434, 12.81175],
+                      [77.58579, 12.81106],
+                      [77.58863, 12.80952],
+                      [77.5894, 12.80908],
+                      [77.58996, 12.80873],
+                      [77.59155, 12.80747],
+                      [77.5933, 12.80604],
+                      [77.5977, 12.8014],
+                      [77.59798, 12.80114],
+                      [77.5984, 12.80078],
+                      [77.60017, 12.79936],
+                      [77.60034, 12.79925],
+                      [77.60065, 12.79909],
+                      [77.60107, 12.79889],
+                      [77.60145, 12.79874],
+                      [77.60285, 12.79828],
+                      [77.60314, 12.79817],
+                      [77.60503, 12.79756],
+                      [77.60546, 12.79745],
+                      [77.60604, 12.79736],
+                      [77.60655, 12.79733],
+                      [77.60751, 12.79736],
+                      [77.60829, 12.79742],
+                      [77.609, 12.7975],
+                      [77.60952, 12.79761],
+                      [77.60972, 12.79767],
+                      [77.61037, 12.79792],
+                      [77.61051, 12.79796],
+                      [77.61084, 12.79803],
+                      [77.61111, 12.79806],
+                      [77.61159, 12.79808],
+                      [77.61202, 12.79805],
+                      [77.61241, 12.79797],
+                      [77.61275, 12.79786],
+                      [77.61482, 12.79699],
+                      [77.6187, 12.79529],
+                      [77.61939, 12.79497],
+                      [77.62086, 12.79438],
+                      [77.62092, 12.79429],
+                      [77.6213, 12.79397],
+                      [77.62206, 12.79308],
+                      [77.62229, 12.7929],
+                      [77.62236, 12.79288],
+                      [77.62252, 12.79273],
+                      [77.62311, 12.79225],
+                      [77.62348, 12.79198],
+                      [77.62345, 12.79187],
+                      [77.62326, 12.79205],
+                      [77.62232, 12.79284],
+                      [77.62229, 12.7929]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [77.62348, 12.79198],
+                      [77.62378, 12.79169],
+                      [77.62441, 12.79118],
+                      [77.62532, 12.79039],
+                      [77.62553, 12.79023],
+                      [77.62604, 12.78996],
+                      [77.62841, 12.78907],
+                      [77.6293, 12.78877],
+                      [77.62936, 12.78872],
+                      [77.62953, 12.78865],
+                      [77.6329, 12.78749],
+                      [77.63331, 12.78736],
+                      [77.63393, 12.78719],
+                      [77.63443, 12.78708],
+                      [77.63479, 12.78702],
+                      [77.63583, 12.78703],
+                      [77.63607, 12.787],
+                      [77.63627, 12.78695],
+                      [77.63642, 12.78689],
+                      [77.6368, 12.78669],
+                      [77.63691, 12.78665],
+                      [77.63703, 12.78663],
+                      [77.63756, 12.78664],
+                      [77.63778, 12.78661],
+                      [77.63789, 12.78657],
+                      [77.63807, 12.78643],
+                      [77.63856, 12.78588],
+                      [77.63926, 12.78535],
+                      [77.63973, 12.78486],
+                      [77.64178, 12.78231],
+                      [77.64226, 12.78166],
+                      [77.64365, 12.7792],
+                      [77.64372, 12.7791],
+                      [77.64379, 12.77896],
+                      [77.64386, 12.77891],
+                      [77.64416, 12.77834],
+                      [77.64511, 12.77668],
+                      [77.6458, 12.77541],
+                      [77.64615, 12.77488],
+                      [77.64636, 12.77461],
+                      [77.64722, 12.77364],
+                      [77.64739, 12.77347],
+                      [77.64927, 12.77138],
+                      [77.65161, 12.76886],
+                      [77.65173, 12.76867],
+                      [77.65187, 12.7685],
+                      [77.6523, 12.76808],
+                      [77.65248, 12.76779],
+                      [77.65267, 12.7674],
+                      [77.65348, 12.76533],
+                      [77.6536, 12.76512],
+                      [77.65399, 12.76455],
+                      [77.65408, 12.76432],
+                      [77.65412, 12.76409],
+                      [77.65412, 12.76397],
+                      [77.65407, 12.76354],
+                      [77.65407, 12.76332],
+                      [77.65414, 12.76301],
+                      [77.6542, 12.76283],
+                      [77.65433, 12.76257],
+                      [77.65536, 12.76082],
+                      [77.65557, 12.76039],
+                      [77.65565, 12.76014],
+                      [77.65583, 12.75935],
+                      [77.65612, 12.75787],
+                      [77.65613, 12.75776],
+                      [77.65618, 12.75755],
+                      [77.65628, 12.75726],
+                      [77.65643, 12.757],
+                      [77.65652, 12.75692],
+                      [77.65735, 12.75517],
+                      [77.65901, 12.75125],
+                      [77.66031, 12.74827],
+                      [77.6605, 12.74788],
+                      [77.66069, 12.74754],
+                      [77.66095, 12.74722],
+                      [77.66142, 12.74678],
+                      [77.66702, 12.74243],
+                      [77.66726, 12.74222],
+                      [77.66803, 12.74163],
+                      [77.66821, 12.74147],
+                      [77.66852, 12.74116],
+                      [77.66882, 12.74072],
+                      [77.66896, 12.74041],
+                      [77.66906, 12.74013],
+                      [77.6691, 12.73997],
+                      [77.66913, 12.73967],
+                      [77.66906, 12.73967],
+                      [77.66905, 12.73985],
+                      [77.66893, 12.73982],
+                      [77.66854, 12.73977],
+                      [77.66858, 12.73936],
+                      [77.66909, 12.73934],
+                      [77.66906, 12.73967]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [77.66913, 12.73967],
+                      [77.66921, 12.73866],
+                      [77.66931, 12.73775],
+                      [77.66947, 12.73571],
+                      [77.66955, 12.73446],
+                      [77.6696, 12.73418],
+                      [77.66971, 12.73379],
+                      [77.66984, 12.73349],
+                      [77.67012, 12.73297],
+                      [77.67043, 12.73249],
+                      [77.67057, 12.73231],
+                      [77.67089, 12.73196],
+                      [77.67132, 12.7317],
+                      [77.67687, 12.72881],
+                      [77.67723, 12.72858],
+                      [77.67759, 12.72825],
+                      [77.6778, 12.72799],
+                      [77.67807, 12.7276],
+                      [77.67814, 12.72747],
+                      [77.679, 12.72546],
+                      [77.67913, 12.72521],
+                      [77.6795, 12.72463],
+                      [77.67976, 12.72435],
+                      [77.68117, 12.72329],
+                      [77.68156, 12.72298],
+                      [77.6816, 12.72288],
+                      [77.68189, 12.72256],
+                      [77.68218, 12.72217],
+                      [77.6824, 12.72178],
+                      [77.68254, 12.7214],
+                      [77.68262, 12.72101],
+                      [77.6827, 12.71986],
+                      [77.68276, 12.71965],
+                      [77.68316, 12.71859],
+                      [77.68353, 12.71786],
+                      [77.68372, 12.71757],
+                      [77.68404, 12.71719],
+                      [77.68426, 12.717],
+                      [77.6844, 12.71693],
+                      [77.68458, 12.71688],
+                      [77.68551, 12.71677],
+                      [77.68573, 12.71678],
+                      [77.68618, 12.71686],
+                      [77.68649, 12.71697],
+                      [77.68663, 12.71705],
+                      [77.6868, 12.71716],
+                      [77.68711, 12.71741],
+                      [77.68743, 12.71774],
+                      [77.68755, 12.71791],
+                      [77.68808, 12.71881],
+                      [77.68837, 12.71919],
+                      [77.68857, 12.71949],
+                      [77.68877, 12.71987],
+                      [77.68883, 12.71995],
+                      [77.6889, 12.72001],
+                      [77.68898, 12.72005],
+                      [77.68913, 12.72008],
+                      [77.69017, 12.72006],
+                      [77.69051, 12.72004],
+                      [77.69065, 12.72005],
+                      [77.69094, 12.71996],
+                      [77.69119, 12.71983],
+                      [77.6929, 12.71867],
+                      [77.69418, 12.71783],
+                      [77.69434, 12.7177],
+                      [77.69437, 12.71759],
+                      [77.69464, 12.71735],
+                      [77.69478, 12.71716],
+                      [77.69483, 12.71702],
+                      [77.69486, 12.71683],
+                      [77.69488, 12.71652],
+                      [77.69494, 12.71634],
+                      [77.695, 12.71622],
+                      [77.69506, 12.71616],
+                      [77.69512, 12.71617],
+                      [77.69653, 12.71609],
+                      [77.69709, 12.71611],
+                      [77.69773, 12.71619],
+                      [77.69897, 12.71642],
+                      [77.6992, 12.7165],
+                      [77.6995, 12.71666],
+                      [77.69987, 12.71694],
+                      [77.69999, 12.71697],
+                      [77.70004, 12.71696],
+                      [77.70011, 12.71691],
+                      [77.70016, 12.71677],
+                      [77.6999, 12.71591],
+                      [77.69981, 12.71569],
+                      [77.69955, 12.71486],
+                      [77.6995, 12.71459],
+                      [77.69948, 12.71392],
+                      [77.69949, 12.7114],
+                      [77.69945, 12.71129],
+                      [77.69948, 12.71086],
+                      [77.69941, 12.70992],
+                      [77.69925, 12.70923],
+                      [77.69921, 12.70915],
+                      [77.69913, 12.70912],
+                      [77.69853, 12.70914],
+                      [77.69846, 12.7091],
+                      [77.69842, 12.70911],
+                      [77.69839, 12.70914],
+                      [77.69807, 12.70917],
+                      [77.69703, 12.70932],
+                      [77.69641, 12.70939],
+                      [77.69839, 12.70914],
+                      [77.69839, 12.70922],
+                      [77.69765, 12.70996],
+                      [77.6976, 12.71004],
+                      [77.69764, 12.71015],
+                      [77.6978, 12.7103],
+                      [77.69847, 12.71082],
+                      [77.69887, 12.71104],
+                      [77.69927, 12.71119],
+                      [77.69945, 12.71129],
+                      [77.69956, 12.71139],
+                      [77.7007, 12.71177],
+                      [77.70215, 12.71231],
+                      [77.70394, 12.71303],
+                      [77.70418, 12.71315],
+                      [77.70437, 12.71327],
+                      [77.70481, 12.71362],
+                      [77.70678, 12.71534],
+                      [77.70688, 12.71538],
+                      [77.70934, 12.71751],
+                      [77.7112, 12.71892],
+                      [77.71293, 12.72018],
+                      [77.71345, 12.72042],
+                      [77.71388, 12.72054],
+                      [77.71423, 12.72059],
+                      [77.71531, 12.72067],
+                      [77.71577, 12.72072],
+                      [77.71613, 12.72078],
+                      [77.71678, 12.72095],
+                      [77.71694, 12.72101],
+                      [77.7176, 12.72137],
+                      [77.71825, 12.72169],
+                      [77.71843, 12.72179],
+                      [77.71855, 12.72188],
+                      [77.71894, 12.72223],
+                      [77.71932, 12.72264],
+                      [77.7212, 12.72478],
+                      [77.72308, 12.72684],
+                      [77.72581, 12.7299],
+                      [77.72961, 12.73412],
+                      [77.7306, 12.7352],
+                      [77.73115, 12.73583],
+                      [77.73218, 12.73695],
+                      [77.73285, 12.7368],
+                      [77.73449, 12.73635],
+                      [77.73476, 12.73627],
+                      [77.73478, 12.73625],
+                      [77.73472, 12.73598],
+                      [77.73451, 12.73531],
+                      [77.73446, 12.73509],
+                      [77.73522, 12.73487],
+                      [77.73528, 12.73483],
+                      [77.73531, 12.73475],
+                      [77.73525, 12.73331],
+                      [77.73613, 12.73326],
+                      [77.73714, 12.73323],
+                      [77.73717, 12.73297],
+                      [77.73752, 12.73306],
+                      [77.7376, 12.7331],
+                      [77.73765, 12.73316],
+                      [77.73767, 12.73324],
+                      [77.73767, 12.73338],
+                      [77.7377, 12.73361],
+                      [77.73775, 12.73366],
+                      [77.73786, 12.73371],
+                      [77.73845, 12.73393],
+                      [77.73871, 12.73401],
+                      [77.73893, 12.73401],
+                      [77.73929, 12.73392]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "1t3",
+                    "stop_name": "Anekal",
+                    "routes": ["3q", "9n", "vl", "wp", "fj", "j7", "pt", "qc", "r6", "y5", "t1", "et", "q5", "8b", "ik"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.69641, 12.70939]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "21s",
+                    "stop_name": "Besthamanahalli",
+                    "routes": ["pt", "et"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.72666, 12.73087]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "2hb",
+                    "stop_name": "M Medahalli",
+                    "routes": ["pt"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.73928, 12.73392]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "2nb",
+                    "stop_name": "Chowdareddy Circle",
+                    "routes": ["3q", "9n", "vl", "wp", "fj", "pt", "qc", "r6", "et", "ik"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.69931, 12.71125]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "2x2",
+                    "stop_name": "Dinnur Sudhamanagara",
+                    "routes": ["pt"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.70584, 12.71452]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "3nd",
+                    "stop_name": "Tattanalli Gate",
+                    "routes": ["pt", "et"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.73079, 12.73549]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "435",
+                    "stop_name": "Haldenahalli",
+                    "routes": ["pt", "et"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.71288, 12.72017]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "48u",
+                    "stop_name": "Karpura Gate",
+                    "routes": ["pt", "et"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.72088, 12.72449]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table class="table-vertical" summary="This table shows schedules for a selection of key stops on the route for Route 365-Z BGT-MMDH - Anekal to M Medahalli Mon-Sun. Stops and their schedule times are listed in the columns." data-orientation="vertical">
+            <caption class="sr-only">Route 365-Z BGT-MMDH - Anekal to M Medahalli | Mon-Sun</caption>
+            <colgroup>
+              <col class="stop-0" id="stop_id_1t3" data-stop-id="1t3" data-is-timepoint="true">
+              <col class="stop-1" id="stop_id_2nb" data-stop-id="2nb" data-is-timepoint="true">
+              <col class="stop-2" id="stop_id_2x2" data-stop-id="2x2" data-is-timepoint="true">
+              <col class="stop-3" id="stop_id_435" data-stop-id="435" data-is-timepoint="true">
+              <col class="stop-4" id="stop_id_48u" data-stop-id="48u" data-is-timepoint="true">
+              <col class="stop-5" id="stop_id_21s" data-stop-id="21s" data-is-timepoint="true">
+              <col class="stop-6" id="stop_id_3nd" data-stop-id="3nd" data-is-timepoint="true">
+              <col class="stop-7" id="stop_id_2hb" data-stop-id="2hb" data-is-timepoint="true">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col" width="12.50%">
+                  <div class="stop-name">Anekal</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="12.50%">
+                  <div class="stop-name">Chowdareddy Circle</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="12.50%">
+                  <div class="stop-name">Dinnur Sudhamanagara</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="12.50%">
+                  <div class="stop-name">Haldenahalli</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="12.50%">
+                  <div class="stop-name">Karpura Gate</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="12.50%">
+                  <div class="stop-name">Besthamanahalli</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="12.50%">
+                  <div class="stop-name">Tattanalli Gate</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="12.50%">
+                  <div class="stop-name">M Medahalli</div>
+                  <div class="stop-code"></div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="trip-row" id="trip_id_1tw">
+                <td class="stop-time pm"><span class="stop-time-text">4:10pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:19pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:28pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:38pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:47pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">4:56pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:06pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:15pm</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

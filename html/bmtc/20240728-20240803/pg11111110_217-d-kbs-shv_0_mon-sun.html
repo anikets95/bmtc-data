@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'YOUR MAPBOX ACCESS TOKEN';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+</head>
+
+<body><!-- Timetable generated on 2024-07-26T20:04:34.195Z using GTFS-to-HTML version 2.6.11 -->
+  <div class="timetable-page menu-type-jump">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center gap-2">
+        <div class="route-color-swatch-large flex-none" style="background-color: #000000; color: #FFFFFF;">217-D KBS-SHV</div>
+        <div>Route 217-D KBS-SHV</div>
+      </h1>
+      <div class="effective-date text-gray-600 mt-2">Effective July 24, 2024</div>
+      <div class="timetable mb-10" id="timetable_id_pg11111110" data-day-list="Mon-Sun" data-direction-name="Shobha Hills View Apartment" data-timetable-id="pg|1111111|0" data-direction-id="0" data-route-id="pg">
+        <div class="mb-2">
+          <h2 class="text-xl">Route 217-D KBS-SHV - Banashankari to Balaji Layout 100ft Road | Monday-Sunday</h2>
+        </div>
+        <div class="map" id="map_timetable_id_pg11111110"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_pg11111110",
+              "routes": {
+                "7": {
+                  "route_id": "7",
+                  "agency_id": "1",
+                  "route_short_name": "211-DA",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Mallipalya",
+                  "route_type": 3
+                },
+                "57": {
+                  "route_id": "57",
+                  "agency_id": "1",
+                  "route_short_name": "213-B",
+                  "route_long_name": "Banashankari Bus Station ⇔ Gundanjaneya Swamy Temple Ravagodlu",
+                  "route_type": 3
+                },
+                "70": {
+                  "route_id": "70",
+                  "agency_id": "1",
+                  "route_short_name": "213-D",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Kempaiahnapalya",
+                  "route_type": 3
+                },
+                "71": {
+                  "route_id": "71",
+                  "agency_id": "1",
+                  "route_short_name": "214-DA",
+                  "route_long_name": "Banashankari Bus Station ⇔ Guttepalya",
+                  "route_type": 3
+                },
+                "bs": {
+                  "route_id": "bs",
+                  "agency_id": "1",
+                  "route_short_name": "211-N",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Bidadi",
+                  "route_type": 3
+                },
+                "e7": {
+                  "route_id": "e7",
+                  "agency_id": "1",
+                  "route_short_name": "211",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Somanahalli",
+                  "route_type": 3
+                },
+                "if": {
+                  "route_id": "if",
+                  "agency_id": "1",
+                  "route_short_name": "211-BA",
+                  "route_long_name": "Banashankari Bus Station ⇔ Somanahalli",
+                  "route_type": 3
+                },
+                "li": {
+                  "route_id": "li",
+                  "agency_id": "1",
+                  "route_short_name": "211-K",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Gudipalya",
+                  "route_type": 3
+                },
+                "oc": {
+                  "route_id": "oc",
+                  "agency_id": "1",
+                  "route_short_name": "211-C",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Vaderahalli",
+                  "route_type": 3
+                },
+                "q8": {
+                  "route_id": "q8",
+                  "agency_id": "1",
+                  "route_short_name": "211-Q",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Kattalepalya",
+                  "route_type": 3
+                },
+                "w7": {
+                  "route_id": "w7",
+                  "agency_id": "1",
+                  "route_short_name": "211-P",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Chudahalli",
+                  "route_type": 3
+                },
+                "tu": {
+                  "route_id": "tu",
+                  "agency_id": "1",
+                  "route_short_name": "212",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Agara",
+                  "route_type": 3
+                },
+                "7p": {
+                  "route_id": "7p",
+                  "agency_id": "1",
+                  "route_short_name": "213-M",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Aralalusandra",
+                  "route_type": 3
+                },
+                "8i": {
+                  "route_id": "8i",
+                  "agency_id": "1",
+                  "route_short_name": "213-QA",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Gottigehalli",
+                  "route_type": 3
+                },
+                "9h": {
+                  "route_id": "9h",
+                  "agency_id": "1",
+                  "route_short_name": "213-W",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Dodda Maralawadi",
+                  "route_type": 3
+                },
+                "9u": {
+                  "route_id": "9u",
+                  "agency_id": "1",
+                  "route_short_name": "213-H",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Bettahalli Kaval",
+                  "route_type": 3
+                },
+                "cq": {
+                  "route_id": "cq",
+                  "agency_id": "1",
+                  "route_short_name": "213-F",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Bannigiri",
+                  "route_type": 3
+                },
+                "hh": {
+                  "route_id": "hh",
+                  "agency_id": "1",
+                  "route_short_name": "213-DA",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Byramangala",
+                  "route_type": 3
+                },
+                "hk": {
+                  "route_id": "hk",
+                  "agency_id": "1",
+                  "route_short_name": "213-K",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Gundanjaneya Swamy Temple Ravagodlu",
+                  "route_type": 3
+                },
+                "jk": {
+                  "route_id": "jk",
+                  "agency_id": "1",
+                  "route_short_name": "213-P",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Thayappana Doddy",
+                  "route_type": 3
+                },
+                "m3": {
+                  "route_id": "m3",
+                  "agency_id": "1",
+                  "route_short_name": "213-E",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Thokathimmana Doddy",
+                  "route_type": 3
+                },
+                "pa": {
+                  "route_id": "pa",
+                  "agency_id": "1",
+                  "route_short_name": "213",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Ravagodlu",
+                  "route_type": 3
+                },
+                "px": {
+                  "route_id": "px",
+                  "agency_id": "1",
+                  "route_short_name": "213-A",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Nettigere",
+                  "route_type": 3
+                },
+                "ye": {
+                  "route_id": "ye",
+                  "agency_id": "1",
+                  "route_short_name": "213-WA",
+                  "route_long_name": "Banashankari Bus Station ⇔ Dodda Maralawadi",
+                  "route_type": 3
+                },
+                "4h": {
+                  "route_id": "4h",
+                  "agency_id": "1",
+                  "route_short_name": "214-D",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Tharalu",
+                  "route_type": 3
+                },
+                "lg": {
+                  "route_id": "lg",
+                  "agency_id": "1",
+                  "route_short_name": "214-C",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Mukkodlu",
+                  "route_type": 3
+                },
+                "nx": {
+                  "route_id": "nx",
+                  "agency_id": "1",
+                  "route_short_name": "214-L",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Kadu Jakkasandra",
+                  "route_type": 3
+                },
+                "sf": {
+                  "route_id": "sf",
+                  "agency_id": "1",
+                  "route_short_name": "214-D KMT-TRLE",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Tharalu Estate",
+                  "route_type": 3
+                },
+                "we": {
+                  "route_id": "we",
+                  "agency_id": "1",
+                  "route_short_name": "214-C KBS-MKD",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Mukkodlu",
+                  "route_type": 3
+                },
+                "xj": {
+                  "route_id": "xj",
+                  "agency_id": "1",
+                  "route_short_name": "214-E",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Muni Nagara",
+                  "route_type": 3
+                },
+                "3y": {
+                  "route_id": "3y",
+                  "agency_id": "1",
+                  "route_short_name": "216-B",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Badekatte",
+                  "route_type": 3
+                },
+                "l2": {
+                  "route_id": "l2",
+                  "agency_id": "1",
+                  "route_short_name": "216-A",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Byrasandra",
+                  "route_type": 3
+                },
+                "pg": {
+                  "route_id": "pg",
+                  "agency_id": "1",
+                  "route_short_name": "217-D KBS-SHV",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Shobha Hills View Apartment",
+                  "route_type": 3
+                },
+                "9m": {
+                  "route_id": "9m",
+                  "agency_id": "1",
+                  "route_short_name": "KBS-KMT-GAT",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Gundanjaneya Swamy Temple Ravagodlu",
+                  "route_type": 3
+                },
+                "2f": {
+                  "route_id": "2f",
+                  "agency_id": "1",
+                  "route_short_name": "215-KA",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Anjanapura 2nd Block",
+                  "route_type": 3
+                },
+                "bd": {
+                  "route_id": "bd",
+                  "agency_id": "1",
+                  "route_short_name": "215-N",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Anjanapura",
+                  "route_type": 3
+                },
+                "i4": {
+                  "route_id": "i4",
+                  "agency_id": "1",
+                  "route_short_name": "215-NE",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ 11th Block Anjanapura",
+                  "route_type": 3
+                },
+                "o9": {
+                  "route_id": "o9",
+                  "agency_id": "1",
+                  "route_short_name": "215-U SBS-ANP",
+                  "route_long_name": "Shivajinagara Bus Station ⇔ Anjanapura",
+                  "route_type": 3
+                },
+                "pf": {
+                  "route_id": "pf",
+                  "agency_id": "1",
+                  "route_short_name": "215 KMT-D44",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Anjanapura 10th Block",
+                  "route_type": 3
+                },
+                "y1": {
+                  "route_id": "y1",
+                  "agency_id": "1",
+                  "route_short_name": "215-NC",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Anjanapura 10th Block",
+                  "route_type": 3
+                },
+                "wt": {
+                  "route_id": "wt",
+                  "agency_id": "1",
+                  "route_short_name": "365-AB",
+                  "route_long_name": "Summanahalli ⇔ Bannerughatta National Park",
+                  "route_type": 3
+                },
+                "4l": {
+                  "route_id": "4l",
+                  "agency_id": "1",
+                  "route_short_name": "210-B KBS-KMT-CHG",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Chunchaghatta",
+                  "route_type": 3
+                },
+                "ao": {
+                  "route_id": "ao",
+                  "agency_id": "1",
+                  "route_short_name": "210-B KBS-KMT-KTNR",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Kothanuru Hari Nagara",
+                  "route_type": 3
+                },
+                "kn": {
+                  "route_id": "kn",
+                  "agency_id": "1",
+                  "route_short_name": "214",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Tattaguppe",
+                  "route_type": 3
+                },
+                "iz": {
+                  "route_id": "iz",
+                  "agency_id": "1",
+                  "route_short_name": "215-R",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Kothanuru Hari Nagara",
+                  "route_type": 3
+                },
+                "q2": {
+                  "route_id": "q2",
+                  "agency_id": "1",
+                  "route_short_name": "215-U",
+                  "route_long_name": "Shivajinagara Bus Station ⇔ Kothanuru Hari Nagara",
+                  "route_type": 3
+                },
+                "zj": {
+                  "route_id": "zj",
+                  "agency_id": "1",
+                  "route_short_name": "217-D",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Lakshmi Temple",
+                  "route_type": 3
+                },
+                "ok": {
+                  "route_id": "ok",
+                  "agency_id": "1",
+                  "route_short_name": "KIA-5",
+                  "route_long_name": "Banashankari Bus Station ⇔ Kempegowda International Airport",
+                  "route_type": 3
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [77.57141, 12.97751],
+                      [77.57098, 12.97749],
+                      [77.57111, 12.97932],
+                      [77.57115, 12.97954],
+                      [77.57133, 12.97978],
+                      [77.57152, 12.97998],
+                      [77.57191, 12.98025],
+                      [77.57259, 12.98036],
+                      [77.57276, 12.98036],
+                      [77.57336, 12.98052],
+                      [77.57368, 12.98058],
+                      [77.57429, 12.98065],
+                      [77.57474, 12.98068],
+                      [77.57552, 12.98068],
+                      [77.57769, 12.98057],
+                      [77.57895, 12.98047],
+                      [77.5802, 12.9804],
+                      [77.58072, 12.9803],
+                      [77.58093, 12.98023],
+                      [77.58139, 12.98003],
+                      [77.58197, 12.97965],
+                      [77.58312, 12.97884],
+                      [77.58465, 12.97786],
+                      [77.58605, 12.97684],
+                      [77.58713, 12.97601],
+                      [77.58721, 12.97601],
+                      [77.5873, 12.97597],
+                      [77.58736, 12.97585],
+                      [77.58733, 12.97575],
+                      [77.58725, 12.97569],
+                      [77.58716, 12.97568],
+                      [77.58665, 12.97448],
+                      [77.5866, 12.9743],
+                      [77.58658, 12.97409],
+                      [77.58677, 12.97263],
+                      [77.58698, 12.97136],
+                      [77.58716, 12.96954],
+                      [77.58745, 12.96806],
+                      [77.58752, 12.96796],
+                      [77.58761, 12.96791],
+                      [77.58774, 12.96787],
+                      [77.58812, 12.96782],
+                      [77.58843, 12.96781],
+                      [77.58843, 12.96742],
+                      [77.58841, 12.96729],
+                      [77.58813, 12.96695],
+                      [77.58797, 12.96676],
+                      [77.58752, 12.96631],
+                      [77.58684, 12.96552],
+                      [77.58803, 12.9645],
+                      [77.58915, 12.96346],
+                      [77.58945, 12.96314],
+                      [77.58957, 12.96299],
+                      [77.58963, 12.96274],
+                      [77.58962, 12.9625],
+                      [77.58958, 12.96227],
+                      [77.58912, 12.96181],
+                      [77.58882, 12.96156],
+                      [77.58831, 12.96101],
+                      [77.58781, 12.9605],
+                      [77.58665, 12.95887],
+                      [77.58653, 12.95864],
+                      [77.58644, 12.95841],
+                      [77.58626, 12.95778],
+                      [77.58587, 12.95616],
+                      [77.58562, 12.95523],
+                      [77.58544, 12.95443],
+                      [77.58536, 12.95426],
+                      [77.58532, 12.9542],
+                      [77.58525, 12.95414],
+                      [77.58508, 12.95407],
+                      [77.58493, 12.95405],
+                      [77.58403, 12.95402],
+                      [77.58371, 12.95326],
+                      [77.58254, 12.95081],
+                      [77.5822, 12.95006],
+                      [77.58202, 12.94971],
+                      [77.58187, 12.94954],
+                      [77.58165, 12.94938],
+                      [77.5806, 12.94887],
+                      [77.5802, 12.94856],
+                      [77.58014, 12.94849],
+                      [77.58007, 12.94832],
+                      [77.58009, 12.94774],
+                      [77.58007, 12.94623],
+                      [77.58012, 12.94381],
+                      [77.58011, 12.94061],
+                      [77.58007, 12.93913],
+                      [77.58013, 12.93746],
+                      [77.58016, 12.93362],
+                      [77.58021, 12.93222],
+                      [77.58023, 12.92848],
+                      [77.58026, 12.92722],
+                      [77.58025, 12.92636],
+                      [77.58028, 12.92493],
+                      [77.58031, 12.91979],
+                      [77.58034, 12.91796],
+                      [77.58032, 12.91719],
+                      [77.58031, 12.91713],
+                      [77.58026, 12.91707],
+                      [77.57865, 12.91708],
+                      [77.57814, 12.91716],
+                      [77.57741, 12.91741],
+                      [77.57702, 12.91752],
+                      [77.57679, 12.91754],
+                      [77.57475, 12.91759],
+                      [77.5746, 12.91754],
+                      [77.57429, 12.91737],
+                      [77.57418, 12.91727],
+                      [77.57406, 12.91712],
+                      [77.57393, 12.91689],
+                      [77.57388, 12.91675],
+                      [77.57385, 12.9166],
+                      [77.57372, 12.91631],
+                      [77.57373, 12.91601],
+                      [77.57361, 12.91485],
+                      [77.57353, 12.91441],
+                      [77.57335, 12.91361],
+                      [77.57313, 12.91278],
+                      [77.57303, 12.91233],
+                      [77.57295, 12.91168],
+                      [77.57295, 12.91137],
+                      [77.57299, 12.91092],
+                      [77.573, 12.90921],
+                      [77.57303, 12.90854],
+                      [77.57314, 12.90777],
+                      [77.57328, 12.90647],
+                      [77.57334, 12.90614],
+                      [77.5734, 12.90555],
+                      [77.5734, 12.90521],
+                      [77.57337, 12.90475],
+                      [77.57329, 12.90409],
+                      [77.57329, 12.90364],
+                      [77.5733, 12.90349],
+                      [77.57345, 12.90253],
+                      [77.5735, 12.90204],
+                      [77.57344, 12.9014],
+                      [77.57331, 12.90089],
+                      [77.57292, 12.89967],
+                      [77.57276, 12.8993],
+                      [77.57232, 12.89862],
+                      [77.57138, 12.89734],
+                      [77.57057, 12.8964],
+                      [77.57028, 12.89609],
+                      [77.56906, 12.89467],
+                      [77.5685, 12.89415],
+                      [77.56706, 12.89275],
+                      [77.56617, 12.89193],
+                      [77.56526, 12.89113],
+                      [77.56462, 12.89059],
+                      [77.56382, 12.88978],
+                      [77.56225, 12.8884],
+                      [77.5615, 12.88783],
+                      [77.56088, 12.8874],
+                      [77.56035, 12.88707],
+                      [77.56021, 12.887],
+                      [77.5598, 12.88684],
+                      [77.55769, 12.88614],
+                      [77.55739, 12.88606],
+                      [77.55536, 12.88543],
+                      [77.5551, 12.88533],
+                      [77.55384, 12.88491],
+                      [77.55202, 12.88435],
+                      [77.55089, 12.88403],
+                      [77.54986, 12.88377],
+                      [77.54881, 12.88347],
+                      [77.54774, 12.88321],
+                      [77.54737, 12.883],
+                      [77.54724, 12.88289],
+                      [77.54703, 12.88264],
+                      [77.54684, 12.88235],
+                      [77.54668, 12.88197],
+                      [77.54647, 12.88135],
+                      [77.54618, 12.88067],
+                      [77.54574, 12.87956],
+                      [77.54459, 12.87993],
+                      [77.54441, 12.88001],
+                      [77.54427, 12.8801],
+                      [77.54416, 12.8802],
+                      [77.54406, 12.88032],
+                      [77.54374, 12.88079],
+                      [77.54317, 12.88155],
+                      [77.54246, 12.88067],
+                      [77.54188, 12.88001],
+                      [77.53991, 12.87795],
+                      [77.53913, 12.87703],
+                      [77.53854, 12.87637],
+                      [77.53792, 12.87574],
+                      [77.53723, 12.87498],
+                      [77.53712, 12.87484],
+                      [77.53654, 12.87493],
+                      [77.53629, 12.87499],
+                      [77.5357, 12.87517],
+                      [77.53537, 12.87532],
+                      [77.53463, 12.87572],
+                      [77.53433, 12.87584],
+                      [77.53324, 12.87604],
+                      [77.53234, 12.87615],
+                      [77.53168, 12.87618],
+                      [77.53063, 12.87619],
+                      [77.52912, 12.8761],
+                      [77.52888, 12.8761],
+                      [77.52847, 12.87615],
+                      [77.52821, 12.87627],
+                      [77.52814, 12.87633],
+                      [77.52767, 12.8766],
+                      [77.52692, 12.87697],
+                      [77.52679, 12.877],
+                      [77.52673, 12.87699],
+                      [77.52667, 12.87695],
+                      [77.52628, 12.87657],
+                      [77.52555, 12.87599],
+                      [77.52513, 12.87563],
+                      [77.52491, 12.87548],
+                      [77.52468, 12.87538],
+                      [77.52439, 12.87534],
+                      [77.52398, 12.87536],
+                      [77.52366, 12.87541],
+                      [77.52258, 12.87563],
+                      [77.52124, 12.87607],
+                      [77.521, 12.87616],
+                      [77.5203, 12.87648],
+                      [77.52012, 12.87661],
+                      [77.51988, 12.87688],
+                      [77.51978, 12.87692],
+                      [77.51941, 12.877],
+                      [77.51922, 12.87708],
+                      [77.51907, 12.87717],
+                      [77.5188, 12.87727],
+                      [77.51805, 12.87748],
+                      [77.51739, 12.8777],
+                      [77.51497, 12.87867],
+                      [77.51431, 12.8789],
+                      [77.51407, 12.87896],
+                      [77.51394, 12.87845],
+                      [77.51424, 12.87832],
+                      [77.51455, 12.87824],
+                      [77.51479, 12.87814],
+                      [77.51495, 12.8781],
+                      [77.51484, 12.8776],
+                      [77.51439, 12.87621],
+                      [77.51431, 12.87566],
+                      [77.51423, 12.87556],
+                      [77.5142, 12.87549],
+                      [77.51376, 12.87372],
+                      [77.51366, 12.87296],
+                      [77.51335, 12.87201],
+                      [77.51382, 12.8718],
+                      [77.51396, 12.87169],
+                      [77.51403, 12.87157],
+                      [77.51407, 12.87142],
+                      [77.514, 12.87077],
+                      [77.51403, 12.87048],
+                      [77.51404, 12.86989],
+                      [77.51422, 12.86965],
+                      [77.51426, 12.86957],
+                      [77.51428, 12.86937],
+                      [77.51435, 12.86931],
+                      [77.51461, 12.86895],
+                      [77.51477, 12.86879],
+                      [77.51485, 12.8686],
+                      [77.51673, 12.86848],
+                      [77.51674, 12.86782],
+                      [77.51678, 12.86716],
+                      [77.5172, 12.86727],
+                      [77.51741, 12.8673],
+                      [77.51779, 12.8673],
+                      [77.51853, 12.86725],
+                      [77.5186, 12.86723],
+                      [77.5195, 12.8667],
+                      [77.52036, 12.86666],
+                      [77.5203, 12.86647],
+                      [77.52017, 12.86573],
+                      [77.51999, 12.86495]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "15t",
+                    "stop_name": "Doddakallasandra Metro Station",
+                    "routes": ["7", "bs", "e7", "if", "li", "oc", "q8", "w7", "tu", "57", "70", "7p", "8i", "9h", "9u", "cq", "hh", "hk", "jk", "m3", "pa", "px", "ye", "4h", "71", "lg", "nx", "sf", "we", "xj", "3y", "l2", "pg", "9m"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.55312, 12.88467]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "182",
+                    "stop_name": "Metro",
+                    "routes": ["7", "bs", "e7", "if", "li", "oc", "q8", "w7", "tu", "57", "70", "7p", "8i", "9h", "9u", "cq", "hh", "hk", "jk", "m3", "pa", "px", "ye", "4h", "71", "lg", "nx", "sf", "we", "xj", "2f", "bd", "i4", "o9", "pf", "y1", "3y", "l2", "pg", "wt", "9m"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.56772, 12.89336]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "1ii",
+                    "stop_name": "Banashankari",
+                    "routes": ["4l", "ao", "7", "bs", "e7", "li", "oc", "q8", "w7", "tu", "70", "7p", "8i", "9h", "9u", "cq", "hh", "hk", "jk", "m3", "pa", "px", "4h", "kn", "lg", "nx", "sf", "we", "xj", "2f", "bd", "i4", "iz", "o9", "pf", "q2", "y1", "3y", "l2", "pg", "zj", "9m"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.57373, 12.91631]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "1zh",
+                    "stop_name": "Yalachenahalli",
+                    "routes": ["4l", "ao", "7", "bs", "e7", "if", "li", "oc", "q8", "w7", "tu", "57", "70", "7p", "8i", "9h", "9u", "cq", "hh", "hk", "jk", "m3", "pa", "px", "ye", "4h", "71", "lg", "nx", "sf", "we", "xj", "2f", "bd", "i4", "iz", "o9", "pf", "q2", "y1", "3y", "l2", "pg", "wt", "9m"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.57167, 12.89764]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "252",
+                    "stop_name": "Jaraganahalli Cross",
+                    "routes": ["4l", "ao", "7", "bs", "e7", "if", "li", "oc", "q8", "w7", "tu", "57", "70", "7p", "8i", "9h", "9u", "cq", "hh", "hk", "jk", "m3", "pa", "px", "ye", "4h", "71", "lg", "nx", "sf", "we", "xj", "2f", "bd", "i4", "iz", "o9", "pf", "q2", "y1", "3y", "l2", "pg", "wt", "9m"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.57344, 12.9014]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "25p",
+                    "stop_name": "Raghuvanahalli Cross",
+                    "routes": ["7", "bs", "e7", "if", "li", "oc", "q8", "w7", "tu", "57", "70", "7p", "8i", "9h", "9u", "cq", "hh", "hk", "jk", "m3", "pa", "px", "ye", "4h", "71", "lg", "nx", "sf", "we", "xj", "3y", "l2", "pg", "9m"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.54621, 12.88067]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "26n",
+                    "stop_name": "Balaji Layout 100ft Road",
+                    "routes": ["pg"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.53984, 12.87772]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "29x",
+                    "stop_name": "Sarakki",
+                    "routes": ["4l", "ao", "7", "bs", "e7", "if", "li", "oc", "q8", "w7", "tu", "57", "70", "7p", "8i", "9h", "9u", "cq", "hh", "hk", "jk", "m3", "pa", "px", "ye", "4h", "71", "lg", "nx", "sf", "we", "xj", "2f", "bd", "i4", "iz", "o9", "pf", "q2", "y1", "3y", "l2", "pg", "wt", "9m", "ok"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.57299, 12.9097]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "2ox",
+                    "stop_name": "Gubbalala Gate",
+                    "routes": ["7", "bs", "e7", "if", "li", "oc", "q8", "w7", "tu", "57", "70", "7p", "8i", "9h", "9u", "cq", "hh", "hk", "jk", "m3", "pa", "px", "ye", "4h", "71", "lg", "nx", "sf", "we", "xj", "3y", "l2", "pg", "9m"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.55153, 12.88423]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "2ut",
+                    "stop_name": "Doddakallasandra",
+                    "routes": ["7", "bs", "e7", "if", "li", "oc", "q8", "w7", "tu", "57", "70", "7p", "8i", "9h", "9u", "cq", "hh", "hk", "jk", "m3", "pa", "px", "ye", "4h", "71", "lg", "nx", "sf", "we", "xj", "3y", "l2", "pg", "9m"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.5565, 12.88574]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "31j",
+                    "stop_name": "Konanakunte Cross",
+                    "routes": ["7", "bs", "e7", "if", "li", "oc", "q8", "w7", "tu", "57", "70", "7p", "8i", "9h", "9u", "cq", "hh", "hk", "jk", "m3", "pa", "px", "ye", "4h", "71", "lg", "nx", "sf", "we", "xj", "2f", "pf", "3y", "l2", "pg", "wt", "9m"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.56431, 12.89025]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "3gm",
+                    "stop_name": "Yalachenahalli Metro Station",
+                    "routes": ["7", "57", "70", "7p", "8i", "9h", "9u", "cq", "hh", "hk", "jk", "m3", "ye", "4h", "71", "lg", "nx", "sf", "we", "xj", "o9", "pf", "3y", "l2", "pg", "9m"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.57029, 12.89609]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "3qd",
+                    "stop_name": "JP Nagara Metro Station",
+                    "routes": ["4l", "ao", "7", "bs", "e7", "if", "li", "oc", "q8", "w7", "tu", "70", "7p", "8i", "9h", "9u", "cq", "hh", "hk", "jk", "m3", "pa", "px", "ye", "4h", "71", "lg", "nx", "sf", "we", "xj", "i4", "iz", "o9", "pf", "y1", "l2", "pg", "wt", "9m", "ok"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.57312, 12.908]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "4db",
+                    "stop_name": "Konanakunte Cross  Metro Station",
+                    "routes": ["7", "bs", "e7", "if", "li", "oc", "q8", "w7", "tu", "57", "70", "7p", "8i", "9h", "9u", "cq", "hh", "hk", "jk", "m3", "pa", "px", "ye", "4h", "71", "lg", "nx", "sf", "we", "xj", "3y", "l2", "pg", "9m"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.56306, 12.88907]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table class="table-vertical" summary="This table shows schedules for a selection of key stops on the route for Route 217-D KBS-SHV - Banashankari to Balaji Layout 100ft Road Mon-Sun. Stops and their schedule times are listed in the columns." data-orientation="vertical">
+            <caption class="sr-only">Route 217-D KBS-SHV - Banashankari to Balaji Layout 100ft Road | Mon-Sun</caption>
+            <colgroup>
+              <col class="stop-0" id="stop_id_1ii" data-stop-id="1ii" data-is-timepoint="true">
+              <col class="stop-1" id="stop_id_29x" data-stop-id="29x" data-is-timepoint="true">
+              <col class="stop-2" id="stop_id_3qd" data-stop-id="3qd" data-is-timepoint="true">
+              <col class="stop-3" id="stop_id_252" data-stop-id="252" data-is-timepoint="true">
+              <col class="stop-4" id="stop_id_1zh" data-stop-id="1zh" data-is-timepoint="true">
+              <col class="stop-5" id="stop_id_3gm" data-stop-id="3gm" data-is-timepoint="true">
+              <col class="stop-6" id="stop_id_182" data-stop-id="182" data-is-timepoint="true">
+              <col class="stop-7" id="stop_id_31j" data-stop-id="31j" data-is-timepoint="true">
+              <col class="stop-8" id="stop_id_4db" data-stop-id="4db" data-is-timepoint="true">
+              <col class="stop-9" id="stop_id_2ut" data-stop-id="2ut" data-is-timepoint="true">
+              <col class="stop-10" id="stop_id_15t" data-stop-id="15t" data-is-timepoint="true">
+              <col class="stop-11" id="stop_id_2ox" data-stop-id="2ox" data-is-timepoint="true">
+              <col class="stop-12" id="stop_id_25p" data-stop-id="25p" data-is-timepoint="true">
+              <col class="stop-13" id="stop_id_26n" data-stop-id="26n" data-is-timepoint="true">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col" width="7.14%">
+                  <div class="stop-name">Banashankari</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="7.14%">
+                  <div class="stop-name">Sarakki</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="7.14%">
+                  <div class="stop-name">JP Nagara Metro Station</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="7.14%">
+                  <div class="stop-name">Jaraganahalli Cross</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="7.14%">
+                  <div class="stop-name">Yalachenahalli</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="7.14%">
+                  <div class="stop-name">Yalachenahalli Metro Station</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="7.14%">
+                  <div class="stop-name">Metro</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="7.14%">
+                  <div class="stop-name">Konanakunte Cross</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="7.14%">
+                  <div class="stop-name">Konanakunte Cross Metro Station</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="7.14%">
+                  <div class="stop-name">Doddakallasandra</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="7.14%">
+                  <div class="stop-name">Doddakallasandra Metro Station</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="7.14%">
+                  <div class="stop-name">Gubbalala Gate</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="7.14%">
+                  <div class="stop-name">Raghuvanahalli Cross</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="7.14%">
+                  <div class="stop-name">Balaji Layout 100ft Road</div>
+                  <div class="stop-code"></div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="trip-row" id="trip_id_1kd">
+                <td class="stop-time am"><span class="stop-time-text">9:00am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:05am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:11am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:17am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:22am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:28am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:34am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:40am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:45am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:51am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:57am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:02am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:08am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:14am</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
