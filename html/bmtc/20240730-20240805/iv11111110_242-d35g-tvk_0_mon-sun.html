@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'YOUR MAPBOX ACCESS TOKEN';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+</head>
+
+<body><!-- Timetable generated on 2024-07-28T21:57:59.552Z using GTFS-to-HTML version 2.6.11 -->
+  <div class="timetable-page menu-type-jump">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center gap-2">
+        <div class="route-color-swatch-large flex-none" style="background-color: #000000; color: #FFFFFF;">242 D35G-TVK</div>
+        <div>Route 242 D35G-TVK</div>
+      </h1>
+      <div class="effective-date text-gray-600 mt-2">Effective July 24, 2024</div>
+      <div class="timetable mb-10" id="timetable_id_iv11111110" data-day-list="Mon-Sun" data-direction-name="Tavarekere" data-timetable-id="iv|1111111|0" data-direction-id="0" data-route-id="iv">
+        <div class="mb-2">
+          <h2 class="text-xl">Route 242 D35G-TVK - Depot-35 Gate to Tavarekere | Monday-Sunday</h2>
+        </div>
+        <div class="map" id="map_timetable_id_iv11111110"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_iv11111110",
+              "routes": {
+                "28": {
+                  "route_id": "28",
+                  "agency_id": "1",
+                  "route_short_name": "242",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Tavarekere",
+                  "route_type": 3
+                },
+                "98": {
+                  "route_id": "98",
+                  "agency_id": "1",
+                  "route_short_name": "241-M",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Savandurga",
+                  "route_type": 3
+                },
+                "103": {
+                  "route_id": "103",
+                  "agency_id": "1",
+                  "route_short_name": "242-R D35G-JGH",
+                  "route_long_name": "Depot-35 Gate ⇔ Jogerahalli",
+                  "route_type": 3
+                },
+                "144": {
+                  "route_id": "144",
+                  "agency_id": "1",
+                  "route_short_name": "242-TB",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Kanuvanahalli",
+                  "route_type": 3
+                },
+                "v6": {
+                  "route_id": "v6",
+                  "agency_id": "1",
+                  "route_short_name": "240-J",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Chikka Maskal",
+                  "route_type": 3
+                },
+                "bp": {
+                  "route_id": "bp",
+                  "agency_id": "1",
+                  "route_short_name": "242-U",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Lakshmipura",
+                  "route_type": 3
+                },
+                "c8": {
+                  "route_id": "c8",
+                  "agency_id": "1",
+                  "route_short_name": "242-T",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Hunnigere",
+                  "route_type": 3
+                },
+                "cn": {
+                  "route_id": "cn",
+                  "agency_id": "1",
+                  "route_short_name": "242-MA",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Sulivara",
+                  "route_type": 3
+                },
+                "d7": {
+                  "route_id": "d7",
+                  "agency_id": "1",
+                  "route_short_name": "242-LA",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Baleveeranahalli",
+                  "route_type": 3
+                },
+                "iv": {
+                  "route_id": "iv",
+                  "agency_id": "1",
+                  "route_short_name": "242 D35G-TVK",
+                  "route_long_name": "Depot-35 Gate ⇔ Tavarekere",
+                  "route_type": 3
+                },
+                "lt": {
+                  "route_id": "lt",
+                  "agency_id": "1",
+                  "route_short_name": "242-TB D35G-KVH",
+                  "route_long_name": "Depot-35 Gate ⇔ Kanuvanahalli",
+                  "route_type": 3
+                },
+                "nm": {
+                  "route_id": "nm",
+                  "agency_id": "1",
+                  "route_short_name": "242-M",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Dodderi Grama",
+                  "route_type": 3
+                },
+                "nv": {
+                  "route_id": "nv",
+                  "agency_id": "1",
+                  "route_short_name": "242-ZD",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Kallur",
+                  "route_type": 3
+                },
+                "13z": {
+                  "route_id": "13z",
+                  "agency_id": "1",
+                  "route_short_name": "243-M",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Shreepatihalli",
+                  "route_type": 3
+                },
+                "hl": {
+                  "route_id": "hl",
+                  "agency_id": "1",
+                  "route_short_name": "240-C D35G-KCH",
+                  "route_long_name": "Depot-35 Gate ⇔ Kachohalli",
+                  "route_type": 3
+                },
+                "q9": {
+                  "route_id": "q9",
+                  "agency_id": "1",
+                  "route_short_name": "241-B D35G-KCP",
+                  "route_long_name": "Depot-35 Gate ⇔ Kenchanapura",
+                  "route_type": 3
+                },
+                "yg": {
+                  "route_id": "yg",
+                  "agency_id": "1",
+                  "route_short_name": "241-E D35G-LKMB",
+                  "route_long_name": "Depot-35 Gate ⇔ Lakshmaiah Badavane",
+                  "route_type": 3
+                },
+                "2o": {
+                  "route_id": "2o",
+                  "agency_id": "1",
+                  "route_short_name": "242-RA D35G-CMP",
+                  "route_long_name": "Depot-35 Gate ⇔ Channa Marayyanapalya",
+                  "route_type": 3
+                },
+                "aj": {
+                  "route_id": "aj",
+                  "agency_id": "1",
+                  "route_short_name": "242-B KBS-D35G",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Depot-35 Gate",
+                  "route_type": 3
+                },
+                "ku": {
+                  "route_id": "ku",
+                  "agency_id": "1",
+                  "route_short_name": "242-U LXMP-D35G",
+                  "route_long_name": "Lakshmipura ⇔ Depot-35 Gate",
+                  "route_type": 3
+                },
+                "t0": {
+                  "route_id": "t0",
+                  "agency_id": "1",
+                  "route_short_name": "242-Q D35G-GGH",
+                  "route_long_name": "Depot-35 Gate ⇔ Gangenahalli",
+                  "route_type": 3
+                },
+                "yt": {
+                  "route_id": "yt",
+                  "agency_id": "1",
+                  "route_short_name": "242-B D35G-KDG",
+                  "route_long_name": "Depot-35 Gate ⇔ Kadugodi Bus Station",
+                  "route_type": 3
+                },
+                "z2": {
+                  "route_id": "z2",
+                  "agency_id": "1",
+                  "route_short_name": "242 D35G-KMT",
+                  "route_long_name": "Depot-35 Gate ⇔ KR Market (Kalasipalya)",
+                  "route_type": 3
+                },
+                "cu": {
+                  "route_id": "cu",
+                  "agency_id": "1",
+                  "route_short_name": "245-C D35G-KDBG",
+                  "route_long_name": "Depot-35 Gate ⇔ Kadabagere",
+                  "route_type": 3
+                },
+                "ln": {
+                  "route_id": "ln",
+                  "agency_id": "1",
+                  "route_short_name": "245-D D35G-BTH",
+                  "route_long_name": "Bettahalli ⇔ Depot-35 Gate",
+                  "route_type": 3
+                },
+                "s5": {
+                  "route_id": "s5",
+                  "agency_id": "1",
+                  "route_short_name": "D35-D35G",
+                  "route_long_name": "Depot-35 Kannalli ⇔ Depot-35 Gate",
+                  "route_type": 3
+                },
+                "xq": {
+                  "route_id": "xq",
+                  "agency_id": "1",
+                  "route_short_name": "G-7 D35G-KBS-SBS",
+                  "route_long_name": "Depot-35 Gate ⇔ Shivajinagara Bus Station",
+                  "route_type": 3
+                },
+                "xx": {
+                  "route_id": "xx",
+                  "agency_id": "1",
+                  "route_short_name": "D35G-JPT",
+                  "route_long_name": "Depot-35 Gate ⇔ Janapriya Township",
+                  "route_type": 3
+                },
+                "dt": {
+                  "route_id": "dt",
+                  "agency_id": "1",
+                  "route_short_name": "242-MA KBS-SLVR",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Sulivara",
+                  "route_type": 3
+                },
+                "tf": {
+                  "route_id": "tf",
+                  "agency_id": "1",
+                  "route_short_name": "374-N",
+                  "route_long_name": "Nelamangala Bus Station ⇔ Tavarekere",
+                  "route_type": 3
+                },
+                "3c": {
+                  "route_id": "3c",
+                  "agency_id": "1",
+                  "route_short_name": "MF-42",
+                  "route_long_name": "Kengeri Bus Station ⇔ Tavarekere",
+                  "route_type": 3
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [77.44265, 12.97267],
+                      [77.44265, 12.97289],
+                      [77.44282, 12.97371],
+                      [77.44305, 12.97447],
+                      [77.4437, 12.97701],
+                      [77.44387, 12.97783],
+                      [77.44408, 12.97853],
+                      [77.44416, 12.97873],
+                      [77.44422, 12.97902],
+                      [77.44425, 12.97941],
+                      [77.44425, 12.9797],
+                      [77.44419, 12.98082],
+                      [77.44412, 12.98155],
+                      [77.44404, 12.98215],
+                      [77.44393, 12.98376],
+                      [77.44388, 12.98401],
+                      [77.44229, 12.98302],
+                      [77.44194, 12.98282],
+                      [77.44097, 12.98232],
+                      [77.43663, 12.98026],
+                      [77.43569, 12.97986],
+                      [77.43182, 12.97835],
+                      [77.42658, 12.97641],
+                      [77.4237, 12.97538],
+                      [77.42229, 12.97476],
+                      [77.41796, 12.97262],
+                      [77.41602, 12.97151],
+                      [77.4137, 12.97022],
+                      [77.41333, 12.97006],
+                      [77.41301, 12.96995],
+                      [77.41273, 12.96989],
+                      [77.41255, 12.96987],
+                      [77.41218, 12.96985],
+                      [77.41125, 12.96987],
+                      [77.40976, 12.96994],
+                      [77.40951, 12.96993],
+                      [77.40903, 12.96987],
+                      [77.40836, 12.96971],
+                      [77.40821, 12.96971],
+                      [77.40781, 12.96956],
+                      [77.40723, 12.96928],
+                      [77.4069, 12.96906],
+                      [77.40601, 12.96839],
+                      [77.40551, 12.96804],
+                      [77.40515, 12.96781],
+                      [77.40489, 12.96767],
+                      [77.40431, 12.96743],
+                      [77.40333, 12.96708],
+                      [77.40326, 12.96702],
+                      [77.40321, 12.967],
+                      [77.40207, 12.96659],
+                      [77.40102, 12.96619],
+                      [77.40051, 12.96597],
+                      [77.40042, 12.96597],
+                      [77.40015, 12.96583]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "1bw",
+                    "stop_name": "Hamsa Farm",
+                    "routes": ["v6", "98", "bp", "c8", "cn", "d7", "iv", "lt", "nm", "nv", "13z"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.4397, 12.9817]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "287",
+                    "stop_name": "Depot-35 Gate",
+                    "routes": ["hl", "q9", "yg", "103", "2o", "aj", "iv", "ku", "lt", "t0", "yt", "z2", "cu", "ln", "s5", "xq", "xx"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.44268, 12.9726]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "2ly",
+                    "stop_name": "Channenahalli",
+                    "routes": ["v6", "98", "bp", "c8", "cn", "d7", "iv", "lt", "nm", "nv", "13z"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.43052, 12.97786]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "349",
+                    "stop_name": "Channadasipalya",
+                    "routes": ["v6", "98", "bp", "c8", "cn", "d7", "iv", "lt", "nm", "nv", "13z"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.41485, 12.97085]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "3aj",
+                    "stop_name": "Seegehalli Gate",
+                    "routes": ["v6", "98", "aj", "bp", "c8", "cn", "d7", "iv", "ku", "lt", "nm", "nv", "13z", "ln", "xq"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.44389, 12.98401]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "3as",
+                    "stop_name": "Channenahalli Arch",
+                    "routes": ["v6", "98", "bp", "c8", "cn", "d7", "iv", "lt", "nm", "nv", "13z"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.43546, 12.97977]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "3pk",
+                    "stop_name": "Ganesha Temple Tavarekere",
+                    "routes": ["v6", "98", "bp", "c8", "cn", "d7", "iv", "lt", "nm", "nv", "13z"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.40341, 12.9671]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "bb",
+                    "stop_name": "Tavarekere",
+                    "routes": ["v6", "98", "144", "28", "bp", "cn", "dt", "iv", "nm", "nv", "13z", "tf", "3c"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.40018, 12.96582]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "gf",
+                    "stop_name": "Honaganahatti",
+                    "routes": ["v6", "98", "bp", "c8", "cn", "d7", "iv", "lt", "nm", "nv", "13z"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.42116, 12.9742]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "ws",
+                    "stop_name": "Lakkuppe",
+                    "routes": ["v6", "98", "bp", "c8", "cn", "d7", "iv", "lt", "nm", "nv", "13z"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.41006, 12.96992]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table class="table-vertical" summary="This table shows schedules for a selection of key stops on the route for Route 242 D35G-TVK - Depot-35 Gate to Tavarekere Mon-Sun. Stops and their schedule times are listed in the columns." data-orientation="vertical">
+            <caption class="sr-only">Route 242 D35G-TVK - Depot-35 Gate to Tavarekere | Mon-Sun</caption>
+            <colgroup>
+              <col class="stop-0" id="stop_id_287" data-stop-id="287" data-is-timepoint="true">
+              <col class="stop-1" id="stop_id_3aj" data-stop-id="3aj" data-is-timepoint="true">
+              <col class="stop-2" id="stop_id_1bw" data-stop-id="1bw" data-is-timepoint="true">
+              <col class="stop-3" id="stop_id_3as" data-stop-id="3as" data-is-timepoint="true">
+              <col class="stop-4" id="stop_id_2ly" data-stop-id="2ly" data-is-timepoint="true">
+              <col class="stop-5" id="stop_id_gf" data-stop-id="gf" data-is-timepoint="true">
+              <col class="stop-6" id="stop_id_349" data-stop-id="349" data-is-timepoint="true">
+              <col class="stop-7" id="stop_id_ws" data-stop-id="ws" data-is-timepoint="true">
+              <col class="stop-8" id="stop_id_3pk" data-stop-id="3pk" data-is-timepoint="true">
+              <col class="stop-9" id="stop_id_bb" data-stop-id="bb" data-is-timepoint="true">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col" width="10.00%">
+                  <div class="stop-name">Depot-35 Gate</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="10.00%">
+                  <div class="stop-name">Seegehalli Gate</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="10.00%">
+                  <div class="stop-name">Hamsa Farm</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="10.00%">
+                  <div class="stop-name">Channenahalli Arch</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="10.00%">
+                  <div class="stop-name">Channenahalli</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="10.00%">
+                  <div class="stop-name">Honaganahatti</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="10.00%">
+                  <div class="stop-name">Channadasipalya</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="10.00%">
+                  <div class="stop-name">Lakkuppe</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="10.00%">
+                  <div class="stop-name">Ganesha Temple Tavarekere</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="10.00%">
+                  <div class="stop-name">Tavarekere</div>
+                  <div class="stop-code"></div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="trip-row" id="trip_id_zz">
+                <td class="stop-time am"><span class="stop-time-text">7:31am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:32am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:33am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:35am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:36am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:38am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:39am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:40am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:42am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:43am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_2li">
+                <td class="stop-time am"><span class="stop-time-text">7:41am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:42am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:43am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:45am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:46am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:48am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:49am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:50am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:52am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:53am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_24c">
+                <td class="stop-time am"><span class="stop-time-text">7:51am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:52am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:53am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:55am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:56am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:58am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:59am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:00am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:02am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:03am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_q3">
+                <td class="stop-time am"><span class="stop-time-text">8:41am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:42am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:43am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:45am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:46am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:48am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:49am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:50am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:52am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:53am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_3o6">
+                <td class="stop-time am"><span class="stop-time-text">9:01am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:02am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:03am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:05am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:06am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:08am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:09am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:10am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:12am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:13am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_27z">
+                <td class="stop-time pm"><span class="stop-time-text">2:26pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:27pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:28pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:30pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:31pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:33pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:34pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:35pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:37pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:38pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_4hm">
+                <td class="stop-time pm"><span class="stop-time-text">2:31pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:32pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:33pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:35pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:36pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:38pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:39pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:40pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:42pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:43pm</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

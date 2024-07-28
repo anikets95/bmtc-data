@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'YOUR MAPBOX ACCESS TOKEN';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+</head>
+
+<body><!-- Timetable generated on 2024-07-28T21:58:03.559Z using GTFS-to-HTML version 2.6.11 -->
+  <div class="timetable-page menu-type-jump">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center gap-2">
+        <div class="route-color-swatch-large flex-none" style="background-color: #000000; color: #FFFFFF;">D31-D31G</div>
+        <div>Route D31-D31G</div>
+      </h1>
+      <div class="effective-date text-gray-600 mt-2">Effective July 24, 2024</div>
+      <div class="timetable mb-10" id="timetable_id_8611111111" data-day-list="Mon-Sun" data-direction-name="Depot-31 Summanahalli" data-timetable-id="86|1111111|1" data-direction-id="1" data-route-id="86">
+        <div class="mb-2">
+          <h2 class="text-xl">Route D31-D31G - Depot-31 Gate to Depot-31 Summanahalli | Monday-Sunday</h2>
+        </div>
+        <div class="map" id="map_timetable_id_8611111111"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_8611111111",
+              "routes": {
+                "86": {
+                  "route_id": "86",
+                  "agency_id": "1",
+                  "route_short_name": "D31-D31G",
+                  "route_long_name": "Depot-31 Summanahalli ⇔ Depot-31 Gate",
+                  "route_type": 3
+                },
+                "105": {
+                  "route_id": "105",
+                  "agency_id": "1",
+                  "route_short_name": "242-B D31G-KBS",
+                  "route_long_name": "Depot-31 Gate ⇔ Kempegowda Bus Station",
+                  "route_type": 3
+                },
+                "6q": {
+                  "route_id": "6q",
+                  "agency_id": "1",
+                  "route_short_name": "80-A D31G-KBS",
+                  "route_long_name": "Depot-31 Gate ⇔ Kempegowda Bus Station",
+                  "route_type": 3
+                },
+                "tn": {
+                  "route_id": "tn",
+                  "agency_id": "1",
+                  "route_short_name": "80-G",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Summanahalli",
+                  "route_type": 3
+                },
+                "12g": {
+                  "route_id": "12g",
+                  "agency_id": "1",
+                  "route_short_name": "242-B D31G-TVK",
+                  "route_long_name": "Depot-31 Gate ⇔ Tavarekere",
+                  "route_type": 3
+                },
+                "xa": {
+                  "route_id": "xa",
+                  "agency_id": "1",
+                  "route_short_name": "242 D31G-KMT",
+                  "route_long_name": "Depot-31 Gate ⇔ KR Market (Kalasipalya)",
+                  "route_type": 3
+                },
+                "h8": {
+                  "route_id": "h8",
+                  "agency_id": "1",
+                  "route_short_name": "243-L D31-LDH",
+                  "route_long_name": "Depot-31 Gate ⇔ Lingadeeranahalli",
+                  "route_type": 3
+                },
+                "tc": {
+                  "route_id": "tc",
+                  "agency_id": "1",
+                  "route_short_name": "410-FC JHC-GGP-CLO",
+                  "route_long_name": "Jalahalli Cross ⇔ Chandra Layout",
+                  "route_type": 3
+                },
+                "11y": {
+                  "route_id": "11y",
+                  "agency_id": "1",
+                  "route_short_name": "501-NH",
+                  "route_long_name": "Nayandahalli Junction ⇔ Hebbala Bridge",
+                  "route_type": 3
+                },
+                "8m": {
+                  "route_id": "8m",
+                  "agency_id": "1",
+                  "route_short_name": "501-BH",
+                  "route_long_name": "Banashankari Bus Station ⇔ Hebbala Bridge",
+                  "route_type": 3
+                },
+                "sf": {
+                  "route_id": "sf",
+                  "agency_id": "1",
+                  "route_short_name": "501-C",
+                  "route_long_name": "Hebbala Bridge ⇔ Kengeri Bus Station",
+                  "route_type": 3
+                },
+                "2p": {
+                  "route_id": "2p",
+                  "agency_id": "1",
+                  "route_short_name": "502-H D31G-KTS-DWN",
+                  "route_long_name": "Depot-31 Gate ⇔ Dwaraka Nagara",
+                  "route_type": 3
+                },
+                "7j": {
+                  "route_id": "7j",
+                  "agency_id": "1",
+                  "route_short_name": "502-E ANPN-GKVK",
+                  "route_long_name": "Annapoorneshwarinagara ⇔ GKVK",
+                  "route_type": 3
+                },
+                "kk": {
+                  "route_id": "kk",
+                  "agency_id": "1",
+                  "route_short_name": "502-E",
+                  "route_long_name": "Hebbala Bridge ⇔ Kottigepalya",
+                  "route_type": 3
+                },
+                "1e": {
+                  "route_id": "1e",
+                  "agency_id": "1",
+                  "route_short_name": "D31G-JMN",
+                  "route_long_name": "Depot-31 Gate ⇔ Jai Maruthi Nagara",
+                  "route_type": 3
+                },
+                "5o": {
+                  "route_id": "5o",
+                  "agency_id": "1",
+                  "route_short_name": "D31G-MGH",
+                  "route_long_name": "Depot-31 Gate ⇔ Manganahalli",
+                  "route_type": 3
+                },
+                "rr": {
+                  "route_id": "rr",
+                  "agency_id": "1",
+                  "route_short_name": "D31G-KML",
+                  "route_long_name": "Depot-31 Gate ⇔ Kamalanagara BEML Layout",
+                  "route_type": 3
+                },
+                "wh": {
+                  "route_id": "wh",
+                  "agency_id": "1",
+                  "route_short_name": "MF-410FC",
+                  "route_long_name": "Jalahalli Cross ⇔ Banashankari Bus Station",
+                  "route_type": 3
+                },
+                "yz": {
+                  "route_id": "yz",
+                  "agency_id": "1",
+                  "route_short_name": "SMH-D31",
+                  "route_long_name": "Summanahalli ⇔ Depot-31 Summanahalli",
+                  "route_type": 3
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [77.52147, 12.9931],
+                      [77.52222, 12.99286]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "19f",
+                    "stop_name": "Depot-31 Gate",
+                    "routes": ["6q", "tn", "105", "12g", "xa", "h8", "tc", "11y", "8m", "sf", "2p", "7j", "kk", "1e", "5o", "86", "rr", "wh"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.52146, 12.99306]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "2b1",
+                    "stop_name": "Depot-31 Summanahalli",
+                    "routes": ["86", "yz"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.52221, 12.99285]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table class="table-vertical" summary="This table shows schedules for a selection of key stops on the route for Route D31-D31G - Depot-31 Gate to Depot-31 Summanahalli Mon-Sun. Stops and their schedule times are listed in the columns." data-orientation="vertical">
+            <caption class="sr-only">Route D31-D31G - Depot-31 Gate to Depot-31 Summanahalli | Mon-Sun</caption>
+            <colgroup>
+              <col class="stop-0" id="stop_id_19f" data-stop-id="19f" data-is-timepoint="true">
+              <col class="stop-1" id="stop_id_2b1" data-stop-id="2b1" data-is-timepoint="true">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col" width="50.00%">
+                  <div class="stop-name">Depot-31 Gate</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="50.00%">
+                  <div class="stop-name">Depot-31 Summanahalli</div>
+                  <div class="stop-code"></div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="trip-row" id="trip_id_3su">
+                <td class="stop-time am"><span class="stop-time-text">7:15am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:16am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_4bt">
+                <td class="stop-time am"><span class="stop-time-text">7:20am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:21am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_5x">
+                <td class="stop-time am"><span class="stop-time-text">8:15am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:16am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_2u7">
+                <td class="stop-time am"><span class="stop-time-text">8:25am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:25am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_1o3">
+                <td class="stop-time am"><span class="stop-time-text">11:45am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:47am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_20d">
+                <td class="stop-time am"><span class="stop-time-text">11:59am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:59am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_1i2">
+                <td class="stop-time pm"><span class="stop-time-text">12:15pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:17pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_3f">
+                <td class="stop-time pm"><span class="stop-time-text">12:34pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:34pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_4nb">
+                <td class="stop-time pm"><span class="stop-time-text">12:48pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:49pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_138">
+                <td class="stop-time pm"><span class="stop-time-text">1:15pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:16pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_1d2">
+                <td class="stop-time pm"><span class="stop-time-text">1:34pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:34pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_2wt">
+                <td class="stop-time pm"><span class="stop-time-text">2:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:01pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_uc">
+                <td class="stop-time pm"><span class="stop-time-text">2:10pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:11pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_2nm">
+                <td class="stop-time pm"><span class="stop-time-text">2:30pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:31pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_dv">
+                <td class="stop-time pm"><span class="stop-time-text">7:04pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:04pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_2zo">
+                <td class="stop-time pm"><span class="stop-time-text">7:35pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:37pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_1pb">
+                <td class="stop-time pm"><span class="stop-time-text">9:18pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:19pm</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

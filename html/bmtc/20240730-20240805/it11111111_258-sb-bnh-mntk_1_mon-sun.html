@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'YOUR MAPBOX ACCESS TOKEN';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+</head>
+
+<body><!-- Timetable generated on 2024-07-28T21:58:23.572Z using GTFS-to-HTML version 2.6.11 -->
+  <div class="timetable-page menu-type-jump">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center gap-2">
+        <div class="route-color-swatch-large flex-none" style="background-color: #000000; color: #FFFFFF;">258-SB BNH-MNTK</div>
+        <div>Route 258-SB BNH-MNTK</div>
+      </h1>
+      <div class="effective-date text-gray-600 mt-2">Effective July 24, 2024</div>
+      <div class="timetable mb-10" id="timetable_id_it11111111" data-day-list="Mon-Sun" data-direction-name="Byranayakanahalli" data-timetable-id="it|1111111|1" data-direction-id="1" data-route-id="it">
+        <div class="mb-2">
+          <h2 class="text-xl">Route 258-SB BNH-MNTK - Mantanakurchi to Byranayakanahalli | Monday-Sunday</h2>
+        </div>
+        <div class="map" id="map_timetable_id_it11111111"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_it11111111",
+              "routes": {
+                "62": {
+                  "route_id": "62",
+                  "agency_id": "1",
+                  "route_short_name": "258-GA",
+                  "route_long_name": "KR Market ⇔ Bommashettyhalli",
+                  "route_type": 3
+                },
+                "10w": {
+                  "route_id": "10w",
+                  "agency_id": "1",
+                  "route_short_name": "258-SD KBS-BNH",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Byranayakanahalli",
+                  "route_type": 3
+                },
+                "it": {
+                  "route_id": "it",
+                  "agency_id": "1",
+                  "route_short_name": "258-SB BNH-MNTK",
+                  "route_long_name": "Byranayakanahalli ⇔ Mantanakurchi",
+                  "route_type": 3
+                },
+                "kc": {
+                  "route_id": "kc",
+                  "agency_id": "1",
+                  "route_short_name": "258-SA",
+                  "route_long_name": "KR Market ⇔ Vajrakattepalya",
+                  "route_type": 3
+                },
+                "kb": {
+                  "route_id": "kb",
+                  "agency_id": "1",
+                  "route_short_name": "242-TC",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Nelamangala Bus Station",
+                  "route_type": 3
+                },
+                "lj": {
+                  "route_id": "lj",
+                  "agency_id": "1",
+                  "route_short_name": "374-MA",
+                  "route_long_name": "Kengeri Bus Station ⇔ Nelamangala Bus Station",
+                  "route_type": 3
+                },
+                "dn": {
+                  "route_id": "dn",
+                  "agency_id": "1",
+                  "route_short_name": "377-A",
+                  "route_long_name": "Bidadi ⇔ Nelamangala Bus Station",
+                  "route_type": 3
+                },
+                "ca": {
+                  "route_id": "ca",
+                  "agency_id": "1",
+                  "route_short_name": "258-TA",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Kannamangala Madhure",
+                  "route_type": 3
+                },
+                "xv": {
+                  "route_id": "xv",
+                  "agency_id": "1",
+                  "route_short_name": "258 KMT-CMDR",
+                  "route_long_name": "KR Market ⇔ Chikka Madhure",
+                  "route_type": 3
+                },
+                "2n": {
+                  "route_id": "2n",
+                  "agency_id": "1",
+                  "route_short_name": "409",
+                  "route_long_name": "Nelamangala Bus Station ⇔ Yelahanka Old Town",
+                  "route_type": 3
+                },
+                "br": {
+                  "route_id": "br",
+                  "agency_id": "1",
+                  "route_short_name": "258-F",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Shivanapura",
+                  "route_type": 3
+                },
+                "r3": {
+                  "route_id": "r3",
+                  "agency_id": "1",
+                  "route_short_name": "256-MB",
+                  "route_long_name": "KR Market ⇔ Magadi",
+                  "route_type": 3
+                },
+                "zh": {
+                  "route_id": "zh",
+                  "agency_id": "1",
+                  "route_short_name": "256-MA",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Thore Hosapalya",
+                  "route_type": 3
+                },
+                "13s": {
+                  "route_id": "13s",
+                  "agency_id": "1",
+                  "route_short_name": "258-P",
+                  "route_long_name": "KR Market ⇔ Kanegowdanahalli",
+                  "route_type": 3
+                },
+                "4r": {
+                  "route_id": "4r",
+                  "agency_id": "1",
+                  "route_short_name": "258-QA",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Mantanakurchi",
+                  "route_type": 3
+                },
+                "4u": {
+                  "route_id": "4u",
+                  "agency_id": "1",
+                  "route_short_name": "258-F KMT-SVP",
+                  "route_long_name": "KR Market ⇔ Shivanapura",
+                  "route_type": 3
+                },
+                "9h": {
+                  "route_id": "9h",
+                  "agency_id": "1",
+                  "route_short_name": "258-VB",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Chikkamaranahalli",
+                  "route_type": 3
+                },
+                "b1": {
+                  "route_id": "b1",
+                  "agency_id": "1",
+                  "route_short_name": "258-Q",
+                  "route_long_name": "KR Market ⇔ Hunnigere",
+                  "route_type": 3
+                },
+                "i": {
+                  "route_id": "i",
+                  "agency_id": "1",
+                  "route_short_name": "258",
+                  "route_long_name": "KR Market ⇔ Nelamangala Bus Station",
+                  "route_type": 3
+                },
+                "i0": {
+                  "route_id": "i0",
+                  "agency_id": "1",
+                  "route_short_name": "258-M KMT-GVS",
+                  "route_long_name": "KR Market ⇔ Gidaveerasagara",
+                  "route_type": 3
+                },
+                "kp": {
+                  "route_id": "kp",
+                  "agency_id": "1",
+                  "route_short_name": "258-V",
+                  "route_long_name": "KR Market ⇔ Guravanahalli",
+                  "route_type": 3
+                },
+                "l2": {
+                  "route_id": "l2",
+                  "agency_id": "1",
+                  "route_short_name": "258-C KBS-GDP",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Gangadharanapalya",
+                  "route_type": 3
+                },
+                "lb": {
+                  "route_id": "lb",
+                  "agency_id": "1",
+                  "route_short_name": "258-T",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Kasaghatta",
+                  "route_type": 3
+                },
+                "se": {
+                  "route_id": "se",
+                  "agency_id": "1",
+                  "route_short_name": "258-V KBS-GRH",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Guravanahalli",
+                  "route_type": 3
+                },
+                "yb": {
+                  "route_id": "yb",
+                  "agency_id": "1",
+                  "route_short_name": "258-SA VKP-KBS",
+                  "route_long_name": "Vajrakattepalya ⇔ Kempegowda Bus Station",
+                  "route_type": 3
+                },
+                "tf": {
+                  "route_id": "tf",
+                  "agency_id": "1",
+                  "route_short_name": "374-N",
+                  "route_long_name": "Nelamangala Bus Station ⇔ Tavarekere",
+                  "route_type": 3
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [77.38415, 13.04359],
+                      [77.38438, 13.04351],
+                      [77.3845, 13.04349],
+                      [77.38458, 13.04344],
+                      [77.38466, 13.04343],
+                      [77.38465, 13.04292],
+                      [77.38471, 13.04289],
+                      [77.38499, 13.0429],
+                      [77.38499, 13.04241],
+                      [77.38506, 13.04218],
+                      [77.38562, 13.04138],
+                      [77.38586, 13.04095],
+                      [77.38605, 13.04066],
+                      [77.38614, 13.04056],
+                      [77.38632, 13.04041],
+                      [77.38644, 13.04034],
+                      [77.38675, 13.0402],
+                      [77.38684, 13.04013],
+                      [77.38697, 13.03996],
+                      [77.38715, 13.03963],
+                      [77.3872, 13.03959],
+                      [77.38732, 13.03956],
+                      [77.3875, 13.03955],
+                      [77.38764, 13.03957],
+                      [77.38836, 13.0395],
+                      [77.38877, 13.03948],
+                      [77.38902, 13.03949],
+                      [77.38925, 13.03947],
+                      [77.38974, 13.0394],
+                      [77.39108, 13.03914],
+                      [77.39181, 13.04222],
+                      [77.3919, 13.04246],
+                      [77.39226, 13.04313],
+                      [77.39274, 13.04455],
+                      [77.39301, 13.04552],
+                      [77.3934, 13.04764],
+                      [77.39351, 13.04851],
+                      [77.39368, 13.04965],
+                      [77.39367, 13.04976],
+                      [77.39359, 13.04995],
+                      [77.39328, 13.05048],
+                      [77.39319, 13.05075],
+                      [77.39316, 13.05094],
+                      [77.39316, 13.05161],
+                      [77.3932, 13.05241],
+                      [77.3932, 13.05284],
+                      [77.39316, 13.05378],
+                      [77.39317, 13.05455],
+                      [77.39332, 13.0559],
+                      [77.39336, 13.0564],
+                      [77.39344, 13.05694],
+                      [77.3936, 13.05758],
+                      [77.39381, 13.05826],
+                      [77.39387, 13.05855],
+                      [77.39391, 13.05887],
+                      [77.39389, 13.05922],
+                      [77.39364, 13.06007],
+                      [77.39358, 13.06039],
+                      [77.39357, 13.06056],
+                      [77.39359, 13.06128],
+                      [77.39372, 13.06332],
+                      [77.39383, 13.0658],
+                      [77.3939, 13.06605],
+                      [77.39425, 13.06683],
+                      [77.39447, 13.06747],
+                      [77.39469, 13.06829],
+                      [77.39469, 13.06872],
+                      [77.39463, 13.06911],
+                      [77.39443, 13.07002],
+                      [77.39406, 13.07137],
+                      [77.394, 13.07168],
+                      [77.39374, 13.07268],
+                      [77.39349, 13.0739],
+                      [77.39336, 13.07442],
+                      [77.3933, 13.07477],
+                      [77.3929, 13.07602],
+                      [77.39279, 13.07643],
+                      [77.39271, 13.07756],
+                      [77.39273, 13.0783],
+                      [77.3928, 13.07911],
+                      [77.39284, 13.08012],
+                      [77.39276, 13.08118],
+                      [77.39274, 13.08192],
+                      [77.39275, 13.08235],
+                      [77.39296, 13.08309],
+                      [77.39298, 13.0833],
+                      [77.39295, 13.08351],
+                      [77.39287, 13.08376],
+                      [77.39261, 13.08428],
+                      [77.39258, 13.0844],
+                      [77.39253, 13.08489],
+                      [77.39246, 13.08511],
+                      [77.39224, 13.08553],
+                      [77.3922, 13.08566],
+                      [77.39219, 13.08578],
+                      [77.39227, 13.08606],
+                      [77.39234, 13.0862],
+                      [77.39253, 13.08649],
+                      [77.39265, 13.08663],
+                      [77.39343, 13.08737],
+                      [77.39375, 13.08777],
+                      [77.39387, 13.08809],
+                      [77.39392, 13.0886],
+                      [77.39396, 13.08872],
+                      [77.39401, 13.08884],
+                      [77.39422, 13.0891],
+                      [77.3943, 13.08925],
+                      [77.39437, 13.08956],
+                      [77.3946, 13.09111],
+                      [77.39482, 13.09222],
+                      [77.39483, 13.09248],
+                      [77.39481, 13.09266],
+                      [77.39471, 13.09304],
+                      [77.3947, 13.09336],
+                      [77.39482, 13.09446],
+                      [77.39485, 13.09496],
+                      [77.3948, 13.09571],
+                      [77.39479, 13.09633],
+                      [77.39475, 13.09669],
+                      [77.3946, 13.09718],
+                      [77.3946, 13.09727],
+                      [77.39472, 13.09771],
+                      [77.39489, 13.0981],
+                      [77.39458, 13.09821],
+                      [77.39447, 13.098],
+                      [77.39442, 13.09795],
+                      [77.39435, 13.09794],
+                      [77.39389, 13.09801],
+                      [77.39384, 13.09804],
+                      [77.39379, 13.09832],
+                      [77.39292, 13.09845],
+                      [77.39266, 13.09853],
+                      [77.39236, 13.09867],
+                      [77.39206, 13.09886],
+                      [77.39187, 13.099],
+                      [77.3914, 13.09958],
+                      [77.39116, 13.09982],
+                      [77.39111, 13.09982],
+                      [77.39107, 13.09985],
+                      [77.39106, 13.09993],
+                      [77.39108, 13.09996],
+                      [77.39066, 13.10057],
+                      [77.39057, 13.10068],
+                      [77.39011, 13.10115],
+                      [77.3897, 13.10147],
+                      [77.38865, 13.10215],
+                      [77.3887, 13.10224],
+                      [77.38869, 13.10242],
+                      [77.3884, 13.10307],
+                      [77.38823, 13.10357],
+                      [77.3882, 13.10374],
+                      [77.38817, 13.10435],
+                      [77.38822, 13.10475],
+                      [77.38821, 13.105],
+                      [77.38812, 13.1058],
+                      [77.38813, 13.10812],
+                      [77.38811, 13.10931],
+                      [77.38827, 13.11102],
+                      [77.38852, 13.11209],
+                      [77.38866, 13.11281],
+                      [77.38879, 13.11317],
+                      [77.38929, 13.11412],
+                      [77.38942, 13.11443],
+                      [77.39048, 13.11764],
+                      [77.39061, 13.11796],
+                      [77.39071, 13.11814],
+                      [77.39152, 13.11927],
+                      [77.39196, 13.11985],
+                      [77.39342, 13.12191],
+                      [77.39393, 13.12267],
+                      [77.39461, 13.12373],
+                      [77.39527, 13.12481],
+                      [77.39541, 13.125],
+                      [77.39564, 13.12525],
+                      [77.39599, 13.12554],
+                      [77.39784, 13.12674],
+                      [77.39829, 13.12706],
+                      [77.39885, 13.12753],
+                      [77.39913, 13.12782],
+                      [77.3996, 13.12835],
+                      [77.40028, 13.12917],
+                      [77.40128, 13.1303],
+                      [77.40233, 13.13152],
+                      [77.40258, 13.13177],
+                      [77.40298, 13.13214],
+                      [77.40401, 13.1329],
+                      [77.40451, 13.13332],
+                      [77.40567, 13.13419],
+                      [77.40621, 13.13463],
+                      [77.40672, 13.13517],
+                      [77.40691, 13.13541],
+                      [77.40733, 13.13588],
+                      [77.40856, 13.1374],
+                      [77.40884, 13.13771],
+                      [77.40911, 13.13808],
+                      [77.41038, 13.14031],
+                      [77.41065, 13.14073],
+                      [77.41222, 13.14348],
+                      [77.41231, 13.14372],
+                      [77.41231, 13.14406],
+                      [77.41212, 13.14582],
+                      [77.412, 13.14754],
+                      [77.41193, 13.14789],
+                      [77.4119, 13.14826],
+                      [77.41162, 13.1484],
+                      [77.41139, 13.1487],
+                      [77.41091, 13.14911],
+                      [77.4107, 13.14933],
+                      [77.40983, 13.15005],
+                      [77.40963, 13.15014],
+                      [77.40956, 13.15021],
+                      [77.40954, 13.15039],
+                      [77.40949, 13.15052],
+                      [77.40942, 13.15063],
+                      [77.40925, 13.15077],
+                      [77.40904, 13.15092],
+                      [77.40808, 13.15149],
+                      [77.40775, 13.15172],
+                      [77.40659, 13.15262],
+                      [77.40569, 13.15335],
+                      [77.40501, 13.15406],
+                      [77.40492, 13.15419],
+                      [77.40485, 13.15433],
+                      [77.40469, 13.15474],
+                      [77.40415, 13.15536],
+                      [77.40392, 13.15588],
+                      [77.40381, 13.15607],
+                      [77.40367, 13.15626],
+                      [77.40342, 13.15653],
+                      [77.40337, 13.15656],
+                      [77.40322, 13.15658],
+                      [77.40317, 13.15656],
+                      [77.40303, 13.15644],
+                      [77.40287, 13.15641],
+                      [77.4024, 13.15647],
+                      [77.4022, 13.15653],
+                      [77.40211, 13.15664],
+                      [77.40205, 13.15678],
+                      [77.40185, 13.15747],
+                      [77.40187, 13.15783],
+                      [77.4018, 13.15791],
+                      [77.40174, 13.15794],
+                      [77.40143, 13.15803],
+                      [77.4011, 13.15809],
+                      [77.40076, 13.15818],
+                      [77.40054, 13.15829],
+                      [77.40033, 13.15848],
+                      [77.40023, 13.15853],
+                      [77.39968, 13.15865],
+                      [77.39962, 13.15869],
+                      [77.3994, 13.15895],
+                      [77.39927, 13.15905],
+                      [77.39893, 13.15922],
+                      [77.39869, 13.15928],
+                      [77.39835, 13.1593],
+                      [77.39805, 13.15934],
+                      [77.39773, 13.15944],
+                      [77.39745, 13.1595],
+                      [77.3971, 13.15953],
+                      [77.3968, 13.15959],
+                      [77.39668, 13.15964],
+                      [77.39659, 13.15978],
+                      [77.39659, 13.15988],
+                      [77.39653, 13.16009],
+                      [77.39648, 13.16018],
+                      [77.39624, 13.1604],
+                      [77.39611, 13.16049],
+                      [77.39538, 13.16084],
+                      [77.39434, 13.16119],
+                      [77.39401, 13.16128],
+                      [77.39344, 13.1614],
+                      [77.39329, 13.16145],
+                      [77.39314, 13.16153],
+                      [77.39279, 13.16176],
+                      [77.39271, 13.16179],
+                      [77.39285, 13.16196],
+                      [77.3933, 13.1627],
+                      [77.39335, 13.16283],
+                      [77.39344, 13.16334],
+                      [77.39355, 13.16367],
+                      [77.39367, 13.16383],
+                      [77.39403, 13.16416],
+                      [77.39415, 13.1643],
+                      [77.39452, 13.16496],
+                      [77.39494, 13.16566],
+                      [77.39516, 13.1661],
+                      [77.39557, 13.16666],
+                      [77.39602, 13.16716],
+                      [77.39624, 13.16743],
+                      [77.39646, 13.16764],
+                      [77.39681, 13.16791],
+                      [77.39733, 13.16845],
+                      [77.3974, 13.16856],
+                      [77.39747, 13.16879],
+                      [77.39749, 13.16894],
+                      [77.3975, 13.1693],
+                      [77.39702, 13.17046],
+                      [77.39632, 13.17189],
+                      [77.39615, 13.17214],
+                      [77.39599, 13.17232],
+                      [77.39571, 13.17255],
+                      [77.39555, 13.17271],
+                      [77.39517, 13.17327],
+                      [77.39495, 13.17367],
+                      [77.39489, 13.17383],
+                      [77.39487, 13.17397],
+                      [77.39487, 13.17415],
+                      [77.39484, 13.17429],
+                      [77.39473, 13.17452],
+                      [77.39466, 13.1746],
+                      [77.39457, 13.17467],
+                      [77.39408, 13.17476],
+                      [77.394, 13.17481],
+                      [77.39398, 13.17487],
+                      [77.39397, 13.17509],
+                      [77.39393, 13.17523],
+                      [77.39339, 13.17621],
+                      [77.39321, 13.17658],
+                      [77.39311, 13.17673],
+                      [77.39293, 13.17695],
+                      [77.39191, 13.17799],
+                      [77.39162, 13.1782],
+                      [77.39135, 13.17844],
+                      [77.3911, 13.1787],
+                      [77.39082, 13.17903],
+                      [77.39041, 13.17931],
+                      [77.39022, 13.17941],
+                      [77.39008, 13.17954],
+                      [77.38922, 13.18049],
+                      [77.38885, 13.18078],
+                      [77.38842, 13.18103],
+                      [77.38804, 13.18121],
+                      [77.3878, 13.18142],
+                      [77.38751, 13.18177],
+                      [77.38728, 13.18196],
+                      [77.38696, 13.18227],
+                      [77.38672, 13.18252],
+                      [77.38644, 13.18285],
+                      [77.38621, 13.18305],
+                      [77.38596, 13.18323],
+                      [77.3858, 13.18332],
+                      [77.3851, 13.18356],
+                      [77.38449, 13.18367],
+                      [77.384, 13.18374],
+                      [77.38374, 13.18376],
+                      [77.38356, 13.18374],
+                      [77.38342, 13.18375],
+                      [77.38325, 13.18378],
+                      [77.38315, 13.18384],
+                      [77.38296, 13.18402],
+                      [77.3826, 13.18466],
+                      [77.38202, 13.18549],
+                      [77.38187, 13.18566],
+                      [77.38158, 13.18584],
+                      [77.38142, 13.18596],
+                      [77.38134, 13.18608],
+                      [77.38129, 13.18623],
+                      [77.38129, 13.18635],
+                      [77.38178, 13.18777],
+                      [77.38193, 13.18823],
+                      [77.382, 13.18852],
+                      [77.38207, 13.18904],
+                      [77.38213, 13.18989],
+                      [77.38211, 13.19047],
+                      [77.38202, 13.19092],
+                      [77.38192, 13.19128],
+                      [77.3818, 13.19189],
+                      [77.38169, 13.19262],
+                      [77.38171, 13.19287],
+                      [77.38191, 13.19428],
+                      [77.38188, 13.19439],
+                      [77.3817, 13.19467],
+                      [77.38129, 13.19523],
+                      [77.38074, 13.19632],
+                      [77.38059, 13.19657],
+                      [77.37966, 13.19765],
+                      [77.37898, 13.19825],
+                      [77.37863, 13.19859],
+                      [77.37802, 13.19907],
+                      [77.37774, 13.19926],
+                      [77.37752, 13.19936],
+                      [77.37736, 13.19939],
+                      [77.37714, 13.19939],
+                      [77.37683, 13.19934]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "147",
+                    "stop_name": "Railway Bridge Byranayakanahalli",
+                    "routes": ["10w", "it"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.38051, 13.19662]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "1a1",
+                    "stop_name": "Bolamaranahalli",
+                    "routes": ["10w", "it", "kc"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.39782, 13.15935]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "1c5",
+                    "stop_name": "Udichikkanahalli",
+                    "routes": ["10w", "it"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.3948, 13.17432]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "1ho",
+                    "stop_name": "Mallapura Cross",
+                    "routes": ["kb", "it", "lj", "dn"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.39373, 13.07271]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "1hp",
+                    "stop_name": "Chikkanahalli",
+                    "routes": ["10w", "it"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.38426, 13.18367]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "1ie",
+                    "stop_name": "Renuka Nagara",
+                    "routes": ["10w", "ca", "it", "kc", "xv", "2n"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.38812, 13.1058]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "1lf",
+                    "stop_name": "Nelamangala Court",
+                    "routes": ["kb", "br", "it", "lj", "dn"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.39384, 13.08793]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "1ow",
+                    "stop_name": "Nelamangala Bus Station",
+                    "routes": ["r3", "zh", "10w", "13s", "4r", "4u", "62", "9h", "b1", "br", "ca", "i", "i0", "it", "kc", "kp", "l2", "lb", "se", "xv", "yb", "tf", "2n"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.39438, 13.09796]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "1q",
+                    "stop_name": "Gollahalli",
+                    "routes": ["10w", "ca", "it", "kc", "xv", "2n"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.41228, 13.1437]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "1qs",
+                    "stop_name": "Lakshmi Devastana",
+                    "routes": ["kb", "it", "lj", "dn"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.39275, 13.07818]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "1rw",
+                    "stop_name": "Islampura Cross",
+                    "routes": ["10w", "ca", "it", "kc", "xv", "2n"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.38877, 13.11309]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "1s8",
+                    "stop_name": "Thyagadahalli",
+                    "routes": ["10w", "it"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.39429, 13.16463]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "225",
+                    "stop_name": "Mylanahalli Bare",
+                    "routes": ["10w", "ca", "it", "kc", "xv", "2n"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.39837, 13.12716]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "28i",
+                    "stop_name": "Nelamangala Hunasemara",
+                    "routes": ["10w", "ca", "it", "kc", "xv", "2n"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.39064, 13.10054]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "2cq",
+                    "stop_name": "Byregowdanahalli Colony",
+                    "routes": ["kb", "it", "lj", "dn"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.39376, 13.06434]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "2go",
+                    "stop_name": "Hyadalu",
+                    "routes": ["10w", "ca", "it", "kc", "xv", "2n"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.41023, 13.1401]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "2v1",
+                    "stop_name": "Basavanahalli",
+                    "routes": ["10w", "ca", "it", "kc", "xv", "2n"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.3882, 13.11034]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "30t",
+                    "stop_name": "Byregowdanahalli2",
+                    "routes": ["kb", "it", "lj", "dn"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.39389, 13.05913]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "32l",
+                    "stop_name": "Jai Maruthi Nagara",
+                    "routes": ["10w", "it"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.3813, 13.18643]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "337",
+                    "stop_name": "KG Srinivasapura Cross",
+                    "routes": ["10w", "ca", "it", "kc", "xv", "2n"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.40021, 13.1291]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "33y",
+                    "stop_name": "Byranayakanahalli",
+                    "routes": ["it"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.37682, 13.19938]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "352",
+                    "stop_name": "Byranayakanahalli Railway Station",
+                    "routes": ["10w", "it"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.38186, 13.19402]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "35x",
+                    "stop_name": "Sondekoppa Circle Nelamangala",
+                    "routes": ["kb", "4r", "b1", "br", "it", "lj", "dn"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.39479, 13.0921]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "37x",
+                    "stop_name": "A G Export Garments Nelamangala",
+                    "routes": ["10w", "ca", "it", "kc", "xv", "2n"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.39237, 13.12046]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "38o",
+                    "stop_name": "Byrashettyhalli",
+                    "routes": ["10w", "it", "kc"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.40332, 13.15656]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "3b8",
+                    "stop_name": "Hunnigere Cross",
+                    "routes": ["kb", "it", "lj", "dn"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.39107, 13.03914]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "3fk",
+                    "stop_name": "Bylanjaneya Swamy Temple Gollahalli",
+                    "routes": ["10w", "it", "kc"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.40957, 13.1501]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "3sk",
+                    "stop_name": "Basavanahalli Cross",
+                    "routes": ["10w", "ca", "it", "kc", "xv", "2n"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.38869, 13.10231]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "3yl",
+                    "stop_name": "Ganesha Gudi Nelamangala",
+                    "routes": ["kb", "it", "lj", "dn"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.39293, 13.08363]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "3yt",
+                    "stop_name": "Chikkanahalli Bande",
+                    "routes": ["10w", "it"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.39042, 13.17933]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "3z3",
+                    "stop_name": "Chikkanahalli School",
+                    "routes": ["10w", "it"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.3865, 13.18269]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "40",
+                    "stop_name": "Lakkenahalli Junction Sondekoppa Road",
+                    "routes": ["kb", "it", "lj", "dn"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.39272, 13.04454]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "420",
+                    "stop_name": "Siddaganga College",
+                    "routes": ["kb", "it", "lj", "dn"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.39274, 13.08213]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "94",
+                    "stop_name": "Arch Railway Gollahalli",
+                    "routes": ["10w", "ca", "it", "kc", "xv", "2n"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.41187, 13.14818]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "br",
+                    "stop_name": "Mylanahalli Gate",
+                    "routes": ["10w", "ca", "it", "kc", "xv", "2n"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.40361, 13.13262]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "cn",
+                    "stop_name": "Bettahallipalya",
+                    "routes": ["10w", "it", "kc"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.39285, 13.16168]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "dz",
+                    "stop_name": "Mantanakurchi",
+                    "routes": ["4r", "it"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.38411, 13.04352]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "ke",
+                    "stop_name": "Hullegowdanahalli Cross",
+                    "routes": ["kb", "it", "lj", "dn"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.39468, 13.06831]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table class="table-vertical" summary="This table shows schedules for a selection of key stops on the route for Route 258-SB BNH-MNTK - Mantanakurchi to Byranayakanahalli Mon-Sun. Stops and their schedule times are listed in the columns." data-orientation="vertical">
+            <caption class="sr-only">Route 258-SB BNH-MNTK - Mantanakurchi to Byranayakanahalli | Mon-Sun</caption>
+            <colgroup>
+              <col class="stop-0" id="stop_id_dz" data-stop-id="dz" data-is-timepoint="true">
+              <col class="stop-1" id="stop_id_3b8" data-stop-id="3b8" data-is-timepoint="true">
+              <col class="stop-2" id="stop_id_40" data-stop-id="40" data-is-timepoint="true">
+              <col class="stop-3" id="stop_id_30t" data-stop-id="30t" data-is-timepoint="true">
+              <col class="stop-4" id="stop_id_2cq" data-stop-id="2cq" data-is-timepoint="true">
+              <col class="stop-5" id="stop_id_ke" data-stop-id="ke" data-is-timepoint="true">
+              <col class="stop-6" id="stop_id_1ho" data-stop-id="1ho" data-is-timepoint="true">
+              <col class="stop-7" id="stop_id_1qs" data-stop-id="1qs" data-is-timepoint="true">
+              <col class="stop-8" id="stop_id_420" data-stop-id="420" data-is-timepoint="true">
+              <col class="stop-9" id="stop_id_3yl" data-stop-id="3yl" data-is-timepoint="true">
+              <col class="stop-10" id="stop_id_1lf" data-stop-id="1lf" data-is-timepoint="true">
+              <col class="stop-11" id="stop_id_35x" data-stop-id="35x" data-is-timepoint="true">
+              <col class="stop-12" id="stop_id_1ow" data-stop-id="1ow" data-is-timepoint="true">
+              <col class="stop-13" id="stop_id_28i" data-stop-id="28i" data-is-timepoint="true">
+              <col class="stop-14" id="stop_id_3sk" data-stop-id="3sk" data-is-timepoint="true">
+              <col class="stop-15" id="stop_id_1ie" data-stop-id="1ie" data-is-timepoint="true">
+              <col class="stop-16" id="stop_id_2v1" data-stop-id="2v1" data-is-timepoint="true">
+              <col class="stop-17" id="stop_id_1rw" data-stop-id="1rw" data-is-timepoint="true">
+              <col class="stop-18" id="stop_id_37x" data-stop-id="37x" data-is-timepoint="true">
+              <col class="stop-19" id="stop_id_225" data-stop-id="225" data-is-timepoint="true">
+              <col class="stop-20" id="stop_id_337" data-stop-id="337" data-is-timepoint="true">
+              <col class="stop-21" id="stop_id_br" data-stop-id="br" data-is-timepoint="true">
+              <col class="stop-22" id="stop_id_2go" data-stop-id="2go" data-is-timepoint="true">
+              <col class="stop-23" id="stop_id_1q" data-stop-id="1q" data-is-timepoint="true">
+              <col class="stop-24" id="stop_id_94" data-stop-id="94" data-is-timepoint="true">
+              <col class="stop-25" id="stop_id_3fk" data-stop-id="3fk" data-is-timepoint="true">
+              <col class="stop-26" id="stop_id_38o" data-stop-id="38o" data-is-timepoint="true">
+              <col class="stop-27" id="stop_id_1a1" data-stop-id="1a1" data-is-timepoint="true">
+              <col class="stop-28" id="stop_id_cn" data-stop-id="cn" data-is-timepoint="true">
+              <col class="stop-29" id="stop_id_1s8" data-stop-id="1s8" data-is-timepoint="true">
+              <col class="stop-30" id="stop_id_1c5" data-stop-id="1c5" data-is-timepoint="true">
+              <col class="stop-31" id="stop_id_3yt" data-stop-id="3yt" data-is-timepoint="true">
+              <col class="stop-32" id="stop_id_3z3" data-stop-id="3z3" data-is-timepoint="true">
+              <col class="stop-33" id="stop_id_1hp" data-stop-id="1hp" data-is-timepoint="true">
+              <col class="stop-34" id="stop_id_32l" data-stop-id="32l" data-is-timepoint="true">
+              <col class="stop-35" id="stop_id_352" data-stop-id="352" data-is-timepoint="true">
+              <col class="stop-36" id="stop_id_147" data-stop-id="147" data-is-timepoint="true">
+              <col class="stop-37" id="stop_id_33y" data-stop-id="33y" data-is-timepoint="true">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">Mantanakurchi</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">Hunnigere Cross</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">Lakkenahalli Junction Sondekoppa Road</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">Byregowdanahalli2</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">Byregowdanahalli Colony</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">Hullegowdanahalli Cross</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">Mallapura Cross</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">Lakshmi Devastana</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">Siddaganga College</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">Ganesha Gudi Nelamangala</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">Nelamangala Court</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">Sondekoppa Circle Nelamangala</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">Nelamangala Bus Station</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">Nelamangala Hunasemara</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">Basavanahalli Cross</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">Renuka Nagara</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">Basavanahalli</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">Islampura Cross</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">A G Export Garments Nelamangala</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">Mylanahalli Bare</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">KG Srinivasapura Cross</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">Mylanahalli Gate</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">Hyadalu</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">Gollahalli</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">Arch Railway Gollahalli</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">Bylanjaneya Swamy Temple Gollahalli</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">Byrashettyhalli</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">Bolamaranahalli</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">Bettahallipalya</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">Thyagadahalli</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">Udichikkanahalli</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">Chikkanahalli Bande</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">Chikkanahalli School</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">Chikkanahalli</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">Jai Maruthi Nagara</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">Byranayakanahalli Railway Station</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">Railway Bridge Byranayakanahalli</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="2.63%">
+                  <div class="stop-name">Byranayakanahalli</div>
+                  <div class="stop-code"></div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="trip-row" id="trip_id_4gl">
+                <td class="stop-time am"><span class="stop-time-text">8:35am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:36am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:38am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:40am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:42am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:44am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:46am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:48am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:50am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:52am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:54am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:56am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:58am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:00am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:02am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:04am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:06am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:08am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:10am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:12am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:14am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:16am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:18am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:20am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:22am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:24am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:26am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:28am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:30am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:32am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:34am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:36am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:38am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:40am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:42am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:44am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:46am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:48am</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

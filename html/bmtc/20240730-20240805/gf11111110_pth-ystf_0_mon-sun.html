@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'YOUR MAPBOX ACCESS TOKEN';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+</head>
+
+<body><!-- Timetable generated on 2024-07-28T21:55:50.560Z using GTFS-to-HTML version 2.6.11 -->
+  <div class="timetable-page menu-type-jump">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center gap-2">
+        <div class="route-color-swatch-large flex-none" style="background-color: #000000; color: #FFFFFF;">PTH-YSTF</div>
+        <div>Route PTH-YSTF</div>
+      </h1>
+      <div class="effective-date text-gray-600 mt-2">Effective July 24, 2024</div>
+      <div class="timetable mb-10" id="timetable_id_gf11111110" data-day-list="Mon-Sun" data-direction-name="5th Phase Yelahanka New Town" data-timetable-id="gf|1111111|0" data-direction-id="0" data-route-id="gf">
+        <div class="mb-2">
+          <h2 class="text-xl">Route PTH-YSTF - Puttenahalli to 5th Phase Yelahanka New Town | Monday-Sunday</h2>
+        </div>
+        <div class="map" id="map_timetable_id_gf11111110"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_gf11111110",
+              "routes": {
+                "11": {
+                  "route_id": "11",
+                  "agency_id": "1",
+                  "route_short_name": "507-D",
+                  "route_long_name": "5th Phase Yelahanka New Town ⇔ Krishnaraja Pura Govt Hospital",
+                  "route_type": 3
+                },
+                "16": {
+                  "route_id": "16",
+                  "agency_id": "1",
+                  "route_short_name": "285-C",
+                  "route_long_name": "KR Market ⇔ Dodda Tumkur",
+                  "route_type": 3
+                },
+                "54": {
+                  "route_id": "54",
+                  "agency_id": "1",
+                  "route_short_name": "290-EB SBS-VRP",
+                  "route_long_name": "Shivajinagara Bus Station ⇔ Vidyaranyapura",
+                  "route_type": 3
+                },
+                "dj": {
+                  "route_id": "dj",
+                  "agency_id": "1",
+                  "route_short_name": "283 PTH-SGT",
+                  "route_long_name": "Puttenahalli ⇔ Suggatta",
+                  "route_type": 3
+                },
+                "12w": {
+                  "route_id": "12w",
+                  "agency_id": "1",
+                  "route_short_name": "285-C KBS-DTMR",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Dodda Tumkur",
+                  "route_type": 3
+                },
+                "9t": {
+                  "route_id": "9t",
+                  "agency_id": "1",
+                  "route_short_name": "285-N",
+                  "route_long_name": "KR Market ⇔ Tharahunase",
+                  "route_type": 3
+                },
+                "ba": {
+                  "route_id": "ba",
+                  "agency_id": "1",
+                  "route_short_name": "285-M",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Doddaballapura Bus Stand",
+                  "route_type": 3
+                },
+                "f6": {
+                  "route_id": "f6",
+                  "agency_id": "1",
+                  "route_short_name": "285-W",
+                  "route_long_name": "KR Market ⇔ Dibbur",
+                  "route_type": 3
+                },
+                "qu": {
+                  "route_id": "qu",
+                  "agency_id": "1",
+                  "route_short_name": "285-CA",
+                  "route_long_name": "KR Market ⇔ Jinke Bachahalli",
+                  "route_type": 3
+                },
+                "sv": {
+                  "route_id": "sv",
+                  "agency_id": "1",
+                  "route_short_name": "285-X",
+                  "route_long_name": "KR Market ⇔ Dibbur",
+                  "route_type": 3
+                },
+                "zf": {
+                  "route_id": "zf",
+                  "agency_id": "1",
+                  "route_short_name": "285 BMSITY-MKC-SBS",
+                  "route_long_name": "BMSIT College Campous Yelahanka ⇔ Shivajinagara Bus Station",
+                  "route_type": 3
+                },
+                "oh": {
+                  "route_id": "oh",
+                  "agency_id": "1",
+                  "route_short_name": "289-AB PTH-BYH",
+                  "route_long_name": "Puttenahalli ⇔ Byalahalli",
+                  "route_type": 3
+                },
+                "qk": {
+                  "route_id": "qk",
+                  "agency_id": "1",
+                  "route_short_name": "289-A PTH-BKHP",
+                  "route_long_name": "Puttenahalli ⇔ Bande Kodigehallipalya Cross",
+                  "route_type": 3
+                },
+                "rj": {
+                  "route_id": "rj",
+                  "agency_id": "1",
+                  "route_short_name": "289-B PTH-KYH",
+                  "route_long_name": "Puttenahalli ⇔ Kadayarappanahalli",
+                  "route_type": 3
+                },
+                "b2": {
+                  "route_id": "b2",
+                  "agency_id": "1",
+                  "route_short_name": "291-L PTN-MYLH",
+                  "route_long_name": "Puttenahalli ⇔ Mylanahalli",
+                  "route_type": 3
+                },
+                "12b": {
+                  "route_id": "12b",
+                  "agency_id": "1",
+                  "route_short_name": "297-G PTH-DCH",
+                  "route_long_name": "Puttenahalli ⇔ Dodda Cheemanahalli",
+                  "route_type": 3
+                },
+                "gf": {
+                  "route_id": "gf",
+                  "agency_id": "1",
+                  "route_short_name": "PTH-YSTF",
+                  "route_long_name": "Puttenahalli ⇔ 5th Phase Yelahanka New Town",
+                  "route_type": 3
+                },
+                "hv": {
+                  "route_id": "hv",
+                  "agency_id": "1",
+                  "route_short_name": "PTH-MADT",
+                  "route_long_name": "Puttenahalli ⇔ Malya Adhithi School",
+                  "route_type": 3
+                },
+                "k": {
+                  "route_id": "k",
+                  "agency_id": "1",
+                  "route_short_name": "PTH-JLOW",
+                  "route_long_name": "Puttenahalli ⇔ Judicial Layout Water Tank",
+                  "route_type": 3
+                },
+                "6j": {
+                  "route_id": "6j",
+                  "agency_id": "1",
+                  "route_short_name": "276-F KBS-YSTF",
+                  "route_long_name": "Kempegowda Bus Station ⇔ 5th Phase Yelahanka New Town",
+                  "route_type": 3
+                },
+                "dq": {
+                  "route_id": "dq",
+                  "agency_id": "1",
+                  "route_short_name": "289-LA YSTF-HSK",
+                  "route_long_name": "5th Phase Yelahanka New Town ⇔ Hosakote Bus Stand (Old)",
+                  "route_type": 3
+                },
+                "10j": {
+                  "route_id": "10j",
+                  "agency_id": "1",
+                  "route_short_name": "290-EA",
+                  "route_long_name": "Shivajinagara Bus Station ⇔ 5th Phase Yelahanka New Town",
+                  "route_type": 3
+                },
+                "7m": {
+                  "route_id": "7m",
+                  "agency_id": "1",
+                  "route_short_name": "290-EA BCGHS-YSTF",
+                  "route_long_name": "Bishop Coton Girls High School ⇔ 5th Phase Yelahanka New Town",
+                  "route_type": 3
+                },
+                "8n": {
+                  "route_id": "8n",
+                  "agency_id": "1",
+                  "route_short_name": "290-EH",
+                  "route_long_name": "Shivajinagara Bus Station ⇔ 5th Phase Yelahanka New Town",
+                  "route_type": 3
+                },
+                "8v": {
+                  "route_id": "8v",
+                  "agency_id": "1",
+                  "route_short_name": "402-B",
+                  "route_long_name": "Kempegowda Bus Station ⇔ 5th Phase Yelahanka New Town",
+                  "route_type": 3
+                },
+                "6h": {
+                  "route_id": "6h",
+                  "agency_id": "1",
+                  "route_short_name": "G-9",
+                  "route_long_name": "MG Road Metro Station ⇔ 5th Phase Yelahanka New Town",
+                  "route_type": 3
+                },
+                "ie": {
+                  "route_id": "ie",
+                  "agency_id": "1",
+                  "route_short_name": "D45G-YSTF",
+                  "route_long_name": "Depot-45 Gate ⇔ 5th Phase Yelahanka New Town",
+                  "route_type": 3
+                },
+                "7b": {
+                  "route_id": "7b",
+                  "agency_id": "1",
+                  "route_short_name": "285-MJ HBLB-GST",
+                  "route_long_name": "Hebbala Bridge ⇔ Ghati Subramanya",
+                  "route_type": 3
+                },
+                "lv": {
+                  "route_id": "lv",
+                  "agency_id": "1",
+                  "route_short_name": "D11-PTH",
+                  "route_long_name": "Depot-11 Puttenahalli ⇔ Puttenahalli",
+                  "route_type": 3
+                },
+                "no": {
+                  "route_id": "no",
+                  "agency_id": "1",
+                  "route_short_name": "D30-PTN",
+                  "route_long_name": "Depot-30 Puttenahalli ⇔ Puttenahalli",
+                  "route_type": 3
+                },
+                "m8": {
+                  "route_id": "m8",
+                  "agency_id": "1",
+                  "route_short_name": "289-AA MSP-BGR",
+                  "route_long_name": "MS Palya ⇔ Bagalur",
+                  "route_type": 3
+                },
+                "b8": {
+                  "route_id": "b8",
+                  "agency_id": "1",
+                  "route_short_name": "290-EB D45-SBS",
+                  "route_long_name": "Depot-45 Gate ⇔ Shivajinagara Bus Station",
+                  "route_type": 3
+                },
+                "7s": {
+                  "route_id": "7s",
+                  "agency_id": "1",
+                  "route_short_name": "401-A NMG-YHKOT",
+                  "route_long_name": "Nelamangala Bus Station ⇔ Yelahanka Old Town",
+                  "route_type": 3
+                },
+                "c": {
+                  "route_id": "c",
+                  "agency_id": "1",
+                  "route_short_name": "401-B",
+                  "route_long_name": "Hampinagara RPC Layout ⇔ Yelahanka Old Town",
+                  "route_type": 3
+                },
+                "s7": {
+                  "route_id": "s7",
+                  "agency_id": "1",
+                  "route_short_name": "407-F",
+                  "route_long_name": "Yelahanka Old Town ⇔ Nelamangala Bus Station",
+                  "route_type": 3
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [77.58023, 13.11016],
+                      [77.58092, 13.10801],
+                      [77.5811, 13.10755],
+                      [77.58118, 13.1074],
+                      [77.58136, 13.10714],
+                      [77.58206, 13.10626],
+                      [77.58312, 13.10508],
+                      [77.58388, 13.10432],
+                      [77.58467, 13.10359],
+                      [77.58564, 13.10278],
+                      [77.58648, 13.10216],
+                      [77.58639, 13.10209],
+                      [77.58627, 13.10203],
+                      [77.58595, 13.10192],
+                      [77.58537, 13.10175],
+                      [77.58316, 13.10114],
+                      [77.58092, 13.10048],
+                      [77.57892, 13.09992],
+                      [77.57884, 13.09986],
+                      [77.5787, 13.09981],
+                      [77.57757, 13.09948],
+                      [77.57719, 13.09933],
+                      [77.57677, 13.09921],
+                      [77.57668, 13.09952],
+                      [77.57669, 13.09973],
+                      [77.57674, 13.09998],
+                      [77.57694, 13.10379],
+                      [77.57698, 13.10406],
+                      [77.57728, 13.10517],
+                      [77.5775, 13.10577],
+                      [77.57781, 13.10641],
+                      [77.57552, 13.10719],
+                      [77.57479, 13.1074],
+                      [77.57444, 13.10626],
+                      [77.57435, 13.10591],
+                      [77.5735, 13.10601],
+                      [77.57276, 13.10612]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "1bc",
+                    "stop_name": "Escorts",
+                    "routes": ["dj", "12w", "16", "9t", "ba", "f6", "qu", "sv", "zf", "oh", "qk", "rj", "b2", "12b", "gf", "hv", "k"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.58564, 13.10278]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "1y6",
+                    "stop_name": "5th Phase Yelahanka New Town",
+                    "routes": ["6j", "dq", "10j", "7m", "8n", "8v", "11", "6h", "gf", "ie"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.57251, 13.10575]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "293",
+                    "stop_name": "Shrusti School Yalahanka",
+                    "routes": ["8n", "8v", "gf"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.57594, 13.10703]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "3qq",
+                    "stop_name": "Puttenahalli",
+                    "routes": ["dj", "12w", "16", "7b", "9t", "ba", "f6", "qu", "sv", "zf", "oh", "qk", "rj", "b2", "12b", "gf", "hv", "k", "lv", "no"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.58024, 13.11016]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "3wq",
+                    "stop_name": "Wheel And Axle Plant",
+                    "routes": ["dj", "12w", "16", "9t", "ba", "f6", "qu", "sv", "zf", "oh", "qk", "rj", "b2", "12b", "gf", "hv", "k"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.58227, 13.10603]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "4d7",
+                    "stop_name": "Mother Dairy Cross Yalahanka",
+                    "routes": ["m8", "10j", "54", "7m", "8n", "b8", "7s", "c", "8v", "s7", "gf"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.57719, 13.09933]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "h2",
+                    "stop_name": "Yalahanka Bakery",
+                    "routes": ["10j", "7m", "8n", "8v", "6h", "gf", "ie"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.57689, 13.10329]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table class="table-vertical" summary="This table shows schedules for a selection of key stops on the route for Route PTH-YSTF - Puttenahalli to 5th Phase Yelahanka New Town Mon-Sun. Stops and their schedule times are listed in the columns." data-orientation="vertical">
+            <caption class="sr-only">Route PTH-YSTF - Puttenahalli to 5th Phase Yelahanka New Town | Mon-Sun</caption>
+            <colgroup>
+              <col class="stop-0" id="stop_id_3qq" data-stop-id="3qq" data-is-timepoint="true">
+              <col class="stop-1" id="stop_id_3wq" data-stop-id="3wq" data-is-timepoint="true">
+              <col class="stop-2" id="stop_id_1bc" data-stop-id="1bc" data-is-timepoint="true">
+              <col class="stop-3" id="stop_id_4d7" data-stop-id="4d7" data-is-timepoint="true">
+              <col class="stop-4" id="stop_id_h2" data-stop-id="h2" data-is-timepoint="true">
+              <col class="stop-5" id="stop_id_293" data-stop-id="293" data-is-timepoint="true">
+              <col class="stop-6" id="stop_id_1y6" data-stop-id="1y6" data-is-timepoint="true">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col" width="14.29%">
+                  <div class="stop-name">Puttenahalli</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="14.29%">
+                  <div class="stop-name">Wheel And Axle Plant</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="14.29%">
+                  <div class="stop-name">Escorts</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="14.29%">
+                  <div class="stop-name">Mother Dairy Cross Yalahanka</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="14.29%">
+                  <div class="stop-name">Yalahanka Bakery</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="14.29%">
+                  <div class="stop-name">Shrusti School Yalahanka</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="14.29%">
+                  <div class="stop-name">5th Phase Yelahanka New Town</div>
+                  <div class="stop-code"></div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="trip-row" id="trip_id_1oh">
+                <td class="stop-time am"><span class="stop-time-text">8:01am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:01am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:02am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:02am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:03am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:03am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:04am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_1da">
+                <td class="stop-time am"><span class="stop-time-text">8:01am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:02am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:03am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:04am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:06am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:07am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:08am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_2qj">
+                <td class="stop-time am"><span class="stop-time-text">8:33am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:34am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:35am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:36am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:37am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:38am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:39am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_zf">
+                <td class="stop-time am"><span class="stop-time-text">9:06am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:06am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:07am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:07am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:08am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:08am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:09am</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_1oy">
+                <td class="stop-time pm"><span class="stop-time-text">2:31pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:31pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:32pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:32pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:33pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:33pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:34pm</span></td>
+              </tr>
+              <tr class="trip-row" id="trip_id_am">
+                <td class="stop-time pm"><span class="stop-time-text">7:46pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:46pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:47pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:47pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:48pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:48pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:49pm</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

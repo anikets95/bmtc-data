@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'YOUR MAPBOX ACCESS TOKEN';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+</head>
+
+<body><!-- Timetable generated on 2024-07-28T21:57:58.720Z using GTFS-to-HTML version 2.6.11 -->
+  <div class="timetable-page menu-type-jump">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center gap-2">
+        <div class="route-color-swatch-large flex-none" style="background-color: #000000; color: #FFFFFF;">355 D38-BMSV</div>
+        <div>Route 355 D38-BMSV</div>
+      </h1>
+      <div class="effective-date text-gray-600 mt-2">Effective July 24, 2024</div>
+      <div class="timetable mb-10" id="timetable_id_4511111110" data-day-list="Mon-Sun" data-direction-name="Bommasandra Village" data-timetable-id="45|1111111|0" data-direction-id="0" data-route-id="45">
+        <div class="mb-2">
+          <h2 class="text-xl">Route 355 D38-BMSV - Depot-38 Gate to Bommasandra Village | Monday-Sunday</h2>
+        </div>
+        <div class="map" id="map_timetable_id_4511111110"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_4511111110",
+              "routes": {
+                "31": {
+                  "route_id": "31",
+                  "agency_id": "1",
+                  "route_short_name": "361-K",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Naganayakanahalli",
+                  "route_type": 3
+                },
+                "33": {
+                  "route_id": "33",
+                  "agency_id": "1",
+                  "route_short_name": "V-356",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Chandapura",
+                  "route_type": 3
+                },
+                "45": {
+                  "route_id": "45",
+                  "agency_id": "1",
+                  "route_short_name": "355 D38-BMSV",
+                  "route_long_name": "Depot-38 Gate ⇔ Bommasandra Village",
+                  "route_type": 3
+                },
+                "71": {
+                  "route_id": "71",
+                  "agency_id": "1",
+                  "route_short_name": "600-F FLYOVER",
+                  "route_long_name": "Banashankari Bus Station ⇔ Attibele Bus Stand",
+                  "route_type": 3
+                },
+                "81": {
+                  "route_id": "81",
+                  "agency_id": "1",
+                  "route_short_name": "361-C",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Anekal",
+                  "route_type": 3
+                },
+                "84": {
+                  "route_id": "84",
+                  "agency_id": "1",
+                  "route_short_name": "361-B D38G-CHD",
+                  "route_long_name": "Depot-38 Gate ⇔ Chikka Hagade",
+                  "route_type": 3
+                },
+                "5i": {
+                  "route_id": "5i",
+                  "agency_id": "1",
+                  "route_short_name": "355",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Bommasandra Village",
+                  "route_type": 3
+                },
+                "wg": {
+                  "route_id": "wg",
+                  "agency_id": "1",
+                  "route_short_name": "398-H",
+                  "route_long_name": "Jigani APC Circle ⇔ Hosakote Bus Stand (Old)",
+                  "route_type": 3
+                },
+                "fj": {
+                  "route_id": "fj",
+                  "agency_id": "1",
+                  "route_short_name": "349",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Huskur",
+                  "route_type": 3
+                },
+                "6u": {
+                  "route_id": "6u",
+                  "agency_id": "1",
+                  "route_short_name": "356-ZA D38G-KDMS",
+                  "route_long_name": "Depot-38 Gate ⇔ Kempu Dommasandra",
+                  "route_type": 3
+                },
+                "jg": {
+                  "route_id": "jg",
+                  "agency_id": "1",
+                  "route_short_name": "360-S D38G-ANK-RMH",
+                  "route_long_name": "Depot-38 Gate ⇔ Rachammanahalli",
+                  "route_type": 3
+                },
+                "mt": {
+                  "route_id": "mt",
+                  "agency_id": "1",
+                  "route_short_name": "360 D38G-ATB",
+                  "route_long_name": "Depot-38 Gate ⇔ Attibele Bus Stand",
+                  "route_type": 3
+                },
+                "qs": {
+                  "route_id": "qs",
+                  "agency_id": "1",
+                  "route_short_name": "360-S D38G-SMDR",
+                  "route_long_name": "Depot-38 Gate ⇔ Samanduru",
+                  "route_type": 3
+                },
+                "8h": {
+                  "route_id": "8h",
+                  "agency_id": "1",
+                  "route_short_name": "399",
+                  "route_long_name": "Electronic City ⇔ Hosakote Bus Stand (Old)",
+                  "route_type": 3
+                },
+                "5a": {
+                  "route_id": "5a",
+                  "agency_id": "1",
+                  "route_short_name": "600-CH",
+                  "route_long_name": "Banashankari Bus Station ⇔ Huskur",
+                  "route_type": 3
+                },
+                "db": {
+                  "route_id": "db",
+                  "agency_id": "1",
+                  "route_short_name": "NICE-8C D38G-MDV",
+                  "route_long_name": "Depot-38 Gate ⇔ Madavara",
+                  "route_type": 3
+                },
+                "c9": {
+                  "route_id": "c9",
+                  "agency_id": "1",
+                  "route_short_name": "352-E KBS-MHDB",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Mahadeshwara Badavane",
+                  "route_type": 3
+                },
+                "uf": {
+                  "route_id": "uf",
+                  "agency_id": "1",
+                  "route_short_name": "352",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Hennagara",
+                  "route_type": 3
+                },
+                "sy": {
+                  "route_id": "sy",
+                  "agency_id": "1",
+                  "route_short_name": "353-C",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Jigani Bus Stand",
+                  "route_type": 3
+                },
+                "ao": {
+                  "route_id": "ao",
+                  "agency_id": "1",
+                  "route_short_name": "356-M",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Anekal",
+                  "route_type": 3
+                },
+                "2y": {
+                  "route_id": "2y",
+                  "agency_id": "1",
+                  "route_short_name": "360-K",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Attibele Bus Stand",
+                  "route_type": 3
+                },
+                "as": {
+                  "route_id": "as",
+                  "agency_id": "1",
+                  "route_short_name": "360-K KRM-STJN-ATB",
+                  "route_long_name": "Koramangala Bus Station ⇔ Attibele Bus Stand",
+                  "route_type": 3
+                },
+                "f0": {
+                  "route_id": "f0",
+                  "agency_id": "1",
+                  "route_short_name": "360-S",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Samanduru",
+                  "route_type": 3
+                },
+                "j4": {
+                  "route_id": "j4",
+                  "agency_id": "1",
+                  "route_short_name": "360-J",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Handenahalli Attibele",
+                  "route_type": 3
+                },
+                "qg": {
+                  "route_id": "qg",
+                  "agency_id": "1",
+                  "route_short_name": "360-H",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Kodalipura",
+                  "route_type": 3
+                },
+                "rb": {
+                  "route_id": "rb",
+                  "agency_id": "1",
+                  "route_short_name": "360-K ARMYASC-ATB",
+                  "route_long_name": "ARMY Public School ASC Center ⇔ Attibele Bus Stand",
+                  "route_type": 3
+                },
+                "10c": {
+                  "route_id": "10c",
+                  "agency_id": "1",
+                  "route_short_name": "600-F BSK-D32",
+                  "route_long_name": "Banashankari Bus Station ⇔ Depot-32 Suryacity",
+                  "route_type": 3
+                },
+                "gg": {
+                  "route_id": "gg",
+                  "agency_id": "1",
+                  "route_short_name": "600-G",
+                  "route_long_name": "Chandapura ⇔ ISRO Layout",
+                  "route_type": 3
+                },
+                "mv": {
+                  "route_id": "mv",
+                  "agency_id": "1",
+                  "route_short_name": "600-FC",
+                  "route_long_name": "Banashankari Bus Station ⇔ Jigani APC Circle",
+                  "route_type": 3
+                },
+                "3j": {
+                  "route_id": "3j",
+                  "agency_id": "1",
+                  "route_short_name": "KBS-3A ALH-ATB",
+                  "route_long_name": "Avalahalli BDA Park Girinagara ⇔ Attibele Bus Stand",
+                  "route_type": 3
+                },
+                "6r": {
+                  "route_id": "6r",
+                  "agency_id": "1",
+                  "route_short_name": "KBS-3C",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Chandapura",
+                  "route_type": 3
+                },
+                "8q": {
+                  "route_id": "8q",
+                  "agency_id": "1",
+                  "route_short_name": "KBS-3A VVK-ATB",
+                  "route_long_name": "Vivek Nagara ⇔ Attibele Bus Stand",
+                  "route_type": 3
+                },
+                "si": {
+                  "route_id": "si",
+                  "agency_id": "1",
+                  "route_short_name": "V-356M",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Anekal",
+                  "route_type": 3
+                },
+                "zk": {
+                  "route_id": "zk",
+                  "agency_id": "1",
+                  "route_short_name": "KBS-3F",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Attibele Bus Stand",
+                  "route_type": 3
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [77.69251, 12.84902],
+                      [77.69213, 12.84855],
+                      [77.69157, 12.84772],
+                      [77.6915, 12.84765],
+                      [77.69135, 12.84755],
+                      [77.69126, 12.84751],
+                      [77.69079, 12.84734],
+                      [77.69063, 12.84721],
+                      [77.68864, 12.84455],
+                      [77.68658, 12.84171],
+                      [77.68494, 12.83948],
+                      [77.68452, 12.83886],
+                      [77.6842, 12.83845],
+                      [77.68358, 12.83776],
+                      [77.68352, 12.83765],
+                      [77.6834, 12.83733],
+                      [77.68331, 12.83703],
+                      [77.68319, 12.83685],
+                      [77.68309, 12.83678],
+                      [77.68289, 12.83671],
+                      [77.6826, 12.8367],
+                      [77.68204, 12.83675],
+                      [77.68099, 12.83688],
+                      [77.68066, 12.83688],
+                      [77.68056, 12.83685],
+                      [77.68045, 12.83679],
+                      [77.67933, 12.83604],
+                      [77.68039, 12.83319],
+                      [77.68127, 12.83029],
+                      [77.68196, 12.82815],
+                      [77.68232, 12.8273],
+                      [77.6829, 12.8262],
+                      [77.68351, 12.82518],
+                      [77.68369, 12.82492],
+                      [77.68441, 12.82403],
+                      [77.68467, 12.82377],
+                      [77.68506, 12.82333],
+                      [77.68514, 12.82341],
+                      [77.68612, 12.82251],
+                      [77.68669, 12.8219],
+                      [77.68747, 12.82092],
+                      [77.68878, 12.81962],
+                      [77.68911, 12.81927],
+                      [77.68939, 12.81893],
+                      [77.69064, 12.81728],
+                      [77.69228, 12.81716],
+                      [77.69596, 12.81672],
+                      [77.6967, 12.81667],
+                      [77.69694, 12.81667],
+                      [77.69748, 12.81671],
+                      [77.69802, 12.81683],
+                      [77.69895, 12.81681]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "1ar",
+                    "stop_name": "Govt Primary School Bommasandra",
+                    "routes": ["45", "5i"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.69366, 12.81707]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "1l1",
+                    "stop_name": "Bommasandra Village",
+                    "routes": ["45", "5i"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.69891, 12.8169]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "1lg",
+                    "stop_name": "Bommasandra",
+                    "routes": ["45", "5i", "wg"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.68939, 12.81893]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "2is",
+                    "stop_name": "Singena Agrahara Cross Fruits Market",
+                    "routes": ["fj", "45", "6u", "jg", "mt", "qs", "84", "8h", "5a"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.68709, 12.84235]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "360",
+                    "stop_name": "Depot-38 Gate",
+                    "routes": ["45", "6u", "jg", "qs", "84", "db"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.69251, 12.84902]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "37i",
+                    "stop_name": "Hebbagodi",
+                    "routes": ["c9", "uf", "sy", "45", "5i", "6u", "ao", "2y", "as", "f0", "j4", "jg", "mt", "qg", "qs", "rb", "31", "81", "84", "10c", "71", "gg", "mv", "33", "3j", "6r", "8q", "si", "zk"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.68224, 12.82752]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "7k",
+                    "stop_name": "Huskur Gate",
+                    "routes": ["c9", "uf", "sy", "45", "5i", "6u", "ao", "2y", "as", "f0", "j4", "jg", "qg", "qs", "rb", "31", "81", "84", "10c", "71", "gg", "mv", "33", "3j", "6r", "8q", "si", "zk"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.67942, 12.8361]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table class="table-vertical" summary="This table shows schedules for a selection of key stops on the route for Route 355 D38-BMSV - Depot-38 Gate to Bommasandra Village Mon-Sun. Stops and their schedule times are listed in the columns." data-orientation="vertical">
+            <caption class="sr-only">Route 355 D38-BMSV - Depot-38 Gate to Bommasandra Village | Mon-Sun</caption>
+            <colgroup>
+              <col class="stop-0" id="stop_id_360" data-stop-id="360" data-is-timepoint="true">
+              <col class="stop-1" id="stop_id_2is" data-stop-id="2is" data-is-timepoint="true">
+              <col class="stop-2" id="stop_id_7k" data-stop-id="7k" data-is-timepoint="true">
+              <col class="stop-3" id="stop_id_37i" data-stop-id="37i" data-is-timepoint="true">
+              <col class="stop-4" id="stop_id_1lg" data-stop-id="1lg" data-is-timepoint="true">
+              <col class="stop-5" id="stop_id_1ar" data-stop-id="1ar" data-is-timepoint="true">
+              <col class="stop-6" id="stop_id_1l1" data-stop-id="1l1" data-is-timepoint="true">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col" width="14.29%">
+                  <div class="stop-name">Depot-38 Gate</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="14.29%">
+                  <div class="stop-name">Singena Agrahara Cross Fruits Market</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="14.29%">
+                  <div class="stop-name">Huskur Gate</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="14.29%">
+                  <div class="stop-name">Hebbagodi</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="14.29%">
+                  <div class="stop-name">Bommasandra</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="14.29%">
+                  <div class="stop-name">Govt Primary School Bommasandra</div>
+                  <div class="stop-code"></div>
+                </th>
+                <th class="stop-header" scope="col" width="14.29%">
+                  <div class="stop-name">Bommasandra Village</div>
+                  <div class="stop-code"></div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="trip-row" id="trip_id_2sd">
+                <td class="stop-time am"><span class="stop-time-text">7:41am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:43am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:45am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:47am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:49am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:51am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:53am</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
