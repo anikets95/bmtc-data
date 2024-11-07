@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYW5pa2V0czk1IiwiYSI6ImNsemtkZHpwdDB1NGIybHNhaHhhZHR2NzAifQ.YkI9PvPHjhbxOAUBgAgMSw';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+</head>
+
+<body><!-- Timetable generated on 2024-11-07T05:13:33.505Z using GTFS-to-HTML version 2.6.11 -->
+  <div class="timetable-page menu-type-jump">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center gap-2">
+        <div class="route-color-swatch-large flex-none" style="background-color: #000000; color: #FFFFFF;">D43-SVP</div>
+        <div>Route D43-SVP</div>
+      </h1>
+      <div class="effective-date text-gray-600 mt-2">Effective November 07, 2024</div>
+      <div class="timetable mb-10" id="timetable_id_111111111" data-day-list="Mon-Sun" data-direction-name="Depot-43 Gate" data-timetable-id="1|1111111|1" data-direction-id="1" data-route-id="1">
+        <div class="mb-2">
+          <h2 class="text-xl">Route D43-SVP - Shivanapura to Depot-43 Gate | Monday-Sunday</h2>
+        </div>
+        <div class="map" id="map_timetable_id_111111111"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_111111111",
+              "routes": {
+                "1": {
+                  "route_id": "1",
+                  "agency_id": "1",
+                  "route_short_name": "D43-SVP",
+                  "route_long_name": "Depot-43 Gate ⇔ Shivanapura",
+                  "route_type": 3
+                },
+                "238": {
+                  "route_id": "238",
+                  "agency_id": "1",
+                  "route_short_name": "245-M KBS-D43G",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Depot-43 Gate",
+                  "route_type": 3
+                },
+                "1vt": {
+                  "route_id": "1vt",
+                  "agency_id": "1",
+                  "route_short_name": "245-M KMT-D43G",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Depot-43 Gate",
+                  "route_type": 3
+                },
+                "2lw": {
+                  "route_id": "2lw",
+                  "agency_id": "1",
+                  "route_short_name": "256-B D43G-GJH",
+                  "route_long_name": "Depot-43 Gate ⇔ Gejjigadahalli",
+                  "route_type": 3
+                },
+                "2tv": {
+                  "route_id": "2tv",
+                  "agency_id": "1",
+                  "route_short_name": "256-MA D43G-TRHH",
+                  "route_long_name": "Depot-43 Gate ⇔ Thore Hosapalya",
+                  "route_type": 3
+                },
+                "1o9": {
+                  "route_id": "1o9",
+                  "agency_id": "1",
+                  "route_short_name": "257-C D43G-RVH",
+                  "route_long_name": "Depot-43 Gate ⇔ Ravuthanahalli",
+                  "route_type": 3
+                },
+                "15a": {
+                  "route_id": "15a",
+                  "agency_id": "1",
+                  "route_short_name": "258 D43G-NMGRS",
+                  "route_long_name": "Depot-43 Gate ⇔ Nelamangala Railway Station",
+                  "route_type": 3
+                },
+                "2dz": {
+                  "route_id": "2dz",
+                  "agency_id": "1",
+                  "route_short_name": "258-KBS-D43G",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Depot-43 Gate",
+                  "route_type": 3
+                },
+                "2g0": {
+                  "route_id": "2g0",
+                  "agency_id": "1",
+                  "route_short_name": "258-N SBS-D43G",
+                  "route_long_name": "Depot-43 Gate ⇔ Shivajinagara Bus Station",
+                  "route_type": 3
+                },
+                "2hb": {
+                  "route_id": "2hb",
+                  "agency_id": "1",
+                  "route_short_name": "258-F D43G-SVP",
+                  "route_long_name": "Depot-43 Gate ⇔ Shivanapura",
+                  "route_type": 3
+                },
+                "2yg": {
+                  "route_id": "2yg",
+                  "agency_id": "1",
+                  "route_short_name": "258-P D43G-KGN",
+                  "route_long_name": "Depot-43 Gate ⇔ Kanegowdanahalli",
+                  "route_type": 3
+                },
+                "31h": {
+                  "route_id": "31h",
+                  "agency_id": "1",
+                  "route_short_name": "258-M D43G-TMG",
+                  "route_long_name": "Depot-43 Gate ⇔ Thyamagondlu",
+                  "route_type": 3
+                },
+                "cp": {
+                  "route_id": "cp",
+                  "agency_id": "1",
+                  "route_short_name": "258-E D43G-MYLH",
+                  "route_long_name": "Depot-43 Gate ⇔ Mylanahalli",
+                  "route_type": 3
+                },
+                "i6": {
+                  "route_id": "i6",
+                  "agency_id": "1",
+                  "route_short_name": "258 KMT-D43G",
+                  "route_long_name": "KR Market ⇔ Depot-43 Gate",
+                  "route_type": 3
+                },
+                "w2": {
+                  "route_id": "w2",
+                  "agency_id": "1",
+                  "route_short_name": "258 D43G-VNC-NMG",
+                  "route_long_name": "Depot-43 Gate ⇔ Nelamangala Bus Station",
+                  "route_type": 3
+                },
+                "2jp": {
+                  "route_id": "2jp",
+                  "agency_id": "1",
+                  "route_short_name": "263-C D43G-KDH",
+                  "route_long_name": "Depot-43 Gate ⇔ Kadirenahalli",
+                  "route_type": 3
+                },
+                "3a": {
+                  "route_id": "3a",
+                  "agency_id": "1",
+                  "route_short_name": "401-A D43G-YHKOT",
+                  "route_long_name": "Depot-43 Gate ⇔ Yelahanka Old Town",
+                  "route_type": 3
+                },
+                "1v4": {
+                  "route_id": "1v4",
+                  "agency_id": "1",
+                  "route_short_name": "410-FD D43G-BSK",
+                  "route_long_name": "Depot-43 Gate ⇔ Banashankari Bus Station",
+                  "route_type": 3
+                },
+                "1ik": {
+                  "route_id": "1ik",
+                  "agency_id": "1",
+                  "route_short_name": "D43G-BTH",
+                  "route_long_name": "Bettahalli ⇔ Depot-43 Gate",
+                  "route_type": 3
+                },
+                "1m6": {
+                  "route_id": "1m6",
+                  "agency_id": "1",
+                  "route_short_name": "NICE-10 ELC-D43G",
+                  "route_long_name": "Electronic City ⇔ Depot-43 Gate",
+                  "route_type": 3
+                },
+                "2xp": {
+                  "route_id": "2xp",
+                  "agency_id": "1",
+                  "route_short_name": "D43G-ASK",
+                  "route_long_name": "Depot-43 Gate ⇔ Arishinakunte",
+                  "route_type": 3
+                },
+                "yq": {
+                  "route_id": "yq",
+                  "agency_id": "1",
+                  "route_short_name": "D43-D43G",
+                  "route_long_name": "Depot-43 Shivanapura ⇔ Depot-43 Gate",
+                  "route_type": 3
+                },
+                "1e5": {
+                  "route_id": "1e5",
+                  "agency_id": "1",
+                  "route_short_name": "256 KMT-SVP",
+                  "route_long_name": "KR Market ⇔ Shivanapura",
+                  "route_type": 3
+                },
+                "2fd": {
+                  "route_id": "2fd",
+                  "agency_id": "1",
+                  "route_short_name": "258-F",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Shivanapura",
+                  "route_type": 3
+                },
+                "2kk": {
+                  "route_id": "2kk",
+                  "agency_id": "1",
+                  "route_short_name": "258-F KMT-SVP",
+                  "route_long_name": "KR Market ⇔ Shivanapura",
+                  "route_type": 3
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [77.42152, 13.04926],
+                      [77.42123, 13.04948],
+                      [77.42106, 13.04965],
+                      [77.4207, 13.05014],
+                      [77.42067, 13.05032],
+                      [77.42067, 13.05066],
+                      [77.42072, 13.05126],
+                      [77.42092, 13.05221],
+                      [77.4209, 13.05247],
+                      [77.42099, 13.05383],
+                      [77.42094, 13.05388],
+                      [77.42059, 13.05387],
+                      [77.42053, 13.05391],
+                      [77.42031, 13.05441],
+                      [77.4202, 13.05459],
+                      [77.42012, 13.0548],
+                      [77.41997, 13.05551],
+                      [77.4199, 13.05616],
+                      [77.41977, 13.05651],
+                      [77.41981, 13.05721],
+                      [77.41976, 13.05814],
+                      [77.41971, 13.05833],
+                      [77.41939, 13.05895],
+                      [77.41932, 13.05915],
+                      [77.41929, 13.05947],
+                      [77.41937, 13.05995],
+                      [77.41961, 13.06102],
+                      [77.41972, 13.06135],
+                      [77.41989, 13.06237],
+                      [77.41997, 13.06297],
+                      [77.42027, 13.06447],
+                      [77.42111, 13.06445],
+                      [77.42196, 13.06429],
+                      [77.42215, 13.06423],
+                      [77.42236, 13.06421],
+                      [77.42243, 13.06423],
+                      [77.42248, 13.06432],
+                      [77.42245, 13.06543],
+                      [77.42274, 13.06542],
+                      [77.42307, 13.06544],
+                      [77.42515, 13.06547],
+                      [77.42515, 13.06589],
+                      [77.42552, 13.06565],
+                      [77.42559, 13.06596]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "1rt",
+                    "stop_name": "Depot-43 Gate",
+                    "routes": ["1vt", "238", "2lw", "2tv", "1o9", "15a", "2dz", "2g0", "2hb", "2yg", "31h", "cp", "i6", "w2", "2jp", "3a", "1v4", "1", "1ik", "1m6", "2xp", "yq"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.42564, 13.06595]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "66j",
+                    "stop_name": "Thimmabhovipalya Shivanapura",
+                    "routes": ["1"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.41928, 13.05961]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "6ee",
+                    "stop_name": "Shivanapura",
+                    "routes": ["1e5", "2fd", "2hb", "2kk", "1"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.42152, 13.04926]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table class="table-horizontal" summary="This table shows schedules for a selection of key stops on the route for Route D43-SVP - Shivanapura to Depot-43 Gate Mon-Sun. Stops and their schedule times are listed in the columns." data-orientation="horizontal">
+            <caption class="sr-only">Route D43-SVP - Shivanapura to Depot-43 Gate | Mon-Sun</caption>
+            <colgroup>
+              <col>
+              <col class="run_0 " id="trip_id_mg1">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col">Stop</th>
+                <th class="run-header" scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="stop-row" id="stop_id_6ee" data-stop-id="6ee" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Shivanapura</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">6:40pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_66j" data-stop-id="66j" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Thimmabhovipalya Shivanapura</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">6:43pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_1rt" data-stop-id="1rt" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Depot-43 Gate</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">6:46pm</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

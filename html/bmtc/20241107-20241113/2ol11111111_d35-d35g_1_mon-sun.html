@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYW5pa2V0czk1IiwiYSI6ImNsemtkZHpwdDB1NGIybHNhaHhhZHR2NzAifQ.YkI9PvPHjhbxOAUBgAgMSw';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+</head>
+
+<body><!-- Timetable generated on 2024-11-07T05:13:45.857Z using GTFS-to-HTML version 2.6.11 -->
+  <div class="timetable-page menu-type-jump">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center gap-2">
+        <div class="route-color-swatch-large flex-none" style="background-color: #000000; color: #FFFFFF;">D35-D35G</div>
+        <div>Route D35-D35G</div>
+      </h1>
+      <div class="effective-date text-gray-600 mt-2">Effective November 07, 2024</div>
+      <div class="timetable mb-10" id="timetable_id_2ol11111111" data-day-list="Mon-Sun" data-direction-name="Depot-35 Kannalli" data-timetable-id="2ol|1111111|1" data-direction-id="1" data-route-id="2ol">
+        <div class="mb-2">
+          <h2 class="text-xl">Route D35-D35G - Depot-35 Gate to Depot-35 Kannalli | Monday-Sunday</h2>
+        </div>
+        <div class="map" id="map_timetable_id_2ol11111111"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_2ol11111111",
+              "routes": {
+                "160": {
+                  "route_id": "160",
+                  "agency_id": "1",
+                  "route_short_name": "243-F D35G-GKH",
+                  "route_long_name": "Depot-35 Gate ⇔ Gidadakonenahalli",
+                  "route_type": 3
+                },
+                "293": {
+                  "route_id": "293",
+                  "agency_id": "1",
+                  "route_short_name": "245-HA D35G-NMG",
+                  "route_long_name": "Depot-35 Gate ⇔ Nelamangala Bus Station",
+                  "route_type": 3
+                },
+                "2ol": {
+                  "route_id": "2ol",
+                  "agency_id": "1",
+                  "route_short_name": "D35-D35G",
+                  "route_long_name": "Depot-35 Kannalli ⇔ Depot-35 Gate",
+                  "route_type": 3
+                },
+                "1ez": {
+                  "route_id": "1ez",
+                  "agency_id": "1",
+                  "route_short_name": "240-C D35G-KCH",
+                  "route_long_name": "Depot-35 Gate ⇔ Kachohalli",
+                  "route_type": 3
+                },
+                "6g": {
+                  "route_id": "6g",
+                  "agency_id": "1",
+                  "route_short_name": "240-E D35G-BKH",
+                  "route_long_name": "Depot-35 Gate ⇔ Bylakonenahalli",
+                  "route_type": 3
+                },
+                "25d": {
+                  "route_id": "25d",
+                  "agency_id": "1",
+                  "route_short_name": "241-N D35G-BDG",
+                  "route_long_name": "Depot-35 Gate ⇔ Brahma Devara Gudda",
+                  "route_type": 3
+                },
+                "2p1": {
+                  "route_id": "2p1",
+                  "agency_id": "1",
+                  "route_short_name": "241-G KBS-SGH",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Seegehalli",
+                  "route_type": 3
+                },
+                "20p": {
+                  "route_id": "20p",
+                  "agency_id": "1",
+                  "route_short_name": "242 D35G-TVK",
+                  "route_long_name": "Depot-35 Gate ⇔ Tavarekere",
+                  "route_type": 3
+                },
+                "23q": {
+                  "route_id": "23q",
+                  "agency_id": "1",
+                  "route_short_name": "242-TA D35G-MTK",
+                  "route_long_name": "Depot-35 Gate ⇔ Mantanakurchi",
+                  "route_type": 3
+                },
+                "2ic": {
+                  "route_id": "2ic",
+                  "agency_id": "1",
+                  "route_short_name": "242-CB D35G-TGP",
+                  "route_long_name": "Depot-35 Gate ⇔ Thigalarapalya",
+                  "route_type": 3
+                },
+                "gj": {
+                  "route_id": "gj",
+                  "agency_id": "1",
+                  "route_short_name": "242-Q D35G-GGH",
+                  "route_long_name": "Depot-35 Gate ⇔ Gangenahalli",
+                  "route_type": 3
+                },
+                "v9": {
+                  "route_id": "v9",
+                  "agency_id": "1",
+                  "route_short_name": "248-V KMT-D35G",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Depot-35 Gate",
+                  "route_type": 3
+                },
+                "1k0": {
+                  "route_id": "1k0",
+                  "agency_id": "1",
+                  "route_short_name": "374-N D35G-TVK-NML",
+                  "route_long_name": "Depot-35 Gate ⇔ Nelamangala Bus Station",
+                  "route_type": 3
+                },
+                "1ey": {
+                  "route_id": "1ey",
+                  "agency_id": "1",
+                  "route_short_name": "501-BH D35G-HBL",
+                  "route_long_name": "Depot-35 Gate ⇔ Hebbala Bridge",
+                  "route_type": 3
+                },
+                "1oz": {
+                  "route_id": "1oz",
+                  "agency_id": "1",
+                  "route_short_name": "D35G-YKH",
+                  "route_long_name": "Depot-35 Gate ⇔ Yale Kodigehalli",
+                  "route_type": 3
+                },
+                "1x8": {
+                  "route_id": "1x8",
+                  "agency_id": "1",
+                  "route_short_name": "D35G-JPT",
+                  "route_long_name": "Depot-35 Gate ⇔ Janapriya Township",
+                  "route_type": 3
+                },
+                "2e5": {
+                  "route_id": "2e5",
+                  "agency_id": "1",
+                  "route_short_name": "D35G-BDH",
+                  "route_long_name": "Depot-35 Gate ⇔ Byadarahalli",
+                  "route_type": 3
+                },
+                "2xm": {
+                  "route_id": "2xm",
+                  "agency_id": "1",
+                  "route_short_name": "D35G-LDH",
+                  "route_long_name": "Depot-35 Gate ⇔ Lingadeeranahalli",
+                  "route_type": 3
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [77.44266, 12.97267],
+                      [77.44273, 12.97255]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "123",
+                    "stop_name": "Depot-35 Kannalli",
+                    "routes": ["2ol"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.44263, 12.97253]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "47o",
+                    "stop_name": "Depot-35 Gate",
+                    "routes": ["1ez", "6g", "25d", "2p1", "20p", "23q", "2ic", "gj", "160", "293", "v9", "1k0", "1ey", "1oz", "1x8", "2e5", "2ol", "2xm"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.44268, 12.9726]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table class="table-horizontal" summary="This table shows schedules for a selection of key stops on the route for Route D35-D35G - Depot-35 Gate to Depot-35 Kannalli Mon-Sun. Stops and their schedule times are listed in the columns." data-orientation="horizontal">
+            <caption class="sr-only">Route D35-D35G - Depot-35 Gate to Depot-35 Kannalli | Mon-Sun</caption>
+            <colgroup>
+              <col>
+              <col class="run_0 " id="trip_id_8ss">
+              <col class="run_1 " id="trip_id_81">
+              <col class="run_2 " id="trip_id_oce">
+              <col class="run_3 " id="trip_id_8v4">
+              <col class="run_4 " id="trip_id_30s">
+              <col class="run_5 " id="trip_id_iu2">
+              <col class="run_6 " id="trip_id_nqa">
+              <col class="run_7 " id="trip_id_7wv">
+              <col class="run_8 " id="trip_id_2px">
+              <col class="run_9 " id="trip_id_b5u">
+              <col class="run_10 " id="trip_id_agl">
+              <col class="run_11 " id="trip_id_1mz">
+              <col class="run_12 " id="trip_id_4yi">
+              <col class="run_13 " id="trip_id_f6f">
+              <col class="run_14 " id="trip_id_85o">
+              <col class="run_15 " id="trip_id_2qo">
+              <col class="run_16 " id="trip_id_3bo">
+              <col class="run_17 " id="trip_id_bis">
+              <col class="run_18 " id="trip_id_dws">
+              <col class="run_19 " id="trip_id_ook">
+              <col class="run_20 " id="trip_id_8h5">
+              <col class="run_21 " id="trip_id_eyr">
+              <col class="run_22 " id="trip_id_4uf">
+              <col class="run_23 " id="trip_id_ln0">
+              <col class="run_24 " id="trip_id_683">
+              <col class="run_25 " id="trip_id_6c8">
+              <col class="run_26 " id="trip_id_eka">
+              <col class="run_27 " id="trip_id_5l1">
+              <col class="run_28 " id="trip_id_nlw">
+              <col class="run_29 " id="trip_id_gcm">
+              <col class="run_30 " id="trip_id_npl">
+              <col class="run_31 " id="trip_id_6b2">
+              <col class="run_32 " id="trip_id_mdf">
+              <col class="run_33 " id="trip_id_eqo">
+              <col class="run_34 " id="trip_id_jkw">
+              <col class="run_35 " id="trip_id_77k">
+              <col class="run_36 " id="trip_id_kw5">
+              <col class="run_37 " id="trip_id_o48">
+              <col class="run_38 " id="trip_id_h5y">
+              <col class="run_39 " id="trip_id_oav">
+              <col class="run_40 " id="trip_id_n4h">
+              <col class="run_41 " id="trip_id_mac">
+              <col class="run_42 " id="trip_id_65d">
+              <col class="run_43 " id="trip_id_l6k">
+              <col class="run_44 " id="trip_id_9ja">
+              <col class="run_45 " id="trip_id_lkw">
+              <col class="run_46 " id="trip_id_fgb">
+              <col class="run_47 " id="trip_id_qbu">
+              <col class="run_48 " id="trip_id_kaq">
+              <col class="run_49 " id="trip_id_bey">
+              <col class="run_50 " id="trip_id_kj4">
+              <col class="run_51 " id="trip_id_cdq">
+              <col class="run_52 " id="trip_id_ash">
+              <col class="run_53 " id="trip_id_8mx">
+              <col class="run_54 " id="trip_id_blr">
+              <col class="run_55 " id="trip_id_png">
+              <col class="run_56 " id="trip_id_78o">
+              <col class="run_57 " id="trip_id_h2v">
+              <col class="run_58 " id="trip_id_7ee">
+              <col class="run_59 " id="trip_id_6r7">
+              <col class="run_60 " id="trip_id_be9">
+              <col class="run_61 " id="trip_id_dvj">
+              <col class="run_62 " id="trip_id_66m">
+              <col class="run_63 " id="trip_id_bbi">
+              <col class="run_64 " id="trip_id_eww">
+              <col class="run_65 " id="trip_id_1f5">
+              <col class="run_66 " id="trip_id_ocx">
+              <col class="run_67 " id="trip_id_o9y">
+              <col class="run_68 " id="trip_id_djq">
+              <col class="run_69 " id="trip_id_4vg">
+              <col class="run_70 " id="trip_id_f0a">
+              <col class="run_71 " id="trip_id_84t">
+              <col class="run_72 " id="trip_id_ox7">
+              <col class="run_73 " id="trip_id_niq">
+              <col class="run_74 " id="trip_id_pc0">
+              <col class="run_75 " id="trip_id_lz3">
+              <col class="run_76 " id="trip_id_601">
+              <col class="run_77 " id="trip_id_lqx">
+              <col class="run_78 " id="trip_id_28u">
+              <col class="run_79 " id="trip_id_nr2">
+              <col class="run_80 " id="trip_id_e9a">
+              <col class="run_81 " id="trip_id_kl6">
+              <col class="run_82 " id="trip_id_cf8">
+              <col class="run_83 " id="trip_id_kbu">
+              <col class="run_84 " id="trip_id_l74">
+              <col class="run_85 " id="trip_id_2ss">
+              <col class="run_86 " id="trip_id_1p1">
+              <col class="run_87 " id="trip_id_4a0">
+              <col class="run_88 " id="trip_id_96p">
+              <col class="run_89 " id="trip_id_4vo">
+              <col class="run_90 " id="trip_id_dxp">
+              <col class="run_91 " id="trip_id_cln">
+              <col class="run_92 " id="trip_id_7ls">
+              <col class="run_93 " id="trip_id_1y9">
+              <col class="run_94 " id="trip_id_qg4">
+              <col class="run_95 " id="trip_id_pbv">
+              <col class="run_96 " id="trip_id_gr3">
+              <col class="run_97 " id="trip_id_dw9">
+              <col class="run_98 " id="trip_id_38v">
+              <col class="run_99 " id="trip_id_pa8">
+              <col class="run_100 " id="trip_id_afu">
+              <col class="run_101 " id="trip_id_hjr">
+              <col class="run_102 " id="trip_id_83a">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col">Stop</th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="stop-row" id="stop_id_47o" data-stop-id="47o" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Depot-35 Gate</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">1:29am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:19am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:44am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:58am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:59am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:03am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:04am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:08am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:09am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:14am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:19am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:28am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:29am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:34am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:39am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:44am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:49am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:53am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:54am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:58am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:59am</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:04pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:08pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:09pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:14pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:19pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:23pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:24pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:29pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:34pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:39pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:44pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:49pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:58pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:59pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:04pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:14pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:15pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:19pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:35pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:49pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:19pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:23pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:24pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:44pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:49pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:53pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:54pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:59pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:08pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:09pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:14pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:18pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:23pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:24pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:28pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:29pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:33pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:34pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:38pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:39pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:43pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:44pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:48pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:49pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:53pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:54pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:58pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:59pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:03pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:04pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:09pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:13pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:14pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:18pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:23pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:24pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:28pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:29pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:33pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:34pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:38pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:39pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:43pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:59pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">8:04pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">8:19pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">8:39pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:04pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:08pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:14pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:19pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:23pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:24pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:29pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:33pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:43pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:44pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:49pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:54pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:58pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">10:09pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">10:19pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_123" data-stop-id="123" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Depot-35 Kannalli</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">1:29am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">6:19am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:44am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:59am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:59am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:04am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:04am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:09am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:09am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:14am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:19am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:29am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:29am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:34am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:39am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:44am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:49am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:54am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:54am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:59am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:59am</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:04pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:09pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:09pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:14pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:19pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:24pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:24pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:29pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:34pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:39pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:44pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:49pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:59pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:59pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:04pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:14pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:16pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:19pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:35pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:49pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:19pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:24pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:24pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:44pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:49pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:54pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:54pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:59pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:09pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:09pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:14pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:19pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:24pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:24pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:29pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:29pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:34pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:34pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:39pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:39pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:44pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:44pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:49pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:49pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:54pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:54pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:59pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:59pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:04pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:04pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:09pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:14pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:14pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:19pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:24pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:24pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:29pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:29pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:34pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:34pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:39pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:39pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:44pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:59pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">8:04pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">8:19pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">8:39pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:04pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:09pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:14pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:19pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:24pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:24pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:29pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:34pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:44pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:44pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:49pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:54pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:59pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">10:09pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">10:19pm</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

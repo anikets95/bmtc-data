@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYW5pa2V0czk1IiwiYSI6ImNsemtkZHpwdDB1NGIybHNhaHhhZHR2NzAifQ.YkI9PvPHjhbxOAUBgAgMSw';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+</head>
+
+<body><!-- Timetable generated on 2024-11-07T05:16:14.943Z using GTFS-to-HTML version 2.6.11 -->
+  <div class="timetable-page menu-type-jump">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center gap-2">
+        <div class="route-color-swatch-large flex-none" style="background-color: #000000; color: #FFFFFF;">2KVP-JHE</div>
+        <div>Route 2KVP-JHE</div>
+      </h1>
+      <div class="effective-date text-gray-600 mt-2">Effective November 07, 2024</div>
+      <div class="timetable mb-10" id="timetable_id_1fx11111110" data-day-list="Mon-Sun" data-direction-name="Jalahalli East" data-timetable-id="1fx|1111111|0" data-direction-id="0" data-route-id="1fx">
+        <div class="mb-2">
+          <h2 class="text-xl">Route 2KVP-JHE - 2nd stage Kuvempunagara to Jalahalli East | Monday-Sunday</h2>
+        </div>
+        <div class="map" id="map_timetable_id_1fx11111110"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_1fx11111110",
+              "routes": {
+                "9": {
+                  "route_id": "9",
+                  "agency_id": "1",
+                  "route_short_name": "266-F GNA-KBS",
+                  "route_long_name": "Guni Agrahara ⇔ Kempegowda Bus Station",
+                  "route_type": 3
+                },
+                "220": {
+                  "route_id": "220",
+                  "agency_id": "1",
+                  "route_short_name": "401-AN",
+                  "route_long_name": "Yelahanka Old Town ⇔ Nelamangala Bus Station",
+                  "route_type": 3
+                },
+                "234": {
+                  "route_id": "234",
+                  "agency_id": "1",
+                  "route_short_name": "272-B",
+                  "route_long_name": "Shivajinagara Bus Station ⇔ Siluvepura",
+                  "route_type": 3
+                },
+                "1fx": {
+                  "route_id": "1fx",
+                  "agency_id": "1",
+                  "route_short_name": "2KVP-JHE",
+                  "route_long_name": "2nd stage Kuvempunagara ⇔ Jalahalli East",
+                  "route_type": 3
+                },
+                "ou": {
+                  "route_id": "ou",
+                  "agency_id": "1",
+                  "route_short_name": "250-DT D45G-KDGC",
+                  "route_long_name": "Depot-45 Gate ⇔ Kuduregere Madanayakanahalli",
+                  "route_type": 3
+                },
+                "14i": {
+                  "route_id": "14i",
+                  "agency_id": "1",
+                  "route_short_name": "266 D45G-MSP-KMT",
+                  "route_long_name": "Depot-45 Gate ⇔ KR Market",
+                  "route_type": 3
+                },
+                "1iu": {
+                  "route_id": "1iu",
+                  "agency_id": "1",
+                  "route_short_name": "266-M",
+                  "route_long_name": "KR Market ⇔ Kondashettyhalli",
+                  "route_type": 3
+                },
+                "1iw": {
+                  "route_id": "1iw",
+                  "agency_id": "1",
+                  "route_short_name": "266-G YTTMC-MTGH",
+                  "route_long_name": "Yeshawanthapura Bus Station ⇔ Muthugadahalli Hostel",
+                  "route_type": 3
+                },
+                "1jk": {
+                  "route_id": "1jk",
+                  "agency_id": "1",
+                  "route_short_name": "266-T",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Lakshmipura",
+                  "route_type": 3
+                },
+                "1mf": {
+                  "route_id": "1mf",
+                  "agency_id": "1",
+                  "route_short_name": "266-E",
+                  "route_long_name": "KR Market ⇔ Madhugirihalli",
+                  "route_type": 3
+                },
+                "20e": {
+                  "route_id": "20e",
+                  "agency_id": "1",
+                  "route_short_name": "266-B",
+                  "route_long_name": "KR Market ⇔ Mylappanahalli",
+                  "route_type": 3
+                },
+                "27u": {
+                  "route_id": "27u",
+                  "agency_id": "1",
+                  "route_short_name": "266-R",
+                  "route_long_name": "KR Market ⇔ JK Basavanna Nagara",
+                  "route_type": 3
+                },
+                "2ar": {
+                  "route_id": "2ar",
+                  "agency_id": "1",
+                  "route_short_name": "266-G",
+                  "route_long_name": "KR Market ⇔ Muthugadahalli Hostel",
+                  "route_type": 3
+                },
+                "2bm": {
+                  "route_id": "2bm",
+                  "agency_id": "1",
+                  "route_short_name": "266-A",
+                  "route_long_name": "KR Market ⇔ Muthkur",
+                  "route_type": 3
+                },
+                "2s9": {
+                  "route_id": "2s9",
+                  "agency_id": "1",
+                  "route_short_name": "266-J",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Muthkur",
+                  "route_type": 3
+                },
+                "2ui": {
+                  "route_id": "2ui",
+                  "agency_id": "1",
+                  "route_short_name": "266 KMT-VSD-HGV",
+                  "route_long_name": "KR Market ⇔ Hesaraghatta",
+                  "route_type": 3
+                },
+                "4w": {
+                  "route_id": "4w",
+                  "agency_id": "1",
+                  "route_short_name": "266-Q KMT-LXP",
+                  "route_long_name": "KR Market ⇔ Lakshmipura",
+                  "route_type": 3
+                },
+                "kk": {
+                  "route_id": "kk",
+                  "agency_id": "1",
+                  "route_short_name": "266 KBS-HGV",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Hesaraghatta",
+                  "route_type": 3
+                },
+                "1s8": {
+                  "route_id": "1s8",
+                  "agency_id": "1",
+                  "route_short_name": "267-A SBS-D45G",
+                  "route_long_name": "Shivajinagara Bus Station ⇔ Depot-45 Gate",
+                  "route_type": 3
+                },
+                "2b5": {
+                  "route_id": "2b5",
+                  "agency_id": "1",
+                  "route_short_name": "267-A",
+                  "route_long_name": "Shivajinagara Bus Station ⇔ Hesaraghatta",
+                  "route_type": 3
+                },
+                "19b": {
+                  "route_id": "19b",
+                  "agency_id": "1",
+                  "route_short_name": "401-K NMIT-NES-MSP-YTTMC",
+                  "route_long_name": "NITTE Meenakshi College ⇔ Yeshawanthapura Bus Station",
+                  "route_type": 3
+                },
+                "1gu": {
+                  "route_id": "1gu",
+                  "agency_id": "1",
+                  "route_short_name": "401-A",
+                  "route_long_name": "Yelahanka Old Town ⇔ Peenya 2nd Stage",
+                  "route_type": 3
+                },
+                "1z7": {
+                  "route_id": "1z7",
+                  "agency_id": "1",
+                  "route_short_name": "401-B HPN-MSP-YHKOT",
+                  "route_long_name": "Hampinagara RPC Layout ⇔ Yelahanka Old Town",
+                  "route_type": 3
+                },
+                "3o": {
+                  "route_id": "3o",
+                  "agency_id": "1",
+                  "route_short_name": "401-BJ",
+                  "route_long_name": "Bagalur ⇔ Jalahalli Cross",
+                  "route_type": 3
+                },
+                "8o": {
+                  "route_id": "8o",
+                  "agency_id": "1",
+                  "route_short_name": "401 ABDYNG-YHK",
+                  "route_long_name": "Adishwara Bombay Dying ⇔ Yelahanka Old Town",
+                  "route_type": 3
+                },
+                "9u": {
+                  "route_id": "9u",
+                  "agency_id": "1",
+                  "route_short_name": "401-AM",
+                  "route_long_name": "Devanahalli Old Bus Stand ⇔ Peenya 2nd Stage",
+                  "route_type": 3
+                },
+                "g3": {
+                  "route_id": "g3",
+                  "agency_id": "1",
+                  "route_short_name": "401-BJ PTML-MHC",
+                  "route_long_name": "Patalamma Temple ⇔ Mallasandra Health Center",
+                  "route_type": 3
+                },
+                "jh": {
+                  "route_id": "jh",
+                  "agency_id": "1",
+                  "route_short_name": "401-AM PTH-PSS",
+                  "route_long_name": "Puttenahalli ⇔ Peenya 2nd Stage",
+                  "route_type": 3
+                },
+                "ps": {
+                  "route_id": "ps",
+                  "agency_id": "1",
+                  "route_short_name": "401-RC D45-BEML5",
+                  "route_long_name": "Depot-45 Gate ⇔ BEML Layout 5th stage",
+                  "route_type": 3
+                },
+                "1zj": {
+                  "route_id": "1zj",
+                  "agency_id": "1",
+                  "route_short_name": "508 D45G-HSK",
+                  "route_long_name": "Depot-45 Gate ⇔ Hosakote Bus Stand (Old)",
+                  "route_type": 3
+                },
+                "1d8": {
+                  "route_id": "1d8",
+                  "agency_id": "1",
+                  "route_short_name": "MF-401",
+                  "route_long_name": "Yeshawanthapura Bus Station ⇔ Yelahanka Old Town",
+                  "route_type": 3
+                },
+                "2h3": {
+                  "route_id": "2h3",
+                  "agency_id": "1",
+                  "route_short_name": "D45G-JHMS",
+                  "route_long_name": "Depot-45 Gate ⇔ Jalahalli Cross  Metro Station Departure",
+                  "route_type": 3
+                },
+                "1b8": {
+                  "route_id": "1b8",
+                  "agency_id": "1",
+                  "route_short_name": "266-K",
+                  "route_long_name": "KR Market ⇔ Madappanahalli",
+                  "route_type": 3
+                },
+                "1m9": {
+                  "route_id": "1m9",
+                  "agency_id": "1",
+                  "route_short_name": "266-Q",
+                  "route_long_name": "KR Market ⇔ Kanshiram Nagara",
+                  "route_type": 3
+                },
+                "1ww": {
+                  "route_id": "1ww",
+                  "agency_id": "1",
+                  "route_short_name": "266-R JKBN-KBS",
+                  "route_long_name": "JK Basavanna Nagara ⇔ Kempegowda Bus Station",
+                  "route_type": 3
+                },
+                "23i": {
+                  "route_id": "23i",
+                  "agency_id": "1",
+                  "route_short_name": "266-E KBS-MGH",
+                  "route_long_name": "Madhugirihalli ⇔ Kempegowda Bus Station",
+                  "route_type": 3
+                },
+                "2qe": {
+                  "route_id": "2qe",
+                  "agency_id": "1",
+                  "route_short_name": "266 HGV-MTK-SBS",
+                  "route_long_name": "Hesaraghatta ⇔ Shivajinagara Bus Station",
+                  "route_type": 3
+                },
+                "q4": {
+                  "route_id": "q4",
+                  "agency_id": "1",
+                  "route_short_name": "266-N KMT-MLPH",
+                  "route_long_name": "KR Market ⇔ Mylappanahalli",
+                  "route_type": 3
+                },
+                "yn": {
+                  "route_id": "yn",
+                  "agency_id": "1",
+                  "route_short_name": "266-C KKL-KBS",
+                  "route_long_name": "Kakolu ⇔ Kempegowda Bus Station",
+                  "route_type": 3
+                },
+                "2u6": {
+                  "route_id": "2u6",
+                  "agency_id": "1",
+                  "route_short_name": "267",
+                  "route_long_name": "Shivajinagara Bus Station ⇔ Hesaraghatta",
+                  "route_type": 3
+                },
+                "2v4": {
+                  "route_id": "2v4",
+                  "agency_id": "1",
+                  "route_short_name": "272-E",
+                  "route_long_name": "Shivajinagara Bus Station ⇔ Singapura",
+                  "route_type": 3
+                },
+                "re": {
+                  "route_id": "re",
+                  "agency_id": "1",
+                  "route_short_name": "500-A D45-BEMLF",
+                  "route_long_name": "Depot-45 Gate ⇔ BEML Factory",
+                  "route_type": 3
+                },
+                "h1": {
+                  "route_id": "h1",
+                  "agency_id": "1",
+                  "route_short_name": "502-G D45G-ITPL",
+                  "route_long_name": "Depot-45 Gate ⇔ ITPL",
+                  "route_type": 3
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [77.54138, 13.07303],
+                      [77.5413, 13.07284],
+                      [77.54127, 13.07263],
+                      [77.54128, 13.07248],
+                      [77.54135, 13.07222],
+                      [77.54134, 13.07123],
+                      [77.54139, 13.07082],
+                      [77.54144, 13.06988],
+                      [77.54143, 13.06881],
+                      [77.54142, 13.06871],
+                      [77.54139, 13.06863],
+                      [77.54133, 13.06856],
+                      [77.54114, 13.06843],
+                      [77.5411, 13.06838],
+                      [77.54105, 13.06823],
+                      [77.54108, 13.06812],
+                      [77.54113, 13.06806],
+                      [77.5413, 13.06793],
+                      [77.54146, 13.06778],
+                      [77.54158, 13.06761],
+                      [77.54179, 13.06719],
+                      [77.54286, 13.0641],
+                      [77.54313, 13.06295],
+                      [77.54478, 13.05938],
+                      [77.54487, 13.0593],
+                      [77.54494, 13.05928],
+                      [77.54533, 13.05929],
+                      [77.54555, 13.05922],
+                      [77.5457, 13.05921],
+                      [77.54633, 13.05775]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [77.5457, 13.05921],
+                      [77.54561, 13.05928],
+                      [77.54551, 13.05947],
+                      [77.54436, 13.06208],
+                      [77.54416, 13.0626],
+                      [77.54407, 13.06293],
+                      [77.54405, 13.06311],
+                      [77.54405, 13.06332],
+                      [77.54415, 13.06495],
+                      [77.54418, 13.06593],
+                      [77.54426, 13.06648],
+                      [77.54447, 13.06716],
+                      [77.54454, 13.06757]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "2ug",
+                    "stop_name": "Jalahalli East",
+                    "routes": ["1fx", "ou", "14i", "1iu", "1iw", "1jk", "1mf", "20e", "27u", "2ar", "2bm", "2s9", "2ui", "4w", "kk", "1s8", "2b5", "234", "19b", "1gu", "1z7", "220", "3o", "8o", "9u", "g3", "jh", "ps", "1zj", "1d8", "2h3"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.54452, 13.06758]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "62k",
+                    "stop_name": "Gangamma Circle",
+                    "routes": ["1fx", "1b8", "1m9", "1ww", "23i", "2qe", "9", "q4", "yn", "2u6", "2v4", "re", "h1", "1d8"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.54635, 13.05776]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "661",
+                    "stop_name": "Kendriya Vidyalaya",
+                    "routes": ["1fx", "ou", "14i", "1iu", "1iw", "1jk", "1mf", "20e", "27u", "2ar", "2bm", "2s9", "2ui", "4w", "kk", "1s8", "2b5", "234", "19b", "1gu", "1z7", "220", "3o", "8o", "9u", "g3", "jh", "ps", "1zj", "1d8", "2h3"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.54415, 13.06541]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "9o",
+                    "stop_name": "2nd stage Kuvempunagara",
+                    "routes": ["1fx", "9", "q4", "2v4"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.54142, 13.07306]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "tn",
+                    "stop_name": "Kuvempunagara",
+                    "routes": ["1fx", "9", "q4", "2v4"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.54144, 13.0695]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table class="table-horizontal" summary="This table shows schedules for a selection of key stops on the route for Route 2KVP-JHE - 2nd stage Kuvempunagara to Jalahalli East Mon-Sun. Stops and their schedule times are listed in the columns." data-orientation="horizontal">
+            <caption class="sr-only">Route 2KVP-JHE - 2nd stage Kuvempunagara to Jalahalli East | Mon-Sun</caption>
+            <colgroup>
+              <col>
+              <col class="run_0 " id="trip_id_mii">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col">Stop</th>
+                <th class="run-header" scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="stop-row" id="stop_id_9o" data-stop-id="9o" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">2nd stage Kuvempunagara</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">10:10pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_tn" data-stop-id="tn" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Kuvempunagara</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">10:12pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_62k" data-stop-id="62k" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Gangamma Circle</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">10:14pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_661" data-stop-id="661" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Kendriya Vidyalaya</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">10:16pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_2ug" data-stop-id="2ug" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Jalahalli East</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">10:18pm</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

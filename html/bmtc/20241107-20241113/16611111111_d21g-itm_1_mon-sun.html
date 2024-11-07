@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYW5pa2V0czk1IiwiYSI6ImNsemtkZHpwdDB1NGIybHNhaHhhZHR2NzAifQ.YkI9PvPHjhbxOAUBgAgMSw';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+</head>
+
+<body><!-- Timetable generated on 2024-11-07T05:15:54.384Z using GTFS-to-HTML version 2.6.11 -->
+  <div class="timetable-page menu-type-jump">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center gap-2">
+        <div class="route-color-swatch-large flex-none" style="background-color: #000000; color: #FFFFFF;">D21G-ITM</div>
+        <div>Route D21G-ITM</div>
+      </h1>
+      <div class="effective-date text-gray-600 mt-2">Effective November 07, 2024</div>
+      <div class="timetable mb-10" id="timetable_id_16611111111" data-day-list="Mon-Sun" data-direction-name="BEML Layout 5th stage" data-timetable-id="166|1111111|1" data-direction-id="1" data-route-id="166">
+        <div class="mb-2">
+          <h2 class="text-xl">Route D21G-ITM - Ittamadu 1 to BEML Layout 5th stage | Monday-Sunday</h2>
+        </div>
+        <div class="map" id="map_timetable_id_16611111111"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_16611111111",
+              "routes": {
+                "166": {
+                  "route_id": "166",
+                  "agency_id": "1",
+                  "route_short_name": "D21G-ITM",
+                  "route_long_name": "BEML Layout 5th stage ⇔ Ittamadu 1",
+                  "route_type": 3
+                },
+                "246": {
+                  "route_id": "246",
+                  "agency_id": "1",
+                  "route_short_name": "210-G SBS-ISRLO-PPLO",
+                  "route_long_name": "Shivajinagara Bus Station ⇔ Poornaprajna Layout",
+                  "route_type": 3
+                },
+                "283": {
+                  "route_id": "283",
+                  "agency_id": "1",
+                  "route_short_name": "210-ND KBS-PPLO",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Poornaprajna Layout",
+                  "route_type": 3
+                },
+                "2ey": {
+                  "route_id": "2ey",
+                  "agency_id": "1",
+                  "route_short_name": "210-WA KBS-BEML5",
+                  "route_long_name": "Kempegowda Bus Station ⇔ BEML Layout 5th stage",
+                  "route_type": 3
+                },
+                "10l": {
+                  "route_id": "10l",
+                  "agency_id": "1",
+                  "route_short_name": "375-G",
+                  "route_long_name": "Banashankari Bus Station ⇔ Bidadi",
+                  "route_type": 3
+                },
+                "1s3": {
+                  "route_id": "1s3",
+                  "agency_id": "1",
+                  "route_short_name": "375 JBS-BEML5",
+                  "route_long_name": "Jayanagara Bus Station ⇔ BEML Layout 5th stage",
+                  "route_type": 3
+                },
+                "1kc": {
+                  "route_id": "1kc",
+                  "agency_id": "1",
+                  "route_short_name": "378 BEML5-ELC",
+                  "route_long_name": "BEML Layout 5th stage ⇔ Electronic City",
+                  "route_type": 3
+                },
+                "1up": {
+                  "route_id": "1up",
+                  "agency_id": "1",
+                  "route_short_name": "378 D12G-ELC",
+                  "route_long_name": "Depot-12 Gate ⇔ Electronic City",
+                  "route_type": 3
+                },
+                "lo": {
+                  "route_id": "lo",
+                  "agency_id": "1",
+                  "route_short_name": "600-F BEML5-ATB",
+                  "route_long_name": "BEML Layout 5th stage ⇔ Attibele Bus Stand",
+                  "route_type": 3
+                },
+                "12u": {
+                  "route_id": "12u",
+                  "agency_id": "1",
+                  "route_short_name": "MF-375H",
+                  "route_long_name": "Kengeri Bus Station ⇔ Jayanagara Bus Station",
+                  "route_type": 3
+                },
+                "17x": {
+                  "route_id": "17x",
+                  "agency_id": "1",
+                  "route_short_name": "BEML5-KSLOW",
+                  "route_long_name": "BEML Layout 5th stage ⇔ Kumaraswamy Layout West",
+                  "route_type": 3
+                },
+                "1s7": {
+                  "route_id": "1s7",
+                  "agency_id": "1",
+                  "route_short_name": "V-378",
+                  "route_long_name": "Kengeri Bus Station ⇔ Electronic City",
+                  "route_type": 3
+                },
+                "25z": {
+                  "route_id": "25z",
+                  "agency_id": "1",
+                  "route_short_name": "MF-510",
+                  "route_long_name": "Banashankari Bus Station ⇔ Banashankari Bus Station",
+                  "route_type": 3
+                },
+                "2sk": {
+                  "route_id": "2sk",
+                  "agency_id": "1",
+                  "route_short_name": "MF-43",
+                  "route_long_name": "Konanakunte Cross ⇔ Konanakunte Cross",
+                  "route_type": 3
+                },
+                "io": {
+                  "route_id": "io",
+                  "agency_id": "1",
+                  "route_short_name": "JNSVS-UTH-BSK",
+                  "route_long_name": "Jnanakshi Vidyaniketan School ⇔ Banashankari Bus Station",
+                  "route_type": 3
+                },
+                "2lk": {
+                  "route_id": "2lk",
+                  "agency_id": "1",
+                  "route_short_name": "43-M MRBS-PPLO",
+                  "route_long_name": "Mysore Road Bus Station ⇔ Poornaprajna Layout",
+                  "route_type": 3
+                },
+                "1f4": {
+                  "route_id": "1f4",
+                  "agency_id": "1",
+                  "route_short_name": "45-K KMT-PPLO",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Poornaprajna Layout",
+                  "route_type": 3
+                },
+                "1kz": {
+                  "route_id": "1kz",
+                  "agency_id": "1",
+                  "route_short_name": "45-D KBS-PPLO",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Poornaprajna Layout",
+                  "route_type": 3
+                },
+                "cb": {
+                  "route_id": "cb",
+                  "agency_id": "1",
+                  "route_short_name": "45-D",
+                  "route_long_name": "Kempegowda Bus Station ⇔ AGS Layout Arehalli",
+                  "route_type": 3
+                },
+                "2qr": {
+                  "route_id": "2qr",
+                  "agency_id": "1",
+                  "route_short_name": "49 PPLO-BNR",
+                  "route_long_name": "Poornaprajna Layout ⇔ Brundavana Nagara",
+                  "route_type": 3
+                },
+                "1hk": {
+                  "route_id": "1hk",
+                  "agency_id": "1",
+                  "route_short_name": "D33G-BSK3",
+                  "route_long_name": "Poornaprajna Layout ⇔ Shri Vidhyanagara",
+                  "route_type": 3
+                },
+                "xh": {
+                  "route_id": "xh",
+                  "agency_id": "1",
+                  "route_short_name": "225-C BEML5-JNKLO",
+                  "route_long_name": "BEML Layout 5th stage ⇔ Jnanakshi Layout",
+                  "route_type": 3
+                },
+                "23j": {
+                  "route_id": "23j",
+                  "agency_id": "1",
+                  "route_short_name": "234 BEML5-MGH",
+                  "route_long_name": "BEML Layout 5th stage ⇔ Manganahalli",
+                  "route_type": 3
+                },
+                "1bd": {
+                  "route_id": "1bd",
+                  "agency_id": "1",
+                  "route_short_name": "BEML5-BEMLG",
+                  "route_long_name": "BEML Layout 5th stage ⇔ BEML Gate",
+                  "route_type": 3
+                },
+                "1gf": {
+                  "route_id": "1gf",
+                  "agency_id": "1",
+                  "route_short_name": "BEML5-KMB",
+                  "route_long_name": "BEML Layout 5th stage ⇔ Kambipura",
+                  "route_type": 3
+                },
+                "31b": {
+                  "route_id": "31b",
+                  "agency_id": "1",
+                  "route_short_name": "15-E KBS-PPLO",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Poornaprajna Layout",
+                  "route_type": 3
+                },
+                "1o0": {
+                  "route_id": "1o0",
+                  "agency_id": "1",
+                  "route_short_name": "43-J PPLO-HKLO",
+                  "route_long_name": "Poornaprajna Layout ⇔ H Krishnappa Layout",
+                  "route_type": 3
+                },
+                "12d": {
+                  "route_id": "12d",
+                  "agency_id": "1",
+                  "route_short_name": "45-E PPLO-CKA",
+                  "route_long_name": "Poornaprajna Layout ⇔ Channammanakere Achukattu",
+                  "route_type": 3
+                },
+                "1ku": {
+                  "route_id": "1ku",
+                  "agency_id": "1",
+                  "route_short_name": "210-NA",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Poornaprajna Layout",
+                  "route_type": 3
+                },
+                "2cp": {
+                  "route_id": "2cp",
+                  "agency_id": "1",
+                  "route_short_name": "210-N BEML5TS-KBS",
+                  "route_long_name": "BEML Layout 5th stage ⇔ Kempegowda Bus Station",
+                  "route_type": 3
+                },
+                "2r7": {
+                  "route_id": "2r7",
+                  "agency_id": "1",
+                  "route_short_name": "210-FA",
+                  "route_long_name": "Shivajinagara Bus Station ⇔ Poornaprajna Layout",
+                  "route_type": 3
+                },
+                "7e": {
+                  "route_id": "7e",
+                  "agency_id": "1",
+                  "route_short_name": "210-KA KBS-PPLO",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Poornaprajna Layout",
+                  "route_type": 3
+                },
+                "sh": {
+                  "route_id": "sh",
+                  "agency_id": "1",
+                  "route_short_name": "210-P PPLO-CKLS",
+                  "route_long_name": "Poornaprajna Layout ⇔ Chikkallasandra",
+                  "route_type": 3
+                },
+                "1rc": {
+                  "route_id": "1rc",
+                  "agency_id": "1",
+                  "route_short_name": "D33-PPLO",
+                  "route_long_name": "Depot-33 Poornapragna layout ⇔ Poornaprajna Layout",
+                  "route_type": 3
+                },
+                "2vz": {
+                  "route_id": "2vz",
+                  "agency_id": "1",
+                  "route_short_name": "PPLO-HKH",
+                  "route_long_name": "Poornaprajna Layout ⇔ Hoskerehalli",
+                  "route_type": 3
+                },
+                "2ni": {
+                  "route_id": "2ni",
+                  "agency_id": "1",
+                  "route_short_name": "13-H",
+                  "route_long_name": "Shivajinagara Bus Station ⇔ AGS Layout Arehalli",
+                  "route_type": 3
+                },
+                "1eq": {
+                  "route_id": "1eq",
+                  "agency_id": "1",
+                  "route_short_name": "43-B PPLO-HSKH",
+                  "route_long_name": "Poornaprajna Layout ⇔ Hoskerehalli",
+                  "route_type": 3
+                },
+                "1p": {
+                  "route_id": "1p",
+                  "agency_id": "1",
+                  "route_short_name": "45-K",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Sapthagiri Badavane",
+                  "route_type": 3
+                },
+                "1rf": {
+                  "route_id": "1rf",
+                  "agency_id": "1",
+                  "route_short_name": "45-DG",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Gaviyappa Thimayya Layout",
+                  "route_type": 3
+                },
+                "1y5": {
+                  "route_id": "1y5",
+                  "agency_id": "1",
+                  "route_short_name": "45-G AGSLC-KBS",
+                  "route_long_name": "AGS Layout Cross ⇔ Kempegowda Bus Station",
+                  "route_type": 3
+                },
+                "sc": {
+                  "route_id": "sc",
+                  "agency_id": "1",
+                  "route_short_name": "210-TP",
+                  "route_long_name": "Jayanagara Bus Station ⇔ Turahalli",
+                  "route_type": 3
+                },
+                "1qk": {
+                  "route_id": "1qk",
+                  "agency_id": "1",
+                  "route_short_name": "45-D PPLO-GTLO",
+                  "route_long_name": "Poornaprajna Layout ⇔ Gaviyappa Thimayya Layout",
+                  "route_type": 3
+                },
+                "rh": {
+                  "route_id": "rh",
+                  "agency_id": "1",
+                  "route_short_name": "210-NP",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Poornaprajnalayout NEW Bus Stand",
+                  "route_type": 3
+                },
+                "25n": {
+                  "route_id": "25n",
+                  "agency_id": "1",
+                  "route_short_name": "212-C BEML5-SHVA",
+                  "route_long_name": "BEML Layout 5th stage ⇔ Shobha Hills View Apartment",
+                  "route_type": 3
+                },
+                "23o": {
+                  "route_id": "23o",
+                  "agency_id": "1",
+                  "route_short_name": "BEML5TS-BSK",
+                  "route_long_name": "BEML Layout 5th stage ⇔ Banashankari Bus Station",
+                  "route_type": 3
+                },
+                "zl": {
+                  "route_id": "zl",
+                  "agency_id": "1",
+                  "route_short_name": "BEML5-CKGP",
+                  "route_long_name": "BEML Layout 5th stage ⇔ Chikkegowdanapalya",
+                  "route_type": 3
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [77.54229, 12.91951],
+                      [77.54221, 12.91932],
+                      [77.54203, 12.91878],
+                      [77.54196, 12.91748],
+                      [77.54199, 12.91653],
+                      [77.54196, 12.91632],
+                      [77.54173, 12.91544],
+                      [77.54144, 12.91466],
+                      [77.54092, 12.91357],
+                      [77.54073, 12.91305],
+                      [77.54063, 12.91285],
+                      [77.54043, 12.91266],
+                      [77.53975, 12.91229],
+                      [77.53971, 12.91226],
+                      [77.53966, 12.91217],
+                      [77.53953, 12.91152],
+                      [77.53942, 12.91112],
+                      [77.5394, 12.91095],
+                      [77.53939, 12.91056],
+                      [77.53934, 12.91028],
+                      [77.53912, 12.90968],
+                      [77.53891, 12.90931],
+                      [77.53863, 12.90893],
+                      [77.53855, 12.90877],
+                      [77.53853, 12.90869],
+                      [77.53854, 12.90853],
+                      [77.53819, 12.90841],
+                      [77.5379, 12.90836],
+                      [77.53745, 12.90836],
+                      [77.53669, 12.90841],
+                      [77.5365, 12.90846],
+                      [77.53604, 12.90872],
+                      [77.53568, 12.90887],
+                      [77.53542, 12.90891],
+                      [77.53533, 12.9089],
+                      [77.53526, 12.90886],
+                      [77.53489, 12.90857],
+                      [77.53387, 12.90791],
+                      [77.53376, 12.90781],
+                      [77.5331, 12.90645],
+                      [77.53276, 12.90567],
+                      [77.53257, 12.90538],
+                      [77.53161, 12.90442],
+                      [77.53146, 12.90433],
+                      [77.53134, 12.90428],
+                      [77.53117, 12.90425],
+                      [77.53105, 12.90428],
+                      [77.53034, 12.90468],
+                      [77.53007, 12.90482],
+                      [77.5299, 12.90488],
+                      [77.52945, 12.905],
+                      [77.52932, 12.90502],
+                      [77.52911, 12.90504],
+                      [77.52877, 12.90502],
+                      [77.52858, 12.90498],
+                      [77.52766, 12.90467],
+                      [77.52735, 12.90458],
+                      [77.52708, 12.90447],
+                      [77.52601, 12.90414],
+                      [77.52514, 12.90385],
+                      [77.52477, 12.9037],
+                      [77.52413, 12.9035],
+                      [77.52316, 12.90324],
+                      [77.52196, 12.90299],
+                      [77.52135, 12.90284],
+                      [77.52106, 12.90384],
+                      [77.52104, 12.90398],
+                      [77.52108, 12.90458],
+                      [77.52108, 12.90537],
+                      [77.52104, 12.90635],
+                      [77.52106, 12.90684]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "21h",
+                    "stop_name": "Patalamma Temple",
+                    "routes": ["2ey", "10l", "1s3", "1kc", "1up", "lo", "12u", "166", "17x", "1s7", "25z", "2sk", "io"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.53014, 12.90477]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "32p",
+                    "stop_name": "AGS Layout Cross",
+                    "routes": ["2lk", "1f4", "1kz", "cb", "2qr", "166", "1hk"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.54088, 12.91347]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "41r",
+                    "stop_name": "BEML Layout 5th stage",
+                    "routes": ["xh", "23j", "1kc", "166", "1bd", "1gf"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.52111, 12.90684]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "4l6",
+                    "stop_name": "Poornaprajna Layout",
+                    "routes": ["31b", "1o0", "2lk", "12d", "1f4", "1kz", "2qr", "1ku", "246", "283", "2cp", "2ey", "2r7", "7e", "sh", "10l", "1s3", "1kc", "1up", "lo", "12u", "166", "17x", "1hk", "1rc", "1s7", "25z", "2vz", "io"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.53592, 12.90877]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "56a",
+                    "stop_name": "Ittamadu 1",
+                    "routes": ["2ni", "1eq", "1p", "1rf", "1y5", "cb", "166"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.54234, 12.91963]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "5bp",
+                    "stop_name": "Uttarahalli Water Tank",
+                    "routes": ["2ey", "sc", "10l", "1s3", "1kc", "1up", "lo", "12u", "166", "17x", "1s7", "25z", "2sk", "io"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.53463, 12.90841]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "5do",
+                    "stop_name": "Arehalli",
+                    "routes": ["31b", "2lk", "12d", "1f4", "1qk", "2qr", "1ku", "246", "283", "2cp", "2ey", "2r7", "7e", "rh", "sh", "10l", "1s3", "1kc", "1up", "lo", "12u", "166", "17x", "1hk", "1s7", "25z", "2sk", "io"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.53855, 12.90849]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "5z6",
+                    "stop_name": "Channasandra",
+                    "routes": ["25n", "166", "23o", "zl"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.52134, 12.90289]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table class="table-horizontal" summary="This table shows schedules for a selection of key stops on the route for Route D21G-ITM - Ittamadu 1 to BEML Layout 5th stage Mon-Sun. Stops and their schedule times are listed in the columns." data-orientation="horizontal">
+            <caption class="sr-only">Route D21G-ITM - Ittamadu 1 to BEML Layout 5th stage | Mon-Sun</caption>
+            <colgroup>
+              <col>
+              <col class="run_0 " id="trip_id_lna">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col">Stop</th>
+                <th class="run-header" scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="stop-row" id="stop_id_56a" data-stop-id="56a" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Ittamadu 1</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">4:45pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_32p" data-stop-id="32p" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">AGS Layout Cross</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">4:46pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_5do" data-stop-id="5do" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Arehalli</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">4:48pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_4l6" data-stop-id="4l6" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Poornaprajna Layout</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">4:50pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_5bp" data-stop-id="5bp" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Uttarahalli Water Tank</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">4:52pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_21h" data-stop-id="21h" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Patalamma Temple</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">4:53pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_5z6" data-stop-id="5z6" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Channasandra</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">4:55pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_41r" data-stop-id="41r" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">BEML Layout 5th stage</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">4:57pm</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

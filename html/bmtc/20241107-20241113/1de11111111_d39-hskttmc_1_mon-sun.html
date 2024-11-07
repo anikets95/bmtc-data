@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYW5pa2V0czk1IiwiYSI6ImNsemtkZHpwdDB1NGIybHNhaHhhZHR2NzAifQ.YkI9PvPHjhbxOAUBgAgMSw';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+</head>
+
+<body><!-- Timetable generated on 2024-11-07T05:13:41.280Z using GTFS-to-HTML version 2.6.11 -->
+  <div class="timetable-page menu-type-jump">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center gap-2">
+        <div class="route-color-swatch-large flex-none" style="background-color: #000000; color: #FFFFFF;">D39-HSKTTMC</div>
+        <div>Route D39-HSKTTMC</div>
+      </h1>
+      <div class="effective-date text-gray-600 mt-2">Effective November 07, 2024</div>
+      <div class="timetable mb-10" id="timetable_id_1de11111111" data-day-list="Mon-Sun" data-direction-name="Depot-39 Hoskote" data-timetable-id="1de|1111111|1" data-direction-id="1" data-route-id="1de">
+        <div class="mb-2">
+          <h2 class="text-xl">Route D39-HSKTTMC - Hosakote Bus Station (TTMC) to Depot-39 Hoskote | Monday-Sunday</h2>
+        </div>
+        <div class="map" id="map_timetable_id_1de11111111"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_1de11111111",
+              "routes": {
+                "134": {
+                  "route_id": "134",
+                  "agency_id": "1",
+                  "route_short_name": "12F-5",
+                  "route_long_name": "Sarjapura ⇔ Hosakote Bus Stand (Old)",
+                  "route_type": 3
+                },
+                "174": {
+                  "route_id": "174",
+                  "agency_id": "1",
+                  "route_short_name": "399-A",
+                  "route_long_name": "Hosakote Bus Stand (Old) ⇔ Chandapura",
+                  "route_type": 3
+                },
+                "306": {
+                  "route_id": "306",
+                  "agency_id": "1",
+                  "route_short_name": "317-V D39G-NDV",
+                  "route_long_name": "Depot-39 Gate ⇔ Naduvatti",
+                  "route_type": 3
+                },
+                "1de": {
+                  "route_id": "1de",
+                  "agency_id": "1",
+                  "route_short_name": "D39-HSKTTMC",
+                  "route_long_name": "Depot-39 Hoskote ⇔ Hosakote Bus Station (TTMC)",
+                  "route_type": 3
+                },
+                "2os": {
+                  "route_id": "2os",
+                  "agency_id": "1",
+                  "route_short_name": "D39-D39G",
+                  "route_long_name": "Depot-39 Hoskote ⇔ Depot-39 Gate",
+                  "route_type": 3
+                },
+                "30a": {
+                  "route_id": "30a",
+                  "agency_id": "1",
+                  "route_short_name": "D39-HSK",
+                  "route_long_name": "Depot-39 Hoskote ⇔ Hosakote Bus Stand (Old)",
+                  "route_type": 3
+                },
+                "xd": {
+                  "route_id": "xd",
+                  "agency_id": "1",
+                  "route_short_name": "D39G-HSK",
+                  "route_long_name": "Depot-39 Hoskote ⇔ Hosakote Bus Stand (Old)",
+                  "route_type": 3
+                },
+                "vh": {
+                  "route_id": "vh",
+                  "agency_id": "1",
+                  "route_short_name": "380-G D24G-DNP",
+                  "route_long_name": "Depot-24 Gate ⇔ Dandupalya",
+                  "route_type": 3
+                },
+                "wf": {
+                  "route_id": "wf",
+                  "agency_id": "1",
+                  "route_short_name": "MF-1K D39G-KDGMS",
+                  "route_long_name": "Depot-39 Gate ⇔ Kadugodi Metro Station",
+                  "route_type": 3
+                },
+                "oc": {
+                  "route_id": "oc",
+                  "agency_id": "1",
+                  "route_short_name": "280-F PTH-HSK",
+                  "route_long_name": "Puttenahalli ⇔ Hosakote Bus Stand (Old)",
+                  "route_type": 3
+                },
+                "28h": {
+                  "route_id": "28h",
+                  "agency_id": "1",
+                  "route_short_name": "289-D HSK-BYRTH-YHKOT",
+                  "route_long_name": "Yelahanka Old Town ⇔ Hosakote Bus Stand (Old)",
+                  "route_type": 3
+                },
+                "7a": {
+                  "route_id": "7a",
+                  "agency_id": "1",
+                  "route_short_name": "289-F PTH-HSK",
+                  "route_long_name": "Puttenahalli ⇔ Hosakote Bus Stand (Old)",
+                  "route_type": 3
+                },
+                "ah": {
+                  "route_id": "ah",
+                  "agency_id": "1",
+                  "route_short_name": "301-D",
+                  "route_long_name": "Shivajinagara Bus Station ⇔ Hosakote Bus Stand (Old)",
+                  "route_type": 3
+                },
+                "1gp": {
+                  "route_id": "1gp",
+                  "agency_id": "1",
+                  "route_short_name": "317-W",
+                  "route_long_name": "KR Market ⇔ Ganagalu",
+                  "route_type": 3
+                },
+                "2a4": {
+                  "route_id": "2a4",
+                  "agency_id": "1",
+                  "route_short_name": "317 D24G-HSK",
+                  "route_long_name": "Depot-24 Gate ⇔ Hosakote Bus Stand (Old)",
+                  "route_type": 3
+                },
+                "c8": {
+                  "route_id": "c8",
+                  "agency_id": "1",
+                  "route_short_name": "317-J KCH-HSK-VRKD",
+                  "route_long_name": "Varthur kodi ⇔ Kacharakanahalli",
+                  "route_type": 3
+                },
+                "dx": {
+                  "route_id": "dx",
+                  "agency_id": "1",
+                  "route_short_name": "317 HSK-BEML",
+                  "route_long_name": "Hosakote Bus Stand (Old) ⇔ BEML Gate",
+                  "route_type": 3
+                },
+                "jx": {
+                  "route_id": "jx",
+                  "agency_id": "1",
+                  "route_short_name": "317-MJ",
+                  "route_long_name": "Tin Factory ⇔ MVJ Medical Hospital",
+                  "route_type": 3
+                },
+                "2gs": {
+                  "route_id": "2gs",
+                  "agency_id": "1",
+                  "route_short_name": "328-H HSK-D41G",
+                  "route_long_name": "Hosakote Bus Stand (Old) ⇔ Depot-41 Gate",
+                  "route_type": 3
+                },
+                "2oe": {
+                  "route_id": "2oe",
+                  "agency_id": "1",
+                  "route_short_name": "328-H D41G-HSK",
+                  "route_long_name": "Depot-41 Gate ⇔ Hosakote Bus Stand (Old)",
+                  "route_type": 3
+                },
+                "1du": {
+                  "route_id": "1du",
+                  "agency_id": "1",
+                  "route_short_name": "334-E",
+                  "route_long_name": "Dr BR Ambedkar Bus Terminal (Domlur) ⇔ Hosakote Bus Stand (Old)",
+                  "route_type": 3
+                },
+                "1j9": {
+                  "route_id": "1j9",
+                  "agency_id": "1",
+                  "route_short_name": "380 SBS-MVJ",
+                  "route_long_name": "Shivajinagara Bus Station ⇔ MVJ Medical Hospital",
+                  "route_type": 3
+                },
+                "1jf": {
+                  "route_id": "1jf",
+                  "agency_id": "1",
+                  "route_short_name": "382-AB",
+                  "route_long_name": "KR Market ⇔ Beerahalli",
+                  "route_type": 3
+                },
+                "1wu": {
+                  "route_id": "1wu",
+                  "agency_id": "1",
+                  "route_short_name": "382-C KBS-DNH",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Dodda Nallala",
+                  "route_type": 3
+                },
+                "an": {
+                  "route_id": "an",
+                  "agency_id": "1",
+                  "route_short_name": "383-A",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Poojena Agrahara",
+                  "route_type": 3
+                },
+                "yt": {
+                  "route_id": "yt",
+                  "agency_id": "1",
+                  "route_short_name": "383",
+                  "route_long_name": "KR Market ⇔ Vagata",
+                  "route_type": 3
+                },
+                "1qo": {
+                  "route_id": "1qo",
+                  "agency_id": "1",
+                  "route_short_name": "399-F D27G-ANK-HSK",
+                  "route_long_name": "Depot-27 Gate ⇔ Hosakote Bus Stand (Old)",
+                  "route_type": 3
+                },
+                "2u4": {
+                  "route_id": "2u4",
+                  "agency_id": "1",
+                  "route_short_name": "399-F",
+                  "route_long_name": "Hosakote Bus Stand (Old) ⇔ Anekal",
+                  "route_type": 3
+                },
+                "31s": {
+                  "route_id": "31s",
+                  "agency_id": "1",
+                  "route_short_name": "399",
+                  "route_long_name": "Electronic City ⇔ Hosakote Bus Stand (Old)",
+                  "route_type": 3
+                },
+                "1z0": {
+                  "route_id": "1z0",
+                  "agency_id": "1",
+                  "route_short_name": "500-HG",
+                  "route_long_name": "Hosakote Bus Stand (Old) ⇔ Goraguntepalya",
+                  "route_type": 3
+                },
+                "2ew": {
+                  "route_id": "2ew",
+                  "agency_id": "1",
+                  "route_short_name": "500-HG HSK-BELF",
+                  "route_long_name": "Hosakote Bus Stand (Old) ⇔ BEL Factory",
+                  "route_type": 3
+                },
+                "1iy": {
+                  "route_id": "1iy",
+                  "agency_id": "1",
+                  "route_short_name": "508 YTTMC-HSK",
+                  "route_long_name": "Yeshawanthapura Bus Station ⇔ Hosakote Bus Stand (Old)",
+                  "route_type": 3
+                },
+                "16u": {
+                  "route_id": "16u",
+                  "agency_id": "1",
+                  "route_short_name": "KRPGH-HSK",
+                  "route_long_name": "Krishnaraja Pura Govt Hospital ⇔ Hosakote Bus Stand (Old)",
+                  "route_type": 3
+                },
+                "18c": {
+                  "route_id": "18c",
+                  "agency_id": "1",
+                  "route_short_name": "V-500HK",
+                  "route_long_name": "Hosakote Bus Stand (Old) ⇔ Hebbala Bridge",
+                  "route_type": 3
+                },
+                "1km": {
+                  "route_id": "1km",
+                  "agency_id": "1",
+                  "route_short_name": "V-328H",
+                  "route_long_name": "Hosakote Bus Stand (Old) ⇔ Attibele Bus Stand",
+                  "route_type": 3
+                },
+                "2wu": {
+                  "route_id": "2wu",
+                  "agency_id": "1",
+                  "route_short_name": "V-317A",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Hosakote Bus Stand (Old)",
+                  "route_type": 3
+                },
+                "5s": {
+                  "route_id": "5s",
+                  "agency_id": "1",
+                  "route_short_name": "KBS-12HK",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Hosakote Bus Stand (Old)",
+                  "route_type": 3
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [77.78471, 13.07026],
+                      [77.78505, 13.07048],
+                      [77.78488, 13.07076],
+                      [77.78177, 13.06906],
+                      [77.78187, 13.06891],
+                      [77.78189, 13.06885],
+                      [77.78173, 13.06832]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "3po",
+                    "stop_name": "Depot-39 Hoskote",
+                    "routes": ["1de", "2os", "30a", "xd"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.78173, 13.06832]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "4s2",
+                    "stop_name": "Depot-39 Gate",
+                    "routes": ["306", "vh", "1de", "2os", "wf"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.78178, 13.06905]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "5gm",
+                    "stop_name": "Hosakote Bus Station (TTMC)",
+                    "routes": ["134", "oc", "28h", "7a", "ah", "1gp", "2a4", "c8", "dx", "jx", "2gs", "2oe", "1du", "1j9", "vh", "1jf", "1wu", "an", "yt", "174", "1qo", "2u4", "31s", "1z0", "2ew", "1iy", "16u", "18c", "1de", "1km", "2wu", "30a", "5s", "wf", "xd"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.78468, 13.07031]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "5xy",
+                    "stop_name": "Hosakote High School",
+                    "routes": ["oc", "ah", "2a4", "c8", "dx", "jx", "1j9", "vh", "1wu", "an", "yt", "1qo", "1z0", "2ew", "1iy", "16u", "1de", "30a", "5s", "xd"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.78375, 13.07012]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table class="table-horizontal" summary="This table shows schedules for a selection of key stops on the route for Route D39-HSKTTMC - Hosakote Bus Station (TTMC) to Depot-39 Hoskote Mon-Sun. Stops and their schedule times are listed in the columns." data-orientation="horizontal">
+            <caption class="sr-only">Route D39-HSKTTMC - Hosakote Bus Station (TTMC) to Depot-39 Hoskote | Mon-Sun</caption>
+            <colgroup>
+              <col>
+              <col class="run_0 " id="trip_id_6yi">
+              <col class="run_1 " id="trip_id_2vf">
+              <col class="run_2 " id="trip_id_5jo">
+              <col class="run_3 " id="trip_id_152">
+              <col class="run_4 " id="trip_id_5w8">
+              <col class="run_5 " id="trip_id_gmz">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col">Stop</th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="stop-row" id="stop_id_5gm" data-stop-id="5gm" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Hosakote Bus Station (TTMC)</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">11:45am</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:18pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:23pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:29pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:04pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_5xy" data-stop-id="5xy" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Hosakote High School</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">11:46am</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:01pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:18pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:23pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:29pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:04pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_4s2" data-stop-id="4s2" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Depot-39 Gate</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">11:47am</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:02pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:19pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:24pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:29pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:04pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_3po" data-stop-id="3po" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Depot-39 Hoskote</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">11:48am</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:03pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:19pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:24pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:29pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:04pm</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

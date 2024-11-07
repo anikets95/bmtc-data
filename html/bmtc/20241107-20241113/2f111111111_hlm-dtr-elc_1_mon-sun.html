@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYW5pa2V0czk1IiwiYSI6ImNsemtkZHpwdDB1NGIybHNhaHhhZHR2NzAifQ.YkI9PvPHjhbxOAUBgAgMSw';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+</head>
+
+<body><!-- Timetable generated on 2024-11-07T05:12:53.673Z using GTFS-to-HTML version 2.6.11 -->
+  <div class="timetable-page menu-type-jump">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center gap-2">
+        <div class="route-color-swatch-large flex-none" style="background-color: #000000; color: #FFFFFF;">HLM-DTR-ELC</div>
+        <div>Route HLM-DTR-ELC</div>
+      </h1>
+      <div class="effective-date text-gray-600 mt-2">Effective November 07, 2024</div>
+      <div class="timetable mb-10" id="timetable_id_2f111111111" data-day-list="Mon-Sun" data-direction-name="Electronic City" data-timetable-id="2f1|1111111|1" data-direction-id="1" data-route-id="2f1">
+        <div class="mb-2">
+          <h2 class="text-xl">Route HLM-DTR-ELC - Hulimangala to Electronic City | Monday-Sunday</h2>
+        </div>
+        <div class="map" id="map_timetable_id_2f111111111"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_2f111111111",
+              "routes": {
+                "17": {
+                  "route_id": "17",
+                  "agency_id": "1",
+                  "route_short_name": "345 KMT-JAPC",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Jigani APC Circle",
+                  "route_type": 3
+                },
+                "142": {
+                  "route_id": "142",
+                  "agency_id": "1",
+                  "route_short_name": "346-K",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Hulimangala",
+                  "route_type": 3
+                },
+                "143": {
+                  "route_id": "143",
+                  "agency_id": "1",
+                  "route_short_name": "NICE-7",
+                  "route_long_name": "Vidyaranyapura Bus Station ⇔ Electronic City Wipro Main Gate",
+                  "route_type": 3
+                },
+                "2r1": {
+                  "route_id": "2r1",
+                  "agency_id": "1",
+                  "route_short_name": "378-C",
+                  "route_long_name": "Jambu Savari Dinne ⇔ Electronic City",
+                  "route_type": 3
+                },
+                "2vt": {
+                  "route_id": "2vt",
+                  "agency_id": "1",
+                  "route_short_name": "378-E JPN6-JSD-ELC",
+                  "route_long_name": "JP Nagara 6th Phase ⇔ Electronic City",
+                  "route_type": 3
+                },
+                "fa": {
+                  "route_id": "fa",
+                  "agency_id": "1",
+                  "route_short_name": "378 D34G-ELC-HSS",
+                  "route_long_name": "Depot-34 Gate ⇔ Head Start School Kommasandra",
+                  "route_type": 3
+                },
+                "nf": {
+                  "route_id": "nf",
+                  "agency_id": "1",
+                  "route_short_name": "378-E",
+                  "route_long_name": "Banashankari Bus Station ⇔ Electronic City",
+                  "route_type": 3
+                },
+                "p3": {
+                  "route_id": "p3",
+                  "agency_id": "1",
+                  "route_short_name": "378-C UTH-ELC",
+                  "route_long_name": "Uttarahalli Bus Stand ⇔ Electronic City",
+                  "route_type": 3
+                },
+                "s3": {
+                  "route_id": "s3",
+                  "agency_id": "1",
+                  "route_short_name": "378-D",
+                  "route_long_name": "Kengeri Bus Station ⇔ Electronic City",
+                  "route_type": 3
+                },
+                "uh": {
+                  "route_id": "uh",
+                  "agency_id": "1",
+                  "route_short_name": "378-C D34G-ELC",
+                  "route_long_name": "Depot-34 Gate ⇔ Electronic City",
+                  "route_type": 3
+                },
+                "11u": {
+                  "route_id": "11u",
+                  "agency_id": "1",
+                  "route_short_name": "COAA-ELC",
+                  "route_long_name": "Classic Archid Apartment Kothanuru ⇔ Electronic City",
+                  "route_type": 3
+                },
+                "16w": {
+                  "route_id": "16w",
+                  "agency_id": "1",
+                  "route_short_name": "MF-500EB D6G-ELCW",
+                  "route_long_name": "Depot-06 Gate ⇔ Electronic City Wipro Main Gate",
+                  "route_type": 3
+                },
+                "1fa": {
+                  "route_id": "1fa",
+                  "agency_id": "1",
+                  "route_short_name": "MF-500EB DBS-ELCW",
+                  "route_long_name": "Dr BR Ambedkar Bus Terminal (Domlur) ⇔ Electronic City Wipro Main Gate",
+                  "route_type": 3
+                },
+                "2f1": {
+                  "route_id": "2f1",
+                  "agency_id": "1",
+                  "route_short_name": "HLM-DTR-ELC",
+                  "route_long_name": "Hulimangala ⇔ Electronic City",
+                  "route_type": 3
+                },
+                "om": {
+                  "route_id": "om",
+                  "agency_id": "1",
+                  "route_short_name": "MF-500EB SMVR-ELCW",
+                  "route_long_name": "Sir M Vishweshwaraiah Railway Station ⇔ Electronic City Wipro Main Gate",
+                  "route_type": 3
+                },
+                "18t": {
+                  "route_id": "18t",
+                  "agency_id": "1",
+                  "route_short_name": "600-CF",
+                  "route_long_name": "Banashankari Bus Station ⇔ Electronic City Wipro Main Gate",
+                  "route_type": 3
+                },
+                "1uc": {
+                  "route_id": "1uc",
+                  "agency_id": "1",
+                  "route_short_name": "600-KB CLO-ELCW",
+                  "route_long_name": "Electronic City Wipro Main Gate ⇔ Chandra Layout",
+                  "route_type": 3
+                },
+                "2w7": {
+                  "route_id": "2w7",
+                  "agency_id": "1",
+                  "route_short_name": "600CA ELC A-ANK",
+                  "route_long_name": "Ajmeer Apartment Neeladri Road ⇔ Anekal",
+                  "route_type": 3
+                },
+                "19u": {
+                  "route_id": "19u",
+                  "agency_id": "1",
+                  "route_short_name": "KBS-3E FLY",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Electronic City Wipro Main Gate",
+                  "route_type": 3
+                },
+                "1an": {
+                  "route_id": "1an",
+                  "agency_id": "1",
+                  "route_short_name": "NICE-7A",
+                  "route_long_name": "Chikka Banavara ⇔ Electronic City Wipro Main Gate",
+                  "route_type": 3
+                },
+                "22h": {
+                  "route_id": "22h",
+                  "agency_id": "1",
+                  "route_short_name": "NICE-8",
+                  "route_long_name": "Nelamangala Bus Station ⇔ Electronic City Wipro Main Gate",
+                  "route_type": 3
+                },
+                "27l": {
+                  "route_id": "27l",
+                  "agency_id": "1",
+                  "route_short_name": "NICE-6",
+                  "route_long_name": "Basaveshwaranagara New Bus Stand ⇔ Electronic City Wipro Main Gate",
+                  "route_type": 3
+                },
+                "2fo": {
+                  "route_id": "2fo",
+                  "agency_id": "1",
+                  "route_short_name": "NICE-5",
+                  "route_long_name": "BEML Layout 5th stage ⇔ Electronic City Wipro Main Gate",
+                  "route_type": 3
+                },
+                "2se": {
+                  "route_id": "2se",
+                  "agency_id": "1",
+                  "route_short_name": "NICE-5A",
+                  "route_long_name": "Summanahalli ⇔ Electronic City Wipro Main Gate",
+                  "route_type": 3
+                },
+                "eo": {
+                  "route_id": "eo",
+                  "agency_id": "1",
+                  "route_short_name": "KBS-3E",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Electronic City Wipro Main Gate",
+                  "route_type": 3
+                },
+                "fs": {
+                  "route_id": "fs",
+                  "agency_id": "1",
+                  "route_short_name": "NICE-4",
+                  "route_long_name": "Vijayanagara Garage ⇔ Electronic City Wipro Main Gate",
+                  "route_type": 3
+                },
+                "k7": {
+                  "route_id": "k7",
+                  "agency_id": "1",
+                  "route_short_name": "V-600NL",
+                  "route_long_name": "Vijayanagara Garage ⇔ Electronic City Wipro Main Gate",
+                  "route_type": 3
+                },
+                "4c": {
+                  "route_id": "4c",
+                  "agency_id": "1",
+                  "route_short_name": "356-CW UFLY",
+                  "route_long_name": "BDA Complex HSR Layout ⇔ Electronic City Wipro Main Gate",
+                  "route_type": 3
+                },
+                "16s": {
+                  "route_id": "16s",
+                  "agency_id": "1",
+                  "route_short_name": "KIA-8",
+                  "route_long_name": "Electronic City KIA ⇔ Kempegowda International Airport",
+                  "route_type": 3
+                },
+                "2rp": {
+                  "route_id": "2rp",
+                  "agency_id": "1",
+                  "route_short_name": "G-3",
+                  "route_long_name": "Brigade Road ⇔ Electronic City Wipro Main Gate",
+                  "route_type": 3
+                },
+                "ce": {
+                  "route_id": "ce",
+                  "agency_id": "1",
+                  "route_short_name": "D19-ELCT",
+                  "route_long_name": "Depot-19 Electronic City ⇔ Electronic City",
+                  "route_type": 3
+                },
+                "ml": {
+                  "route_id": "ml",
+                  "agency_id": "1",
+                  "route_short_name": "345-C SNBS-NJP",
+                  "route_long_name": "Shanthinagara Bus Station ⇔ Nanjapura",
+                  "route_type": 3
+                },
+                "2j2": {
+                  "route_id": "2j2",
+                  "agency_id": "1",
+                  "route_short_name": "600CA CSB-ELC A",
+                  "route_long_name": "Central Silk Board ⇔ Ajmeer Apartment Neeladri Road",
+                  "route_type": 3
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [77.63716, 12.81779],
+                      [77.6371, 12.8179],
+                      [77.63708, 12.81799],
+                      [77.63706, 12.81829],
+                      [77.63709, 12.81867],
+                      [77.63719, 12.81902],
+                      [77.63738, 12.81948],
+                      [77.6374, 12.81956],
+                      [77.63757, 12.81966],
+                      [77.63782, 12.81976],
+                      [77.63785, 12.81979],
+                      [77.63789, 12.81988],
+                      [77.63793, 12.82013],
+                      [77.63811, 12.82086],
+                      [77.63823, 12.82127],
+                      [77.63854, 12.82204],
+                      [77.63873, 12.82256],
+                      [77.63891, 12.82292],
+                      [77.63906, 12.82348],
+                      [77.63915, 12.82391],
+                      [77.63919, 12.82429],
+                      [77.63923, 12.8245],
+                      [77.63938, 12.82491],
+                      [77.63955, 12.82545],
+                      [77.63972, 12.82587],
+                      [77.63976, 12.82602],
+                      [77.63981, 12.82634],
+                      [77.63985, 12.82646],
+                      [77.64, 12.82668],
+                      [77.64037, 12.82706],
+                      [77.64044, 12.82717],
+                      [77.64047, 12.82738],
+                      [77.64045, 12.82807],
+                      [77.6405, 12.82839],
+                      [77.6407, 12.82927],
+                      [77.64086, 12.82981],
+                      [77.64105, 12.83054],
+                      [77.64174, 12.83207],
+                      [77.64211, 12.83281],
+                      [77.64235, 12.83323],
+                      [77.64296, 12.83447],
+                      [77.64314, 12.83487],
+                      [77.64324, 12.8352],
+                      [77.64348, 12.83615],
+                      [77.64357, 12.83644],
+                      [77.64369, 12.83672],
+                      [77.64386, 12.83737],
+                      [77.64398, 12.83767],
+                      [77.64404, 12.8379],
+                      [77.64409, 12.83824],
+                      [77.64415, 12.83842],
+                      [77.64448, 12.83891],
+                      [77.64473, 12.83921],
+                      [77.6446, 12.83959],
+                      [77.64415, 12.84048],
+                      [77.6441, 12.84083],
+                      [77.64413, 12.84152],
+                      [77.64421, 12.84222],
+                      [77.64427, 12.8432],
+                      [77.64427, 12.84357]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [77.64421, 12.84222],
+                      [77.64416, 12.84177],
+                      [77.64458, 12.84173],
+                      [77.64497, 12.84172],
+                      [77.64511, 12.84174],
+                      [77.6452, 12.84177],
+                      [77.64545, 12.8419],
+                      [77.64564, 12.84196],
+                      [77.64618, 12.84192],
+                      [77.64697, 12.84175],
+                      [77.64892, 12.84125],
+                      [77.65104, 12.84077],
+                      [77.65247, 12.84038],
+                      [77.65278, 12.84025],
+                      [77.65289, 12.84022],
+                      [77.65395, 12.83966],
+                      [77.6542, 12.83955],
+                      [77.65441, 12.83948],
+                      [77.65557, 12.83921],
+                      [77.65615, 12.83914],
+                      [77.65776, 12.83908],
+                      [77.65891, 12.83907],
+                      [77.65899, 12.83905],
+                      [77.6592, 12.83912],
+                      [77.65944, 12.83926],
+                      [77.65951, 12.83933],
+                      [77.6597, 12.83964],
+                      [77.65991, 12.84007],
+                      [77.65989, 12.84029],
+                      [77.65993, 12.84062],
+                      [77.66032, 12.84194],
+                      [77.66036, 12.84228],
+                      [77.66012, 12.84505],
+                      [77.66016, 12.84514],
+                      [77.6605, 12.8452],
+                      [77.66117, 12.84542],
+                      [77.66158, 12.84546],
+                      [77.66166, 12.8455],
+                      [77.66402, 12.84548],
+                      [77.66506, 12.84549],
+                      [77.66544, 12.84548],
+                      [77.66552, 12.84547],
+                      [77.66562, 12.84543],
+                      [77.66572, 12.84547],
+                      [77.66583, 12.84549],
+                      [77.66643, 12.84553],
+                      [77.66671, 12.84557],
+                      [77.66722, 12.84568],
+                      [77.66746, 12.84575],
+                      [77.66772, 12.84583],
+                      [77.66824, 12.84603],
+                      [77.66889, 12.84632],
+                      [77.66956, 12.84666],
+                      [77.67022, 12.84701],
+                      [77.67058, 12.84723]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "19t",
+                    "stop_name": "BHEL",
+                    "routes": ["142", "2r1", "2vt", "fa", "nf", "p3", "s3", "uh", "11u", "16w", "1fa", "2f1", "om"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.66026, 12.8452]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "20s",
+                    "stop_name": "Wipro Gate Shikaripalya Cross",
+                    "routes": ["142", "2r1", "2vt", "fa", "nf", "p3", "s3", "uh", "18t", "1uc", "2w7", "11u", "143", "16w", "19u", "1an", "1fa", "22h", "27l", "2f1", "2fo", "2se", "eo", "fs", "k7", "om"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.659, 12.83902]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "2oa",
+                    "stop_name": "Siemens",
+                    "routes": ["142", "4c", "2r1", "2vt", "fa", "nf", "p3", "s3", "uh", "18t", "1uc", "11u", "143", "16s", "16w", "1an", "1fa", "22h", "27l", "2f1", "2fo", "2rp", "2se", "eo", "fs", "k7", "om"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.66215, 12.84556]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "3k9",
+                    "stop_name": "Concord Apartment Electronic City",
+                    "routes": ["2r1", "2vt", "fa", "nf", "p3", "s3", "uh", "11u", "2f1"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.65172, 12.84061]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "3my",
+                    "stop_name": "Thogur Cross",
+                    "routes": ["2r1", "2vt", "fa", "nf", "p3", "s3", "uh", "11u", "2f1"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.64427, 12.84356]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "43l",
+                    "stop_name": "Jayasandrahalli",
+                    "routes": ["2f1"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.64101, 12.83055]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "444",
+                    "stop_name": "Vapasandra",
+                    "routes": ["2f1"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.63999, 12.82667]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "53",
+                    "stop_name": "Electronic City",
+                    "routes": ["142", "4c", "2r1", "2vt", "fa", "nf", "p3", "s3", "uh", "1uc", "2w7", "11u", "143", "1an", "1fa", "22h", "27l", "2f1", "2rp", "2se", "ce", "eo", "fs", "k7"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.67049, 12.84717]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "5dy",
+                    "stop_name": "Kempapura",
+                    "routes": ["17", "ml", "2f1"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.6373, 12.81945]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "695",
+                    "stop_name": "Ajmeer Apartment Neeladri Road",
+                    "routes": ["2r1", "nf", "uh", "2j2", "2w7", "2f1"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.64673, 12.84185]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "la",
+                    "stop_name": "Neeladri Nagar",
+                    "routes": ["2r1", "2vt", "fa", "nf", "p3", "s3", "uh", "11u", "2f1"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.64788, 12.84151]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "yl",
+                    "stop_name": "Hulimangala",
+                    "routes": ["17", "ml", "2f1"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.63712, 12.81771]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table class="table-horizontal" summary="This table shows schedules for a selection of key stops on the route for Route HLM-DTR-ELC - Hulimangala to Electronic City Mon-Sun. Stops and their schedule times are listed in the columns." data-orientation="horizontal">
+            <caption class="sr-only">Route HLM-DTR-ELC - Hulimangala to Electronic City | Mon-Sun</caption>
+            <colgroup>
+              <col>
+              <col class="run_0 " id="trip_id_gxb">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col">Stop</th>
+                <th class="run-header" scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="stop-row" id="stop_id_yl" data-stop-id="yl" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Hulimangala</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">11:25am</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_5dy" data-stop-id="5dy" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Kempapura</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">11:26am</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_444" data-stop-id="444" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Vapasandra</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">11:28am</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_43l" data-stop-id="43l" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Jayasandrahalli</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">11:29am</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_3my" data-stop-id="3my" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Thogur Cross</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">11:31am</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_695" data-stop-id="695" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Ajmeer Apartment Neeladri Road</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">11:32am</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_la" data-stop-id="la" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Neeladri Nagar</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">11:34am</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_3k9" data-stop-id="3k9" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Concord Apartment Electronic City</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">11:35am</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_20s" data-stop-id="20s" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Wipro Gate Shikaripalya Cross</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">11:37am</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_19t" data-stop-id="19t" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">BHEL</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">11:38am</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_2oa" data-stop-id="2oa" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Siemens</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">11:40am</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_53" data-stop-id="53" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Electronic City</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">11:41am</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

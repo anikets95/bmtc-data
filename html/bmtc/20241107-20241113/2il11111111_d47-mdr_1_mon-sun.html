@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYW5pa2V0czk1IiwiYSI6ImNsemtkZHpwdDB1NGIybHNhaHhhZHR2NzAifQ.YkI9PvPHjhbxOAUBgAgMSw';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+</head>
+
+<body><!-- Timetable generated on 2024-11-07T05:13:25.386Z using GTFS-to-HTML version 2.6.11 -->
+  <div class="timetable-page menu-type-jump">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center gap-2">
+        <div class="route-color-swatch-large flex-none" style="background-color: #000000; color: #FFFFFF;">D47-MDR</div>
+        <div>Route D47-MDR</div>
+      </h1>
+      <div class="effective-date text-gray-600 mt-2">Effective November 07, 2024</div>
+      <div class="timetable mb-10" id="timetable_id_2il11111111" data-day-list="Mon-Sun" data-direction-name="Depot-47 Manduru" data-timetable-id="2il|1111111|1" data-direction-id="1" data-route-id="2il">
+        <div class="mb-2">
+          <h2 class="text-xl">Route D47-MDR - Mandur to Depot-47 Manduru | Monday-Sunday</h2>
+        </div>
+        <div class="map" id="map_timetable_id_2il11111111"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_2il11111111",
+              "routes": {
+                "199": {
+                  "route_id": "199",
+                  "agency_id": "1",
+                  "route_short_name": "316-A",
+                  "route_long_name": "KR Market ⇔ Gangavara",
+                  "route_type": 3
+                },
+                "239": {
+                  "route_id": "239",
+                  "agency_id": "1",
+                  "route_short_name": "316-E",
+                  "route_long_name": "KR Market ⇔ Hancharahalli",
+                  "route_type": 3
+                },
+                "318": {
+                  "route_id": "318",
+                  "agency_id": "1",
+                  "route_short_name": "D47G-BDHD",
+                  "route_long_name": "Depot-47 Gate ⇔ Bidarahalli Dargah",
+                  "route_type": 3
+                },
+                "18e": {
+                  "route_id": "18e",
+                  "agency_id": "1",
+                  "route_short_name": "D47-KMSD",
+                  "route_long_name": "Depot-47 Manduru ⇔ Kammasandra",
+                  "route_type": 3
+                },
+                "18n": {
+                  "route_id": "18n",
+                  "agency_id": "1",
+                  "route_short_name": "D47-MRS",
+                  "route_long_name": "Depot-47 Manduru ⇔ Marasandra",
+                  "route_type": 3
+                },
+                "2il": {
+                  "route_id": "2il",
+                  "agency_id": "1",
+                  "route_short_name": "D47-MDR",
+                  "route_long_name": "Depot-47 Manduru ⇔ Mandur",
+                  "route_type": 3
+                },
+                "2mg": {
+                  "route_id": "2mg",
+                  "agency_id": "1",
+                  "route_short_name": "D47-KMS",
+                  "route_long_name": "Depot-47 Manduru ⇔ Kammasandra",
+                  "route_type": 3
+                },
+                "v": {
+                  "route_id": "v",
+                  "agency_id": "1",
+                  "route_short_name": "D47-D47G",
+                  "route_long_name": "Depot-47 Manduru ⇔ Depot-47 Gate",
+                  "route_type": 3
+                },
+                "2ig": {
+                  "route_id": "2ig",
+                  "agency_id": "1",
+                  "route_short_name": "D47G-KMSD",
+                  "route_long_name": "Depot-47 Gate ⇔ Kammasandra",
+                  "route_type": 3
+                },
+                "2o1": {
+                  "route_id": "2o1",
+                  "agency_id": "1",
+                  "route_short_name": "D47G-MRSD",
+                  "route_long_name": "Depot-47 Gate ⇔ Marasandra",
+                  "route_type": 3
+                },
+                "7a": {
+                  "route_id": "7a",
+                  "agency_id": "1",
+                  "route_short_name": "289-F PTH-HSK",
+                  "route_long_name": "Puttenahalli ⇔ Hosakote Bus Stand (Old)",
+                  "route_type": 3
+                },
+                "ns": {
+                  "route_id": "ns",
+                  "agency_id": "1",
+                  "route_short_name": "304-V MDR-CKT",
+                  "route_long_name": "Mandur ⇔ Chikka Thirupathi",
+                  "route_type": 3
+                },
+                "2cw": {
+                  "route_id": "2cw",
+                  "agency_id": "1",
+                  "route_short_name": "306-M MDR-PURA",
+                  "route_long_name": "Mandur ⇔ Pura",
+                  "route_type": 3
+                },
+                "vv": {
+                  "route_id": "vv",
+                  "agency_id": "1",
+                  "route_short_name": "307-A MDR-VRH",
+                  "route_long_name": "Mandur ⇔ Veeranahalli",
+                  "route_type": 3
+                },
+                "1is": {
+                  "route_id": "1is",
+                  "agency_id": "1",
+                  "route_short_name": "316-Z",
+                  "route_long_name": "Tin Factory ⇔ Vijayapura Bus Stand Jangamakote",
+                  "route_type": 3
+                },
+                "1nx": {
+                  "route_id": "1nx",
+                  "agency_id": "1",
+                  "route_short_name": "316-R",
+                  "route_long_name": "KR Market ⇔ Bidalapura",
+                  "route_type": 3
+                },
+                "2iq": {
+                  "route_id": "2iq",
+                  "agency_id": "1",
+                  "route_short_name": "316-T",
+                  "route_long_name": "KR Market ⇔ Somathanahalli",
+                  "route_type": 3
+                },
+                "2yw": {
+                  "route_id": "2yw",
+                  "agency_id": "1",
+                  "route_short_name": "316-B",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Budigere",
+                  "route_type": 3
+                },
+                "7k": {
+                  "route_id": "7k",
+                  "agency_id": "1",
+                  "route_short_name": "316 MDR-HDH-BDG",
+                  "route_long_name": "Mandur ⇔ Budigere",
+                  "route_type": 3
+                },
+                "bp": {
+                  "route_id": "bp",
+                  "agency_id": "1",
+                  "route_short_name": "316-M",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Singahalli",
+                  "route_type": 3
+                },
+                "hk": {
+                  "route_id": "hk",
+                  "agency_id": "1",
+                  "route_short_name": "316-K",
+                  "route_long_name": "KR Market ⇔ Kaggalahalli",
+                  "route_type": 3
+                },
+                "ip": {
+                  "route_id": "ip",
+                  "agency_id": "1",
+                  "route_short_name": "316-S",
+                  "route_long_name": "Shivajinagara Bus Station ⇔ Budigere",
+                  "route_type": 3
+                },
+                "1by": {
+                  "route_id": "1by",
+                  "agency_id": "1",
+                  "route_short_name": "318-A MDR-BMH",
+                  "route_long_name": "Mandur ⇔ Bommenahalli",
+                  "route_type": 3
+                },
+                "2yd": {
+                  "route_id": "2yd",
+                  "agency_id": "1",
+                  "route_short_name": "318 KBS-JTP",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Jyothipura Budigere",
+                  "route_type": 3
+                },
+                "2bl": {
+                  "route_id": "2bl",
+                  "agency_id": "1",
+                  "route_short_name": "KIA-15",
+                  "route_long_name": "White Field Bus Station (Vydehi Hospital) ⇔ Kempegowda International Airport",
+                  "route_type": 3
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [77.73831, 13.08169],
+                      [77.7386, 13.08227],
+                      [77.7384, 13.08236],
+                      [77.73744, 13.08289],
+                      [77.73731, 13.08294],
+                      [77.73664, 13.08313],
+                      [77.73618, 13.0833],
+                      [77.73572, 13.08352],
+                      [77.73553, 13.08359],
+                      [77.73495, 13.08375],
+                      [77.73175, 13.08475],
+                      [77.73162, 13.08478],
+                      [77.73153, 13.08478],
+                      [77.73169, 13.08506],
+                      [77.73146, 13.08535]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "20",
+                    "stop_name": "Depot-47 Manduru",
+                    "routes": ["18e", "18n", "2il", "2mg", "v"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.73146, 13.08535]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "29c",
+                    "stop_name": "Depot-47 Gate",
+                    "routes": ["2ig", "2il", "2o1", "318", "v"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.73201, 13.08467]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "4o5",
+                    "stop_name": "Mandur",
+                    "routes": ["7a", "ns", "2cw", "vv", "199", "1is", "1nx", "239", "2iq", "2yw", "7k", "bp", "hk", "ip", "1by", "2yd", "2bl", "2il"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.73818, 13.08157]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table class="table-horizontal" summary="This table shows schedules for a selection of key stops on the route for Route D47-MDR - Mandur to Depot-47 Manduru Mon-Sun. Stops and their schedule times are listed in the columns." data-orientation="horizontal">
+            <caption class="sr-only">Route D47-MDR - Mandur to Depot-47 Manduru | Mon-Sun</caption>
+            <colgroup>
+              <col>
+              <col class="run_0 " id="trip_id_dpg">
+              <col class="run_1 " id="trip_id_24k">
+              <col class="run_2 " id="trip_id_53s">
+              <col class="run_3 " id="trip_id_j7n">
+              <col class="run_4 " id="trip_id_2te">
+              <col class="run_5 " id="trip_id_ct3">
+              <col class="run_6 " id="trip_id_b2r">
+              <col class="run_7 " id="trip_id_dyp">
+              <col class="run_8 " id="trip_id_fhx">
+              <col class="run_9 " id="trip_id_pu8">
+              <col class="run_10 " id="trip_id_q92">
+              <col class="run_11 " id="trip_id_biu">
+              <col class="run_12 " id="trip_id_no8">
+              <col class="run_13 " id="trip_id_dwz">
+              <col class="run_14 " id="trip_id_c5e">
+              <col class="run_15 " id="trip_id_4sw">
+              <col class="run_16 " id="trip_id_fsy">
+              <col class="run_17 " id="trip_id_9su">
+              <col class="run_18 " id="trip_id_5hk">
+              <col class="run_19 " id="trip_id_hgt">
+              <col class="run_20 " id="trip_id_280">
+              <col class="run_21 " id="trip_id_bof">
+              <col class="run_22 " id="trip_id_n8u">
+              <col class="run_23 " id="trip_id_bv7">
+              <col class="run_24 " id="trip_id_32p">
+              <col class="run_25 " id="trip_id_8nk">
+              <col class="run_26 " id="trip_id_c1v">
+              <col class="run_27 " id="trip_id_9z5">
+              <col class="run_28 " id="trip_id_113">
+              <col class="run_29 " id="trip_id_851">
+              <col class="run_30 " id="trip_id_8ib">
+              <col class="run_31 " id="trip_id_4j5">
+              <col class="run_32 " id="trip_id_mym">
+              <col class="run_33 " id="trip_id_uu">
+              <col class="run_34 " id="trip_id_6a4">
+              <col class="run_35 " id="trip_id_lwh">
+              <col class="run_36 " id="trip_id_kew">
+              <col class="run_37 " id="trip_id_e87">
+              <col class="run_38 " id="trip_id_be8">
+              <col class="run_39 " id="trip_id_70n">
+              <col class="run_40 " id="trip_id_mk1">
+              <col class="run_41 " id="trip_id_muz">
+              <col class="run_42 " id="trip_id_1us">
+              <col class="run_43 " id="trip_id_g24">
+              <col class="run_44 " id="trip_id_78a">
+              <col class="run_45 " id="trip_id_5mg">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col">Stop</th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="stop-row" id="stop_id_4o5" data-stop-id="4o5" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Mandur</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">10:25am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:45am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:50am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:00am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:05am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:10am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:15am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:20am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:25am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:30am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:35am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:45am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:50am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:55am</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:05pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:10pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:15pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:20pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:25pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:30pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:35pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:40pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:45pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:50pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:55pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:15pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:30pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:40pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:55pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:05pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:10pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:14pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:15pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:25pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:30pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:40pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:45pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:50pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:55pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:15pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:20pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:35pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:50pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_29c" data-stop-id="29c" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Depot-47 Gate</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">10:26am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:46am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:51am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:01am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:06am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:11am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:16am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:21am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:26am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:31am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:36am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:46am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:51am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:56am</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:01pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:06pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:11pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:16pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:21pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:26pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:31pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:36pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:41pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:46pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:51pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:56pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:16pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:31pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:41pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:56pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:01pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:06pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:11pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:14pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:16pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:26pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:31pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:41pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:46pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:51pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:56pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:01pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:16pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:21pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:36pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:51pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_20" data-stop-id="20" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Depot-47 Manduru</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">10:28am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:48am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:53am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:03am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:08am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:13am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:18am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:23am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:28am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:33am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:38am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:48am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:53am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:58am</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:03pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:08pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:13pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:18pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:23pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:28pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:33pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:38pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:43pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:48pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:53pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:58pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:18pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:33pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:43pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:58pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:03pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:08pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:13pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:14pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:18pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:28pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:33pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:43pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:48pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:53pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:58pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:03pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:18pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:23pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:38pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:53pm</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

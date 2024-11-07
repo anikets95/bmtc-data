@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYW5pa2V0czk1IiwiYSI6ImNsemtkZHpwdDB1NGIybHNhaHhhZHR2NzAifQ.YkI9PvPHjhbxOAUBgAgMSw';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+</head>
+
+<body><!-- Timetable generated on 2024-11-07T05:14:50.101Z using GTFS-to-HTML version 2.6.11 -->
+  <div class="timetable-page menu-type-jump">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center gap-2">
+        <div class="route-color-swatch-large flex-none" style="background-color: #000000; color: #FFFFFF;">ARMY-16</div>
+        <div>Route ARMY-16</div>
+      </h1>
+      <div class="effective-date text-gray-600 mt-2">Effective November 07, 2024</div>
+      <div class="timetable mb-10" id="timetable_id_tb11111111" data-day-list="Mon-Sun" data-direction-name="CS-Parachute" data-timetable-id="tb|1111111|1" data-direction-id="1" data-route-id="tb">
+        <div class="mb-2">
+          <h2 class="text-xl">Route ARMY-16 - CS-Army Public School Kamaraja Road to CS-Parachute | Monday-Sunday</h2>
+        </div>
+        <div class="map" id="map_timetable_id_tb11111111"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_tb11111111",
+              "routes": {
+                "91": {
+                  "route_id": "91",
+                  "agency_id": "1",
+                  "route_short_name": "Army-01",
+                  "route_long_name": "CS-Uttamasagar Hotel Banasawadi ⇔ CS-Army Public School Kamaraja Road",
+                  "route_type": 3
+                },
+                "259": {
+                  "route_id": "259",
+                  "agency_id": "1",
+                  "route_short_name": "ARMY-10",
+                  "route_long_name": "CS-ADMC Quarters Office ⇔ CS-Army Public School Kamaraja Road",
+                  "route_type": 3
+                },
+                "11a": {
+                  "route_id": "11a",
+                  "agency_id": "1",
+                  "route_short_name": "ARMY-09",
+                  "route_long_name": "CS-ADMC Quarters Office ⇔ CS-Army Public School Kamaraja Road",
+                  "route_type": 3
+                },
+                "1a2": {
+                  "route_id": "1a2",
+                  "agency_id": "1",
+                  "route_short_name": "APS-15",
+                  "route_long_name": "CS-Ganapathi Enclave ⇔ CS-Army Public School Kamaraja Road",
+                  "route_type": 3
+                },
+                "1od": {
+                  "route_id": "1od",
+                  "agency_id": "1",
+                  "route_short_name": "APS-4",
+                  "route_long_name": "CS-TC Palya ⇔ CS-Army Public School Kamaraja Road",
+                  "route_type": 3
+                },
+                "1t6": {
+                  "route_id": "1t6",
+                  "agency_id": "1",
+                  "route_short_name": "APS-20",
+                  "route_long_name": "CS-MEG Center ⇔ CS-Army Public School Kamaraja Road",
+                  "route_type": 3
+                },
+                "20t": {
+                  "route_id": "20t",
+                  "agency_id": "1",
+                  "route_short_name": "APS-02",
+                  "route_long_name": "CS-Nagavarapalya ⇔ CS-Army Public School Kamaraja Road",
+                  "route_type": 3
+                },
+                "22k": {
+                  "route_id": "22k",
+                  "agency_id": "1",
+                  "route_short_name": "APS-27",
+                  "route_long_name": "CS-Domlur Marriad Accomadation ⇔ CS-Army Public School Kamaraja Road",
+                  "route_type": 3
+                },
+                "26o": {
+                  "route_id": "26o",
+                  "agency_id": "1",
+                  "route_short_name": "ARMY-17",
+                  "route_long_name": "CS-Vasanth Enclave ⇔ CS-Army Public School Kamaraja Road",
+                  "route_type": 3
+                },
+                "2df": {
+                  "route_id": "2df",
+                  "agency_id": "1",
+                  "route_short_name": "ARMY-8",
+                  "route_long_name": "CS-Byrathi Bande ⇔ CS-Army Public School Kamaraja Road",
+                  "route_type": 3
+                },
+                "2dr": {
+                  "route_id": "2dr",
+                  "agency_id": "1",
+                  "route_short_name": "APS-25",
+                  "route_long_name": "CS-MEG Center ⇔ CS-Army Public School Kamaraja Road",
+                  "route_type": 3
+                },
+                "2m8": {
+                  "route_id": "2m8",
+                  "agency_id": "1",
+                  "route_short_name": "ARMY-11",
+                  "route_long_name": "CS-Chowdary Line ⇔ CS-Army Public School Kamaraja Road",
+                  "route_type": 3
+                },
+                "2ox": {
+                  "route_id": "2ox",
+                  "agency_id": "1",
+                  "route_short_name": "APS-28",
+                  "route_long_name": "CS-CMP Centre and School ⇔ CS-Army Public School Kamaraja Road",
+                  "route_type": 3
+                },
+                "2r5": {
+                  "route_id": "2r5",
+                  "agency_id": "1",
+                  "route_short_name": "APS-19",
+                  "route_long_name": "CS-Tarapura Officer Colony ⇔ CS-Army Public School Kamaraja Road",
+                  "route_type": 3
+                },
+                "2tt": {
+                  "route_id": "2tt",
+                  "agency_id": "1",
+                  "route_short_name": "APS-14",
+                  "route_long_name": "CS-Ejipura ⇔ CS-Army Public School Kamaraja Road",
+                  "route_type": 3
+                },
+                "2ws": {
+                  "route_id": "2ws",
+                  "agency_id": "1",
+                  "route_short_name": "APS-3",
+                  "route_long_name": "CS-Tin Factory ⇔ CS-Army Public School Kamaraja Road",
+                  "route_type": 3
+                },
+                "ez": {
+                  "route_id": "ez",
+                  "agency_id": "1",
+                  "route_short_name": "APS-13",
+                  "route_long_name": "CS-Nethravathi Block ⇔ CS-Army Public School Kamaraja Road",
+                  "route_type": 3
+                },
+                "ft": {
+                  "route_id": "ft",
+                  "agency_id": "1",
+                  "route_short_name": "ARMY--1",
+                  "route_long_name": "CS-GM Palya ⇔ CS-Army Public School Kamaraja Road",
+                  "route_type": 3
+                },
+                "hn": {
+                  "route_id": "hn",
+                  "agency_id": "1",
+                  "route_short_name": "ARMY-6A",
+                  "route_long_name": "CS-Kalkere ⇔ CS-Army Public School Kamaraja Road",
+                  "route_type": 3
+                },
+                "tb": {
+                  "route_id": "tb",
+                  "agency_id": "1",
+                  "route_short_name": "ARMY-16",
+                  "route_long_name": "CS-Parachute ⇔ CS-Army Public School Kamaraja Road",
+                  "route_type": 3
+                },
+                "zr": {
+                  "route_id": "zr",
+                  "agency_id": "1",
+                  "route_short_name": "APS-26",
+                  "route_long_name": "CS-MEG Center ⇔ CS-Army Public School Kamaraja Road",
+                  "route_type": 3
+                },
+                "zs": {
+                  "route_id": "zs",
+                  "agency_id": "1",
+                  "route_short_name": "APS-24",
+                  "route_long_name": "CS-MEG Center ⇔ CS-Army Public School Kamaraja Road",
+                  "route_type": 3
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [77.60942, 12.97862],
+                      [77.60933, 12.97864],
+                      [77.60916, 12.9782],
+                      [77.60909, 12.97822],
+                      [77.60994, 12.98062],
+                      [77.61, 12.98077],
+                      [77.61003, 12.9808],
+                      [77.61008, 12.981],
+                      [77.61024, 12.98147],
+                      [77.61048, 12.98204],
+                      [77.61056, 12.9823],
+                      [77.61061, 12.9826],
+                      [77.61074, 12.98313],
+                      [77.61094, 12.98352],
+                      [77.61104, 12.98365],
+                      [77.61128, 12.98385],
+                      [77.61169, 12.98425],
+                      [77.61177, 12.98437],
+                      [77.61181, 12.98448],
+                      [77.61183, 12.98465],
+                      [77.61183, 12.98527],
+                      [77.61185, 12.98558],
+                      [77.61196, 12.98597],
+                      [77.61213, 12.98635],
+                      [77.61267, 12.98734],
+                      [77.61281, 12.98794],
+                      [77.61325, 12.98923],
+                      [77.61336, 12.98944],
+                      [77.61388, 12.99058],
+                      [77.61386, 12.99067],
+                      [77.61415, 12.99111],
+                      [77.61447, 12.99171],
+                      [77.61452, 12.99186],
+                      [77.61467, 12.9922],
+                      [77.61481, 12.99249],
+                      [77.61491, 12.99261],
+                      [77.61572, 12.99436],
+                      [77.6149, 12.99487],
+                      [77.61355, 12.99579],
+                      [77.61308, 12.99605],
+                      [77.61145, 12.99685],
+                      [77.61071, 12.99718],
+                      [77.61018, 12.99747],
+                      [77.60953, 12.99777],
+                      [77.6085, 12.99834],
+                      [77.60871, 12.99863],
+                      [77.60913, 12.99909],
+                      [77.60946, 12.99935],
+                      [77.60984, 12.99957],
+                      [77.61057, 13.00004],
+                      [77.61175, 13.00105],
+                      [77.61197, 13.00128],
+                      [77.61205, 13.00142],
+                      [77.61207, 13.00163],
+                      [77.61207, 13.00197],
+                      [77.6121, 13.00249],
+                      [77.61213, 13.00262],
+                      [77.61214, 13.00293],
+                      [77.61235, 13.00576],
+                      [77.61244, 13.00652],
+                      [77.61281, 13.00768],
+                      [77.613, 13.00812],
+                      [77.61322, 13.00847],
+                      [77.61324, 13.00903],
+                      [77.61336, 13.00972],
+                      [77.61218, 13.00998],
+                      [77.61188, 13.01007],
+                      [77.61179, 13.01013],
+                      [77.61133, 13.01016],
+                      [77.61109, 13.01021],
+                      [77.61042, 13.01042],
+                      [77.60968, 13.01057],
+                      [77.60953, 13.01098],
+                      [77.60931, 13.01103],
+                      [77.6091, 13.01102],
+                      [77.6088, 13.01106],
+                      [77.60846, 13.01116],
+                      [77.60819, 13.01121],
+                      [77.60772, 13.01122],
+                      [77.60753, 13.01125],
+                      [77.60734, 13.01131],
+                      [77.60715, 13.01141],
+                      [77.60678, 13.01155],
+                      [77.6057, 13.01201],
+                      [77.60515, 13.01227],
+                      [77.60485, 13.01236],
+                      [77.60462, 13.01233],
+                      [77.60444, 13.01235],
+                      [77.60408, 13.01243],
+                      [77.6038, 13.01258],
+                      [77.60372, 13.01215],
+                      [77.6033, 13.01223],
+                      [77.60296, 13.01222],
+                      [77.6027, 13.01231],
+                      [77.60272, 13.01264],
+                      [77.60268, 13.01271],
+                      [77.60262, 13.01275],
+                      [77.60178, 13.01282],
+                      [77.60107, 13.01306],
+                      [77.60088, 13.01338],
+                      [77.59934, 13.01411],
+                      [77.59902, 13.01354],
+                      [77.59867, 13.01312],
+                      [77.59816, 13.01302],
+                      [77.59801, 13.01271],
+                      [77.59765, 13.01214],
+                      [77.59744, 13.01201],
+                      [77.59724, 13.01193],
+                      [77.59701, 13.01187],
+                      [77.59673, 13.01184],
+                      [77.59594, 13.01184]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "3om",
+                    "stop_name": "CS-Army Public School Kamaraja Road",
+                    "routes": ["11a", "1a2", "1od", "1t6", "20t", "22k", "259", "26o", "2df", "2dr", "2m8", "2ox", "2r5", "2tt", "2ws", "91", "ez", "ft", "hn", "tb", "zr", "zs"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.60941, 12.97867]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "54m",
+                    "stop_name": "CS-Parachute",
+                    "routes": ["tb"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.59594, 13.01184]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table class="table-horizontal" summary="This table shows schedules for a selection of key stops on the route for Route ARMY-16 - CS-Army Public School Kamaraja Road to CS-Parachute Mon-Sun. Stops and their schedule times are listed in the columns." data-orientation="horizontal">
+            <caption class="sr-only">Route ARMY-16 - CS-Army Public School Kamaraja Road to CS-Parachute | Mon-Sun</caption>
+            <colgroup>
+              <col>
+              <col class="run_0 " id="trip_id_jjg">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col">Stop</th>
+                <th class="run-header" scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="stop-row" id="stop_id_3om" data-stop-id="3om" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">CS-Army Public School Kamaraja Road</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">1:45pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_54m" data-stop-id="54m" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">CS-Parachute</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">2:07pm</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

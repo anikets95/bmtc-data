@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYW5pa2V0czk1IiwiYSI6ImNsemtkZHpwdDB1NGIybHNhaHhhZHR2NzAifQ.YkI9PvPHjhbxOAUBgAgMSw';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+</head>
+
+<body><!-- Timetable generated on 2024-11-07T05:13:35.188Z using GTFS-to-HTML version 2.6.11 -->
+  <div class="timetable-page menu-type-jump">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center gap-2">
+        <div class="route-color-swatch-large flex-none" style="background-color: #000000; color: #FFFFFF;">342D D42G-VRT</div>
+        <div>Route 342D D42G-VRT</div>
+      </h1>
+      <div class="effective-date text-gray-600 mt-2">Effective November 07, 2024</div>
+      <div class="timetable mb-10" id="timetable_id_1ub11111111" data-day-list="Mon-Sun" data-direction-name="Depot-42 Gate  Arrival" data-timetable-id="1ub|1111111|1" data-direction-id="1" data-route-id="1ub">
+        <div class="mb-2">
+          <h2 class="text-xl">Route 342D D42G-VRT - Kachamaranahalli to Depot-42 Gate Arrival | Monday-Sunday</h2>
+        </div>
+        <div class="map" id="map_timetable_id_1ub11111111"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_1ub11111111",
+              "routes": {
+                "83": {
+                  "route_id": "83",
+                  "agency_id": "1",
+                  "route_short_name": "342-TA",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Handenahalli Attibele",
+                  "route_type": 3
+                },
+                "1wg": {
+                  "route_id": "1wg",
+                  "agency_id": "1",
+                  "route_short_name": "327-F",
+                  "route_long_name": "KR Market ⇔ Kodathi Village",
+                  "route_type": 3
+                },
+                "1n2": {
+                  "route_id": "1n2",
+                  "agency_id": "1",
+                  "route_short_name": "342-A",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Sarjapura",
+                  "route_type": 3
+                },
+                "1t4": {
+                  "route_id": "1t4",
+                  "agency_id": "1",
+                  "route_short_name": "342-I",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Kuguru",
+                  "route_type": 3
+                },
+                "1ub": {
+                  "route_id": "1ub",
+                  "agency_id": "1",
+                  "route_short_name": "342D D42G-VRT",
+                  "route_long_name": "Depot-42 Gate Departure ⇔ Varthuru",
+                  "route_type": 3
+                },
+                "2be": {
+                  "route_id": "2be",
+                  "agency_id": "1",
+                  "route_short_name": "342",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Dommasandra",
+                  "route_type": 3
+                },
+                "2kt": {
+                  "route_id": "2kt",
+                  "agency_id": "1",
+                  "route_short_name": "342-H STJN-GGSK",
+                  "route_long_name": "St Johns Hospital ⇔ Genius Global School Kodathi",
+                  "route_type": 3
+                },
+                "2vi": {
+                  "route_id": "2vi",
+                  "agency_id": "1",
+                  "route_short_name": "342-A KRMTTMC-SJP",
+                  "route_long_name": "Sarjapura ⇔ Koramangala Bus Station",
+                  "route_type": 3
+                },
+                "kj": {
+                  "route_id": "kj",
+                  "agency_id": "1",
+                  "route_short_name": "342-A KMT HRH",
+                  "route_long_name": "Harohalli ⇔ KR Market (Kalasipalya)",
+                  "route_type": 3
+                },
+                "sl": {
+                  "route_id": "sl",
+                  "agency_id": "1",
+                  "route_short_name": "342-AA",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Thigalara Chowdenahalli",
+                  "route_type": 3
+                },
+                "te": {
+                  "route_id": "te",
+                  "agency_id": "1",
+                  "route_short_name": "342 D42G-SJP",
+                  "route_long_name": "Depot-42 Gate Departure ⇔ Sarjapura",
+                  "route_type": 3
+                },
+                "vb": {
+                  "route_id": "vb",
+                  "agency_id": "1",
+                  "route_short_name": "342-H STJN-JGH",
+                  "route_long_name": "Janthagundanahalli ⇔ St Johns Hospital",
+                  "route_type": 3
+                },
+                "1aa": {
+                  "route_id": "1aa",
+                  "agency_id": "1",
+                  "route_short_name": "500CH SJR-KRP",
+                  "route_long_name": "Sarjapura ⇔ Krishnaraja Pura Govt Hospital",
+                  "route_type": 3
+                },
+                "2i6": {
+                  "route_id": "2i6",
+                  "agency_id": "1",
+                  "route_short_name": "500-CH SJP-HBL",
+                  "route_long_name": "Sarjapura ⇔ Hebbala Bridge",
+                  "route_type": 3
+                },
+                "2jb": {
+                  "route_id": "2jb",
+                  "agency_id": "1",
+                  "route_short_name": "500-CF",
+                  "route_long_name": "Banashankari Bus Station ⇔ Chikka Thirupathi",
+                  "route_type": 3
+                },
+                "2kj": {
+                  "route_id": "2kj",
+                  "agency_id": "1",
+                  "route_short_name": "500-CH",
+                  "route_long_name": "Sarjapura ⇔ Tin Factory",
+                  "route_type": 3
+                },
+                "m4": {
+                  "route_id": "m4",
+                  "agency_id": "1",
+                  "route_short_name": "500-CS",
+                  "route_long_name": "Central Silk Board ⇔ Sarjapura",
+                  "route_type": 3
+                },
+                "yk": {
+                  "route_id": "yk",
+                  "agency_id": "1",
+                  "route_short_name": "500-CH KLN-SJP",
+                  "route_long_name": "Kalyananagara ⇔ Sarjapura",
+                  "route_type": 3
+                },
+                "13y": {
+                  "route_id": "13y",
+                  "agency_id": "1",
+                  "route_short_name": "G-2",
+                  "route_long_name": "Mayohall ⇔ Sarjapura",
+                  "route_type": 3
+                },
+                "15j": {
+                  "route_id": "15j",
+                  "agency_id": "1",
+                  "route_short_name": "V-342F",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Sarjapura",
+                  "route_type": 3
+                },
+                "1vp": {
+                  "route_id": "1vp",
+                  "agency_id": "1",
+                  "route_short_name": "KIA-8D",
+                  "route_long_name": "Sarjapura ⇔ Kempegowda International Airport",
+                  "route_type": 3
+                },
+                "1z": {
+                  "route_id": "1z",
+                  "agency_id": "1",
+                  "route_short_name": "V-500HS",
+                  "route_long_name": "Sarjapura ⇔ Hebbala Bridge",
+                  "route_type": 3
+                },
+                "3r": {
+                  "route_id": "3r",
+                  "agency_id": "1",
+                  "route_short_name": "V-342F D25G-SJP",
+                  "route_long_name": "Depot-25 Gate ⇔ Sarjapura",
+                  "route_type": 3
+                },
+                "1ja": {
+                  "route_id": "1ja",
+                  "agency_id": "1",
+                  "route_short_name": "342 D42G-HSRKEB",
+                  "route_long_name": "HSR Layout KEB ⇔ Depot-42 Gate  Arrival",
+                  "route_type": 3
+                },
+                "1zh": {
+                  "route_id": "1zh",
+                  "agency_id": "1",
+                  "route_short_name": "342-Q KMT-D42G",
+                  "route_long_name": "Depot-42 Gate Departure ⇔ KR Market (Kalasipalya)",
+                  "route_type": 3
+                },
+                "1zo": {
+                  "route_id": "1zo",
+                  "agency_id": "1",
+                  "route_short_name": "342‌ KMT-D42G",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Depot-42 Gate  Arrival",
+                  "route_type": 3
+                },
+                "n0": {
+                  "route_id": "n0",
+                  "agency_id": "1",
+                  "route_short_name": "342-H D42-BLH",
+                  "route_long_name": "Depot-42 Gate Departure ⇔ Belenus Hospital Near Carmelram Gate",
+                  "route_type": 3
+                },
+                "15i": {
+                  "route_id": "15i",
+                  "agency_id": "1",
+                  "route_short_name": "399-F D42G-HUK-ANK",
+                  "route_long_name": "Depot-42 Gate Departure ⇔ Anekal",
+                  "route_type": 3
+                },
+                "1u3": {
+                  "route_id": "1u3",
+                  "agency_id": "1",
+                  "route_short_name": "D42-D42G",
+                  "route_long_name": "Depot-42 Kodathi ⇔ Depot-42 Gate Departure",
+                  "route_type": 3
+                },
+                "2pf": {
+                  "route_id": "2pf",
+                  "agency_id": "1",
+                  "route_short_name": "D42G-PESK",
+                  "route_long_name": "Depot-42 Gate Departure ⇔ PES College Hostel Kasavanahalli",
+                  "route_type": 3
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [77.74732, 12.9401],
+                      [77.74742, 12.93976],
+                      [77.74747, 12.93939],
+                      [77.74744, 12.93903],
+                      [77.74741, 12.93889],
+                      [77.74732, 12.93867],
+                      [77.74719, 12.93851],
+                      [77.74636, 12.93776],
+                      [77.74422, 12.93598],
+                      [77.74402, 12.93577],
+                      [77.74393, 12.93563],
+                      [77.74379, 12.93535],
+                      [77.74325, 12.93401],
+                      [77.74294, 12.93331],
+                      [77.7427, 12.93285],
+                      [77.74225, 12.93223],
+                      [77.73824, 12.92699],
+                      [77.73785, 12.92637],
+                      [77.73684, 12.9246],
+                      [77.73659, 12.92408],
+                      [77.73653, 12.92387],
+                      [77.73649, 12.92353],
+                      [77.73647, 12.92246],
+                      [77.7364, 12.92131],
+                      [77.73641, 12.92041],
+                      [77.7365, 12.91921],
+                      [77.73546, 12.91921],
+                      [77.73524, 12.91911],
+                      [77.73494, 12.91889],
+                      [77.73469, 12.91879],
+                      [77.73453, 12.91875],
+                      [77.73437, 12.91815],
+                      [77.73431, 12.91772],
+                      [77.73428, 12.91719],
+                      [77.73412, 12.91649],
+                      [77.73413, 12.91631],
+                      [77.73419, 12.91601],
+                      [77.73424, 12.91549],
+                      [77.73437, 12.91447],
+                      [77.73436, 12.91416],
+                      [77.73429, 12.91402],
+                      [77.73396, 12.9135],
+                      [77.73371, 12.91289],
+                      [77.73347, 12.91222],
+                      [77.73326, 12.91175],
+                      [77.73312, 12.91158],
+                      [77.73237, 12.91105],
+                      [77.7321, 12.91081],
+                      [77.73156, 12.91021],
+                      [77.73077, 12.90923],
+                      [77.7306, 12.9091],
+                      [77.73019, 12.90891],
+                      [77.73011, 12.90885],
+                      [77.72989, 12.90859],
+                      [77.7298, 12.90844],
+                      [77.72969, 12.90812],
+                      [77.72967, 12.90798],
+                      [77.72967, 12.90767],
+                      [77.7298, 12.90693],
+                      [77.73017, 12.9053],
+                      [77.73017, 12.90525],
+                      [77.73011, 12.90516],
+                      [77.73005, 12.90515],
+                      [77.72992, 12.90518],
+                      [77.7287, 12.90565],
+                      [77.72829, 12.90579],
+                      [77.72684, 12.90638],
+                      [77.72642, 12.90651],
+                      [77.72629, 12.90649],
+                      [77.7262, 12.9064],
+                      [77.72588, 12.90553],
+                      [77.72585, 12.90548],
+                      [77.7258, 12.90545],
+                      [77.72566, 12.90542],
+                      [77.72525, 12.90538],
+                      [77.72474, 12.90536],
+                      [77.72461, 12.90533],
+                      [77.72457, 12.9053],
+                      [77.72454, 12.90524],
+                      [77.7245, 12.90463],
+                      [77.72433, 12.903],
+                      [77.72426, 12.90275],
+                      [77.72412, 12.90246],
+                      [77.72398, 12.90226],
+                      [77.72322, 12.90133],
+                      [77.7231, 12.90113],
+                      [77.72301, 12.90089],
+                      [77.72293, 12.90073],
+                      [77.72281, 12.90065],
+                      [77.72274, 12.90064],
+                      [77.72241, 12.90068],
+                      [77.7222, 12.90065],
+                      [77.72207, 12.90059],
+                      [77.72163, 12.90032],
+                      [77.72153, 12.90023],
+                      [77.7214, 12.90006],
+                      [77.72133, 12.89988],
+                      [77.72132, 12.89972],
+                      [77.72141, 12.89927],
+                      [77.72141, 12.89918],
+                      [77.72136, 12.899],
+                      [77.72123, 12.89871],
+                      [77.72112, 12.89839],
+                      [77.72109, 12.89783],
+                      [77.72106, 12.89772],
+                      [77.72098, 12.89766],
+                      [77.72073, 12.89762],
+                      [77.72064, 12.89752],
+                      [77.72054, 12.89716],
+                      [77.72046, 12.89674],
+                      [77.72039, 12.89658],
+                      [77.72031, 12.89655],
+                      [77.71941, 12.89695],
+                      [77.71814, 12.89747],
+                      [77.71687, 12.89788],
+                      [77.71561, 12.89824],
+                      [77.71306, 12.89909],
+                      [77.71286, 12.89914],
+                      [77.70581, 12.90247],
+                      [77.70569, 12.90242],
+                      [77.7062, 12.90207],
+                      [77.70623, 12.90142],
+                      [77.70626, 12.90119],
+                      [77.70621, 12.90068],
+                      [77.70621, 12.90049],
+                      [77.70625, 12.90026],
+                      [77.70633, 12.90002],
+                      [77.70638, 12.89969],
+                      [77.70645, 12.89943],
+                      [77.70649, 12.89907],
+                      [77.70658, 12.89859],
+                      [77.7066, 12.89838],
+                      [77.7066, 12.89809],
+                      [77.70655, 12.89774],
+                      [77.7065, 12.89757],
+                      [77.70611, 12.89666],
+                      [77.70567, 12.89546]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "2du",
+                    "stop_name": "Kodathi Gate",
+                    "routes": ["1wg", "1n2", "1t4", "1ub", "2be", "2kt", "2vi", "83", "kj", "sl", "te", "vb", "1aa", "2i6", "2jb", "2kj", "m4", "yk", "13y", "15j", "1vp", "1z", "3r"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.7203, 12.89653]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "4s1",
+                    "stop_name": "Ambedkar Nagara",
+                    "routes": ["1n2", "1t4", "1ub", "2be", "2kt", "2vi", "83", "kj", "sl", "te", "vb", "1aa", "2i6", "2jb", "2kj", "m4", "yk", "13y", "15j", "1z", "3r"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.71286, 12.89914]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "5ir",
+                    "stop_name": "Depot-42 Gate  Arrival",
+                    "routes": ["1ja", "1ub", "1zh", "1zo", "n0", "te", "15i", "1u3", "2pf"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.70565, 12.89538]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "5w3",
+                    "stop_name": "Sarjapura Wipro Campus",
+                    "routes": ["1n2", "1t4", "1ub", "2be", "2kt", "2vi", "83", "kj", "sl", "te", "vb", "1aa", "2i6", "2jb", "2kj", "m4", "yk", "13y", "15j", "1vp", "1z", "3r"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.71369, 12.89886]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "6dc",
+                    "stop_name": "Kachamaranahalli",
+                    "routes": ["1ub"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.7335, 12.91226]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "vc",
+                    "stop_name": "Mulluru",
+                    "routes": ["1ub"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.72452, 12.90443]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table class="table-horizontal" summary="This table shows schedules for a selection of key stops on the route for Route 342D D42G-VRT - Kachamaranahalli to Depot-42 Gate  Arrival Mon-Sun. Stops and their schedule times are listed in the columns." data-orientation="horizontal">
+            <caption class="sr-only">Route 342D D42G-VRT - Kachamaranahalli to Depot-42 Gate Arrival | Mon-Sun</caption>
+            <colgroup>
+              <col>
+              <col class="run_0 " id="trip_id_8cf">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col">Stop</th>
+                <th class="run-header" scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="stop-row" id="stop_id_6dc" data-stop-id="6dc" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Kachamaranahalli</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">6:50pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_vc" data-stop-id="vc" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Mulluru</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">6:54pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_2du" data-stop-id="2du" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Kodathi Gate</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">6:59pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_5w3" data-stop-id="5w3" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Sarjapura Wipro Campus</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">7:04pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_4s1" data-stop-id="4s1" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Ambedkar Nagara</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">7:09pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_5ir" data-stop-id="5ir" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Depot-42 Gate Arrival</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">7:14pm</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYW5pa2V0czk1IiwiYSI6ImNsemtkZHpwdDB1NGIybHNhaHhhZHR2NzAifQ.YkI9PvPHjhbxOAUBgAgMSw';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+</head>
+
+<body><!-- Timetable generated on 2024-11-07T05:13:20.339Z using GTFS-to-HTML version 2.6.11 -->
+  <div class="timetable-page menu-type-jump">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center gap-2">
+        <div class="route-color-swatch-large flex-none" style="background-color: #000000; color: #FFFFFF;">298-M DVH-HRH-VJP</div>
+        <div>Route 298-M DVH-HRH-VJP</div>
+      </h1>
+      <div class="effective-date text-gray-600 mt-2">Effective November 07, 2024</div>
+      <div class="timetable mb-10" id="timetable_id_k311111111" data-day-list="Mon-Sun" data-direction-name="Devanahalli New Bus Station" data-timetable-id="k3|1111111|1" data-direction-id="1" data-route-id="k3">
+        <div class="mb-2">
+          <h2 class="text-xl">Route 298-M DVH-HRH-VJP - Vijayapura Bus Stand Jangamakote to Devanahalli New Bus Station | Monday-Sunday</h2>
+        </div>
+        <div class="map" id="map_timetable_id_k311111111"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_k311111111",
+              "routes": {
+                "7u": {
+                  "route_id": "7u",
+                  "agency_id": "1",
+                  "route_short_name": "298-MP KBS-HRH-VJP",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Vijayapura Bus Stand Jangamakote",
+                  "route_type": 3
+                },
+                "k3": {
+                  "route_id": "k3",
+                  "agency_id": "1",
+                  "route_short_name": "298-M DVH-HRH-VJP",
+                  "route_long_name": "Devanahalli New Bus Station ⇔ Vijayapura Bus Stand Jangamakote",
+                  "route_type": 3
+                },
+                "1p3": {
+                  "route_id": "1p3",
+                  "agency_id": "1",
+                  "route_short_name": "289-Y",
+                  "route_long_name": "Devanahalli New Bus Station ⇔ Hosakote Bus Stand (Old)",
+                  "route_type": 3
+                },
+                "2kl": {
+                  "route_id": "2kl",
+                  "agency_id": "1",
+                  "route_short_name": "296-MA",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Devanahalli Old Bus Stand",
+                  "route_type": 3
+                },
+                "1l5": {
+                  "route_id": "1l5",
+                  "agency_id": "1",
+                  "route_short_name": "298-MF",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Beerasandra Chapradakallu",
+                  "route_type": 3
+                },
+                "1r6": {
+                  "route_id": "1r6",
+                  "agency_id": "1",
+                  "route_short_name": "298-Y VJP-YLR-YHKOT",
+                  "route_long_name": "Vijayapura Bus Stand Jangamakote ⇔ Yelahanka Old Town",
+                  "route_type": 3
+                },
+                "1sr": {
+                  "route_id": "1sr",
+                  "agency_id": "1",
+                  "route_short_name": "298-MP",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Vijayapura Bus Stand Jangamakote",
+                  "route_type": 3
+                },
+                "1wb": {
+                  "route_id": "1wb",
+                  "agency_id": "1",
+                  "route_short_name": "298-M PTH-DVH",
+                  "route_long_name": "Puttenahalli ⇔ Devanahalli Old Bus Stand",
+                  "route_type": 3
+                },
+                "1xi": {
+                  "route_id": "1xi",
+                  "agency_id": "1",
+                  "route_short_name": "298-M",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Devanahalli Old Bus Stand",
+                  "route_type": 3
+                },
+                "1yt": {
+                  "route_id": "1yt",
+                  "agency_id": "1",
+                  "route_short_name": "298-ME YHK-NLR",
+                  "route_long_name": "Yelahanka Old Town ⇔ Neeleri",
+                  "route_type": 3
+                },
+                "2pm": {
+                  "route_id": "2pm",
+                  "agency_id": "1",
+                  "route_short_name": "298-MV",
+                  "route_long_name": "KR Market ⇔ Vijayapura Bus Stand Jangamakote",
+                  "route_type": 3
+                },
+                "2ys": {
+                  "route_id": "2ys",
+                  "agency_id": "1",
+                  "route_short_name": "298PD-KBS-DNH",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Devanayakanahalli",
+                  "route_type": 3
+                },
+                "cd": {
+                  "route_id": "cd",
+                  "agency_id": "1",
+                  "route_short_name": "298-ME KMT-NLR",
+                  "route_long_name": "KR Market ⇔ Neeleri",
+                  "route_type": 3
+                },
+                "gn": {
+                  "route_id": "gn",
+                  "agency_id": "1",
+                  "route_short_name": "298-P",
+                  "route_long_name": "Devanahalli New Bus Station ⇔ Hosakote Bus Stand (Old)",
+                  "route_type": 3
+                },
+                "h": {
+                  "route_id": "h",
+                  "agency_id": "1",
+                  "route_short_name": "298 SBS-DVH",
+                  "route_long_name": "Shivajinagara Bus Station ⇔ Devanahalli Old Bus Stand",
+                  "route_type": 3
+                },
+                "if": {
+                  "route_id": "if",
+                  "agency_id": "1",
+                  "route_short_name": "298-M DVH-VSD-KBS",
+                  "route_long_name": "Devanahalli Old Bus Stand ⇔ Kempegowda Bus Station",
+                  "route_type": 3
+                },
+                "ut": {
+                  "route_id": "ut",
+                  "agency_id": "1",
+                  "route_short_name": "298-Y KBS-YLR-VJP",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Vijayapura Bus Stand Jangamakote",
+                  "route_type": 3
+                },
+                "wh": {
+                  "route_id": "wh",
+                  "agency_id": "1",
+                  "route_short_name": "298-M KMT-DVH",
+                  "route_long_name": "KR Market ⇔ Devanahalli Old Bus Stand",
+                  "route_type": 3
+                },
+                "s2": {
+                  "route_id": "s2",
+                  "agency_id": "1",
+                  "route_short_name": "401AM DVH-MSP",
+                  "route_long_name": "Devanahalli Old Bus Stand ⇔ MS Palya",
+                  "route_type": 3
+                },
+                "1xd": {
+                  "route_id": "1xd",
+                  "agency_id": "1",
+                  "route_short_name": "DVH-KDGK-KHR",
+                  "route_long_name": "Devanahalli New Bus Station ⇔ Koyira",
+                  "route_type": 3
+                },
+                "23c": {
+                  "route_id": "23c",
+                  "agency_id": "1",
+                  "route_short_name": "293-ZA",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Vijayapura Bus Stand Jangamakote",
+                  "route_type": 3
+                },
+                "1dz": {
+                  "route_id": "1dz",
+                  "agency_id": "1",
+                  "route_short_name": "298-MT",
+                  "route_long_name": "Devanahalli New Bus Station ⇔ Vijayapura Bus Stand Jangamakote",
+                  "route_type": 3
+                },
+                "1eg": {
+                  "route_id": "1eg",
+                  "agency_id": "1",
+                  "route_short_name": "298-PB",
+                  "route_long_name": "Hosakote Bus Stand (Old) ⇔ Vijayapura Bus Stand Jangamakote",
+                  "route_type": 3
+                },
+                "26z": {
+                  "route_id": "26z",
+                  "agency_id": "1",
+                  "route_short_name": "298-MP HBLB-VJP",
+                  "route_long_name": "Hebbala Bridge ⇔ Vijayapura Bus Stand Jangamakote",
+                  "route_type": 3
+                },
+                "2mm": {
+                  "route_id": "2mm",
+                  "agency_id": "1",
+                  "route_short_name": "298-Z",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Vijayapura Bus Stand Jangamakote",
+                  "route_type": 3
+                },
+                "a4": {
+                  "route_id": "a4",
+                  "agency_id": "1",
+                  "route_short_name": "298-W",
+                  "route_long_name": "Doddaballapura Bus Stand ⇔ Vijayapura Bus Stand Jangamakote",
+                  "route_type": 3
+                },
+                "qa": {
+                  "route_id": "qa",
+                  "agency_id": "1",
+                  "route_short_name": "298-MV VJP-DVH-DBP",
+                  "route_long_name": "Vijayapura Bus Stand Jangamakote ⇔ Doddaballapura Bus Stand",
+                  "route_type": 3
+                },
+                "1is": {
+                  "route_id": "1is",
+                  "agency_id": "1",
+                  "route_short_name": "316-Z",
+                  "route_long_name": "Tin Factory ⇔ Vijayapura Bus Stand Jangamakote",
+                  "route_type": 3
+                },
+                "1bb": {
+                  "route_id": "1bb",
+                  "agency_id": "1",
+                  "route_short_name": "381-C",
+                  "route_long_name": "Hosakote Bus Stand (Old) ⇔ Vijayapura Bus Stand Jangamakote",
+                  "route_type": 3
+                },
+                "4j": {
+                  "route_id": "4j",
+                  "agency_id": "1",
+                  "route_short_name": "381-C HSK-NGRH-VJP",
+                  "route_long_name": "Vijayapura Bus Stand Jangamakote ⇔ Hosakote Bus Stand (Old)",
+                  "route_type": 3
+                },
+                "f7": {
+                  "route_id": "f7",
+                  "agency_id": "1",
+                  "route_short_name": "298-V",
+                  "route_long_name": "Devanahalli New Bus Station ⇔ Doddaballapura Bus Stand",
+                  "route_type": 3
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [77.80199, 13.2948],
+                      [77.80063, 13.29588],
+                      [77.79728, 13.29861],
+                      [77.79627, 13.29946],
+                      [77.79571, 13.29988],
+                      [77.7955, 13.30007],
+                      [77.79435, 13.30098],
+                      [77.79188, 13.30299],
+                      [77.79133, 13.3034],
+                      [77.79114, 13.30342],
+                      [77.79098, 13.30347],
+                      [77.78912, 13.30418],
+                      [77.78886, 13.30427],
+                      [77.78852, 13.30435],
+                      [77.78838, 13.30437],
+                      [77.78814, 13.30436],
+                      [77.78768, 13.30424],
+                      [77.7874, 13.30421],
+                      [77.78611, 13.30418],
+                      [77.78545, 13.30414],
+                      [77.78508, 13.30419],
+                      [77.78457, 13.30435],
+                      [77.78434, 13.30444],
+                      [77.78305, 13.30482],
+                      [77.78198, 13.30505],
+                      [77.7815, 13.30511],
+                      [77.78083, 13.30515],
+                      [77.78025, 13.30509],
+                      [77.77988, 13.30509],
+                      [77.77914, 13.3052],
+                      [77.77874, 13.30528],
+                      [77.77849, 13.30535],
+                      [77.77792, 13.30555],
+                      [77.77682, 13.30601],
+                      [77.77643, 13.30615],
+                      [77.77562, 13.30639],
+                      [77.77471, 13.30663],
+                      [77.77437, 13.30671],
+                      [77.77117, 13.30717],
+                      [77.77089, 13.30722],
+                      [77.77062, 13.30729],
+                      [77.76985, 13.30754],
+                      [77.76915, 13.30781],
+                      [77.76875, 13.30821],
+                      [77.7687, 13.30845],
+                      [77.76865, 13.30857],
+                      [77.7684, 13.30894],
+                      [77.76825, 13.30908],
+                      [77.76789, 13.30936],
+                      [77.76764, 13.30951],
+                      [77.76728, 13.30965],
+                      [77.76677, 13.30972],
+                      [77.76605, 13.30988],
+                      [77.765, 13.31025],
+                      [77.76448, 13.31045],
+                      [77.76349, 13.31079],
+                      [77.76216, 13.31117],
+                      [77.76133, 13.31152],
+                      [77.76114, 13.31158],
+                      [77.75972, 13.31212],
+                      [77.75889, 13.31246],
+                      [77.75709, 13.31313],
+                      [77.75577, 13.31365],
+                      [77.75487, 13.31394],
+                      [77.75303, 13.31449],
+                      [77.75081, 13.31511],
+                      [77.75039, 13.31524],
+                      [77.74881, 13.31562],
+                      [77.74861, 13.31565],
+                      [77.74828, 13.31566],
+                      [77.74819, 13.31564],
+                      [77.74808, 13.31556],
+                      [77.74756, 13.31541],
+                      [77.74732, 13.31532],
+                      [77.74695, 13.31515],
+                      [77.74629, 13.31481],
+                      [77.74578, 13.31445],
+                      [77.7455, 13.31428],
+                      [77.74532, 13.31419],
+                      [77.74448, 13.31383],
+                      [77.74361, 13.31351],
+                      [77.74283, 13.31318],
+                      [77.74011, 13.31189],
+                      [77.73828, 13.31119],
+                      [77.73703, 13.31066],
+                      [77.7367, 13.31047],
+                      [77.73642, 13.31024],
+                      [77.73608, 13.31005],
+                      [77.73553, 13.30983],
+                      [77.73408, 13.30921],
+                      [77.73287, 13.30872],
+                      [77.73185, 13.30835],
+                      [77.73126, 13.308],
+                      [77.73096, 13.30778],
+                      [77.73077, 13.30753],
+                      [77.73064, 13.30722],
+                      [77.73059, 13.30717],
+                      [77.73054, 13.30715],
+                      [77.73049, 13.30714],
+                      [77.73005, 13.30722],
+                      [77.72989, 13.30727],
+                      [77.72943, 13.30749],
+                      [77.72864, 13.30776],
+                      [77.72764, 13.30806],
+                      [77.72678, 13.30834],
+                      [77.72621, 13.3085],
+                      [77.72557, 13.30864],
+                      [77.72557, 13.30663],
+                      [77.72565, 13.30379],
+                      [77.72566, 13.30197],
+                      [77.72565, 13.29754],
+                      [77.72563, 13.29655],
+                      [77.72558, 13.29583],
+                      [77.72543, 13.29508],
+                      [77.72494, 13.2933],
+                      [77.72455, 13.29154],
+                      [77.72374, 13.28706],
+                      [77.72338, 13.28516],
+                      [77.72289, 13.28273],
+                      [77.72261, 13.28123],
+                      [77.72081, 13.27232],
+                      [77.72022, 13.2695],
+                      [77.71987, 13.26769],
+                      [77.71972, 13.26724],
+                      [77.71979, 13.26671],
+                      [77.71979, 13.26662],
+                      [77.71973, 13.26646],
+                      [77.7194, 13.26594],
+                      [77.71939, 13.26583],
+                      [77.71922, 13.26532],
+                      [77.71923, 13.2651],
+                      [77.71879, 13.26339],
+                      [77.71768, 13.25851],
+                      [77.71741, 13.25739],
+                      [77.71738, 13.25719],
+                      [77.71696, 13.25542],
+                      [77.71636, 13.25254],
+                      [77.71609, 13.25132],
+                      [77.71592, 13.25028],
+                      [77.71564, 13.24892],
+                      [77.71551, 13.24817],
+                      [77.71536, 13.2475],
+                      [77.71523, 13.24712],
+                      [77.71515, 13.24699],
+                      [77.71495, 13.24678],
+                      [77.7147, 13.24658],
+                      [77.71455, 13.24649],
+                      [77.71344, 13.24571],
+                      [77.7128, 13.24529]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "2h8",
+                    "stop_name": "Shanimahathma Temple",
+                    "routes": ["7u", "k3"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.78885, 13.30425]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "2qa",
+                    "stop_name": "Devanahalli New Bus Station",
+                    "routes": ["1p3", "2kl", "1l5", "1r6", "1sr", "1wb", "1xi", "1yt", "2pm", "2ys", "cd", "gn", "h", "if", "k3", "ut", "wh", "s2", "1xd"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.71281, 13.24528]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "31e",
+                    "stop_name": "Rani Circle",
+                    "routes": ["1yt", "7u", "cd", "k3", "1xd"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.7198, 13.26728]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "334",
+                    "stop_name": "Avathi",
+                    "routes": ["7u", "k3"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.7256, 13.29627]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "38",
+                    "stop_name": "Harohalli",
+                    "routes": ["7u", "k3"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.7481, 13.31556]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "3ps",
+                    "stop_name": "Vijayapura Kere Kodi",
+                    "routes": ["7u", "k3"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.79135, 13.30336]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "413",
+                    "stop_name": "Vijayapura Bus Stand Jangamakote",
+                    "routes": ["23c", "1dz", "1eg", "1r6", "1sr", "26z", "2mm", "2pm", "7u", "a4", "k3", "qa", "1is", "1bb", "4j"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.80199, 13.29479]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "4mj",
+                    "stop_name": "Bullahalli",
+                    "routes": ["7u", "k3"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.73069, 13.30722]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "5ls",
+                    "stop_name": "Dandiganahalli",
+                    "routes": ["7u", "k3"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.76763, 13.30949]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "5wf",
+                    "stop_name": "Devanahalli Old Bus Stand",
+                    "routes": ["2kl", "1dz", "1l5", "1r6", "1sr", "1wb", "1xi", "1yt", "2pm", "7u", "cd", "f7", "h", "if", "k3", "ut", "wh", "s2", "1xd"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.7156, 13.24845]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "5wx",
+                    "stop_name": "Vijayapura Cross",
+                    "routes": ["1dz", "1l5", "1sr", "1yt", "2pm", "7u", "a4", "cd", "f7", "k3", "qa", "1xd"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.7173, 13.25686]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table class="table-horizontal" summary="This table shows schedules for a selection of key stops on the route for Route 298-M DVH-HRH-VJP - Vijayapura Bus Stand Jangamakote to Devanahalli New Bus Station Mon-Sun. Stops and their schedule times are listed in the columns." data-orientation="horizontal">
+            <caption class="sr-only">Route 298-M DVH-HRH-VJP - Vijayapura Bus Stand Jangamakote to Devanahalli New Bus Station | Mon-Sun</caption>
+            <colgroup>
+              <col>
+              <col class="run_0 " id="trip_id_ot1">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col">Stop</th>
+                <th class="run-header" scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="stop-row" id="stop_id_413" data-stop-id="413" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Vijayapura Bus Stand Jangamakote</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">4:40pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_3ps" data-stop-id="3ps" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Vijayapura Kere Kodi</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">4:44pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_2h8" data-stop-id="2h8" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Shanimahathma Temple</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">4:48pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_5ls" data-stop-id="5ls" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Dandiganahalli</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">4:52pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_38" data-stop-id="38" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Harohalli</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">4:56pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_4mj" data-stop-id="4mj" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Bullahalli</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">5:00pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_334" data-stop-id="334" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Avathi</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">5:04pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_31e" data-stop-id="31e" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Rani Circle</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">5:08pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_5wx" data-stop-id="5wx" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Vijayapura Cross</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">5:12pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_5wf" data-stop-id="5wf" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Devanahalli Old Bus Stand</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">5:16pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_2qa" data-stop-id="2qa" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Devanahalli New Bus Station</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">5:20pm</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

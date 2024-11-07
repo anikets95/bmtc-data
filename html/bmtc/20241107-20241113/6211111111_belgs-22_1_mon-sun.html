@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYW5pa2V0czk1IiwiYSI6ImNsemtkZHpwdDB1NGIybHNhaHhhZHR2NzAifQ.YkI9PvPHjhbxOAUBgAgMSw';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+</head>
+
+<body><!-- Timetable generated on 2024-11-07T05:14:59.385Z using GTFS-to-HTML version 2.6.11 -->
+  <div class="timetable-page menu-type-jump">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center gap-2">
+        <div class="route-color-swatch-large flex-none" style="background-color: #000000; color: #FFFFFF;">BELGS-22</div>
+        <div>Route BELGS-22</div>
+      </h1>
+      <div class="effective-date text-gray-600 mt-2">Effective November 07, 2024</div>
+      <div class="timetable mb-10" id="timetable_id_6211111111" data-day-list="Mon-Sun" data-direction-name="CS-Karekal Cross" data-timetable-id="62|1111111|1" data-direction-id="1" data-route-id="62">
+        <div class="mb-2">
+          <h2 class="text-xl">Route BELGS-22 - CS-BEL Factory to CS-Karekal Cross | Monday-Sunday</h2>
+        </div>
+        <div class="map" id="map_timetable_id_6211111111"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_6211111111",
+              "routes": {
+                "33": {
+                  "route_id": "33",
+                  "agency_id": "1",
+                  "route_short_name": "BELGS-2",
+                  "route_long_name": "CS-Kadugodi Bus Stand ⇔ CS-BEL Factory",
+                  "route_type": 3
+                },
+                "62": {
+                  "route_id": "62",
+                  "agency_id": "1",
+                  "route_short_name": "BELGS-22",
+                  "route_long_name": "CS-Karekal Cross ⇔ CS-BEL Factory",
+                  "route_type": 3
+                },
+                "71": {
+                  "route_id": "71",
+                  "agency_id": "1",
+                  "route_short_name": "BELGS-3",
+                  "route_long_name": "CS-Kannamangala Railway Gollahalli ⇔ CS-BEL Factory",
+                  "route_type": 3
+                },
+                "81": {
+                  "route_id": "81",
+                  "agency_id": "1",
+                  "route_short_name": "BELGS-6",
+                  "route_long_name": "CS-Beereshwaranagara ⇔ CS-BEL Factory",
+                  "route_type": 3
+                },
+                "121": {
+                  "route_id": "121",
+                  "agency_id": "1",
+                  "route_short_name": "BELGS-13",
+                  "route_long_name": "CS-RV College ⇔ CS-BEL Factory",
+                  "route_type": 3
+                },
+                "168": {
+                  "route_id": "168",
+                  "agency_id": "1",
+                  "route_short_name": "BELGS-34",
+                  "route_long_name": "CS-NP Medical Store RPC Layout ⇔ CS-BEL Factory",
+                  "route_type": 3
+                },
+                "192": {
+                  "route_id": "192",
+                  "agency_id": "1",
+                  "route_short_name": "BEL GS-39",
+                  "route_long_name": "CS-Ramaswamipalya ⇔ CS-BEL Factory",
+                  "route_type": 3
+                },
+                "271": {
+                  "route_id": "271",
+                  "agency_id": "1",
+                  "route_short_name": "BELGS-20",
+                  "route_long_name": "CS-Raghavendra Swamy Temple ⇔ CS-BEL Factory",
+                  "route_type": 3
+                },
+                "12s": {
+                  "route_id": "12s",
+                  "agency_id": "1",
+                  "route_short_name": "BEL GS-19",
+                  "route_long_name": "CS-BEML Factory ⇔ CS-BEL Factory",
+                  "route_type": 3
+                },
+                "19n": {
+                  "route_id": "19n",
+                  "agency_id": "1",
+                  "route_short_name": "BELGS-9",
+                  "route_long_name": "CS-Brigade Millenium ⇔ CS-BEL Factory",
+                  "route_type": 3
+                },
+                "1bz": {
+                  "route_id": "1bz",
+                  "agency_id": "1",
+                  "route_short_name": "BELGS-4",
+                  "route_long_name": "CS-Muttanallur Cross ⇔ CS-BEL Factory",
+                  "route_type": 3
+                },
+                "1ej": {
+                  "route_id": "1ej",
+                  "agency_id": "1",
+                  "route_short_name": "BELGS-27",
+                  "route_long_name": "CS-Depot-10 Gate ⇔ CS-BEL Factory",
+                  "route_type": 3
+                },
+                "1l": {
+                  "route_id": "1l",
+                  "agency_id": "1",
+                  "route_short_name": "BEL GS-25",
+                  "route_long_name": "CS-BEL Factory ⇔ CS-Kalyana Mantapa Koramangala",
+                  "route_type": 3
+                },
+                "1ng": {
+                  "route_id": "1ng",
+                  "agency_id": "1",
+                  "route_short_name": "BELGS-5",
+                  "route_long_name": "CS-Bannerughatta Circle ⇔ CS-BEL Factory",
+                  "route_type": 3
+                },
+                "1pa": {
+                  "route_id": "1pa",
+                  "agency_id": "1",
+                  "route_short_name": "BEL GS-1",
+                  "route_long_name": "CS-Hosakote KEB Circle ⇔ CS-BEL Factory",
+                  "route_type": 3
+                },
+                "1si": {
+                  "route_id": "1si",
+                  "agency_id": "1",
+                  "route_short_name": "BEL GS-38",
+                  "route_long_name": "CS-GKW Layout ⇔ CS-BEL Factory",
+                  "route_type": 3
+                },
+                "1ss": {
+                  "route_id": "1ss",
+                  "agency_id": "1",
+                  "route_short_name": "BELGS-56",
+                  "route_long_name": "CS-Kamalanagara ⇔ CS-BEL Factory",
+                  "route_type": 3
+                },
+                "1sy": {
+                  "route_id": "1sy",
+                  "agency_id": "1",
+                  "route_short_name": "BEL GS-21",
+                  "route_long_name": "CS-BEL Factory ⇔ CS-Viva Toyota Hunasamaranahalli",
+                  "route_type": 3
+                },
+                "1ua": {
+                  "route_id": "1ua",
+                  "agency_id": "1",
+                  "route_short_name": "BEL GS-37",
+                  "route_long_name": "CS-B Channasandra Bridge ⇔ CS-BEL Factory",
+                  "route_type": 3
+                },
+                "1ux": {
+                  "route_id": "1ux",
+                  "agency_id": "1",
+                  "route_short_name": "BELFGS-40",
+                  "route_long_name": "CS-1st Cross Magadi Road ⇔ CS-BEL Factory",
+                  "route_type": 3
+                },
+                "1vw": {
+                  "route_id": "1vw",
+                  "agency_id": "1",
+                  "route_short_name": "BEL GS-17",
+                  "route_long_name": "CS-Munnekolalu ⇔ CS-BEL Factory",
+                  "route_type": 3
+                },
+                "1zc": {
+                  "route_id": "1zc",
+                  "agency_id": "1",
+                  "route_short_name": "BELGS-32",
+                  "route_long_name": "CS-BEL Factory ⇔ CS-Gowdanapalya",
+                  "route_type": 3
+                },
+                "22s": {
+                  "route_id": "22s",
+                  "agency_id": "1",
+                  "route_short_name": "BEL GS-22",
+                  "route_long_name": "CS-Kittanahalli ⇔ CS-BEL Factory",
+                  "route_type": 3
+                },
+                "29g": {
+                  "route_id": "29g",
+                  "agency_id": "1",
+                  "route_short_name": "BELGS-54",
+                  "route_long_name": "CS-Hegganahalli ⇔ CS-BEL Factory",
+                  "route_type": 3
+                },
+                "2a6": {
+                  "route_id": "2a6",
+                  "agency_id": "1",
+                  "route_short_name": "BELGS-24",
+                  "route_long_name": "CS-Rajanukunte ⇔ CS-BEL Factory",
+                  "route_type": 3
+                },
+                "2l1": {
+                  "route_id": "2l1",
+                  "agency_id": "1",
+                  "route_short_name": "BELGS-29",
+                  "route_long_name": "CS-Kempegowda Swimming Pool ⇔ CS-BEL Factory",
+                  "route_type": 3
+                },
+                "2mu": {
+                  "route_id": "2mu",
+                  "agency_id": "1",
+                  "route_short_name": "BEL GS-30",
+                  "route_long_name": "CS-Bhattarahalli Bank Of India ⇔ CS-BEL Factory",
+                  "route_type": 3
+                },
+                "2o2": {
+                  "route_id": "2o2",
+                  "agency_id": "1",
+                  "route_short_name": "BELGS-16",
+                  "route_long_name": "CS-CV Raman Nagara Railway Gate ⇔ CS-BEL Factory",
+                  "route_type": 3
+                },
+                "2x5": {
+                  "route_id": "2x5",
+                  "agency_id": "1",
+                  "route_short_name": "BEL GS-12",
+                  "route_long_name": "CS-Bommasandra Canara Bank ⇔ CS-BEL Factory",
+                  "route_type": 3
+                },
+                "4e": {
+                  "route_id": "4e",
+                  "agency_id": "1",
+                  "route_short_name": "BELGS-23",
+                  "route_long_name": "CS-Syndicate Bank Colony Andraha ⇔ CS-BEL Factory",
+                  "route_type": 3
+                },
+                "6r": {
+                  "route_id": "6r",
+                  "agency_id": "1",
+                  "route_short_name": "BELGS-33",
+                  "route_long_name": "CS-Sri Mata Amritanandamayi Ashram ⇔ CS-BEL Factory",
+                  "route_type": 3
+                },
+                "8h": {
+                  "route_id": "8h",
+                  "agency_id": "1",
+                  "route_short_name": "BELGS-51",
+                  "route_long_name": "CS-BEL Factory ⇔ CS-Havanur Circle",
+                  "route_type": 3
+                },
+                "a2": {
+                  "route_id": "a2",
+                  "agency_id": "1",
+                  "route_short_name": "BELGS-28",
+                  "route_long_name": "CS-Chinnappa Garden ⇔ CS-BEL Factory",
+                  "route_type": 3
+                },
+                "bj": {
+                  "route_id": "bj",
+                  "agency_id": "1",
+                  "route_short_name": "BELGS-31",
+                  "route_long_name": "CS-Kamakya Talkies ⇔ CS-BEL Factory",
+                  "route_type": 3
+                },
+                "dy": {
+                  "route_id": "dy",
+                  "agency_id": "1",
+                  "route_short_name": "BEL-10",
+                  "route_long_name": "CS-JP Nagara 15th Cross ⇔ CS-BEL Factory",
+                  "route_type": 3
+                },
+                "dz": {
+                  "route_id": "dz",
+                  "agency_id": "1",
+                  "route_short_name": "BEL GS-36",
+                  "route_long_name": "CS-BEL Factory ⇔ CS-Gruhalakshmi Layout",
+                  "route_type": 3
+                },
+                "jm": {
+                  "route_id": "jm",
+                  "agency_id": "1",
+                  "route_short_name": "BELGS-11",
+                  "route_long_name": "CS-Poornaprajna Layout ⇔ CS-BEL Factory",
+                  "route_type": 3
+                },
+                "kr": {
+                  "route_id": "kr",
+                  "agency_id": "1",
+                  "route_short_name": "BELGS-14",
+                  "route_long_name": "CS-Vignananagara ⇔ CS-BEL Factory",
+                  "route_type": 3
+                },
+                "s": {
+                  "route_id": "s",
+                  "agency_id": "1",
+                  "route_short_name": "BEL-08",
+                  "route_long_name": "CS-Vinayakanagara Indira Canteen ⇔ CS-BEL Factory",
+                  "route_type": 3
+                },
+                "sz": {
+                  "route_id": "sz",
+                  "agency_id": "1",
+                  "route_short_name": "BELGS-26",
+                  "route_long_name": "CS-Girinagara Extension ⇔ CS-BEL Factory",
+                  "route_type": 3
+                },
+                "vp": {
+                  "route_id": "vp",
+                  "agency_id": "1",
+                  "route_short_name": "BELGS-15",
+                  "route_long_name": "CS-Aluru ⇔ CS-BEL Factory",
+                  "route_type": 3
+                },
+                "zf": {
+                  "route_id": "zf",
+                  "agency_id": "1",
+                  "route_short_name": "BELGS-35",
+                  "route_long_name": "CS-Gangondanahalli Chandra Layout ⇔ CS-BEL Factory",
+                  "route_type": 3
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [77.55904, 13.04888],
+                      [77.55775, 13.04883],
+                      [77.55757, 13.04889],
+                      [77.55755, 13.04852],
+                      [77.55744, 13.04816],
+                      [77.55713, 13.04734],
+                      [77.55708, 13.04728],
+                      [77.55687, 13.04675],
+                      [77.55656, 13.04591],
+                      [77.55651, 13.04559],
+                      [77.55655, 13.04556],
+                      [77.55657, 13.04548],
+                      [77.55653, 13.04543],
+                      [77.55645, 13.04541],
+                      [77.55636, 13.04551],
+                      [77.5561, 13.04593],
+                      [77.55604, 13.04607],
+                      [77.55463, 13.04838],
+                      [77.5539, 13.04945],
+                      [77.55321, 13.05034],
+                      [77.5524, 13.05119],
+                      [77.55198, 13.05183],
+                      [77.55101, 13.05318],
+                      [77.55066, 13.0535],
+                      [77.54909, 13.0547],
+                      [77.5476, 13.05603],
+                      [77.54735, 13.05621],
+                      [77.54678, 13.05672],
+                      [77.54637, 13.05634],
+                      [77.54626, 13.05629],
+                      [77.54587, 13.05589],
+                      [77.54498, 13.05511],
+                      [77.54488, 13.05505],
+                      [77.54475, 13.05501],
+                      [77.5446, 13.05499],
+                      [77.54408, 13.05497],
+                      [77.54336, 13.05498],
+                      [77.54284, 13.05497],
+                      [77.54237, 13.05494],
+                      [77.54167, 13.05483],
+                      [77.54057, 13.0546],
+                      [77.53936, 13.05437],
+                      [77.53905, 13.05434],
+                      [77.53866, 13.05437],
+                      [77.53538, 13.05486],
+                      [77.53468, 13.0549],
+                      [77.53393, 13.05489],
+                      [77.53361, 13.05485],
+                      [77.53283, 13.05465],
+                      [77.53203, 13.0546],
+                      [77.53162, 13.05454],
+                      [77.53134, 13.05447],
+                      [77.53116, 13.05431],
+                      [77.53094, 13.05394],
+                      [77.53078, 13.05362],
+                      [77.53051, 13.0532],
+                      [77.5297, 13.05264],
+                      [77.52884, 13.05194],
+                      [77.52867, 13.05182],
+                      [77.52844, 13.05167],
+                      [77.52819, 13.05157],
+                      [77.52709, 13.05127],
+                      [77.52689, 13.05119],
+                      [77.52663, 13.05101],
+                      [77.52531, 13.04998],
+                      [77.525, 13.04978],
+                      [77.52415, 13.0493],
+                      [77.52396, 13.04915],
+                      [77.5238, 13.04896],
+                      [77.5237, 13.0488],
+                      [77.52346, 13.04832],
+                      [77.52334, 13.04804],
+                      [77.52317, 13.04755],
+                      [77.52304, 13.04724],
+                      [77.52296, 13.04709],
+                      [77.52265, 13.04659],
+                      [77.52187, 13.04542],
+                      [77.52103, 13.04406],
+                      [77.52042, 13.04316],
+                      [77.51896, 13.04093],
+                      [77.51873, 13.04055],
+                      [77.51872, 13.04048],
+                      [77.51849, 13.04009],
+                      [77.51841, 13.03978],
+                      [77.51767, 13.04036],
+                      [77.51697, 13.04103],
+                      [77.51651, 13.04137],
+                      [77.51624, 13.04155],
+                      [77.51606, 13.04165],
+                      [77.5159, 13.04177],
+                      [77.51578, 13.04182],
+                      [77.51553, 13.04187],
+                      [77.51457, 13.04218],
+                      [77.51162, 13.04322],
+                      [77.5111, 13.04344],
+                      [77.50898, 13.04449],
+                      [77.50863, 13.04468],
+                      [77.50807, 13.04493],
+                      [77.50743, 13.04511],
+                      [77.50679, 13.04532],
+                      [77.50489, 13.04586],
+                      [77.50415, 13.04613],
+                      [77.50293, 13.04652],
+                      [77.50162, 13.047],
+                      [77.50087, 13.0473],
+                      [77.49738, 13.04847],
+                      [77.49591, 13.049],
+                      [77.49557, 13.04909],
+                      [77.49453, 13.04929],
+                      [77.49421, 13.04939],
+                      [77.49367, 13.04963],
+                      [77.49261, 13.05014],
+                      [77.49211, 13.0504],
+                      [77.49185, 13.05051],
+                      [77.48982, 13.05116],
+                      [77.48967, 13.05126],
+                      [77.4893, 13.05141],
+                      [77.4867, 13.05237],
+                      [77.4861, 13.05256],
+                      [77.48371, 13.05349],
+                      [77.48183, 13.05413],
+                      [77.48056, 13.05453],
+                      [77.47973, 13.05484],
+                      [77.47902, 13.05508],
+                      [77.47695, 13.05572],
+                      [77.47523, 13.05614],
+                      [77.47359, 13.0566],
+                      [77.47301, 13.05678],
+                      [77.47285, 13.05677],
+                      [77.47261, 13.0568],
+                      [77.47205, 13.05693],
+                      [77.47047, 13.05748],
+                      [77.46837, 13.05806],
+                      [77.46729, 13.05838],
+                      [77.46632, 13.05858],
+                      [77.46467, 13.05907],
+                      [77.46442, 13.05915],
+                      [77.46396, 13.05933],
+                      [77.46329, 13.05968],
+                      [77.45702, 13.06343],
+                      [77.45306, 13.06575],
+                      [77.45161, 13.06654],
+                      [77.44984, 13.06753],
+                      [77.44948, 13.06771],
+                      [77.44872, 13.06816],
+                      [77.448, 13.06856],
+                      [77.44767, 13.06872],
+                      [77.44534, 13.07004],
+                      [77.44171, 13.07206],
+                      [77.43897, 13.07356],
+                      [77.43676, 13.0748],
+                      [77.4358, 13.07533],
+                      [77.43464, 13.07594],
+                      [77.43383, 13.07633],
+                      [77.43267, 13.07686],
+                      [77.42914, 13.07808],
+                      [77.42802, 13.0784],
+                      [77.42522, 13.07937],
+                      [77.42421, 13.0797],
+                      [77.42312, 13.08011],
+                      [77.42175, 13.0808],
+                      [77.42105, 13.08111],
+                      [77.41925, 13.08198],
+                      [77.41548, 13.08369],
+                      [77.4148, 13.08402],
+                      [77.41301, 13.08483],
+                      [77.41203, 13.0853],
+                      [77.40397, 13.08876],
+                      [77.40238, 13.08946],
+                      [77.40145, 13.08984],
+                      [77.40072, 13.09017],
+                      [77.40002, 13.09045],
+                      [77.39967, 13.09062],
+                      [77.39851, 13.09113],
+                      [77.39233, 13.09339],
+                      [77.39154, 13.09366],
+                      [77.39066, 13.09393],
+                      [77.39051, 13.09399],
+                      [77.39023, 13.09412],
+                      [77.3901, 13.09421],
+                      [77.38932, 13.09462],
+                      [77.38855, 13.09511],
+                      [77.38789, 13.09558],
+                      [77.38736, 13.09603],
+                      [77.38688, 13.09653],
+                      [77.38594, 13.09761],
+                      [77.38578, 13.09766],
+                      [77.38568, 13.09767],
+                      [77.38552, 13.09766],
+                      [77.3853, 13.09756],
+                      [77.38195, 13.09571],
+                      [77.38149, 13.09544],
+                      [77.38086, 13.0951],
+                      [77.3799, 13.09454],
+                      [77.37933, 13.09415],
+                      [77.37892, 13.09382],
+                      [77.37849, 13.09336],
+                      [77.37831, 13.09314],
+                      [77.3779, 13.09257],
+                      [77.37772, 13.09227],
+                      [77.37663, 13.09006],
+                      [77.37621, 13.08908],
+                      [77.3747, 13.08595],
+                      [77.37428, 13.08509],
+                      [77.37389, 13.08442],
+                      [77.3734, 13.08381],
+                      [77.37285, 13.08329],
+                      [77.37205, 13.08273],
+                      [77.37113, 13.08213],
+                      [77.36997, 13.08146],
+                      [77.36927, 13.08103],
+                      [77.36865, 13.08057],
+                      [77.36837, 13.08032],
+                      [77.36788, 13.07978],
+                      [77.36766, 13.0795],
+                      [77.36719, 13.07872],
+                      [77.36704, 13.07843],
+                      [77.36356, 13.07237],
+                      [77.36279, 13.07096],
+                      [77.36233, 13.07017],
+                      [77.36206, 13.06978],
+                      [77.36159, 13.06915],
+                      [77.36094, 13.06847],
+                      [77.36059, 13.06814],
+                      [77.3603, 13.06789],
+                      [77.35959, 13.06734],
+                      [77.35921, 13.0671],
+                      [77.35885, 13.0669],
+                      [77.35832, 13.06664],
+                      [77.35768, 13.06636],
+                      [77.35716, 13.06619],
+                      [77.35526, 13.06568],
+                      [77.35483, 13.06558],
+                      [77.35204, 13.0648],
+                      [77.3495, 13.06412],
+                      [77.34837, 13.06377],
+                      [77.34765, 13.06351],
+                      [77.3466, 13.06302],
+                      [77.34652, 13.06316],
+                      [77.34731, 13.06353],
+                      [77.34831, 13.06393],
+                      [77.34937, 13.06427],
+                      [77.35245, 13.06511],
+                      [77.35668, 13.06621],
+                      [77.35747, 13.06646],
+                      [77.35794, 13.06663],
+                      [77.35826, 13.06677],
+                      [77.35878, 13.06704],
+                      [77.35913, 13.06725],
+                      [77.36009, 13.06794],
+                      [77.36049, 13.06827],
+                      [77.36091, 13.06867],
+                      [77.36141, 13.06918]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "5t4",
+                    "stop_name": "CS-Karekal Cross",
+                    "routes": ["62"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.36141, 13.06922]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "l6",
+                    "stop_name": "CS-BEL Factory",
+                    "routes": ["121", "12s", "168", "192", "19n", "1bz", "1ej", "1l", "1ng", "1pa", "1si", "1ss", "1sy", "1ua", "1ux", "1vw", "1zc", "22s", "271", "29g", "2a6", "2l1", "2mu", "2o2", "2x5", "33", "4e", "62", "6r", "71", "81", "8h", "a2", "bj", "dy", "dz", "jm", "kr", "s", "sz", "vp", "zf"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.55902, 13.04887]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table class="table-horizontal" summary="This table shows schedules for a selection of key stops on the route for Route BELGS-22 - CS-BEL Factory to CS-Karekal Cross Mon-Sun. Stops and their schedule times are listed in the columns." data-orientation="horizontal">
+            <caption class="sr-only">Route BELGS-22 - CS-BEL Factory to CS-Karekal Cross | Mon-Sun</caption>
+            <colgroup>
+              <col>
+              <col class="run_0 " id="trip_id_94y">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col">Stop</th>
+                <th class="run-header" scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="stop-row" id="stop_id_l6" data-stop-id="l6" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">CS-BEL Factory</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">5:10pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_5t4" data-stop-id="5t4" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">CS-Karekal Cross</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">5:50pm</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

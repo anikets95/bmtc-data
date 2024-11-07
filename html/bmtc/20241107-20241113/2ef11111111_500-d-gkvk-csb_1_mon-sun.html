@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYW5pa2V0czk1IiwiYSI6ImNsemtkZHpwdDB1NGIybHNhaHhhZHR2NzAifQ.YkI9PvPHjhbxOAUBgAgMSw';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+</head>
+
+<body><!-- Timetable generated on 2024-11-07T05:13:12.688Z using GTFS-to-HTML version 2.6.11 -->
+  <div class="timetable-page menu-type-jump">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center gap-2">
+        <div class="route-color-swatch-large flex-none" style="background-color: #000000; color: #FFFFFF;">500-D GKVK-CSB</div>
+        <div>Route 500-D GKVK-CSB</div>
+      </h1>
+      <div class="effective-date text-gray-600 mt-2">Effective November 07, 2024</div>
+      <div class="timetable mb-10" id="timetable_id_2ef11111111" data-day-list="Mon-Sun" data-direction-name="GKVK" data-timetable-id="2ef|1111111|1" data-direction-id="1" data-route-id="2ef">
+        <div class="mb-2">
+          <h2 class="text-xl">Route 500-D GKVK-CSB - Hennur Junction to Hebbala Bridge | Monday-Sunday</h2>
+        </div>
+        <div class="map" id="map_timetable_id_2ef11111111"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_2ef11111111",
+              "routes": {
+                "35": {
+                  "route_id": "35",
+                  "agency_id": "1",
+                  "route_short_name": "500-BC",
+                  "route_long_name": "Banashankari Bus Station ⇔ BEL Circle",
+                  "route_type": 3
+                },
+                "170": {
+                  "route_id": "170",
+                  "agency_id": "1",
+                  "route_short_name": "285-MJ HBLB-GST",
+                  "route_long_name": "Hebbala Bridge ⇔ Ghati Subramanya",
+                  "route_type": 3
+                },
+                "181": {
+                  "route_id": "181",
+                  "agency_id": "1",
+                  "route_short_name": "501-A",
+                  "route_long_name": "Banashankari Bus Station ⇔ Hebbala Bridge",
+                  "route_type": 3
+                },
+                "215": {
+                  "route_id": "215",
+                  "agency_id": "1",
+                  "route_short_name": "D45G-KRPMS",
+                  "route_long_name": "Depot-45 Gate ⇔ KR Pura Metro Station",
+                  "route_type": 3
+                },
+                "281": {
+                  "route_id": "281",
+                  "agency_id": "1",
+                  "route_short_name": "500-QD",
+                  "route_long_name": "Central Silk Board ⇔ Chowdeshwarinagara JP Park",
+                  "route_type": 3
+                },
+                "3i": {
+                  "route_id": "3i",
+                  "agency_id": "1",
+                  "route_short_name": "290-Y",
+                  "route_long_name": "Yeshawanthapura Bus Station ⇔ RK Hegde Nagara",
+                  "route_type": 3
+                },
+                "16a": {
+                  "route_id": "16a",
+                  "agency_id": "1",
+                  "route_short_name": "415-H KBS-VSD-AJB",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Amarajyothi Badavane",
+                  "route_type": 3
+                },
+                "18b": {
+                  "route_id": "18b",
+                  "agency_id": "1",
+                  "route_short_name": "500-DC D38G-BELF",
+                  "route_long_name": "Depot-38 Gate ⇔ BEL Factory",
+                  "route_type": 3
+                },
+                "1a6": {
+                  "route_id": "1a6",
+                  "agency_id": "1",
+                  "route_short_name": "500-D CSB-BMSIT",
+                  "route_long_name": "Central Silk Board ⇔ BMSIT College Campous Yelahanka",
+                  "route_type": 3
+                },
+                "1gz": {
+                  "route_id": "1gz",
+                  "agency_id": "1",
+                  "route_short_name": "500-A YTTMC-GGP-CSB",
+                  "route_long_name": "Yeshawanthapura Bus Station ⇔ Central Silk Board",
+                  "route_type": 3
+                },
+                "1kl": {
+                  "route_id": "1kl",
+                  "agency_id": "1",
+                  "route_short_name": "500-A MRH-JKLO",
+                  "route_long_name": "Kalamandira  Marathahalli Bridge ⇔ Jakkur Layout",
+                  "route_type": 3
+                },
+                "1m8": {
+                  "route_id": "1m8",
+                  "agency_id": "1",
+                  "route_short_name": "500-A SGH-HBL",
+                  "route_long_name": "Sanjay Gandhi Hospital ⇔ Hebbala Bridge",
+                  "route_type": 3
+                },
+                "1mo": {
+                  "route_id": "1mo",
+                  "agency_id": "1",
+                  "route_short_name": "500-BA",
+                  "route_long_name": "Yeshawanthapura Bus Station ⇔ Marathahalli Bridge",
+                  "route_type": 3
+                },
+                "1nf": {
+                  "route_id": "1nf",
+                  "agency_id": "1",
+                  "route_short_name": "500-QG PSB-TCP",
+                  "route_long_name": "Peenya Satellite Bus Station ⇔ TC Palya",
+                  "route_type": 3
+                },
+                "1rj": {
+                  "route_id": "1rj",
+                  "agency_id": "1",
+                  "route_short_name": "500-QG",
+                  "route_long_name": "Krishnaraja Pura Govt Hospital ⇔ Jalahalli Cross",
+                  "route_type": 3
+                },
+                "1t0": {
+                  "route_id": "1t0",
+                  "agency_id": "1",
+                  "route_short_name": "500-Q MDR-CJP",
+                  "route_long_name": "Mandur ⇔ Chowdeshwarinagara JP Park",
+                  "route_type": 3
+                },
+                "1z0": {
+                  "route_id": "1z0",
+                  "agency_id": "1",
+                  "route_short_name": "500-HG",
+                  "route_long_name": "Hosakote Bus Stand (Old) ⇔ Goraguntepalya",
+                  "route_type": 3
+                },
+                "21i": {
+                  "route_id": "21i",
+                  "agency_id": "1",
+                  "route_short_name": "500-BA YTTMC-MTK-KRPGH",
+                  "route_long_name": "Yeshawanthapura Bus Station ⇔ Krishnaraja Pura Govt Hospital",
+                  "route_type": 3
+                },
+                "24z": {
+                  "route_id": "24z",
+                  "agency_id": "1",
+                  "route_short_name": "500-A ISROM-HBL-GGP-PSS",
+                  "route_long_name": "ISRO Murugeshpalya ⇔ Peenya 2nd Stage",
+                  "route_type": 3
+                },
+                "2aa": {
+                  "route_id": "2aa",
+                  "agency_id": "1",
+                  "route_short_name": "500-Q BTPG-CJP",
+                  "route_long_name": "Bagmane Tech Park (Graphite India) ⇔ Chowdeshwarinagara JP Park",
+                  "route_type": 3
+                },
+                "2bp": {
+                  "route_id": "2bp",
+                  "agency_id": "1",
+                  "route_short_name": "500-DP",
+                  "route_long_name": "Goraguntepalya ⇔ Central Silk Board",
+                  "route_type": 3
+                },
+                "2ef": {
+                  "route_id": "2ef",
+                  "agency_id": "1",
+                  "route_short_name": "500-D GKVK-CSB",
+                  "route_long_name": "GKVK ⇔ Central Silk Board",
+                  "route_type": 3
+                },
+                "2ew": {
+                  "route_id": "2ew",
+                  "agency_id": "1",
+                  "route_short_name": "500-HG HSK-BELF",
+                  "route_long_name": "Hosakote Bus Stand (Old) ⇔ BEL Factory",
+                  "route_type": 3
+                },
+                "2h0": {
+                  "route_id": "2h0",
+                  "agency_id": "1",
+                  "route_short_name": "500-QG KRPGH-BELF",
+                  "route_long_name": "Krishnaraja Pura Govt Hospital ⇔ BEL Factory",
+                  "route_type": 3
+                },
+                "2i6": {
+                  "route_id": "2i6",
+                  "agency_id": "1",
+                  "route_short_name": "500-CH SJP-HBL",
+                  "route_long_name": "Sarjapura ⇔ Hebbala Bridge",
+                  "route_type": 3
+                },
+                "2iu": {
+                  "route_id": "2iu",
+                  "agency_id": "1",
+                  "route_short_name": "500-Q VNS-TNF-KRPGH",
+                  "route_long_name": "Vidyaniketan School Hebbala ⇔ Krishnaraja Pura Govt Hospital",
+                  "route_type": 3
+                },
+                "2j1": {
+                  "route_id": "2j1",
+                  "agency_id": "1",
+                  "route_short_name": "500-QB",
+                  "route_long_name": "BEL Circle ⇔ KR Pura Railway Station",
+                  "route_type": 3
+                },
+                "2so": {
+                  "route_id": "2so",
+                  "agency_id": "1",
+                  "route_short_name": "500-A BSK-BELF",
+                  "route_long_name": "Banashankari Bus Station ⇔ BEL Factory",
+                  "route_type": 3
+                },
+                "30i": {
+                  "route_id": "30i",
+                  "agency_id": "1",
+                  "route_short_name": "500-QA YTTMC-GGP-KRPGH",
+                  "route_long_name": "Yeshawanthapura Bus Station ⇔ Krishnaraja Pura Govt Hospital",
+                  "route_type": 3
+                },
+                "3y": {
+                  "route_id": "3y",
+                  "agency_id": "1",
+                  "route_short_name": "500-DP DNK-GGP",
+                  "route_long_name": "Dodda Nekkundi ⇔ Goraguntepalya",
+                  "route_type": 3
+                },
+                "7w": {
+                  "route_id": "7w",
+                  "agency_id": "1",
+                  "route_short_name": "500-DG",
+                  "route_long_name": "Nelamangala Bus Station ⇔ Central Silk Board",
+                  "route_type": 3
+                },
+                "f0": {
+                  "route_id": "f0",
+                  "agency_id": "1",
+                  "route_short_name": "500-D BELF-CSB",
+                  "route_long_name": "BEL Factory ⇔ Central Silk Board",
+                  "route_type": 3
+                },
+                "k1": {
+                  "route_id": "k1",
+                  "agency_id": "1",
+                  "route_short_name": "500-BC YTTMC-MTK-CSB",
+                  "route_long_name": "Yeshawanthapura Bus Station ⇔ Central Silk Board",
+                  "route_type": 3
+                },
+                "lp": {
+                  "route_id": "lp",
+                  "agency_id": "1",
+                  "route_short_name": "500-A PPLO-HBLB",
+                  "route_long_name": "Poornaprajna Layout ⇔ Hebbala Bridge",
+                  "route_type": 3
+                },
+                "t0": {
+                  "route_id": "t0",
+                  "agency_id": "1",
+                  "route_short_name": "500-A",
+                  "route_long_name": "Banashankari Bus Station ⇔ Hebbala Bridge",
+                  "route_type": 3
+                },
+                "wq": {
+                  "route_id": "wq",
+                  "agency_id": "1",
+                  "route_short_name": "500-DJ",
+                  "route_long_name": "Yeshawanthapura Bus Station ⇔ Central Silk Board",
+                  "route_type": 3
+                },
+                "1do": {
+                  "route_id": "1do",
+                  "agency_id": "1",
+                  "route_short_name": "502-D JGF-SMH-GGP-KRPGH",
+                  "route_long_name": "Juggath Pharma ⇔ Krishnaraja Pura Govt Hospital",
+                  "route_type": 3
+                },
+                "21z": {
+                  "route_id": "21z",
+                  "agency_id": "1",
+                  "route_short_name": "502-CT YTTMC-GGP-KRPMS",
+                  "route_long_name": "Yeshawanthapura Bus Station ⇔ KR Pura Metro Station",
+                  "route_type": 3
+                },
+                "ve": {
+                  "route_id": "ve",
+                  "agency_id": "1",
+                  "route_short_name": "502-C PSB-GGP-KRP",
+                  "route_long_name": "Peenya Satellite Bus Station ⇔ Krishnaraja Pura Govt Hospital",
+                  "route_type": 3
+                },
+                "wl": {
+                  "route_id": "wl",
+                  "agency_id": "1",
+                  "route_short_name": "502-A",
+                  "route_long_name": "Marathahalli Bridge ⇔ Kengeri Bus Station",
+                  "route_type": 3
+                },
+                "f6": {
+                  "route_id": "f6",
+                  "agency_id": "1",
+                  "route_short_name": "506-A D41G-HBL",
+                  "route_long_name": "Depot-41 Gate ⇔ Hebbala Bridge",
+                  "route_type": 3
+                },
+                "1me": {
+                  "route_id": "1me",
+                  "agency_id": "1",
+                  "route_short_name": "507-PS",
+                  "route_long_name": "Krishnaraja Pura Govt Hospital ⇔ Peenya Satellite Bus Station (Basaveshwara)",
+                  "route_type": 3
+                },
+                "1t3": {
+                  "route_id": "1t3",
+                  "agency_id": "1",
+                  "route_short_name": "507-E",
+                  "route_long_name": "Yeshawanthapura Bus Station ⇔ KR Pura Railway Station",
+                  "route_type": 3
+                },
+                "up": {
+                  "route_id": "up",
+                  "agency_id": "1",
+                  "route_short_name": "507-C D45G-KRP",
+                  "route_long_name": "Krishnaraja Pura Govt Hospital ⇔ Depot-45 Gate",
+                  "route_type": 3
+                },
+                "xx": {
+                  "route_id": "xx",
+                  "agency_id": "1",
+                  "route_short_name": "507-C VRP-KRPMS",
+                  "route_long_name": "KR Pura Metro Station ⇔ Vidyaranyapura Bus Station",
+                  "route_type": 3
+                },
+                "1iy": {
+                  "route_id": "1iy",
+                  "agency_id": "1",
+                  "route_short_name": "508 YTTMC-HSK",
+                  "route_long_name": "Yeshawanthapura Bus Station ⇔ Hosakote Bus Stand (Old)",
+                  "route_type": 3
+                },
+                "1zj": {
+                  "route_id": "1zj",
+                  "agency_id": "1",
+                  "route_short_name": "508 D45G-HSK",
+                  "route_long_name": "Depot-45 Gate ⇔ Hosakote Bus Stand (Old)",
+                  "route_type": 3
+                },
+                "14c": {
+                  "route_id": "14c",
+                  "agency_id": "1",
+                  "route_short_name": "V-500D",
+                  "route_long_name": "Central Silk Board ⇔ Hebbala Bridge",
+                  "route_type": 3
+                },
+                "16s": {
+                  "route_id": "16s",
+                  "agency_id": "1",
+                  "route_short_name": "KIA-8",
+                  "route_long_name": "Electronic City KIA ⇔ Kempegowda International Airport",
+                  "route_type": 3
+                },
+                "18c": {
+                  "route_id": "18c",
+                  "agency_id": "1",
+                  "route_short_name": "V-500HK",
+                  "route_long_name": "Hosakote Bus Stand (Old) ⇔ Hebbala Bridge",
+                  "route_type": 3
+                },
+                "1vp": {
+                  "route_id": "1vp",
+                  "agency_id": "1",
+                  "route_short_name": "KIA-8D",
+                  "route_long_name": "Sarjapura ⇔ Kempegowda International Airport",
+                  "route_type": 3
+                },
+                "1z": {
+                  "route_id": "1z",
+                  "agency_id": "1",
+                  "route_short_name": "V-500HS",
+                  "route_long_name": "Sarjapura ⇔ Hebbala Bridge",
+                  "route_type": 3
+                },
+                "28p": {
+                  "route_id": "28p",
+                  "agency_id": "1",
+                  "route_short_name": "KIA-6",
+                  "route_long_name": "Kadugodi Bus Station ⇔ Kempegowda International Airport",
+                  "route_type": 3
+                },
+                "2a8": {
+                  "route_id": "2a8",
+                  "agency_id": "1",
+                  "route_short_name": "MBS-17 MRHB-HBL-PSS",
+                  "route_long_name": "Marathahalli Bridge ⇔ Peenya 2nd Stage",
+                  "route_type": 3
+                },
+                "2kg": {
+                  "route_id": "2kg",
+                  "agency_id": "1",
+                  "route_short_name": "V-500QK",
+                  "route_long_name": "BEL Circle ⇔ Kadugodi Bus Station",
+                  "route_type": 3
+                },
+                "2w4": {
+                  "route_id": "2w4",
+                  "agency_id": "1",
+                  "route_short_name": "KIA-8C",
+                  "route_long_name": "Chandapura ⇔ Kempegowda International Airport",
+                  "route_type": 3
+                },
+                "2wt": {
+                  "route_id": "2wt",
+                  "agency_id": "1",
+                  "route_short_name": "KIA-6W",
+                  "route_long_name": "White Field Bus Station (Vydehi Hospital) ⇔ Kempegowda International Airport",
+                  "route_type": 3
+                },
+                "5u": {
+                  "route_id": "5u",
+                  "agency_id": "1",
+                  "route_short_name": "KIA-6A",
+                  "route_long_name": "Kadugodi Bus Station ⇔ Kempegowda International Airport",
+                  "route_type": 3
+                },
+                "eq": {
+                  "route_id": "eq",
+                  "agency_id": "1",
+                  "route_short_name": "KIA-8A",
+                  "route_long_name": "Kuvempunagara ( BTM Layout) ⇔ Kempegowda International Airport",
+                  "route_type": 3
+                },
+                "ln": {
+                  "route_id": "ln",
+                  "agency_id": "1",
+                  "route_short_name": "V-500A",
+                  "route_long_name": "Banashankari Bus Station ⇔ Hebbala Bridge",
+                  "route_type": 3
+                },
+                "og": {
+                  "route_id": "og",
+                  "agency_id": "1",
+                  "route_short_name": "GGP-RMSP",
+                  "route_long_name": "Goraguntepalya ⇔ Ramaswamypalya",
+                  "route_type": 3
+                },
+                "2b6": {
+                  "route_id": "2b6",
+                  "agency_id": "1",
+                  "route_short_name": "278-A",
+                  "route_long_name": "Bhoopasandra ⇔ Yelahanka Old Town",
+                  "route_type": 3
+                },
+                "2n6": {
+                  "route_id": "2n6",
+                  "agency_id": "1",
+                  "route_short_name": "281-AP",
+                  "route_long_name": "Hebbala Bridge ⇔ Kempegowda International Airport",
+                  "route_type": 3
+                },
+                "24m": {
+                  "route_id": "24m",
+                  "agency_id": "1",
+                  "route_short_name": "282-G HBLB-KDLH",
+                  "route_long_name": "Hebbala Bridge ⇔ Kodagalahatti",
+                  "route_type": 3
+                },
+                "2sb": {
+                  "route_id": "2sb",
+                  "agency_id": "1",
+                  "route_short_name": "282 HBLB-VNC-D52G",
+                  "route_long_name": "Hebbala Bridge ⇔ Depot-52 Arrival",
+                  "route_type": 3
+                },
+                "gs": {
+                  "route_id": "gs",
+                  "agency_id": "1",
+                  "route_short_name": "282-F HBLB-MNH",
+                  "route_long_name": "Hebbala Bridge ⇔ Maranayakanahalli",
+                  "route_type": 3
+                },
+                "2do": {
+                  "route_id": "2do",
+                  "agency_id": "1",
+                  "route_short_name": "283-B HBLB-KDGC",
+                  "route_long_name": "Hebbala Bridge ⇔ Kuduregere Colony",
+                  "route_type": 3
+                },
+                "1tv": {
+                  "route_id": "1tv",
+                  "agency_id": "1",
+                  "route_short_name": "285 HBLB-PTML",
+                  "route_long_name": "Hebbala Bridge ⇔ Patalamma Temple",
+                  "route_type": 3
+                },
+                "cs": {
+                  "route_id": "cs",
+                  "agency_id": "1",
+                  "route_short_name": "285-MN",
+                  "route_long_name": "Hebbala Bridge ⇔ Tubagere",
+                  "route_type": 3
+                },
+                "wa": {
+                  "route_id": "wa",
+                  "agency_id": "1",
+                  "route_short_name": "285 HRTA-HBLB",
+                  "route_long_name": "Heritage Estate Rajanukunte ⇔ Hebbala Bridge",
+                  "route_type": 3
+                },
+                "20v": {
+                  "route_id": "20v",
+                  "agency_id": "1",
+                  "route_short_name": "289-E HBLB-CKH",
+                  "route_long_name": "Hebbala Bridge ⇔ Chokkanahalli",
+                  "route_type": 3
+                },
+                "et": {
+                  "route_id": "et",
+                  "agency_id": "1",
+                  "route_short_name": "289 HBLB-D52G",
+                  "route_long_name": "Hebbala Bridge ⇔ Depot-52 Arrival",
+                  "route_type": 3
+                },
+                "1v9": {
+                  "route_id": "1v9",
+                  "agency_id": "1",
+                  "route_short_name": "298-MY",
+                  "route_long_name": "Yeshawanthapura Bus Station ⇔ Devanahalli Old Bus Stand",
+                  "route_type": 3
+                },
+                "1yz": {
+                  "route_id": "1yz",
+                  "agency_id": "1",
+                  "route_short_name": "298-M HBLB-DVH",
+                  "route_long_name": "Hebbala Bridge ⇔ Devanahalli Old Bus Stand",
+                  "route_type": 3
+                },
+                "gx": {
+                  "route_id": "gx",
+                  "agency_id": "1",
+                  "route_short_name": "406 HBLB-NMG",
+                  "route_long_name": "Hebbala Bridge ⇔ Nelamangala Bus Station",
+                  "route_type": 3
+                },
+                "1bh": {
+                  "route_id": "1bh",
+                  "agency_id": "1",
+                  "route_short_name": "501-C",
+                  "route_long_name": "Hebbala Bridge ⇔ Kengeri Bus Station",
+                  "route_type": 3
+                },
+                "1nc": {
+                  "route_id": "1nc",
+                  "agency_id": "1",
+                  "route_short_name": "501-C DBP-HBL",
+                  "route_long_name": "Dubasipalya ⇔ Hebbala Bridge",
+                  "route_type": 3
+                },
+                "1g5": {
+                  "route_id": "1g5",
+                  "agency_id": "1",
+                  "route_short_name": "502-DA",
+                  "route_long_name": "Kengeri Bus Station ⇔ Amruthanagara Hebbala",
+                  "route_type": 3
+                },
+                "1u2": {
+                  "route_id": "1u2",
+                  "agency_id": "1",
+                  "route_short_name": "502-E KLELC-HBLB",
+                  "route_long_name": "KLE Society College ⇔ Hebbala Bridge",
+                  "route_type": 3
+                },
+                "ex": {
+                  "route_id": "ex",
+                  "agency_id": "1",
+                  "route_short_name": "502-A GNP-HBL",
+                  "route_long_name": "Gonipura ⇔ Hebbala Bridge",
+                  "route_type": 3
+                },
+                "7t": {
+                  "route_id": "7t",
+                  "agency_id": "1",
+                  "route_short_name": "507 VNS-HBLB",
+                  "route_long_name": "Vidyaniketan School Hebbala ⇔ Hebbala Bridge",
+                  "route_type": 3
+                },
+                "1e6": {
+                  "route_id": "1e6",
+                  "agency_id": "1",
+                  "route_short_name": "MF-23B VNS-JHCMS",
+                  "route_long_name": "Vidyaniketan School Hebbala ⇔ Jalahalli Cross Metro Station Arrival",
+                  "route_type": 3
+                },
+                "1q8": {
+                  "route_id": "1q8",
+                  "agency_id": "1",
+                  "route_short_name": "HBL-D45G",
+                  "route_long_name": "Hebbala Bridge ⇔ Depot-45 Gate",
+                  "route_type": 3
+                },
+                "fk": {
+                  "route_id": "fk",
+                  "agency_id": "1",
+                  "route_short_name": "KIA-17",
+                  "route_long_name": "BEML Layout 5th stage ⇔ Kempegowda International Airport",
+                  "route_type": 3
+                },
+                "zm": {
+                  "route_id": "zm",
+                  "agency_id": "1",
+                  "route_short_name": "KIA-9H",
+                  "route_long_name": "Hebbala Bridge ⇔ Kempegowda International Airport",
+                  "route_type": 3
+                },
+                "2hd": {
+                  "route_id": "2hd",
+                  "agency_id": "1",
+                  "route_short_name": "507-D",
+                  "route_long_name": "5th Phase Yelahanka New Town ⇔ Krishnaraja Pura Govt Hospital",
+                  "route_type": 3
+                },
+                "2ry": {
+                  "route_id": "2ry",
+                  "agency_id": "1",
+                  "route_short_name": "507-DY",
+                  "route_long_name": "Yelahanka Old Town ⇔ Krishnaraja Pura Govt Hospital",
+                  "route_type": 3
+                },
+                "be": {
+                  "route_id": "be",
+                  "agency_id": "1",
+                  "route_short_name": "KLK-NGWJN",
+                  "route_long_name": "Kalkere ⇔ Nagawara Junction",
+                  "route_type": 3
+                },
+                "u4": {
+                  "route_id": "u4",
+                  "agency_id": "1",
+                  "route_short_name": "KLN-BCC",
+                  "route_long_name": "Kalyananagara Bus Stand ⇔ Bhartiya City Chokkanahalli",
+                  "route_type": 3
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [77.62355, 12.91803],
+                      [77.62364, 12.91769],
+                      [77.62432, 12.91781],
+                      [77.62433, 12.91763],
+                      [77.62495, 12.91769],
+                      [77.62537, 12.91769],
+                      [77.62575, 12.91765],
+                      [77.62615, 12.91755],
+                      [77.62852, 12.91688],
+                      [77.6287, 12.91685],
+                      [77.63026, 12.91674],
+                      [77.63137, 12.91665],
+                      [77.63236, 12.91655],
+                      [77.63369, 12.91646],
+                      [77.63434, 12.9164],
+                      [77.63775, 12.91599],
+                      [77.63816, 12.91598],
+                      [77.63843, 12.91601],
+                      [77.63877, 12.91609],
+                      [77.63943, 12.91632],
+                      [77.63976, 12.91648],
+                      [77.64005, 12.91666],
+                      [77.64021, 12.91678],
+                      [77.64077, 12.91727],
+                      [77.64143, 12.91794],
+                      [77.64183, 12.91837],
+                      [77.643, 12.9199],
+                      [77.64449, 12.9217],
+                      [77.64471, 12.92194],
+                      [77.64503, 12.92225],
+                      [77.6464, 12.92343],
+                      [77.6467, 12.92365],
+                      [77.64703, 12.92385],
+                      [77.6476, 12.92411],
+                      [77.64769, 12.9242],
+                      [77.6479, 12.92428],
+                      [77.64839, 12.92439],
+                      [77.6492, 12.92446],
+                      [77.65014, 12.92452],
+                      [77.65054, 12.92451],
+                      [77.6509, 12.92447],
+                      [77.65218, 12.92422],
+                      [77.65411, 12.9239],
+                      [77.65416, 12.92386],
+                      [77.65422, 12.92384],
+                      [77.65464, 12.92378],
+                      [77.6556, 12.92356],
+                      [77.65674, 12.92318],
+                      [77.65924, 12.92228],
+                      [77.66005, 12.92201],
+                      [77.66131, 12.92167],
+                      [77.66287, 12.92134],
+                      [77.66343, 12.92117],
+                      [77.66403, 12.92102],
+                      [77.6648, 12.92077],
+                      [77.66496, 12.92074],
+                      [77.66518, 12.92076],
+                      [77.66534, 12.92081],
+                      [77.66543, 12.92085],
+                      [77.66553, 12.92092],
+                      [77.66591, 12.92106],
+                      [77.66634, 12.92126],
+                      [77.66637, 12.92134],
+                      [77.66641, 12.92139],
+                      [77.66657, 12.92149],
+                      [77.66784, 12.92207],
+                      [77.66885, 12.92256],
+                      [77.6694, 12.9228],
+                      [77.67015, 12.92318],
+                      [77.67109, 12.92361],
+                      [77.67354, 12.92468],
+                      [77.67492, 12.92534],
+                      [77.67547, 12.92563],
+                      [77.67606, 12.92591],
+                      [77.67629, 12.92606],
+                      [77.67819, 12.92696],
+                      [77.67939, 12.92755],
+                      [77.68077, 12.9282],
+                      [77.68131, 12.92843],
+                      [77.68365, 12.92953],
+                      [77.68416, 12.92982],
+                      [77.68459, 12.93003],
+                      [77.68508, 12.93031],
+                      [77.68526, 12.93044],
+                      [77.68579, 12.93088],
+                      [77.68751, 12.93237],
+                      [77.68771, 12.93252],
+                      [77.68926, 12.93394],
+                      [77.68992, 12.93457],
+                      [77.69005, 12.93467],
+                      [77.69056, 12.93523],
+                      [77.69116, 12.9357],
+                      [77.69243, 12.93686],
+                      [77.69323, 12.93763],
+                      [77.69377, 12.93811],
+                      [77.69438, 12.93872],
+                      [77.6947, 12.93907],
+                      [77.69491, 12.93933],
+                      [77.69497, 12.93944],
+                      [77.69514, 12.93968],
+                      [77.69667, 12.94217],
+                      [77.69711, 12.94299],
+                      [77.69749, 12.94393],
+                      [77.69825, 12.94597],
+                      [77.69858, 12.94702],
+                      [77.69886, 12.94782],
+                      [77.69898, 12.94821],
+                      [77.69909, 12.94869],
+                      [77.6995, 12.95101],
+                      [77.69957, 12.95159],
+                      [77.69965, 12.95186],
+                      [77.6999, 12.95292],
+                      [77.70002, 12.9529],
+                      [77.7007, 12.95551],
+                      [77.70104, 12.9566],
+                      [77.70113, 12.95697],
+                      [77.7012, 12.95805],
+                      [77.70119, 12.95902],
+                      [77.70125, 12.95962],
+                      [77.70133, 12.96029],
+                      [77.70201, 12.96459],
+                      [77.70213, 12.96581],
+                      [77.70213, 12.96656],
+                      [77.70204, 12.96701],
+                      [77.70181, 12.96774],
+                      [77.70163, 12.96809],
+                      [77.70123, 12.96875],
+                      [77.7008, 12.96941],
+                      [77.69866, 12.9729],
+                      [77.69851, 12.97317],
+                      [77.69699, 12.97567],
+                      [77.6969, 12.97591],
+                      [77.69674, 12.97624],
+                      [77.69534, 12.97859],
+                      [77.69316, 12.98211],
+                      [77.69302, 12.98231],
+                      [77.69286, 12.98244],
+                      [77.69275, 12.98261],
+                      [77.68964, 12.98769],
+                      [77.68837, 12.98981],
+                      [77.68797, 12.99038],
+                      [77.68655, 12.99228],
+                      [77.68369, 12.99617],
+                      [77.68335, 12.9967],
+                      [77.68261, 12.99793],
+                      [77.68201, 12.99888],
+                      [77.68144, 12.99982],
+                      [77.68129, 12.99997],
+                      [77.68105, 13.00011],
+                      [77.68077, 13.00023],
+                      [77.6805, 13.0003],
+                      [77.68026, 13.00032],
+                      [77.67966, 13.00032],
+                      [77.67827, 13.00025],
+                      [77.67731, 13.00028],
+                      [77.67706, 13.00023],
+                      [77.67665, 13.00009],
+                      [77.67615, 12.99986],
+                      [77.67543, 12.99956],
+                      [77.67481, 12.99934],
+                      [77.67062, 12.99732],
+                      [77.66985, 12.99697],
+                      [77.66966, 12.99697],
+                      [77.66736, 12.99595],
+                      [77.66602, 12.99539],
+                      [77.66587, 12.99535],
+                      [77.66574, 12.99535],
+                      [77.66551, 12.9954],
+                      [77.66539, 12.99544],
+                      [77.66527, 12.99551],
+                      [77.66506, 12.99569],
+                      [77.66495, 12.99584],
+                      [77.66369, 12.99792],
+                      [77.66354, 12.99822],
+                      [77.6635, 12.99836],
+                      [77.66331, 13.00146],
+                      [77.66321, 13.00276],
+                      [77.6631, 13.00454],
+                      [77.66303, 13.00513],
+                      [77.66282, 13.00627],
+                      [77.66252, 13.00823],
+                      [77.66247, 13.00889],
+                      [77.66242, 13.00991],
+                      [77.66223, 13.01252],
+                      [77.6622, 13.01353],
+                      [77.66208, 13.01503],
+                      [77.66194, 13.01593],
+                      [77.66188, 13.0161],
+                      [77.66182, 13.0162],
+                      [77.66168, 13.01634],
+                      [77.66144, 13.01647],
+                      [77.65808, 13.01791],
+                      [77.65535, 13.01913],
+                      [77.65223, 13.02033],
+                      [77.64515, 13.0234],
+                      [77.6399, 13.0257],
+                      [77.63924, 13.02586],
+                      [77.63671, 13.02634],
+                      [77.63522, 13.02672],
+                      [77.63388, 13.02719],
+                      [77.63276, 13.02763],
+                      [77.63221, 13.0279],
+                      [77.63199, 13.02805],
+                      [77.63192, 13.02812],
+                      [77.63171, 13.02846],
+                      [77.63079, 13.03044],
+                      [77.62856, 13.03489],
+                      [77.6276, 13.03658],
+                      [77.62735, 13.0369],
+                      [77.62697, 13.03725],
+                      [77.62657, 13.03754],
+                      [77.62592, 13.03797],
+                      [77.62587, 13.03809],
+                      [77.62542, 13.03867],
+                      [77.62523, 13.03895],
+                      [77.62447, 13.03997],
+                      [77.62408, 13.04045],
+                      [77.62378, 13.04076],
+                      [77.62357, 13.04091],
+                      [77.62331, 13.04104],
+                      [77.62314, 13.04109],
+                      [77.62301, 13.04111],
+                      [77.62263, 13.04114],
+                      [77.62123, 13.04113],
+                      [77.61987, 13.04109],
+                      [77.61896, 13.04104],
+                      [77.6178, 13.04095],
+                      [77.61713, 13.04094],
+                      [77.61684, 13.04097],
+                      [77.61596, 13.04119],
+                      [77.61539, 13.04136],
+                      [77.61486, 13.04155],
+                      [77.61452, 13.04169],
+                      [77.61373, 13.0421],
+                      [77.61352, 13.04217],
+                      [77.61101, 13.04275],
+                      [77.6109, 13.04276],
+                      [77.61082, 13.04274],
+                      [77.6106, 13.04281],
+                      [77.60933, 13.04313],
+                      [77.6082, 13.04339],
+                      [77.60684, 13.0436],
+                      [77.60651, 13.04362],
+                      [77.60212, 13.04358],
+                      [77.59994, 13.04363],
+                      [77.59978, 13.04362],
+                      [77.59941, 13.04356],
+                      [77.5992, 13.04349],
+                      [77.59893, 13.04335],
+                      [77.59753, 13.04229],
+                      [77.59719, 13.04207],
+                      [77.59693, 13.04195],
+                      [77.59664, 13.04186],
+                      [77.59636, 13.04183],
+                      [77.59389, 13.04194],
+                      [77.59358, 13.04201],
+                      [77.5926, 13.04233],
+                      [77.59144, 13.04264],
+                      [77.59119, 13.04267],
+                      [77.59043, 13.04267],
+                      [77.5902, 13.04274],
+                      [77.5901, 13.04275],
+                      [77.59021, 13.04295],
+                      [77.59036, 13.04328],
+                      [77.59051, 13.04376],
+                      [77.59057, 13.04401],
+                      [77.59064, 13.04467],
+                      [77.59076, 13.04537],
+                      [77.59082, 13.04557],
+                      [77.59115, 13.04618],
+                      [77.59122, 13.04628],
+                      [77.59137, 13.04635],
+                      [77.59149, 13.04673],
+                      [77.59245, 13.04872],
+                      [77.59267, 13.0493],
+                      [77.59278, 13.04971],
+                      [77.5927, 13.04995],
+                      [77.59282, 13.0503],
+                      [77.59329, 13.05216],
+                      [77.59338, 13.05278],
+                      [77.59338, 13.05341],
+                      [77.59324, 13.05522],
+                      [77.59324, 13.0567],
+                      [77.59321, 13.0582],
+                      [77.59325, 13.05922],
+                      [77.59324, 13.06086],
+                      [77.59316, 13.06271],
+                      [77.59306, 13.06421],
+                      [77.59304, 13.06575],
+                      [77.59299, 13.06645],
+                      [77.59292, 13.06708],
+                      [77.5928, 13.06848],
+                      [77.59279, 13.06899],
+                      [77.5925, 13.07348],
+                      [77.59251, 13.07523],
+                      [77.5926, 13.07655],
+                      [77.59267, 13.07716],
+                      [77.58904, 13.07785],
+                      [77.58729, 13.0782],
+                      [77.58578, 13.07847],
+                      [77.58338, 13.07896],
+                      [77.58317, 13.07818],
+                      [77.58287, 13.07826],
+                      [77.58255, 13.07714],
+                      [77.58155, 13.0777],
+                      [77.58082, 13.07753],
+                      [77.58047, 13.07766],
+                      [77.58006, 13.0779]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "125",
+                    "stop_name": "Nagawara Junction",
+                    "routes": ["3i", "16a", "18b", "1a6", "1gz", "1kl", "1m8", "1mo", "1nf", "1rj", "1t0", "1z0", "21i", "24z", "281", "2aa", "2bp", "2ef", "2ew", "2h0", "2i6", "2iu", "2j1", "2so", "30i", "35", "3y", "7w", "f0", "k1", "lp", "t0", "wq", "1do", "21z", "ve", "wl", "f6", "1me", "1t3", "up", "xx", "1iy", "1zj", "14c", "16s", "18c", "1vp", "1z", "215", "28p", "2a8", "2kg", "2w4", "2wt", "5u", "eq", "ln", "og"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.62408, 13.04046]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "1ym",
+                    "stop_name": "Kempapura",
+                    "routes": ["2b6", "3i", "16a", "18b", "1a6", "1gz", "1kl", "1m8", "1mo", "1nf", "1rj", "1t0", "1z0", "21i", "24z", "281", "2aa", "2bp", "2ef", "2ew", "2h0", "2i6", "2iu", "2j1", "2so", "30i", "35", "3y", "7w", "f0", "k1", "lp", "t0", "wq", "1do", "21z", "ve", "wl", "f6", "1me", "1t3", "up", "xx", "1iy", "1zj", "14c", "18c", "1vp", "1z", "215", "2a8", "2kg", "2w4", "ln", "og"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.60121, 13.0436]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "4h8",
+                    "stop_name": "Hebbala Bridge",
+                    "routes": ["2n6", "24m", "2sb", "gs", "2do", "170", "1tv", "cs", "wa", "20v", "et", "1v9", "1yz", "gx", "1a6", "1kl", "2ef", "2iu", "181", "1bh", "1nc", "1g5", "1u2", "ex", "7t", "16s", "1e6", "1q8", "1vp", "28p", "2w4", "2wt", "5u", "eq", "fk", "zm"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.5903, 13.0432]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "5bf",
+                    "stop_name": "HBR Layout",
+                    "routes": ["18b", "1a6", "1gz", "1kl", "1m8", "1mo", "1nf", "1rj", "1t0", "1z0", "21i", "24z", "281", "2aa", "2bp", "2ef", "2ew", "2h0", "2i6", "2iu", "2j1", "2so", "30i", "35", "3y", "7w", "f0", "k1", "lp", "t0", "wq", "1do", "21z", "ve", "wl", "f6", "1me", "1t3", "2hd", "2ry", "up", "xx", "1iy", "1zj", "14c", "18c", "1vp", "1z", "215", "2a8", "2kg", "2w4", "be", "ln", "og", "u4"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.62849, 13.035]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "5e7",
+                    "stop_name": "Hennur Junction",
+                    "routes": ["18b", "1a6", "1gz", "1kl", "1m8", "1mo", "1nf", "1rj", "1t0", "1z0", "21i", "24z", "281", "2aa", "2bp", "2ef", "2ew", "2h0", "2i6", "2iu", "2j1", "2so", "30i", "35", "3y", "7w", "f0", "k1", "lp", "t0", "wq", "1do", "21z", "ve", "wl", "f6", "1me", "1t3", "2hd", "2ry", "up", "xx", "1iy", "1zj", "14c", "18c", "1vp", "1z", "215", "2a8", "2kg", "2w4", "be", "ln", "og", "u4"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.63125, 13.02948]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "5f5",
+                    "stop_name": "Manyatha Tech Park",
+                    "routes": ["2b6", "3i", "16a", "18b", "1a6", "1gz", "1kl", "1m8", "1mo", "1nf", "1rj", "1t0", "1z0", "21i", "24z", "281", "2aa", "2bp", "2ef", "2ew", "2h0", "2i6", "2iu", "2j1", "2so", "30i", "35", "3y", "7w", "f0", "k1", "lp", "t0", "wq", "1do", "21z", "ve", "wl", "f6", "1me", "1t3", "up", "xx", "1iy", "1zj", "14c", "18c", "1vp", "1z", "215", "2a8", "2kg", "2w4", "5u", "ln", "og"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.61995, 13.04109]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "if",
+                    "stop_name": "Veerannapalya",
+                    "routes": ["2b6", "3i", "16a", "18b", "1a6", "1gz", "1kl", "1m8", "1mo", "1nf", "1rj", "1t0", "1z0", "21i", "24z", "281", "2aa", "2bp", "2ef", "2ew", "2h0", "2i6", "2iu", "2j1", "2so", "30i", "35", "3y", "7w", "f0", "k1", "lp", "t0", "wq", "1do", "21z", "ve", "wl", "f6", "1me", "1t3", "up", "xx", "1iy", "1zj", "14c", "16s", "18c", "1vp", "1z", "215", "28p", "2a8", "2kg", "2w4", "2wt", "5u", "eq", "ln", "og"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.61352, 13.04217]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table class="table-horizontal" summary="This table shows schedules for a selection of key stops on the route for Route 500-D GKVK-CSB - Hennur Junction to Hebbala Bridge Mon-Sun. Stops and their schedule times are listed in the columns." data-orientation="horizontal">
+            <caption class="sr-only">Route 500-D GKVK-CSB - Hennur Junction to Hebbala Bridge | Mon-Sun</caption>
+            <colgroup>
+              <col>
+              <col class="run_0 " id="trip_id_bco">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col">Stop</th>
+                <th class="run-header" scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="stop-row" id="stop_id_5e7" data-stop-id="5e7" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Hennur Junction</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">2:45pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_5bf" data-stop-id="5bf" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">HBR Layout</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">2:58pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_125" data-stop-id="125" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Nagawara Junction</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">3:12pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_5f5" data-stop-id="5f5" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Manyatha Tech Park</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">3:25pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_if" data-stop-id="if" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Veerannapalya</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">3:39pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_1ym" data-stop-id="1ym" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Kempapura</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">3:52pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_4h8" data-stop-id="4h8" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Hebbala Bridge</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">4:06pm</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

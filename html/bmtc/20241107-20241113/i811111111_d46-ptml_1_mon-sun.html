@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYW5pa2V0czk1IiwiYSI6ImNsemtkZHpwdDB1NGIybHNhaHhhZHR2NzAifQ.YkI9PvPHjhbxOAUBgAgMSw';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+</head>
+
+<body><!-- Timetable generated on 2024-11-07T05:13:26.205Z using GTFS-to-HTML version 2.6.11 -->
+  <div class="timetable-page menu-type-jump">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center gap-2">
+        <div class="route-color-swatch-large flex-none" style="background-color: #000000; color: #FFFFFF;">D46-PTML</div>
+        <div>Route D46-PTML</div>
+      </h1>
+      <div class="effective-date text-gray-600 mt-2">Effective November 07, 2024</div>
+      <div class="timetable mb-10" id="timetable_id_i811111111" data-day-list="Mon-Sun" data-direction-name="Depot-46 Sadenahalli" data-timetable-id="i8|1111111|1" data-direction-id="1" data-route-id="i8">
+        <div class="mb-2">
+          <h2 class="text-xl">Route D46-PTML - Patalamma Temple to Depot-46 Sadenahalli | Monday-Sunday</h2>
+        </div>
+        <div class="map" id="map_timetable_id_i811111111"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_i811111111",
+              "routes": {
+                "228": {
+                  "route_id": "228",
+                  "agency_id": "1",
+                  "route_short_name": "285-K KBS-SDNH",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Sadenahalli",
+                  "route_type": 3
+                },
+                "i8": {
+                  "route_id": "i8",
+                  "agency_id": "1",
+                  "route_short_name": "D46-PTML",
+                  "route_long_name": "Depot-46 Sadenahalli ⇔ Patalamma Temple",
+                  "route_type": 3
+                },
+                "18d": {
+                  "route_id": "18d",
+                  "agency_id": "1",
+                  "route_short_name": "285-MK KMT-PTML",
+                  "route_long_name": "KR Market ⇔ Patalamma Temple",
+                  "route_type": 3
+                },
+                "1c2": {
+                  "route_id": "1c2",
+                  "agency_id": "1",
+                  "route_short_name": "285-M PTLM-DBPH",
+                  "route_long_name": "Patalamma Temple ⇔ Doddaballapura Govt Hospital",
+                  "route_type": 3
+                },
+                "1ia": {
+                  "route_id": "1ia",
+                  "agency_id": "1",
+                  "route_short_name": "285 PTML-HNYR",
+                  "route_long_name": "Patalamma Temple ⇔ Haniyuru",
+                  "route_type": 3
+                },
+                "1no": {
+                  "route_id": "1no",
+                  "agency_id": "1",
+                  "route_short_name": "285-M PTML-DVH",
+                  "route_long_name": "Patalamma Temple ⇔ Devanahalli Old Bus Stand",
+                  "route_type": 3
+                },
+                "1vg": {
+                  "route_id": "1vg",
+                  "agency_id": "1",
+                  "route_short_name": "285-MJ  D46G-JKR",
+                  "route_long_name": "Patalamma Temple ⇔ Jakkur",
+                  "route_type": 3
+                },
+                "2b7": {
+                  "route_id": "2b7",
+                  "agency_id": "1",
+                  "route_short_name": "285-J PTML-JLG",
+                  "route_long_name": "Patalamma Temple ⇔ Jalige",
+                  "route_type": 3
+                },
+                "2bv": {
+                  "route_id": "2bv",
+                  "agency_id": "1",
+                  "route_short_name": "285 SBS-MKC-PTLM",
+                  "route_long_name": "Patalamma Temple ⇔ Shivajinagara Bus Station",
+                  "route_type": 3
+                },
+                "2go": {
+                  "route_id": "2go",
+                  "agency_id": "1",
+                  "route_short_name": "285 PTML-YHKOT",
+                  "route_long_name": "Patalamma Temple ⇔ Yelahanka Old Town",
+                  "route_type": 3
+                },
+                "2ju": {
+                  "route_id": "2ju",
+                  "agency_id": "1",
+                  "route_short_name": "285-MP PTML-NAGH",
+                  "route_long_name": "Patalamma Temple ⇔ Narasaiahna Agrahara",
+                  "route_type": 3
+                },
+                "2md": {
+                  "route_id": "2md",
+                  "agency_id": "1",
+                  "route_short_name": "285-KA",
+                  "route_long_name": "KR Market ⇔ Bettenahalli",
+                  "route_type": 3
+                },
+                "2ph": {
+                  "route_id": "2ph",
+                  "agency_id": "1",
+                  "route_short_name": "285-YA PTML-HHPL",
+                  "route_long_name": "Patalamma Temple ⇔ Harohalli Palya",
+                  "route_type": 3
+                },
+                "fm": {
+                  "route_id": "fm",
+                  "agency_id": "1",
+                  "route_short_name": "285-MC PTML-DBP",
+                  "route_long_name": "Patalamma Temple ⇔ Doddaballapura Bus Stand",
+                  "route_type": 3
+                },
+                "ra": {
+                  "route_id": "ra",
+                  "agency_id": "1",
+                  "route_short_name": "285-F PTML-BRPR",
+                  "route_long_name": "Patalamma Temple ⇔ Byrapura",
+                  "route_type": 3
+                },
+                "w1": {
+                  "route_id": "w1",
+                  "agency_id": "1",
+                  "route_short_name": "285-K PTMT-CVB-KBS",
+                  "route_long_name": "Patalamma Temple ⇔ Kempegowda Bus Station",
+                  "route_type": 3
+                },
+                "y5": {
+                  "route_id": "y5",
+                  "agency_id": "1",
+                  "route_short_name": "285-F PTML-BRP-HNYR",
+                  "route_long_name": "Patalamma Temple ⇔ Haniyuru",
+                  "route_type": 3
+                },
+                "1hc": {
+                  "route_id": "1hc",
+                  "agency_id": "1",
+                  "route_short_name": "PTML-SNH",
+                  "route_long_name": "Patalamma Temple ⇔ Sonnenahalli",
+                  "route_type": 3
+                },
+                "1zk": {
+                  "route_id": "1zk",
+                  "agency_id": "1",
+                  "route_short_name": "KLRH-PTML",
+                  "route_long_name": "Koluvarayanahalli ⇔ Patalamma Temple",
+                  "route_type": 3
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [77.5699, 13.18344],
+                      [77.56987, 13.18356],
+                      [77.56977, 13.18363],
+                      [77.56966, 13.18366],
+                      [77.56875, 13.18374],
+                      [77.56865, 13.18374],
+                      [77.56855, 13.1837],
+                      [77.5681, 13.18386],
+                      [77.56787, 13.18389],
+                      [77.56761, 13.18388],
+                      [77.56716, 13.18396],
+                      [77.56707, 13.184]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "31b",
+                    "stop_name": "Depot-46 Sadenahalli",
+                    "routes": ["i8"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.56681, 13.18393]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "4ta",
+                    "stop_name": "Patalamma Temple",
+                    "routes": ["18d", "1c2", "1ia", "1no", "1vg", "228", "2b7", "2bv", "2go", "2ju", "2md", "2ph", "fm", "ra", "w1", "y5", "1hc", "1zk", "i8"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.56991, 13.18343]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table class="table-horizontal" summary="This table shows schedules for a selection of key stops on the route for Route D46-PTML - Patalamma Temple to Depot-46 Sadenahalli Mon-Sun. Stops and their schedule times are listed in the columns." data-orientation="horizontal">
+            <caption class="sr-only">Route D46-PTML - Patalamma Temple to Depot-46 Sadenahalli | Mon-Sun</caption>
+            <colgroup>
+              <col>
+              <col class="run_0 " id="trip_id_alb">
+              <col class="run_1 " id="trip_id_lws">
+              <col class="run_2 " id="trip_id_4y3">
+              <col class="run_3 " id="trip_id_d9b">
+              <col class="run_4 " id="trip_id_w7">
+              <col class="run_5 " id="trip_id_jwm">
+              <col class="run_6 " id="trip_id_kot">
+              <col class="run_7 " id="trip_id_bp0">
+              <col class="run_8 " id="trip_id_c0z">
+              <col class="run_9 " id="trip_id_gw5">
+              <col class="run_10 " id="trip_id_es7">
+              <col class="run_11 " id="trip_id_aem">
+              <col class="run_12 " id="trip_id_e9t">
+              <col class="run_13 " id="trip_id_3me">
+              <col class="run_14 " id="trip_id_egj">
+              <col class="run_15 " id="trip_id_172">
+              <col class="run_16 " id="trip_id_1cf">
+              <col class="run_17 " id="trip_id_9w9">
+              <col class="run_18 " id="trip_id_gwz">
+              <col class="run_19 " id="trip_id_iwd">
+              <col class="run_20 " id="trip_id_2pq">
+              <col class="run_21 " id="trip_id_oq5">
+              <col class="run_22 " id="trip_id_n4x">
+              <col class="run_23 " id="trip_id_at6">
+              <col class="run_24 " id="trip_id_f5a">
+              <col class="run_25 " id="trip_id_3pv">
+              <col class="run_26 " id="trip_id_63c">
+              <col class="run_27 " id="trip_id_moi">
+              <col class="run_28 " id="trip_id_d1v">
+              <col class="run_29 " id="trip_id_3qp">
+              <col class="run_30 " id="trip_id_7s1">
+              <col class="run_31 " id="trip_id_57i">
+              <col class="run_32 " id="trip_id_hha">
+              <col class="run_33 " id="trip_id_60r">
+              <col class="run_34 " id="trip_id_m67">
+              <col class="run_35 " id="trip_id_d8n">
+              <col class="run_36 " id="trip_id_qfd">
+              <col class="run_37 " id="trip_id_aq7">
+              <col class="run_38 " id="trip_id_3vt">
+              <col class="run_39 " id="trip_id_at7">
+              <col class="run_40 " id="trip_id_1r4">
+              <col class="run_41 " id="trip_id_l0p">
+              <col class="run_42 " id="trip_id_jqg">
+              <col class="run_43 " id="trip_id_asb">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col">Stop</th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="stop-row" id="stop_id_4ta" data-stop-id="4ta" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Patalamma Temple</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">1:40am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:30am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:35am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:55am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:00am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:05am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:10am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:15am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:20am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:25am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:30am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:35am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:40am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:45am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:50am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:55am</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:10pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:15pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:25pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:40pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:45pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:50pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:25pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:50pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:55pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:05pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:10pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:15pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:20pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:30pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:34pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:35pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:40pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:45pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:50pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:55pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:10pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:20pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:25pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:45pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_31b" data-stop-id="31b" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Depot-46 Sadenahalli</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">1:42am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:32am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:37am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">10:57am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:02am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:07am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:12am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:17am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:22am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:27am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:32am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:37am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:42am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:47am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:52am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:57am</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:02pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:12pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:17pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:27pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:42pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:47pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:52pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:02pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:27pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:52pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:57pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:02pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:07pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:12pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:17pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:22pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:32pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:34pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:37pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:42pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:47pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:52pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:57pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:02pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:12pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:22pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:27pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:47pm</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

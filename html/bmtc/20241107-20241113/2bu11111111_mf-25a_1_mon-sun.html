@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYW5pa2V0czk1IiwiYSI6ImNsemtkZHpwdDB1NGIybHNhaHhhZHR2NzAifQ.YkI9PvPHjhbxOAUBgAgMSw';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+</head>
+
+<body><!-- Timetable generated on 2024-11-07T05:16:12.133Z using GTFS-to-HTML version 2.6.11 -->
+  <div class="timetable-page menu-type-jump">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center gap-2">
+        <div class="route-color-swatch-large flex-none" style="background-color: #000000; color: #FFFFFF;">MF-25A</div>
+        <div>Route MF-25A</div>
+      </h1>
+      <div class="effective-date text-gray-600 mt-2">Effective November 07, 2024</div>
+      <div class="timetable mb-10" id="timetable_id_2bu11111111" data-day-list="Mon-Sun" data-direction-name="8th Mile Dasarahalli" data-timetable-id="2bu|1111111|1" data-direction-id="1" data-route-id="2bu">
+        <div class="mb-2">
+          <h2 class="text-xl">Route MF-25A - Suvarna Nagara to 8th Mile Dasarahalli | Monday-Sunday</h2>
+        </div>
+        <div class="map" id="map_timetable_id_2bu11111111"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_2bu11111111",
+              "routes": {
+                "129": {
+                  "route_id": "129",
+                  "agency_id": "1",
+                  "route_short_name": "263-A",
+                  "route_long_name": "KR Market ⇔ Thippennahalli",
+                  "route_type": 3
+                },
+                "2bu": {
+                  "route_id": "2bu",
+                  "agency_id": "1",
+                  "route_short_name": "MF-25A",
+                  "route_long_name": "8th Mile Dasarahalli ⇔ Suvarna Nagara",
+                  "route_type": 3
+                },
+                "1k4": {
+                  "route_id": "1k4",
+                  "agency_id": "1",
+                  "route_short_name": "247",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ KG Lakkenahalli",
+                  "route_type": 3
+                },
+                "1ll": {
+                  "route_id": "1ll",
+                  "agency_id": "1",
+                  "route_short_name": "263 KMT-NLGH-GGNH",
+                  "route_long_name": "KR Market ⇔ Gangondanahalli",
+                  "route_type": 3
+                },
+                "2b": {
+                  "route_id": "2b",
+                  "agency_id": "1",
+                  "route_short_name": "263-G",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Gangondanahalli",
+                  "route_type": 3
+                },
+                "10n": {
+                  "route_id": "10n",
+                  "agency_id": "1",
+                  "route_short_name": "BC-7H D31G-8MYL",
+                  "route_long_name": "Depot-31 Gate ⇔ 8th Mile Dasarahalli",
+                  "route_type": 3
+                },
+                "12p": {
+                  "route_id": "12p",
+                  "agency_id": "1",
+                  "route_short_name": "MF-30",
+                  "route_long_name": "Jalahalli Cross  Metro Station Departure ⇔ Jalahalli Cross Metro Station Arrival",
+                  "route_type": 3
+                },
+                "1g3": {
+                  "route_id": "1g3",
+                  "agency_id": "1",
+                  "route_short_name": "BC-8",
+                  "route_long_name": "Chikka Banavara ⇔ Summanahalli",
+                  "route_type": 3
+                },
+                "1jp": {
+                  "route_id": "1jp",
+                  "agency_id": "1",
+                  "route_short_name": "MF-31",
+                  "route_long_name": "Jalahalli Cross  Metro Station Departure ⇔ Jalahalli Cross Metro Station Arrival",
+                  "route_type": 3
+                },
+                "1tx": {
+                  "route_id": "1tx",
+                  "agency_id": "1",
+                  "route_short_name": "BC-7B BDH-PSBS",
+                  "route_long_name": "Byadarahalli ⇔ Peenya Satellite Bus Station (Basaveshwara)",
+                  "route_type": 3
+                },
+                "1vm": {
+                  "route_id": "1vm",
+                  "agency_id": "1",
+                  "route_short_name": "BC-7B",
+                  "route_long_name": "8th Mile Dasarahalli ⇔ Byadarahalli",
+                  "route_type": 3
+                },
+                "22r": {
+                  "route_id": "22r",
+                  "agency_id": "1",
+                  "route_short_name": "BC-7B BDH-JHC-PSS",
+                  "route_long_name": "Byadarahalli ⇔ Peenya 2nd stage",
+                  "route_type": 3
+                },
+                "2qd": {
+                  "route_id": "2qd",
+                  "agency_id": "1",
+                  "route_short_name": "BC-7K",
+                  "route_long_name": "8th Mile Dasarahalli ⇔ Kachohalli Gate",
+                  "route_type": 3
+                },
+                "5m": {
+                  "route_id": "5m",
+                  "agency_id": "1",
+                  "route_short_name": "BC-7H",
+                  "route_long_name": "8th Mile Dasarahalli ⇔ Herohalli Cross",
+                  "route_type": 3
+                },
+                "7x": {
+                  "route_id": "7x",
+                  "agency_id": "1",
+                  "route_short_name": "BC-7E",
+                  "route_long_name": "8th Mile Dasarahalli ⇔ Gangondanahalli",
+                  "route_type": 3
+                },
+                "kv": {
+                  "route_id": "kv",
+                  "agency_id": "1",
+                  "route_short_name": "BC-7B 8thM-KMT",
+                  "route_long_name": "8th Mile Dasarahalli ⇔ KR Market (Kalasipalya)",
+                  "route_type": 3
+                },
+                "o": {
+                  "route_id": "o",
+                  "agency_id": "1",
+                  "route_short_name": "BC-7B PSS-NLGH-8thM",
+                  "route_long_name": "Peenya 2nd stage ⇔ 8th Mile Dasarahalli",
+                  "route_type": 3
+                },
+                "21j": {
+                  "route_id": "21j",
+                  "agency_id": "1",
+                  "route_short_name": "BC-7CA",
+                  "route_long_name": "8th Mile Dasarahalli ⇔ 8th Mile Dasarahalli",
+                  "route_type": 3
+                },
+                "2lc": {
+                  "route_id": "2lc",
+                  "agency_id": "1",
+                  "route_short_name": "BC-7C",
+                  "route_long_name": "8th Mile Dasarahalli ⇔ 8th Mile Dasarahalli",
+                  "route_type": 3
+                },
+                "12m": {
+                  "route_id": "12m",
+                  "agency_id": "1",
+                  "route_short_name": "MF-25",
+                  "route_long_name": "8th Mile Dasarahalli ⇔ Thippennahalli",
+                  "route_type": 3
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [77.49485, 13.03329],
+                      [77.49502, 13.03481],
+                      [77.4952, 13.03481],
+                      [77.49521, 13.03523],
+                      [77.49525, 13.03567],
+                      [77.49405, 13.03577],
+                      [77.49388, 13.03582],
+                      [77.49374, 13.03591],
+                      [77.49369, 13.03596],
+                      [77.49372, 13.036],
+                      [77.49375, 13.03614],
+                      [77.49374, 13.03676],
+                      [77.49379, 13.03746],
+                      [77.49407, 13.03916],
+                      [77.49413, 13.04009],
+                      [77.49419, 13.0403],
+                      [77.49427, 13.04044],
+                      [77.49443, 13.0406],
+                      [77.49457, 13.04071],
+                      [77.49477, 13.04079],
+                      [77.49497, 13.04081],
+                      [77.49545, 13.04078],
+                      [77.49579, 13.04073],
+                      [77.49594, 13.04069],
+                      [77.49632, 13.04054],
+                      [77.49655, 13.04049],
+                      [77.49791, 13.04033],
+                      [77.49809, 13.04029],
+                      [77.49844, 13.04018],
+                      [77.4986, 13.04011],
+                      [77.49882, 13.03998],
+                      [77.49912, 13.03973],
+                      [77.49952, 13.03961],
+                      [77.50003, 13.03943],
+                      [77.50026, 13.03937],
+                      [77.50231, 13.03894],
+                      [77.5034, 13.03869],
+                      [77.50373, 13.0386],
+                      [77.50455, 13.03848],
+                      [77.50457, 13.03916],
+                      [77.50489, 13.04125],
+                      [77.5049, 13.0418],
+                      [77.50496, 13.04232],
+                      [77.50495, 13.04292],
+                      [77.50502, 13.04325],
+                      [77.50513, 13.04351],
+                      [77.50522, 13.04386],
+                      [77.50544, 13.045],
+                      [77.5055, 13.04544]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "1af",
+                    "stop_name": "Venugopala Nagara",
+                    "routes": ["2bu"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.49403, 13.03969]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "2em",
+                    "stop_name": "Suvarna Nagara",
+                    "routes": ["2bu"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.49491, 13.03324]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "2i3",
+                    "stop_name": "Nagasandra Cross",
+                    "routes": ["1k4", "129", "1ll", "2b", "10n", "12p", "1g3", "1jp", "1tx", "1vm", "22r", "2bu", "2qd", "5m", "7x", "kv", "o"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.50451, 13.03849]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "380",
+                    "stop_name": "Nagasandra",
+                    "routes": ["2bu"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.49999, 13.03946]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "4x7",
+                    "stop_name": "Rukmini Nagara",
+                    "routes": ["12p", "1g3", "1tx", "1vm", "21j", "22r", "2bu", "5m"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.50482, 13.04099]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "5rs",
+                    "stop_name": "8th Mile Dasarahalli",
+                    "routes": ["129", "1ll", "2b", "12p", "1g3", "1tx", "1vm", "21j", "2bu", "2lc", "2qd", "5m"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.50547, 13.04544]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "5zl",
+                    "stop_name": "Rock Line Studio",
+                    "routes": ["2bu"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.49634, 13.0406]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "rs",
+                    "stop_name": "Doddabidarakallu",
+                    "routes": ["12m", "2bu"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.49368, 13.03594]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table class="table-horizontal" summary="This table shows schedules for a selection of key stops on the route for Route MF-25A - Suvarna Nagara to 8th Mile Dasarahalli Mon-Sun. Stops and their schedule times are listed in the columns." data-orientation="horizontal">
+            <caption class="sr-only">Route MF-25A - Suvarna Nagara to 8th Mile Dasarahalli | Mon-Sun</caption>
+            <colgroup>
+              <col>
+              <col class="run_0 " id="trip_id_nn1">
+              <col class="run_1 " id="trip_id_p0g">
+              <col class="run_2 " id="trip_id_dpj">
+              <col class="run_3 " id="trip_id_a7z">
+              <col class="run_4 " id="trip_id_c49">
+              <col class="run_5 " id="trip_id_lly">
+              <col class="run_6 " id="trip_id_jwk">
+              <col class="run_7 " id="trip_id_chz">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col">Stop</th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="stop-row" id="stop_id_2em" data-stop-id="2em" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Suvarna Nagara</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">7:10am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:50am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:30am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:10am</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:40pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:20pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:00pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:40pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_rs" data-stop-id="rs" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Doddabidarakallu</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">7:11am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:51am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:31am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:11am</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:41pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:21pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:01pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:41pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_1af" data-stop-id="1af" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Venugopala Nagara</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">7:13am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:53am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:33am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:13am</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:43pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:23pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:03pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:43pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_5zl" data-stop-id="5zl" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Rock Line Studio</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">7:15am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:55am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:35am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:15am</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:45pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:25pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:05pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:45pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_380" data-stop-id="380" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Nagasandra</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">7:17am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:57am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:37am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:17am</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:47pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:27pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:07pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:47pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_2i3" data-stop-id="2i3" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Nagasandra Cross</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">7:19am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">7:59am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:39am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:19am</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:49pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:29pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:09pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:49pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_4x7" data-stop-id="4x7" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Rukmini Nagara</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">7:21am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:01am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:41am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:21am</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:51pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:31pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:11pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:51pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_5rs" data-stop-id="5rs" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">8th Mile Dasarahalli</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">7:23am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:03am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">8:43am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">9:23am</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:53pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:33pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:13pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:53pm</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

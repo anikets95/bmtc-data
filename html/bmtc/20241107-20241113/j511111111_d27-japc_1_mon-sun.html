@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYW5pa2V0czk1IiwiYSI6ImNsemtkZHpwdDB1NGIybHNhaHhhZHR2NzAifQ.YkI9PvPHjhbxOAUBgAgMSw';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+</head>
+
+<body><!-- Timetable generated on 2024-11-07T05:13:59.059Z using GTFS-to-HTML version 2.6.11 -->
+  <div class="timetable-page menu-type-jump">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center gap-2">
+        <div class="route-color-swatch-large flex-none" style="background-color: #000000; color: #FFFFFF;">D27-JAPC</div>
+        <div>Route D27-JAPC</div>
+      </h1>
+      <div class="effective-date text-gray-600 mt-2">Effective November 07, 2024</div>
+      <div class="timetable mb-10" id="timetable_id_j511111111" data-day-list="Mon-Sun" data-direction-name="Depot-27 Jigani" data-timetable-id="j5|1111111|1" data-direction-id="1" data-route-id="j5">
+        <div class="mb-2">
+          <h2 class="text-xl">Route D27-JAPC - Jigani APC Circle to Depot-27 Jigani | Monday-Sunday</h2>
+        </div>
+        <div class="map" id="map_timetable_id_j511111111"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_j511111111",
+              "routes": {
+                "89": {
+                  "route_id": "89",
+                  "agency_id": "1",
+                  "route_short_name": "366-T",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Lingapura",
+                  "route_type": 3
+                },
+                "ee": {
+                  "route_id": "ee",
+                  "agency_id": "1",
+                  "route_short_name": "344-A",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Haragadde",
+                  "route_type": 3
+                },
+                "18y": {
+                  "route_id": "18y",
+                  "agency_id": "1",
+                  "route_short_name": "345-E D34G-BGR-ANK",
+                  "route_long_name": "Depot-34 Gate ⇔ Anekal",
+                  "route_type": 3
+                },
+                "2jx": {
+                  "route_id": "2jx",
+                  "agency_id": "1",
+                  "route_short_name": "353-B",
+                  "route_long_name": "Jigani APC Circle ⇔ Chandapura",
+                  "route_type": 3
+                },
+                "2dg": {
+                  "route_id": "2dg",
+                  "agency_id": "1",
+                  "route_short_name": "365-P",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Anekal",
+                  "route_type": 3
+                },
+                "31v": {
+                  "route_id": "31v",
+                  "agency_id": "1",
+                  "route_short_name": "365-P D34-ANK",
+                  "route_long_name": "Depot-34 Gate ⇔ Anekal",
+                  "route_type": 3
+                },
+                "1gc": {
+                  "route_id": "1gc",
+                  "agency_id": "1",
+                  "route_short_name": "366 D34-NSR",
+                  "route_long_name": "Depot-34 Gate ⇔ Nosenuru",
+                  "route_type": 3
+                },
+                "1v2": {
+                  "route_id": "1v2",
+                  "agency_id": "1",
+                  "route_short_name": "366-R",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Vaddarapalya",
+                  "route_type": 3
+                },
+                "2c6": {
+                  "route_id": "2c6",
+                  "agency_id": "1",
+                  "route_short_name": "366-W",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Vaderamanchanahalli Jigani",
+                  "route_type": 3
+                },
+                "2tq": {
+                  "route_id": "2tq",
+                  "agency_id": "1",
+                  "route_short_name": "366-F",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Nosenuru",
+                  "route_type": 3
+                },
+                "5t": {
+                  "route_id": "5t",
+                  "agency_id": "1",
+                  "route_short_name": "366-Z",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Anekal",
+                  "route_type": 3
+                },
+                "2cm": {
+                  "route_id": "2cm",
+                  "agency_id": "1",
+                  "route_short_name": "372-M",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Thammanayakanahalli",
+                  "route_type": 3
+                },
+                "2eq": {
+                  "route_id": "2eq",
+                  "agency_id": "1",
+                  "route_short_name": "399-E",
+                  "route_long_name": "Jigani APC Circle ⇔ Chikka Thirupathi",
+                  "route_type": 3
+                },
+                "14x": {
+                  "route_id": "14x",
+                  "agency_id": "1",
+                  "route_short_name": "600-FC",
+                  "route_long_name": "Banashankari Bus Station ⇔ Jigani APC Circle",
+                  "route_type": 3
+                },
+                "j5": {
+                  "route_id": "j5",
+                  "agency_id": "1",
+                  "route_short_name": "D27-JAPC",
+                  "route_long_name": "Depot-27 Jigani ⇔ Jigani APC Circle",
+                  "route_type": 3
+                },
+                "l5": {
+                  "route_id": "l5",
+                  "agency_id": "1",
+                  "route_short_name": "D27G-ANKL",
+                  "route_long_name": "Depot-27 Gate ⇔ Anekal",
+                  "route_type": 3
+                },
+                "1oy": {
+                  "route_id": "1oy",
+                  "agency_id": "1",
+                  "route_short_name": "D27-D27G",
+                  "route_long_name": "Depot-27 Jigani ⇔ Depot-27 Gate",
+                  "route_type": 3
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [77.64379, 12.77896],
+                      [77.64372, 12.7791],
+                      [77.64351, 12.77906],
+                      [77.64282, 12.77903],
+                      [77.64048, 12.77897],
+                      [77.64015, 12.77897],
+                      [77.63997, 12.77899],
+                      [77.63848, 12.77924],
+                      [77.63658, 12.77948],
+                      [77.6359, 12.77959],
+                      [77.63573, 12.77963],
+                      [77.63445, 12.78003],
+                      [77.63447, 12.7801]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "1hw",
+                    "stop_name": "Jigani APC Circle",
+                    "routes": ["ee", "18y", "2jx", "2dg", "31v", "1gc", "1v2", "2c6", "2tq", "5t", "89", "2cm", "2eq", "14x", "j5", "l5"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.64381, 12.77896]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "3dh",
+                    "stop_name": "Depot-27 Jigani",
+                    "routes": ["1oy", "j5"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.63446, 12.78019]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table class="table-horizontal" summary="This table shows schedules for a selection of key stops on the route for Route D27-JAPC - Jigani APC Circle to Depot-27 Jigani Mon-Sun. Stops and their schedule times are listed in the columns." data-orientation="horizontal">
+            <caption class="sr-only">Route D27-JAPC - Jigani APC Circle to Depot-27 Jigani | Mon-Sun</caption>
+            <colgroup>
+              <col>
+              <col class="run_0 " id="trip_id_gc9">
+              <col class="run_1 " id="trip_id_han">
+              <col class="run_2 " id="trip_id_lpw">
+              <col class="run_3 " id="trip_id_3tk">
+              <col class="run_4 " id="trip_id_2hq">
+              <col class="run_5 " id="trip_id_zm">
+              <col class="run_6 " id="trip_id_hto">
+              <col class="run_7 " id="trip_id_jm0">
+              <col class="run_8 " id="trip_id_3a8">
+              <col class="run_9 " id="trip_id_eqh">
+              <col class="run_10 " id="trip_id_4px">
+              <col class="run_11 " id="trip_id_owi">
+              <col class="run_12 " id="trip_id_3lz">
+              <col class="run_13 " id="trip_id_9mf">
+              <col class="run_14 " id="trip_id_e4s">
+              <col class="run_15 " id="trip_id_9ek">
+              <col class="run_16 " id="trip_id_mz1">
+              <col class="run_17 " id="trip_id_5is">
+              <col class="run_18 " id="trip_id_2i">
+              <col class="run_19 " id="trip_id_9cr">
+              <col class="run_20 " id="trip_id_or3">
+              <col class="run_21 " id="trip_id_p5v">
+              <col class="run_22 " id="trip_id_i1g">
+              <col class="run_23 " id="trip_id_j0d">
+              <col class="run_24 " id="trip_id_cl4">
+              <col class="run_25 " id="trip_id_1g6">
+              <col class="run_26 " id="trip_id_3jf">
+              <col class="run_27 " id="trip_id_7x1">
+              <col class="run_28 " id="trip_id_geg">
+              <col class="run_29 " id="trip_id_kac">
+              <col class="run_30 " id="trip_id_ex6">
+              <col class="run_31 " id="trip_id_2tk">
+              <col class="run_32 " id="trip_id_485">
+              <col class="run_33 " id="trip_id_5wc">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col">Stop</th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="stop-row" id="stop_id_1hw" data-stop-id="1hw" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Jigani APC Circle</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">11:10am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:14am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:24am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:44am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:54am</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:34pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:35pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:39pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:50pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:54pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:19pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:24pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:59pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:04pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:09pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:19pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:24pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:29pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:34pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:39pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:40pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:54pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:04pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:09pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:14pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:19pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:24pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:29pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:34pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:39pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:54pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:29pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:34pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:59pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_3dh" data-stop-id="3dh" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Depot-27 Jigani</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">11:12am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:14am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:24am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:44am</span></td>
+                <td class="stop-time am"><span class="stop-time-text">11:54am</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:34pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:37pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:39pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:52pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">12:54pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">1:19pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:24pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">5:59pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:04pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:09pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:19pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:24pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:29pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:34pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:39pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:42pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">6:54pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:04pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:09pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:14pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:19pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:24pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:29pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:34pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:39pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:54pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:29pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:34pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:59pm</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

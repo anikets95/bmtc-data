@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYW5pa2V0czk1IiwiYSI6ImNsemtkZHpwdDB1NGIybHNhaHhhZHR2NzAifQ.YkI9PvPHjhbxOAUBgAgMSw';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+</head>
+
+<body><!-- Timetable generated on 2024-11-07T05:18:25.488Z using GTFS-to-HTML version 2.6.11 -->
+  <div class="timetable-page menu-type-jump">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center gap-2">
+        <div class="route-color-swatch-large flex-none" style="background-color: #000000; color: #FFFFFF;">285 PTML-DBRC-KLRH</div>
+        <div>Route 285 PTML-DBRC-KLRH</div>
+      </h1>
+      <div class="effective-date text-gray-600 mt-2">Effective November 07, 2024</div>
+      <div class="timetable mb-10" id="timetable_id_n611111111" data-day-list="Mon-Sun" data-direction-name="Patalamma Temple" data-timetable-id="n6|1111111|1" data-direction-id="1" data-route-id="n6">
+        <div class="mb-2">
+          <h2 class="text-xl">Route 285 PTML-DBRC-KLRH - Koluvarayanahalli to Patalamma Temple | Monday-Sunday</h2>
+        </div>
+        <div class="map" id="map_timetable_id_n611111111"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_n611111111",
+              "routes": {
+                "55": {
+                  "route_id": "55",
+                  "agency_id": "1",
+                  "route_short_name": "285-M MADT-DBP",
+                  "route_long_name": "Malya Adhithi School ⇔ Doddaballapura Bus Stand",
+                  "route_type": 3
+                },
+                "133": {
+                  "route_id": "133",
+                  "agency_id": "1",
+                  "route_short_name": "V-285M",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Doddaballapura Bus Stand",
+                  "route_type": 3
+                },
+                "140": {
+                  "route_id": "140",
+                  "agency_id": "1",
+                  "route_short_name": "285 KMT-THS-BTN",
+                  "route_long_name": "KR Market ⇔ Bettenahalli",
+                  "route_type": 3
+                },
+                "225": {
+                  "route_id": "225",
+                  "agency_id": "1",
+                  "route_short_name": "285-MA KMT-CVB-PTML",
+                  "route_long_name": "KR Market ⇔ Patalamma Temple",
+                  "route_type": 3
+                },
+                "228": {
+                  "route_id": "228",
+                  "agency_id": "1",
+                  "route_short_name": "285-K KBS-SDNH",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Sadenahalli",
+                  "route_type": 3
+                },
+                "1ms": {
+                  "route_id": "1ms",
+                  "agency_id": "1",
+                  "route_short_name": "283-D PTML-KDGC",
+                  "route_long_name": "Patalamma Temple ⇔ Kuduregere Colony",
+                  "route_type": 3
+                },
+                "1a7": {
+                  "route_id": "1a7",
+                  "agency_id": "1",
+                  "route_short_name": "285-R",
+                  "route_long_name": "KR Market ⇔ Challahalli",
+                  "route_type": 3
+                },
+                "1no": {
+                  "route_id": "1no",
+                  "agency_id": "1",
+                  "route_short_name": "285-M PTML-DVH",
+                  "route_long_name": "Patalamma Temple ⇔ Devanahalli Old Bus Stand",
+                  "route_type": 3
+                },
+                "1ud": {
+                  "route_id": "1ud",
+                  "agency_id": "1",
+                  "route_short_name": "285-MP",
+                  "route_long_name": "Yelahanka Old Town ⇔ Doddaballapura Bus Stand",
+                  "route_type": 3
+                },
+                "1ya": {
+                  "route_id": "1ya",
+                  "agency_id": "1",
+                  "route_short_name": "285-P",
+                  "route_long_name": "KR Market ⇔ Bettenahalli",
+                  "route_type": 3
+                },
+                "2b7": {
+                  "route_id": "2b7",
+                  "agency_id": "1",
+                  "route_short_name": "285-J PTML-JLG",
+                  "route_long_name": "Patalamma Temple ⇔ Jalige",
+                  "route_type": 3
+                },
+                "2ju": {
+                  "route_id": "2ju",
+                  "agency_id": "1",
+                  "route_short_name": "285-MP PTML-NAGH",
+                  "route_long_name": "Patalamma Temple ⇔ Narasaiahna Agrahara",
+                  "route_type": 3
+                },
+                "2ku": {
+                  "route_id": "2ku",
+                  "agency_id": "1",
+                  "route_short_name": "285-J",
+                  "route_long_name": "KR Market ⇔ Jalige",
+                  "route_type": 3
+                },
+                "2nr": {
+                  "route_id": "2nr",
+                  "agency_id": "1",
+                  "route_short_name": "285-MA -DBP-KBS",
+                  "route_long_name": "Doddaballapura Bus Stand ⇔ Kempegowda Bus Station",
+                  "route_type": 3
+                },
+                "2ra": {
+                  "route_id": "2ra",
+                  "agency_id": "1",
+                  "route_short_name": "285-JB",
+                  "route_long_name": "Thindlu ⇔ KR Market",
+                  "route_type": 3
+                },
+                "2v6": {
+                  "route_id": "2v6",
+                  "agency_id": "1",
+                  "route_short_name": "285-MA SNBS-DBP",
+                  "route_long_name": "Shanthinagara Bus Station ⇔ Doddaballapura Bus Stand",
+                  "route_type": 3
+                },
+                "2yi": {
+                  "route_id": "2yi",
+                  "agency_id": "1",
+                  "route_short_name": "285-CA",
+                  "route_long_name": "KR Market ⇔ Jinke Bachahalli",
+                  "route_type": 3
+                },
+                "31p": {
+                  "route_id": "31p",
+                  "agency_id": "1",
+                  "route_short_name": "285-X PTML-DBR",
+                  "route_long_name": "Patalamma Temple ⇔ Dibbur",
+                  "route_type": 3
+                },
+                "3k": {
+                  "route_id": "3k",
+                  "agency_id": "1",
+                  "route_short_name": "285-CC",
+                  "route_long_name": "KR Market ⇔ Chikka Tumkur",
+                  "route_type": 3
+                },
+                "5d": {
+                  "route_id": "5d",
+                  "agency_id": "1",
+                  "route_short_name": "285-C",
+                  "route_long_name": "KR Market ⇔ Dodda Tumkur",
+                  "route_type": 3
+                },
+                "eh": {
+                  "route_id": "eh",
+                  "agency_id": "1",
+                  "route_short_name": "285-MA",
+                  "route_long_name": "Cauvery Bhavana ⇔ Doddaballapura Bus Stand",
+                  "route_type": 3
+                },
+                "n6": {
+                  "route_id": "n6",
+                  "agency_id": "1",
+                  "route_short_name": "285 PTML-DBRC-KLRH",
+                  "route_long_name": "Patalamma Temple ⇔ Koluvarayanahalli",
+                  "route_type": 3
+                },
+                "ng": {
+                  "route_id": "ng",
+                  "agency_id": "1",
+                  "route_short_name": "285-MK",
+                  "route_long_name": "KR Market ⇔ Doddaballapura Bus Stand",
+                  "route_type": 3
+                },
+                "2z5": {
+                  "route_id": "2z5",
+                  "agency_id": "1",
+                  "route_short_name": "291-K",
+                  "route_long_name": "Shivajinagara Bus Station ⇔ Rajanukunte",
+                  "route_type": 3
+                },
+                "13b": {
+                  "route_id": "13b",
+                  "agency_id": "1",
+                  "route_short_name": "RJK-BLR",
+                  "route_long_name": "Rajanukunte ⇔ Bagalur",
+                  "route_type": 3
+                },
+                "1jx": {
+                  "route_id": "1jx",
+                  "agency_id": "1",
+                  "route_short_name": "G-10 KMT-THS-PTML",
+                  "route_long_name": "KR Market ⇔ Patalamma Temple",
+                  "route_type": 3
+                },
+                "1nl": {
+                  "route_id": "1nl",
+                  "agency_id": "1",
+                  "route_short_name": "253-L PTML-HGV",
+                  "route_long_name": "Patalamma Temple ⇔ Hesaraghatta",
+                  "route_type": 3
+                },
+                "1sd": {
+                  "route_id": "1sd",
+                  "agency_id": "1",
+                  "route_short_name": "285-E KBS-KKLV",
+                  "route_long_name": "Kakolu Village ⇔ Kempegowda Bus Station",
+                  "route_type": 3
+                },
+                "vs": {
+                  "route_id": "vs",
+                  "agency_id": "1",
+                  "route_short_name": "285RC",
+                  "route_long_name": "Hesaraghatta ⇔ Kempegowda Bus Station",
+                  "route_type": 3
+                },
+                "1bp": {
+                  "route_id": "1bp",
+                  "agency_id": "1",
+                  "route_short_name": "285-RA HNYR-KBS",
+                  "route_long_name": "Haniyuru ⇔ Kempegowda Bus Station",
+                  "route_type": 3
+                },
+                "2ba": {
+                  "route_id": "2ba",
+                  "agency_id": "1",
+                  "route_short_name": "285-R SBS-HNYR",
+                  "route_long_name": "Shivajinagara Bus Station ⇔ Haniyuru",
+                  "route_type": 3
+                },
+                "2tm": {
+                  "route_id": "2tm",
+                  "agency_id": "1",
+                  "route_short_name": "285-YA HHP-KBS",
+                  "route_long_name": "Harohalli Palya ⇔ Kempegowda Bus Station",
+                  "route_type": 3
+                },
+                "30w": {
+                  "route_id": "30w",
+                  "agency_id": "1",
+                  "route_short_name": "285-X DBR-KBS",
+                  "route_long_name": "Dibbur ⇔ Kempegowda Bus Station",
+                  "route_type": 3
+                },
+                "z6": {
+                  "route_id": "z6",
+                  "agency_id": "1",
+                  "route_short_name": "285-L KBS-BYT",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Byatha",
+                  "route_type": 3
+                },
+                "25l": {
+                  "route_id": "25l",
+                  "agency_id": "1",
+                  "route_short_name": "290-E SBS-SNH",
+                  "route_long_name": "Shivajinagara Bus Station ⇔ Sonnenahalli",
+                  "route_type": 3
+                },
+                "1qc": {
+                  "route_id": "1qc",
+                  "agency_id": "1",
+                  "route_short_name": "406 YHKOT-NMG",
+                  "route_long_name": "Yelahanka Old Town ⇔ Nelamangala Bus Station",
+                  "route_type": 3
+                },
+                "2l": {
+                  "route_id": "2l",
+                  "agency_id": "1",
+                  "route_short_name": "407-B",
+                  "route_long_name": "Yelahanka Old Town ⇔ Yelahanka Old Town",
+                  "route_type": 3
+                },
+                "2mx": {
+                  "route_id": "2mx",
+                  "agency_id": "1",
+                  "route_short_name": "409",
+                  "route_long_name": "Nelamangala Bus Station ⇔ Yelahanka Old Town",
+                  "route_type": 3
+                },
+                "2j7": {
+                  "route_id": "2j7",
+                  "agency_id": "1",
+                  "route_short_name": "285-H",
+                  "route_long_name": "KR Market ⇔ Koluvarayanahalli",
+                  "route_type": 3
+                },
+                "9f": {
+                  "route_id": "9f",
+                  "agency_id": "1",
+                  "route_short_name": "285-W",
+                  "route_long_name": "KR Market ⇔ Dibbur",
+                  "route_type": 3
+                },
+                "c6": {
+                  "route_id": "c6",
+                  "agency_id": "1",
+                  "route_short_name": "285-H KBS-KLRH",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Koluvarayanahalli",
+                  "route_type": 3
+                },
+                "1ew": {
+                  "route_id": "1ew",
+                  "agency_id": "1",
+                  "route_short_name": "285 KBS-SRKMS",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Sri Rakum School",
+                  "route_type": 3
+                },
+                "1l0": {
+                  "route_id": "1l0",
+                  "agency_id": "1",
+                  "route_short_name": "285-JE PTML-DYVH",
+                  "route_long_name": "Patalamma Temple ⇔ Dyavarahalli",
+                  "route_type": 3
+                },
+                "1na": {
+                  "route_id": "1na",
+                  "agency_id": "1",
+                  "route_short_name": "285-M PTLM-DBP",
+                  "route_long_name": "Patalamma Temple ⇔ Doddaballapura Bus Stand",
+                  "route_type": 3
+                },
+                "1p4": {
+                  "route_id": "1p4",
+                  "agency_id": "1",
+                  "route_short_name": "285-K",
+                  "route_long_name": "KR Market ⇔ Sadenahalli",
+                  "route_type": 3
+                },
+                "1vg": {
+                  "route_id": "1vg",
+                  "agency_id": "1",
+                  "route_short_name": "285-MJ  D46G-JKR",
+                  "route_long_name": "Patalamma Temple ⇔ Jakkur",
+                  "route_type": 3
+                },
+                "1vk": {
+                  "route_id": "1vk",
+                  "agency_id": "1",
+                  "route_short_name": "285-KA KBS-BTN",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Bettenahalli",
+                  "route_type": 3
+                },
+                "2bv": {
+                  "route_id": "2bv",
+                  "agency_id": "1",
+                  "route_short_name": "285 SBS-MKC-PTLM",
+                  "route_long_name": "Patalamma Temple ⇔ Shivajinagara Bus Station",
+                  "route_type": 3
+                },
+                "2d5": {
+                  "route_id": "2d5",
+                  "agency_id": "1",
+                  "route_short_name": "285-CB PTML-KKH",
+                  "route_long_name": "Patalamma Temple ⇔ Kakkehalli",
+                  "route_type": 3
+                },
+                "2e8": {
+                  "route_id": "2e8",
+                  "agency_id": "1",
+                  "route_short_name": "285-N",
+                  "route_long_name": "KR Market ⇔ Tharahunase",
+                  "route_type": 3
+                },
+                "2zc": {
+                  "route_id": "2zc",
+                  "agency_id": "1",
+                  "route_short_name": "285-MA PTML-CVB",
+                  "route_long_name": "Patalamma Temple ⇔ Cauvery Bhavana",
+                  "route_type": 3
+                },
+                "ra": {
+                  "route_id": "ra",
+                  "agency_id": "1",
+                  "route_short_name": "285-F PTML-BRPR",
+                  "route_long_name": "Patalamma Temple ⇔ Byrapura",
+                  "route_type": 3
+                },
+                "w1": {
+                  "route_id": "w1",
+                  "agency_id": "1",
+                  "route_short_name": "285-K PTMT-CVB-KBS",
+                  "route_long_name": "Patalamma Temple ⇔ Kempegowda Bus Station",
+                  "route_type": 3
+                },
+                "y5": {
+                  "route_id": "y5",
+                  "agency_id": "1",
+                  "route_short_name": "285-F PTML-BRP-HNYR",
+                  "route_long_name": "Patalamma Temple ⇔ Haniyuru",
+                  "route_type": 3
+                },
+                "1bn": {
+                  "route_id": "1bn",
+                  "agency_id": "1",
+                  "route_short_name": "290-E SBS-PTLM",
+                  "route_long_name": "Shivajinagara Bus Station ⇔ Patalamma Temple",
+                  "route_type": 3
+                },
+                "g3": {
+                  "route_id": "g3",
+                  "agency_id": "1",
+                  "route_short_name": "401-BJ PTML-MHC",
+                  "route_long_name": "Patalamma Temple ⇔ Mallasandra Health Center",
+                  "route_type": 3
+                },
+                "12t": {
+                  "route_id": "12t",
+                  "agency_id": "1",
+                  "route_short_name": "KDGC-PTML",
+                  "route_long_name": "Kuduregere Colony ⇔ Patalamma Temple",
+                  "route_type": 3
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [77.52177, 13.16499],
+                      [77.52176, 13.16504],
+                      [77.5218, 13.16526],
+                      [77.52221, 13.16575],
+                      [77.52237, 13.16615],
+                      [77.52243, 13.16676],
+                      [77.52225, 13.16806],
+                      [77.52213, 13.16858],
+                      [77.52203, 13.16866],
+                      [77.52193, 13.16869],
+                      [77.52106, 13.16886],
+                      [77.52115, 13.16893],
+                      [77.52157, 13.16968],
+                      [77.52161, 13.16985],
+                      [77.52165, 13.17038],
+                      [77.52167, 13.17107],
+                      [77.5217, 13.17112],
+                      [77.52181, 13.17121],
+                      [77.5219, 13.17125],
+                      [77.52203, 13.17128],
+                      [77.52329, 13.17133],
+                      [77.52348, 13.17135],
+                      [77.52364, 13.17141],
+                      [77.52392, 13.17158],
+                      [77.52402, 13.17168],
+                      [77.5241, 13.17181],
+                      [77.5242, 13.17207],
+                      [77.52429, 13.17221],
+                      [77.52448, 13.17242],
+                      [77.52471, 13.1729],
+                      [77.52481, 13.17299],
+                      [77.52512, 13.17313],
+                      [77.52519, 13.17319],
+                      [77.52525, 13.17327],
+                      [77.52539, 13.17369],
+                      [77.52564, 13.17358],
+                      [77.52583, 13.17352],
+                      [77.52728, 13.17311],
+                      [77.52794, 13.17293],
+                      [77.52883, 13.17273],
+                      [77.52962, 13.17266],
+                      [77.53016, 13.17265],
+                      [77.53042, 13.17261],
+                      [77.53061, 13.1726],
+                      [77.53158, 13.17258],
+                      [77.53248, 13.17262],
+                      [77.53263, 13.17261],
+                      [77.53302, 13.17252],
+                      [77.53489, 13.17188],
+                      [77.53514, 13.17182],
+                      [77.53528, 13.17182],
+                      [77.53543, 13.17186],
+                      [77.53554, 13.17192],
+                      [77.53579, 13.17215],
+                      [77.53615, 13.17256],
+                      [77.53661, 13.17326],
+                      [77.53672, 13.17339],
+                      [77.53689, 13.17355],
+                      [77.5372, 13.17376],
+                      [77.5374, 13.17386],
+                      [77.53759, 13.17392],
+                      [77.53825, 13.17402],
+                      [77.53962, 13.17418],
+                      [77.53986, 13.17416],
+                      [77.54044, 13.17403],
+                      [77.54064, 13.174],
+                      [77.54095, 13.17403],
+                      [77.54109, 13.17407],
+                      [77.5421, 13.17447],
+                      [77.54263, 13.17466],
+                      [77.54334, 13.17486],
+                      [77.54377, 13.17501],
+                      [77.54438, 13.17528],
+                      [77.54451, 13.17532],
+                      [77.54469, 13.17535],
+                      [77.5449, 13.17535],
+                      [77.54547, 13.17529],
+                      [77.54671, 13.17529],
+                      [77.54708, 13.17526],
+                      [77.54754, 13.17513],
+                      [77.54798, 13.17494],
+                      [77.54836, 13.1747],
+                      [77.54854, 13.17454],
+                      [77.54865, 13.17435],
+                      [77.54871, 13.17417],
+                      [77.54878, 13.17384],
+                      [77.5488, 13.17283],
+                      [77.54901, 13.17138],
+                      [77.54906, 13.17119],
+                      [77.54918, 13.17087],
+                      [77.54932, 13.17061],
+                      [77.5494, 13.17051],
+                      [77.54958, 13.17035],
+                      [77.54976, 13.17025],
+                      [77.55012, 13.17013],
+                      [77.5503, 13.17009],
+                      [77.55063, 13.17006],
+                      [77.55098, 13.17006],
+                      [77.55171, 13.17011],
+                      [77.55202, 13.17015],
+                      [77.55267, 13.17027],
+                      [77.55635, 13.17117],
+                      [77.55719, 13.17135],
+                      [77.55952, 13.17191],
+                      [77.56083, 13.17219],
+                      [77.56159, 13.17238],
+                      [77.56252, 13.17258],
+                      [77.56266, 13.17263],
+                      [77.56314, 13.17274],
+                      [77.56433, 13.17298],
+                      [77.56425, 13.17493],
+                      [77.56436, 13.17495],
+                      [77.5646, 13.17496],
+                      [77.56471, 13.17494],
+                      [77.56482, 13.1749],
+                      [77.56489, 13.17485],
+                      [77.56497, 13.17475],
+                      [77.56503, 13.17452],
+                      [77.56497, 13.17344],
+                      [77.56497, 13.17332],
+                      [77.56499, 13.17321],
+                      [77.56509, 13.17303],
+                      [77.56526, 13.17286],
+                      [77.56545, 13.17273],
+                      [77.56557, 13.17268],
+                      [77.56574, 13.17265],
+                      [77.566, 13.17267],
+                      [77.56689, 13.17296],
+                      [77.56738, 13.17305],
+                      [77.56799, 13.17312],
+                      [77.56824, 13.17312],
+                      [77.56843, 13.1731],
+                      [77.56897, 13.17297],
+                      [77.56972, 13.17297],
+                      [77.56974, 13.17315],
+                      [77.56975, 13.17352],
+                      [77.56967, 13.17386],
+                      [77.5696, 13.17443],
+                      [77.56957, 13.1749],
+                      [77.56958, 13.17519],
+                      [77.56975, 13.17595],
+                      [77.57052, 13.17874],
+                      [77.57055, 13.17889],
+                      [77.57056, 13.17905],
+                      [77.57056, 13.1792],
+                      [77.57053, 13.17943],
+                      [77.57027, 13.18021],
+                      [77.57011, 13.18095],
+                      [77.5701, 13.18115],
+                      [77.5702, 13.18222],
+                      [77.57019, 13.18236],
+                      [77.5701, 13.18246],
+                      [77.56987, 13.18265],
+                      [77.56984, 13.18272],
+                      [77.56982, 13.18327],
+                      [77.56984, 13.18338],
+                      [77.56989, 13.18343]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "106",
+                    "stop_name": "Rajanukunte",
+                    "routes": ["1ms", "1a7", "1no", "1ud", "1ya", "2b7", "2ju", "2ku", "2nr", "2ra", "2v6", "2yi", "31p", "3k", "55", "5d", "eh", "n6", "ng", "2z5", "133", "13b", "1jx"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.56432, 13.17307]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "1ki",
+                    "stop_name": "Ittagalpura Cross",
+                    "routes": ["1nl", "1sd", "n6"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.5426, 13.17467]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "2cy",
+                    "stop_name": "Seethakempanahalli Cross",
+                    "routes": ["n6", "vs"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.521, 13.16886]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "2v9",
+                    "stop_name": "Ittagalpura Gate",
+                    "routes": ["1nl", "1bp", "1sd", "2ba", "2tm", "30w", "31p", "n6", "vs", "z6", "25l", "1qc", "2l", "2mx"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.55025, 13.17012]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "4r6",
+                    "stop_name": "Koluvarayanahalli",
+                    "routes": ["2j7", "9f", "c6", "n6"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.52176, 13.16498]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "4yv",
+                    "stop_name": "Seethakempanahalli Gate",
+                    "routes": ["1nl", "1bp", "2ba", "2tm", "n6", "vs", "z6", "25l", "1qc", "2mx"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.52541, 13.17377]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "5xo",
+                    "stop_name": "Shanubhoganahalli Gate (Dibbur Cross)",
+                    "routes": ["1nl", "1bp", "1sd", "2ba", "30w", "31p", "n6", "vs", "z6", "25l", "1qc", "2l", "2mx"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.53019, 13.17267]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "605",
+                    "stop_name": "Parvathipura",
+                    "routes": ["1nl", "1ms", "140", "1ew", "1l0", "1na", "1p4", "1vg", "1vk", "225", "228", "2bv", "2d5", "2e8", "2zc", "31p", "n6", "ra", "w1", "y5", "1bn", "2z5", "g3", "2l", "2mx", "1jx"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.56616, 13.17274]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "67n",
+                    "stop_name": "Patalamma Temple",
+                    "routes": ["1nl", "1ms", "1l0", "1na", "1p4", "1vk", "225", "2d5", "2e8", "2zc", "31p", "n6", "1bn", "g3", "12t", "1jx"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.56988, 13.18344]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "ab",
+                    "stop_name": "Sri Banashankari Layout",
+                    "routes": ["1nl", "1bp", "1sd", "2ba", "2tm", "30w", "31p", "n6", "vs", "z6", "25l", "1qc", "2l", "2mx"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.55796, 13.17154]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "b2",
+                    "stop_name": "Cable Factory Ittagallapura",
+                    "routes": ["1nl", "1bp", "1sd", "2ba", "2tm", "31p", "n6", "vs", "z6", "1qc", "2l", "2mx"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.54044, 13.17404]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table class="table-horizontal" summary="This table shows schedules for a selection of key stops on the route for Route 285 PTML-DBRC-KLRH - Koluvarayanahalli to Patalamma Temple Mon-Sun. Stops and their schedule times are listed in the columns." data-orientation="horizontal">
+            <caption class="sr-only">Route 285 PTML-DBRC-KLRH - Koluvarayanahalli to Patalamma Temple | Mon-Sun</caption>
+            <colgroup>
+              <col>
+              <col class="run_0 " id="trip_id_yj">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col">Stop</th>
+                <th class="run-header" scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="stop-row" id="stop_id_4r6" data-stop-id="4r6" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Koluvarayanahalli</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">11:00am</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_2cy" data-stop-id="2cy" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Seethakempanahalli Cross</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">11:01am</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_4yv" data-stop-id="4yv" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Seethakempanahalli Gate</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">11:03am</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_5xo" data-stop-id="5xo" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Shanubhoganahalli Gate (Dibbur Cross)</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">11:05am</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_b2" data-stop-id="b2" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Cable Factory Ittagallapura</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">11:07am</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_1ki" data-stop-id="1ki" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Ittagalpura Cross</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">11:09am</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_2v9" data-stop-id="2v9" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Ittagalpura Gate</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">11:10am</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_ab" data-stop-id="ab" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Sri Banashankari Layout</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">11:12am</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_106" data-stop-id="106" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Rajanukunte</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">11:14am</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_605" data-stop-id="605" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Parvathipura</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">11:16am</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_67n" data-stop-id="67n" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Patalamma Temple</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">11:18am</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

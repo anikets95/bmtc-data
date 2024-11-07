@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYW5pa2V0czk1IiwiYSI6ImNsemtkZHpwdDB1NGIybHNhaHhhZHR2NzAifQ.YkI9PvPHjhbxOAUBgAgMSw';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+</head>
+
+<body><!-- Timetable generated on 2024-11-07T05:18:11.660Z using GTFS-to-HTML version 2.6.11 -->
+  <div class="timetable-page menu-type-jump">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center gap-2">
+        <div class="route-color-swatch-large flex-none" style="background-color: #000000; color: #FFFFFF;">PTH-MADT</div>
+        <div>Route PTH-MADT</div>
+      </h1>
+      <div class="effective-date text-gray-600 mt-2">Effective November 07, 2024</div>
+      <div class="timetable mb-10" id="timetable_id_2yl11111110" data-day-list="Mon-Sun" data-direction-name="Malya Adhithi School" data-timetable-id="2yl|1111111|0" data-direction-id="0" data-route-id="2yl">
+        <div class="mb-2">
+          <h2 class="text-xl">Route PTH-MADT - Puttenahalli to Malya Adhithi School | Monday-Sunday</h2>
+        </div>
+        <div class="map" id="map_timetable_id_2yl11111110"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_2yl11111110",
+              "routes": {
+                "55": {
+                  "route_id": "55",
+                  "agency_id": "1",
+                  "route_short_name": "285-M MADT-DBP",
+                  "route_long_name": "Malya Adhithi School ⇔ Doddaballapura Bus Stand",
+                  "route_type": 3
+                },
+                "133": {
+                  "route_id": "133",
+                  "agency_id": "1",
+                  "route_short_name": "V-285M",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Doddaballapura Bus Stand",
+                  "route_type": 3
+                },
+                "170": {
+                  "route_id": "170",
+                  "agency_id": "1",
+                  "route_short_name": "285-MJ HBLB-GST",
+                  "route_long_name": "Hebbala Bridge ⇔ Ghati Subramanya",
+                  "route_type": 3
+                },
+                "228": {
+                  "route_id": "228",
+                  "agency_id": "1",
+                  "route_short_name": "285-K KBS-SDNH",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Sadenahalli",
+                  "route_type": 3
+                },
+                "hu": {
+                  "route_id": "hu",
+                  "agency_id": "1",
+                  "route_short_name": "285 SBS-MKC-MADT",
+                  "route_long_name": "Shivajinagara Bus Station ⇔ Malya Adhithi School",
+                  "route_type": 3
+                },
+                "29x": {
+                  "route_id": "29x",
+                  "agency_id": "1",
+                  "route_short_name": "402-D KBS-MADT",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Malya Adhithi School",
+                  "route_type": 3
+                },
+                "2yl": {
+                  "route_id": "2yl",
+                  "agency_id": "1",
+                  "route_short_name": "PTH-MADT",
+                  "route_long_name": "Puttenahalli ⇔ Malya Adhithi School",
+                  "route_type": 3
+                },
+                "9a": {
+                  "route_id": "9a",
+                  "agency_id": "1",
+                  "route_short_name": "D11-MADT",
+                  "route_long_name": "Depot-11 Puttenahalli ⇔ Malya Adhithi School",
+                  "route_type": 3
+                },
+                "jd": {
+                  "route_id": "jd",
+                  "agency_id": "1",
+                  "route_short_name": "PTH-MAS",
+                  "route_long_name": "Puttenahalli ⇔ Malya Adhithi School",
+                  "route_type": 3
+                },
+                "27s": {
+                  "route_id": "27s",
+                  "agency_id": "1",
+                  "route_short_name": "276 KBS-PTH",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Puttenahalli",
+                  "route_type": 3
+                },
+                "15x": {
+                  "route_id": "15x",
+                  "agency_id": "1",
+                  "route_short_name": "282-D PTH-VVC",
+                  "route_long_name": "Puttenahalli ⇔ Vasantavihar Colony Billamaranahalli",
+                  "route_type": 3
+                },
+                "1tk": {
+                  "route_id": "1tk",
+                  "agency_id": "1",
+                  "route_short_name": "282-A PTH-HSHK",
+                  "route_long_name": "Puttenahalli ⇔ Hosahalli Kodagalahatti",
+                  "route_type": 3
+                },
+                "1ak": {
+                  "route_id": "1ak",
+                  "agency_id": "1",
+                  "route_short_name": "283 PTH-SGT",
+                  "route_long_name": "Puttenahalli ⇔ Suggatta",
+                  "route_type": 3
+                },
+                "17s": {
+                  "route_id": "17s",
+                  "agency_id": "1",
+                  "route_short_name": "285-RB KBS-KNW",
+                  "route_long_name": "Kanasawadi ⇔ Kempegowda Bus Station",
+                  "route_type": 3
+                },
+                "18d": {
+                  "route_id": "18d",
+                  "agency_id": "1",
+                  "route_short_name": "285-MK KMT-PTML",
+                  "route_long_name": "KR Market ⇔ Patalamma Temple",
+                  "route_type": 3
+                },
+                "1bp": {
+                  "route_id": "1bp",
+                  "agency_id": "1",
+                  "route_short_name": "285-RA HNYR-KBS",
+                  "route_long_name": "Haniyuru ⇔ Kempegowda Bus Station",
+                  "route_type": 3
+                },
+                "1jj": {
+                  "route_id": "1jj",
+                  "agency_id": "1",
+                  "route_short_name": "285-P KBS-BTNH",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Bettenahalli",
+                  "route_type": 3
+                },
+                "1sd": {
+                  "route_id": "1sd",
+                  "agency_id": "1",
+                  "route_short_name": "285-E KBS-KKLV",
+                  "route_long_name": "Kakolu Village ⇔ Kempegowda Bus Station",
+                  "route_type": 3
+                },
+                "1sn": {
+                  "route_id": "1sn",
+                  "agency_id": "1",
+                  "route_short_name": "285-MC",
+                  "route_long_name": "NES Office ⇔ Doddaballapura Bus Stand",
+                  "route_type": 3
+                },
+                "1x2": {
+                  "route_id": "1x2",
+                  "agency_id": "1",
+                  "route_short_name": "285-M KBS-DBPH",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Doddaballapura Govt Hospital",
+                  "route_type": 3
+                },
+                "22u": {
+                  "route_id": "22u",
+                  "agency_id": "1",
+                  "route_short_name": "285 SBS-MKC-DDP",
+                  "route_long_name": "Shivajinagara Bus Station ⇔ Doddaballapura Bus Stand",
+                  "route_type": 3
+                },
+                "2ba": {
+                  "route_id": "2ba",
+                  "agency_id": "1",
+                  "route_short_name": "285-R SBS-HNYR",
+                  "route_long_name": "Shivajinagara Bus Station ⇔ Haniyuru",
+                  "route_type": 3
+                },
+                "2bv": {
+                  "route_id": "2bv",
+                  "agency_id": "1",
+                  "route_short_name": "285 SBS-MKC-PTLM",
+                  "route_long_name": "Patalamma Temple ⇔ Shivajinagara Bus Station",
+                  "route_type": 3
+                },
+                "2ds": {
+                  "route_id": "2ds",
+                  "agency_id": "1",
+                  "route_short_name": "285 BTH-THS-KBS",
+                  "route_long_name": "Bettenahalli ⇔ Kempegowda Bus Station",
+                  "route_type": 3
+                },
+                "2g5": {
+                  "route_id": "2g5",
+                  "agency_id": "1",
+                  "route_short_name": "285 BELF-HBLB-DBP",
+                  "route_long_name": "BEL Factory ⇔ Doddaballapura Bus Stand",
+                  "route_type": 3
+                },
+                "2go": {
+                  "route_id": "2go",
+                  "agency_id": "1",
+                  "route_short_name": "285 PTML-YHKOT",
+                  "route_long_name": "Patalamma Temple ⇔ Yelahanka Old Town",
+                  "route_type": 3
+                },
+                "2ib": {
+                  "route_id": "2ib",
+                  "agency_id": "1",
+                  "route_short_name": "285-M YHK-DBP",
+                  "route_long_name": "Yelahanka Old Town ⇔ Doddaballapura Bus Stand",
+                  "route_type": 3
+                },
+                "2pb": {
+                  "route_id": "2pb",
+                  "agency_id": "1",
+                  "route_short_name": "285 BMSITY-MKC-SBS",
+                  "route_long_name": "BMSIT College Campous Yelahanka ⇔ Shivajinagara Bus Station",
+                  "route_type": 3
+                },
+                "2qh": {
+                  "route_id": "2qh",
+                  "agency_id": "1",
+                  "route_short_name": "285-CB KKH-KBS",
+                  "route_long_name": "Kakkehalli ⇔ Kempegowda Bus Station",
+                  "route_type": 3
+                },
+                "2tm": {
+                  "route_id": "2tm",
+                  "agency_id": "1",
+                  "route_short_name": "285-YA HHP-KBS",
+                  "route_long_name": "Harohalli Palya ⇔ Kempegowda Bus Station",
+                  "route_type": 3
+                },
+                "2wa": {
+                  "route_id": "2wa",
+                  "agency_id": "1",
+                  "route_short_name": "285-MG KBS-BMG",
+                  "route_long_name": "Bannimangala ⇔ Kempegowda Bus Station",
+                  "route_type": 3
+                },
+                "2wf": {
+                  "route_id": "2wf",
+                  "agency_id": "1",
+                  "route_short_name": "285-CC KBS-CKTR",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Chikka Tumkur",
+                  "route_type": 3
+                },
+                "30w": {
+                  "route_id": "30w",
+                  "agency_id": "1",
+                  "route_short_name": "285-X DBR-KBS",
+                  "route_long_name": "Dibbur ⇔ Kempegowda Bus Station",
+                  "route_type": 3
+                },
+                "8l": {
+                  "route_id": "8l",
+                  "agency_id": "1",
+                  "route_short_name": "285-MJ GST-JKR",
+                  "route_long_name": "Ghati Subramanya ⇔ Jakkur",
+                  "route_type": 3
+                },
+                "c9": {
+                  "route_id": "c9",
+                  "agency_id": "1",
+                  "route_short_name": "285-MP KBS-NAGH",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Narasaiahna Agrahara",
+                  "route_type": 3
+                },
+                "cs": {
+                  "route_id": "cs",
+                  "agency_id": "1",
+                  "route_short_name": "285-MN",
+                  "route_long_name": "Hebbala Bridge ⇔ Tubagere",
+                  "route_type": 3
+                },
+                "en": {
+                  "route_id": "en",
+                  "agency_id": "1",
+                  "route_short_name": "285-MC PTH-SBS-HAL",
+                  "route_long_name": "Puttenahalli ⇔ HAL Main Gate",
+                  "route_type": 3
+                },
+                "mt": {
+                  "route_id": "mt",
+                  "agency_id": "1",
+                  "route_short_name": "285-JE DYVH-KBS",
+                  "route_long_name": "Dyavarahalli ⇔ Kempegowda Bus Station",
+                  "route_type": 3
+                },
+                "o8": {
+                  "route_id": "o8",
+                  "agency_id": "1",
+                  "route_short_name": "285-MF",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Kodigehalli",
+                  "route_type": 3
+                },
+                "rt": {
+                  "route_id": "rt",
+                  "agency_id": "1",
+                  "route_short_name": "285-C KBS-DTMR",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Dodda Tumkur",
+                  "route_type": 3
+                },
+                "sk": {
+                  "route_id": "sk",
+                  "agency_id": "1",
+                  "route_short_name": "285-JC",
+                  "route_long_name": "KR Market ⇔ Juttanahalli",
+                  "route_type": 3
+                },
+                "sn": {
+                  "route_id": "sn",
+                  "agency_id": "1",
+                  "route_short_name": "285-AA",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Rajanukunte",
+                  "route_type": 3
+                },
+                "tr": {
+                  "route_id": "tr",
+                  "agency_id": "1",
+                  "route_short_name": "285-B RMGH-KBS",
+                  "route_long_name": "Ramagondanahalli ⇔ Kempegowda Bus Station",
+                  "route_type": 3
+                },
+                "vs": {
+                  "route_id": "vs",
+                  "agency_id": "1",
+                  "route_short_name": "285RC",
+                  "route_long_name": "Hesaraghatta ⇔ Kempegowda Bus Station",
+                  "route_type": 3
+                },
+                "w1": {
+                  "route_id": "w1",
+                  "agency_id": "1",
+                  "route_short_name": "285-K PTMT-CVB-KBS",
+                  "route_long_name": "Patalamma Temple ⇔ Kempegowda Bus Station",
+                  "route_type": 3
+                },
+                "wa": {
+                  "route_id": "wa",
+                  "agency_id": "1",
+                  "route_short_name": "285 HRTA-HBLB",
+                  "route_long_name": "Heritage Estate Rajanukunte ⇔ Hebbala Bridge",
+                  "route_type": 3
+                },
+                "z6": {
+                  "route_id": "z6",
+                  "agency_id": "1",
+                  "route_short_name": "285-L KBS-BYT",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Byatha",
+                  "route_type": 3
+                },
+                "25l": {
+                  "route_id": "25l",
+                  "agency_id": "1",
+                  "route_short_name": "290-E SBS-SNH",
+                  "route_long_name": "Shivajinagara Bus Station ⇔ Sonnenahalli",
+                  "route_type": 3
+                },
+                "28w": {
+                  "route_id": "28w",
+                  "agency_id": "1",
+                  "route_short_name": "291-L PTN-MYLH",
+                  "route_long_name": "Puttenahalli ⇔ Mylanahalli",
+                  "route_type": 3
+                },
+                "1yk": {
+                  "route_id": "1yk",
+                  "agency_id": "1",
+                  "route_short_name": "297-G PTH-DCH",
+                  "route_long_name": "Puttenahalli ⇔ Dodda Cheemanahalli",
+                  "route_type": 3
+                },
+                "1qc": {
+                  "route_id": "1qc",
+                  "agency_id": "1",
+                  "route_short_name": "406 YHKOT-NMG",
+                  "route_long_name": "Yelahanka Old Town ⇔ Nelamangala Bus Station",
+                  "route_type": 3
+                },
+                "1za": {
+                  "route_id": "1za",
+                  "agency_id": "1",
+                  "route_short_name": "500-QG PTH-HBL-KRPGH",
+                  "route_long_name": "Puttenahalli ⇔ Krishnaraja Pura Govt Hospital",
+                  "route_type": 3
+                },
+                "1ay": {
+                  "route_id": "1ay",
+                  "agency_id": "1",
+                  "route_short_name": "CHAKRA-17",
+                  "route_long_name": "NES Office ⇔ NES Office",
+                  "route_type": 3
+                },
+                "2zs": {
+                  "route_id": "2zs",
+                  "agency_id": "1",
+                  "route_short_name": "PTH-SUAP",
+                  "route_long_name": "Puttenahalli ⇔ Shubha Ultima Club House",
+                  "route_type": 3
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [77.58023, 13.11016],
+                      [77.58092, 13.10801],
+                      [77.5811, 13.10755],
+                      [77.58118, 13.1074],
+                      [77.58136, 13.10714],
+                      [77.58206, 13.10626],
+                      [77.58284, 13.10538],
+                      [77.58312, 13.10508],
+                      [77.58388, 13.10432],
+                      [77.58436, 13.10387],
+                      [77.58517, 13.10317],
+                      [77.58564, 13.10278],
+                      [77.58648, 13.10216],
+                      [77.58639, 13.10209],
+                      [77.58627, 13.10203],
+                      [77.58595, 13.10192],
+                      [77.58316, 13.10114],
+                      [77.58304, 13.10138],
+                      [77.583, 13.10166]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "4tz",
+                    "stop_name": "Malya Adhithi School",
+                    "routes": ["55", "hu", "29x", "2yl", "9a", "jd"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.58298, 13.10166]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "5hk",
+                    "stop_name": "Puttenahalli",
+                    "routes": ["27s", "15x", "1tk", "1ak", "170", "17s", "18d", "1bp", "1jj", "1sd", "1sn", "1x2", "228", "22u", "2ba", "2bv", "2ds", "2g5", "2go", "2ib", "2pb", "2qh", "2tm", "2wa", "2wf", "30w", "8l", "c9", "cs", "en", "mt", "o8", "rt", "sk", "sn", "tr", "vs", "w1", "wa", "z6", "25l", "28w", "1yk", "1qc", "1za", "133", "1ay", "2yl", "2zs", "jd"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.58024, 13.11016]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "61r",
+                    "stop_name": "Wheel And Axle Plant",
+                    "routes": ["27s", "15x", "1tk", "1ak", "17s", "18d", "1bp", "1jj", "1sd", "1sn", "1x2", "228", "22u", "2ba", "2bv", "2ds", "2g5", "2go", "2ib", "2pb", "2qh", "2tm", "2wa", "2wf", "30w", "c9", "en", "mt", "o8", "rt", "sk", "sn", "tr", "vs", "w1", "wa", "z6", "25l", "28w", "1yk", "1qc", "1za", "133", "2yl", "2zs", "jd"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.58227, 13.10603]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "nx",
+                    "stop_name": "Escorts",
+                    "routes": ["27s", "1tk", "1ak", "17s", "18d", "1bp", "1jj", "1sd", "1sn", "1x2", "228", "22u", "2ba", "2bv", "2ds", "2g5", "2go", "2ib", "2pb", "2qh", "2tm", "2wa", "2wf", "30w", "c9", "en", "mt", "o8", "rt", "sk", "sn", "tr", "vs", "w1", "wa", "z6", "25l", "28w", "1yk", "1qc", "1za", "133", "1ay", "2yl", "2zs"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.58564, 13.10278]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table class="table-horizontal" summary="This table shows schedules for a selection of key stops on the route for Route PTH-MADT - Puttenahalli to Malya Adhithi School Mon-Sun. Stops and their schedule times are listed in the columns." data-orientation="horizontal">
+            <caption class="sr-only">Route PTH-MADT - Puttenahalli to Malya Adhithi School | Mon-Sun</caption>
+            <colgroup>
+              <col>
+              <col class="run_0 " id="trip_id_m9e">
+              <col class="run_1 " id="trip_id_1wx">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col">Stop</th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="stop-row" id="stop_id_5hk" data-stop-id="5hk" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Puttenahalli</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">2:21pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:36pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_61r" data-stop-id="61r" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Wheel And Axle Plant</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">2:22pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:37pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_nx" data-stop-id="nx" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Escorts</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">2:23pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:38pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_4tz" data-stop-id="4tz" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Malya Adhithi School</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">2:24pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">2:39pm</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

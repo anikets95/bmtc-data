@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYW5pa2V0czk1IiwiYSI6ImNsemtkZHpwdDB1NGIybHNhaHhhZHR2NzAifQ.YkI9PvPHjhbxOAUBgAgMSw';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+</head>
+
+<body><!-- Timetable generated on 2024-11-07T05:14:41.289Z using GTFS-to-HTML version 2.6.11 -->
+  <div class="timetable-page menu-type-jump">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center gap-2">
+        <div class="route-color-swatch-large flex-none" style="background-color: #000000; color: #FFFFFF;">ITPB-4N</div>
+        <div>Route ITPB-4N</div>
+      </h1>
+      <div class="effective-date text-gray-600 mt-2">Effective November 07, 2024</div>
+      <div class="timetable mb-10" id="timetable_id_1fw11111111" data-day-list="Mon-Sun" data-direction-name="CS-Uttarahalli" data-timetable-id="1fw|1111111|1" data-direction-id="1" data-route-id="1fw">
+        <div class="mb-2">
+          <h2 class="text-xl">Route ITPB-4N - CS-ITPL to CS-Uttarahalli | Monday-Sunday</h2>
+        </div>
+        <div class="map" id="map_timetable_id_1fw11111111"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_1fw11111111",
+              "routes": {
+                "78": {
+                  "route_id": "78",
+                  "agency_id": "1",
+                  "route_short_name": "ITPB-1W",
+                  "route_long_name": "CS-Uttarahalli ⇔ CS-ITPL",
+                  "route_type": 3
+                },
+                "87": {
+                  "route_id": "87",
+                  "agency_id": "1",
+                  "route_short_name": "ITPL-4B",
+                  "route_long_name": "CS-Koli Farm Gate ⇔ CS-ITPL",
+                  "route_type": 3
+                },
+                "102": {
+                  "route_id": "102",
+                  "agency_id": "1",
+                  "route_short_name": "ITPL-2J",
+                  "route_long_name": "CS-Vidyaranyapura ⇔ CS-ITPL",
+                  "route_type": 3
+                },
+                "1fw": {
+                  "route_id": "1fw",
+                  "agency_id": "1",
+                  "route_short_name": "ITPB-4N",
+                  "route_long_name": "CS-Uttarahalli ⇔ CS-ITPL",
+                  "route_type": 3
+                },
+                "1hf": {
+                  "route_id": "1hf",
+                  "agency_id": "1",
+                  "route_short_name": "ITPL-8E",
+                  "route_long_name": "CS-Heritage Estate ⇔ CS-ITPL",
+                  "route_type": 3
+                },
+                "1qh": {
+                  "route_id": "1qh",
+                  "agency_id": "1",
+                  "route_short_name": "ITPL-2B",
+                  "route_long_name": "CS-Sultanpalya ⇔ CS-ITPL",
+                  "route_type": 3
+                },
+                "1r0": {
+                  "route_id": "1r0",
+                  "agency_id": "1",
+                  "route_short_name": "ITPB-9A",
+                  "route_long_name": "CS-Yelahanka Satellite Town ⇔ CS-ITPL",
+                  "route_type": 3
+                },
+                "1s6": {
+                  "route_id": "1s6",
+                  "agency_id": "1",
+                  "route_short_name": "ITPL-4G",
+                  "route_long_name": "CS-Konanakunte Cross ⇔ CS-ITPL",
+                  "route_type": 3
+                },
+                "23f": {
+                  "route_id": "23f",
+                  "agency_id": "1",
+                  "route_short_name": "ITPB-3H",
+                  "route_long_name": "CS-ITPL ⇔ CS-Deepanjalinagara",
+                  "route_type": 3
+                },
+                "2aw": {
+                  "route_id": "2aw",
+                  "agency_id": "1",
+                  "route_short_name": "ITPL-10D",
+                  "route_long_name": "CS-Mayohall ⇔ CS-ITPL",
+                  "route_type": 3
+                },
+                "2ih": {
+                  "route_id": "2ih",
+                  "agency_id": "1",
+                  "route_short_name": "ITPL-5B",
+                  "route_long_name": "CS-Marathahalli Bridge ⇔ CS-ITPL",
+                  "route_type": 3
+                },
+                "2iw": {
+                  "route_id": "2iw",
+                  "agency_id": "1",
+                  "route_short_name": "ITPL-2F",
+                  "route_long_name": "CS-TC Palya ⇔ CS-ITPL",
+                  "route_type": 3
+                },
+                "2k0": {
+                  "route_id": "2k0",
+                  "agency_id": "1",
+                  "route_short_name": "ITPL-2D",
+                  "route_long_name": "CS-8th Mile ⇔ CS-ITPL",
+                  "route_type": 3
+                },
+                "2mn": {
+                  "route_id": "2mn",
+                  "agency_id": "1",
+                  "route_short_name": "ITPB-3C",
+                  "route_long_name": "CS-Ambedkar Institute of Technology ⇔ CS-ITPL",
+                  "route_type": 3
+                },
+                "2o7": {
+                  "route_id": "2o7",
+                  "agency_id": "1",
+                  "route_short_name": "ITPL-4J",
+                  "route_long_name": "CS-Jambu Savari Dinne ⇔ CS-ITPL",
+                  "route_type": 3
+                },
+                "2r2": {
+                  "route_id": "2r2",
+                  "agency_id": "1",
+                  "route_short_name": "ITPB-1M",
+                  "route_long_name": "CS-ITPL ⇔ CS-Girinagara Extension",
+                  "route_type": 3
+                },
+                "30q": {
+                  "route_id": "30q",
+                  "agency_id": "1",
+                  "route_short_name": "ITPL-7B",
+                  "route_long_name": "CS-Electronic City ⇔ CS-ITPL",
+                  "route_type": 3
+                },
+                "i1": {
+                  "route_id": "i1",
+                  "agency_id": "1",
+                  "route_short_name": "ITPB-4H",
+                  "route_long_name": "CS-ITPL ⇔ CS-Indiranagara KFC",
+                  "route_type": 3
+                },
+                "kp": {
+                  "route_id": "kp",
+                  "agency_id": "1",
+                  "route_short_name": "ITPL-3N",
+                  "route_long_name": "CS-Hosakerehalli Cross ⇔ CS-ITPL",
+                  "route_type": 3
+                },
+                "sb": {
+                  "route_id": "sb",
+                  "agency_id": "1",
+                  "route_short_name": "ITPL-8",
+                  "route_long_name": "CS-Indian Airforce Yelahanka ⇔ CS-ITPL",
+                  "route_type": 3
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [77.74665, 12.98586],
+                      [77.74744, 12.98558],
+                      [77.74839, 12.98519],
+                      [77.74939, 12.98484],
+                      [77.75024, 12.98458],
+                      [77.75242, 12.98381],
+                      [77.75253, 12.98379],
+                      [77.75239, 12.98347],
+                      [77.75226, 12.983],
+                      [77.75177, 12.98042],
+                      [77.75071, 12.97509],
+                      [77.75056, 12.97423],
+                      [77.7504, 12.97314],
+                      [77.75034, 12.97265],
+                      [77.75031, 12.97214],
+                      [77.74992, 12.96934],
+                      [77.74963, 12.96797],
+                      [77.74955, 12.96769],
+                      [77.74929, 12.96659],
+                      [77.74903, 12.96571],
+                      [77.74784, 12.96194],
+                      [77.74766, 12.96118],
+                      [77.7475, 12.96081],
+                      [77.74715, 12.96012],
+                      [77.74613, 12.95825],
+                      [77.74595, 12.95788],
+                      [77.74579, 12.95749],
+                      [77.74568, 12.95709],
+                      [77.74552, 12.95676],
+                      [77.74545, 12.95673],
+                      [77.74541, 12.95674],
+                      [77.74536, 12.95679],
+                      [77.74485, 12.95666],
+                      [77.74471, 12.95665],
+                      [77.74442, 12.95669],
+                      [77.74388, 12.95685],
+                      [77.74363, 12.9569],
+                      [77.7433, 12.95693],
+                      [77.74017, 12.95696],
+                      [77.73695, 12.95702],
+                      [77.73674, 12.95701],
+                      [77.73617, 12.95693],
+                      [77.73193, 12.95621],
+                      [77.73102, 12.95613],
+                      [77.73014, 12.95608],
+                      [77.72854, 12.95596],
+                      [77.72709, 12.9559],
+                      [77.72442, 12.95584],
+                      [77.7238, 12.95584],
+                      [77.72304, 12.95582],
+                      [77.72283, 12.9558],
+                      [77.71982, 12.95577],
+                      [77.71771, 12.95572],
+                      [77.7165, 12.95574],
+                      [77.71541, 12.95581],
+                      [77.71462, 12.95588],
+                      [77.71111, 12.95613],
+                      [77.71064, 12.95618],
+                      [77.70958, 12.95626],
+                      [77.70901, 12.95634],
+                      [77.70868, 12.95637],
+                      [77.70726, 12.95645],
+                      [77.70466, 12.95665],
+                      [77.70283, 12.95675],
+                      [77.70135, 12.95688],
+                      [77.70118, 12.95626],
+                      [77.70087, 12.95529],
+                      [77.70043, 12.95356],
+                      [77.70021, 12.95248],
+                      [77.70006, 12.95252],
+                      [77.69984, 12.95148],
+                      [77.69941, 12.94899],
+                      [77.69917, 12.94797],
+                      [77.69798, 12.94452],
+                      [77.69756, 12.94341],
+                      [77.69747, 12.94319],
+                      [77.69727, 12.94278],
+                      [77.69671, 12.94181],
+                      [77.69636, 12.94116],
+                      [77.69551, 12.93971],
+                      [77.69493, 12.9389],
+                      [77.69468, 12.93862],
+                      [77.6932, 12.93724],
+                      [77.69232, 12.93647],
+                      [77.6892, 12.93358],
+                      [77.68716, 12.93173],
+                      [77.68598, 12.9307],
+                      [77.68536, 12.93018],
+                      [77.68495, 12.92991],
+                      [77.67613, 12.9257],
+                      [77.67439, 12.92483],
+                      [77.67374, 12.92453],
+                      [77.67166, 12.92363],
+                      [77.67098, 12.92332],
+                      [77.66567, 12.92079],
+                      [77.66531, 12.92067],
+                      [77.66508, 12.92064],
+                      [77.66493, 12.92063],
+                      [77.66479, 12.92064],
+                      [77.6645, 12.92069],
+                      [77.66213, 12.92136],
+                      [77.66006, 12.92189],
+                      [77.65799, 12.92261],
+                      [77.65649, 12.92316],
+                      [77.65577, 12.92339],
+                      [77.65419, 12.92374],
+                      [77.65179, 12.92422],
+                      [77.65079, 12.92438],
+                      [77.65002, 12.92442],
+                      [77.64874, 12.92435],
+                      [77.64835, 12.9243],
+                      [77.64798, 12.92421],
+                      [77.64782, 12.92415],
+                      [77.64709, 12.92379],
+                      [77.64658, 12.92348],
+                      [77.64621, 12.92317],
+                      [77.64572, 12.92268],
+                      [77.64515, 12.92218],
+                      [77.64465, 12.92168],
+                      [77.64318, 12.91991],
+                      [77.64193, 12.91826],
+                      [77.64098, 12.91733],
+                      [77.64029, 12.91677],
+                      [77.63975, 12.91642],
+                      [77.63944, 12.91628],
+                      [77.63879, 12.91605],
+                      [77.63837, 12.91594],
+                      [77.63813, 12.91591],
+                      [77.63766, 12.91593],
+                      [77.63481, 12.91629],
+                      [77.63085, 12.91661],
+                      [77.62919, 12.9167],
+                      [77.62865, 12.91676],
+                      [77.62835, 12.91682],
+                      [77.62587, 12.91756],
+                      [77.62561, 12.91761],
+                      [77.62542, 12.91762],
+                      [77.62481, 12.91762],
+                      [77.62436, 12.91756],
+                      [77.62313, 12.91735],
+                      [77.62269, 12.91722],
+                      [77.62154, 12.91677],
+                      [77.62078, 12.91651],
+                      [77.62026, 12.91636],
+                      [77.61973, 12.91624],
+                      [77.61935, 12.91619],
+                      [77.61757, 12.91615],
+                      [77.6171, 12.91616],
+                      [77.61623, 12.91622],
+                      [77.6148, 12.91636],
+                      [77.61183, 12.91645],
+                      [77.61035, 12.91646],
+                      [77.60923, 12.91651],
+                      [77.60725, 12.91654],
+                      [77.60644, 12.91658],
+                      [77.60274, 12.91658],
+                      [77.60187, 12.91656],
+                      [77.5998, 12.91667],
+                      [77.5978, 12.91667],
+                      [77.59617, 12.91675],
+                      [77.59438, 12.91675],
+                      [77.59302, 12.91679],
+                      [77.59265, 12.91682],
+                      [77.59168, 12.91683],
+                      [77.59139, 12.91681],
+                      [77.58951, 12.91688],
+                      [77.58679, 12.91694],
+                      [77.58528, 12.917],
+                      [77.58368, 12.91701],
+                      [77.58248, 12.91705],
+                      [77.58087, 12.91704],
+                      [77.57982, 12.91708],
+                      [77.57873, 12.91705],
+                      [77.57834, 12.91708],
+                      [77.57817, 12.91712],
+                      [77.57752, 12.91738],
+                      [77.57716, 12.91745],
+                      [77.57522, 12.91759],
+                      [77.57475, 12.91759],
+                      [77.57457, 12.91763],
+                      [77.57445, 12.91762],
+                      [77.57431, 12.91759],
+                      [77.57412, 12.9175],
+                      [77.57393, 12.91732],
+                      [77.57363, 12.91697],
+                      [77.57287, 12.91665],
+                      [77.57253, 12.91659],
+                      [77.57224, 12.91657],
+                      [77.57124, 12.91658],
+                      [77.57109, 12.91655],
+                      [77.57052, 12.91638],
+                      [77.57042, 12.91633],
+                      [77.57031, 12.91624],
+                      [77.57014, 12.91601],
+                      [77.57, 12.91571],
+                      [77.56993, 12.91564],
+                      [77.56969, 12.91554],
+                      [77.5693, 12.91544],
+                      [77.56914, 12.91538],
+                      [77.56903, 12.91532],
+                      [77.56757, 12.91404],
+                      [77.56738, 12.9139],
+                      [77.56725, 12.91386],
+                      [77.56705, 12.91384],
+                      [77.5669, 12.91385],
+                      [77.56635, 12.91396],
+                      [77.56626, 12.91399],
+                      [77.56582, 12.91421],
+                      [77.56559, 12.9143],
+                      [77.56296, 12.91505],
+                      [77.56241, 12.91522],
+                      [77.56211, 12.91534],
+                      [77.562, 12.9154],
+                      [77.56175, 12.91558],
+                      [77.56156, 12.91569],
+                      [77.56144, 12.91572],
+                      [77.56132, 12.9157],
+                      [77.56123, 12.91562],
+                      [77.56096, 12.91506],
+                      [77.56089, 12.91495],
+                      [77.56074, 12.91479],
+                      [77.56055, 12.91462],
+                      [77.56019, 12.91419],
+                      [77.55998, 12.91403],
+                      [77.55979, 12.91383],
+                      [77.55966, 12.91373],
+                      [77.55897, 12.91358],
+                      [77.55896, 12.91324],
+                      [77.5589, 12.91284],
+                      [77.55884, 12.91279],
+                      [77.55855, 12.91181],
+                      [77.55849, 12.91167],
+                      [77.55838, 12.91158],
+                      [77.55832, 12.91156],
+                      [77.55819, 12.91156],
+                      [77.5577, 12.91161],
+                      [77.55719, 12.91163],
+                      [77.55642, 12.91169],
+                      [77.55621, 12.91165],
+                      [77.55595, 12.91153],
+                      [77.55581, 12.91149],
+                      [77.55562, 12.91149],
+                      [77.55498, 12.91159],
+                      [77.55489, 12.91158],
+                      [77.55461, 12.91148],
+                      [77.55435, 12.91135],
+                      [77.55421, 12.91133],
+                      [77.55388, 12.9114],
+                      [77.55271, 12.91172],
+                      [77.5526, 12.91174],
+                      [77.55256, 12.91171],
+                      [77.55246, 12.9117],
+                      [77.55237, 12.91167],
+                      [77.55198, 12.9115],
+                      [77.55178, 12.91134],
+                      [77.55173, 12.91132],
+                      [77.55147, 12.91102],
+                      [77.55106, 12.91049],
+                      [77.55082, 12.91025],
+                      [77.55031, 12.90982],
+                      [77.55, 12.90959],
+                      [77.54939, 12.90924],
+                      [77.54903, 12.909],
+                      [77.54818, 12.9083],
+                      [77.54768, 12.90786],
+                      [77.54735, 12.90761],
+                      [77.54703, 12.90741],
+                      [77.54653, 12.90713],
+                      [77.54615, 12.90699],
+                      [77.54549, 12.90682],
+                      [77.54424, 12.90657],
+                      [77.54397, 12.90649],
+                      [77.5433, 12.90615],
+                      [77.54326, 12.9061],
+                      [77.54296, 12.90592],
+                      [77.5428, 12.90579],
+                      [77.54271, 12.90574],
+                      [77.54305, 12.90551],
+                      [77.54318, 12.90537],
+                      [77.54325, 12.90527]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "2jh",
+                    "stop_name": "CS-ITPL",
+                    "routes": ["102", "1fw", "1hf", "1qh", "1r0", "1s6", "23f", "2aw", "2ih", "2iw", "2k0", "2mn", "2o7", "2r2", "30q", "78", "87", "i1", "kp", "sb"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.74669, 12.98597]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "496",
+                    "stop_name": "CS-Uttarahalli",
+                    "routes": ["1fw", "78"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.54325, 12.9051]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table class="table-horizontal" summary="This table shows schedules for a selection of key stops on the route for Route ITPB-4N - CS-ITPL to CS-Uttarahalli Mon-Sun. Stops and their schedule times are listed in the columns." data-orientation="horizontal">
+            <caption class="sr-only">Route ITPB-4N - CS-ITPL to CS-Uttarahalli | Mon-Sun</caption>
+            <colgroup>
+              <col>
+              <col class="run_0 " id="trip_id_kgg">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col">Stop</th>
+                <th class="run-header" scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="stop-row" id="stop_id_2jh" data-stop-id="2jh" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">CS-ITPL</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">7:00pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_496" data-stop-id="496" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">CS-Uttarahalli</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time pm"><span class="stop-time-text">7:52pm</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYW5pa2V0czk1IiwiYSI6ImNsemtkZHpwdDB1NGIybHNhaHhhZHR2NzAifQ.YkI9PvPHjhbxOAUBgAgMSw';
+  </script>
+  <script src="../js/timetable-map.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/timetable_styles.css">
+</head>
+
+<body><!-- Timetable generated on 2024-11-07T05:13:59.313Z using GTFS-to-HTML version 2.6.11 -->
+  <div class="timetable-page menu-type-jump">
+    <div class="container mx-4 md:mx-auto">
+      <h1 class="timetable-page-label text-2xl pt-4 flex items-center gap-2">
+        <div class="route-color-swatch-large flex-none" style="background-color: #000000; color: #FFFFFF;">366-R D27G-VDP</div>
+        <div>Route 366-R D27G-VDP</div>
+      </h1>
+      <div class="effective-date text-gray-600 mt-2">Effective November 07, 2024</div>
+      <div class="timetable mb-10" id="timetable_id_1ai11111111" data-day-list="Mon-Sun" data-direction-name="Depot-27 Gate" data-timetable-id="1ai|1111111|1" data-direction-id="1" data-route-id="1ai">
+        <div class="mb-2">
+          <h2 class="text-xl">Route 366-R D27G-VDP - Vaddarapalya to Depot-27 Gate | Monday-Sunday</h2>
+        </div>
+        <div class="map" id="map_timetable_id_1ai11111111"></div>
+        <script>
+          (function() {
+            const {
+              id,
+              geojson,
+              routes
+            } = {
+              "id": "timetable_id_1ai11111111",
+              "routes": {
+                "8": {
+                  "route_id": "8",
+                  "agency_id": "1",
+                  "route_short_name": "365-P D27-ANK",
+                  "route_long_name": "Depot-27 Gate ⇔ Anekal",
+                  "route_type": 3
+                },
+                "12y": {
+                  "route_id": "12y",
+                  "agency_id": "1",
+                  "route_short_name": "365-N",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Giddenahalli",
+                  "route_type": 3
+                },
+                "1yp": {
+                  "route_id": "1yp",
+                  "agency_id": "1",
+                  "route_short_name": "365-W",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Vaderamanchanahalli Jigani",
+                  "route_type": 3
+                },
+                "1ai": {
+                  "route_id": "1ai",
+                  "agency_id": "1",
+                  "route_short_name": "366-R D27G-VDP",
+                  "route_long_name": "Depot-27 Gate ⇔ Vaddarapalya",
+                  "route_type": 3
+                },
+                "1hn": {
+                  "route_id": "1hn",
+                  "agency_id": "1",
+                  "route_short_name": "366-X",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Tattekere",
+                  "route_type": 3
+                },
+                "2c6": {
+                  "route_id": "2c6",
+                  "agency_id": "1",
+                  "route_short_name": "366-W",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Vaderamanchanahalli Jigani",
+                  "route_type": 3
+                },
+                "2tq": {
+                  "route_id": "2tq",
+                  "agency_id": "1",
+                  "route_short_name": "366-F",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Nosenuru",
+                  "route_type": 3
+                },
+                "e7": {
+                  "route_id": "e7",
+                  "agency_id": "1",
+                  "route_short_name": "366-KA",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Mutturayanaswamy Doddy",
+                  "route_type": 3
+                },
+                "hp": {
+                  "route_id": "hp",
+                  "agency_id": "1",
+                  "route_short_name": "366-N",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Giddenahalli",
+                  "route_type": 3
+                },
+                "1pr": {
+                  "route_id": "1pr",
+                  "agency_id": "1",
+                  "route_short_name": "372-A",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Chikkanahalli",
+                  "route_type": 3
+                },
+                "1wj": {
+                  "route_id": "1wj",
+                  "agency_id": "1",
+                  "route_short_name": "372-J",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Bommandahalli",
+                  "route_type": 3
+                },
+                "2tb": {
+                  "route_id": "2tb",
+                  "agency_id": "1",
+                  "route_short_name": "372-B",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Konasandra",
+                  "route_type": 3
+                },
+                "fb": {
+                  "route_id": "fb",
+                  "agency_id": "1",
+                  "route_short_name": "372-E",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Chinnaiahnapalya",
+                  "route_type": 3
+                },
+                "1rz": {
+                  "route_id": "1rz",
+                  "agency_id": "1",
+                  "route_short_name": "398-H D27G-HSK",
+                  "route_long_name": "Depot-27 Gate ⇔ Hosakote Bus Stand (Old)",
+                  "route_type": 3
+                },
+                "1xh": {
+                  "route_id": "1xh",
+                  "agency_id": "1",
+                  "route_short_name": "398-H D27-ATB",
+                  "route_long_name": "Depot-27 Gate ⇔ Attibele Bus Stand",
+                  "route_type": 3
+                },
+                "1ls": {
+                  "route_id": "1ls",
+                  "agency_id": "1",
+                  "route_short_name": "600-FC D27-JAPC",
+                  "route_long_name": "Depot-27 Gate ⇔ Banashankari Bus Station",
+                  "route_type": 3
+                },
+                "2t6": {
+                  "route_id": "2t6",
+                  "agency_id": "1",
+                  "route_short_name": "G-4 D27G-BGRD",
+                  "route_long_name": "Depot-27 Gate ⇔ Brigade Road",
+                  "route_type": 3
+                },
+                "15g": {
+                  "route_id": "15g",
+                  "agency_id": "1",
+                  "route_short_name": "353-C",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Jigani Bus Stand",
+                  "route_type": 3
+                },
+                "2c0": {
+                  "route_id": "2c0",
+                  "agency_id": "1",
+                  "route_short_name": "353-B JGNAPC-CPR-HKR",
+                  "route_long_name": "Jigani APC Circle ⇔ Huskur",
+                  "route_type": 3
+                },
+                "2jx": {
+                  "route_id": "2jx",
+                  "agency_id": "1",
+                  "route_short_name": "353-B",
+                  "route_long_name": "Jigani APC Circle ⇔ Chandapura",
+                  "route_type": 3
+                },
+                "2q6": {
+                  "route_id": "2q6",
+                  "agency_id": "1",
+                  "route_short_name": "365-Z",
+                  "route_long_name": "Anekal ⇔ Bannerughatta Circle",
+                  "route_type": 3
+                },
+                "2qk": {
+                  "route_id": "2qk",
+                  "agency_id": "1",
+                  "route_short_name": "365-Z BGT-MMDH",
+                  "route_long_name": "Bannerughatta Circle ⇔ M Medahalli",
+                  "route_type": 3
+                },
+                "27i": {
+                  "route_id": "27i",
+                  "agency_id": "1",
+                  "route_short_name": "366-QA",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Nosenuru",
+                  "route_type": 3
+                },
+                "1qo": {
+                  "route_id": "1qo",
+                  "agency_id": "1",
+                  "route_short_name": "399-F D27G-ANK-HSK",
+                  "route_long_name": "Depot-27 Gate ⇔ Hosakote Bus Stand (Old)",
+                  "route_type": 3
+                },
+                "2qn": {
+                  "route_id": "2qn",
+                  "agency_id": "1",
+                  "route_short_name": "355-C KBS-D27G",
+                  "route_long_name": "Kempegowda Bus Station ⇔ Depot-27 Gate",
+                  "route_type": 3
+                },
+                "ti": {
+                  "route_id": "ti",
+                  "agency_id": "1",
+                  "route_short_name": "366-E KMT-D27",
+                  "route_long_name": "KR Market (Kalasipalya) ⇔ Depot-27 Gate",
+                  "route_type": 3
+                },
+                "1oy": {
+                  "route_id": "1oy",
+                  "agency_id": "1",
+                  "route_short_name": "D27-D27G",
+                  "route_long_name": "Depot-27 Jigani ⇔ Depot-27 Gate",
+                  "route_type": 3
+                }
+              },
+              "geojson": {
+                "type": "FeatureCollection",
+                "features": [{
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [77.64074, 12.76579],
+                      [77.63996, 12.76724],
+                      [77.63945, 12.76806],
+                      [77.63927, 12.76843],
+                      [77.63896, 12.76899],
+                      [77.63803, 12.77044],
+                      [77.63793, 12.77056],
+                      [77.63775, 12.77091],
+                      [77.63784, 12.77137],
+                      [77.63804, 12.77191],
+                      [77.63831, 12.77276],
+                      [77.63862, 12.77352],
+                      [77.63876, 12.77356],
+                      [77.64023, 12.77432],
+                      [77.64171, 12.77515],
+                      [77.64299, 12.77582],
+                      [77.6441, 12.77643],
+                      [77.64442, 12.77658],
+                      [77.64492, 12.77686],
+                      [77.64379, 12.77888],
+                      [77.64379, 12.77896],
+                      [77.64372, 12.7791],
+                      [77.64351, 12.77906],
+                      [77.64282, 12.77903],
+                      [77.64048, 12.77897],
+                      [77.64005, 12.77898],
+                      [77.63848, 12.77924],
+                      [77.63658, 12.77948],
+                      [77.6359, 12.77959],
+                      [77.63573, 12.77963],
+                      [77.63445, 12.78003]
+                    ]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "1mw",
+                    "stop_name": "YHK Hospital",
+                    "routes": ["12y", "1yp", "1ai", "1hn", "2c6", "2tq", "e7", "hp", "1pr", "1wj", "2tb", "fb", "1rz", "1xh", "1ls", "2t6"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.63652, 12.77945]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "3at",
+                    "stop_name": "Vaddarapalya",
+                    "routes": ["1ai"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.64077, 12.76574]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "4l0",
+                    "stop_name": "Jigani KEB",
+                    "routes": ["15g", "2c0", "2jx", "2q6", "2qk", "8", "1ai", "27i", "1qo"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.64491, 12.77686]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "4p",
+                    "stop_name": "Depot-27 Gate",
+                    "routes": ["2qn", "8", "1ai", "1hn", "2tq", "hp", "ti", "1pr", "1rz", "1xh", "1qo", "1ls", "1oy", "2t6"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.63445, 12.78003]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "5p",
+                    "stop_name": "Jigani APC CIrcle",
+                    "routes": ["2qn", "8", "1ai", "1pr", "1rz", "1xh", "1qo", "1ls", "2t6"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.64342, 12.77903]
+                  }
+                }, {
+                  "type": "Feature",
+                  "properties": {
+                    "stop_id": "k0",
+                    "stop_name": "TATA Advance Jigani Industrial Area",
+                    "routes": ["1ai"],
+                    "agency_name": "Bengaluru Metropolitan Transport Corporation"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [77.64136, 12.77498]
+                  }
+                }]
+              }
+            };
+            createMap(id, geojson, routes);
+          })();
+        </script>
+        <div class="table-container">
+          <table class="table-horizontal" summary="This table shows schedules for a selection of key stops on the route for Route 366-R D27G-VDP - Vaddarapalya to Depot-27 Gate Mon-Sun. Stops and their schedule times are listed in the columns." data-orientation="horizontal">
+            <caption class="sr-only">Route 366-R D27G-VDP - Vaddarapalya to Depot-27 Gate | Mon-Sun</caption>
+            <colgroup>
+              <col>
+              <col class="run_0 " id="trip_id_epo">
+              <col class="run_1 " id="trip_id_etu">
+              <col class="run_2 " id="trip_id_khz">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="stop-header" scope="col">Stop</th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+                <th class="run-header" scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="stop-row" id="stop_id_3at" data-stop-id="3at" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Vaddarapalya</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">11:05am</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:30pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:55pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_k0" data-stop-id="k0" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">TATA Advance Jigani Industrial Area</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">11:06am</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:30pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:55pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_4l0" data-stop-id="4l0" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Jigani KEB</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">11:08am</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:31pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:56pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_5p" data-stop-id="5p" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Jigani APC CIrcle</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">11:09am</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:32pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:57pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_1mw" data-stop-id="1mw" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">YHK Hospital</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">11:11am</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:33pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:58pm</span></td>
+              </tr>
+              <tr class="stop-row" id="stop_id_4p" data-stop-id="4p" data-is-timepoint="true">
+                <th class="stop-name-container" scope="row">
+                  <div class="stop-name">Depot-27 Gate</div>
+                  <div class="stop-code"></div>
+                </th>
+                <td class="stop-time am"><span class="stop-time-text">11:12am</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">7:34pm</span></td>
+                <td class="stop-time pm"><span class="stop-time-text">9:59pm</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
